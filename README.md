@@ -26,6 +26,7 @@ Useful resources for traffic prediction.
 6. [ICCV 2019] STGAT: Modeling Spatial-Temporal Interactions for Human Trajectory Prediction [[paper]](https://openaccess.thecvf.com/content_ICCV_2019/html/Huang_STGAT_Modeling_Spatial-Temporal_Interactions_for_Human_Trajectory_Prediction_ICCV_2019_paper.html)
 7. [KDD 2019] Urban Traffic Prediction from Spatio-Temporal Data Using Deep Meta Learning [[paper]](https://dl.acm.org/doi/abs/10.1145/3292500.3330884)[[code]](https://github.com/panzheyi/ST-MetaNet)
 8. [ICIKM 2019] Matrix Factorization for Spatio-Temporal Neural Networks with Applications to Urban Flow Prediction [[paper]](https://dl.acm.org/doi/abs/10.1145/3357384.3357832)
+9. [TKDE 2019] Flow prediction in spatio-temporal networks based on multitask deep learning [[paper]](https://ieeexplore.ieee.org/document/8606218)
 
 ##### 2020
 
@@ -42,11 +43,29 @@ Useful resources for traffic prediction.
 
 ### Statistic Based Methods
 
+## Textbook
+
+1. [Urban Computing](https://mitpress.mit.edu/books/urban-computing)
+2. ……
+
 ## Datasets
 
 1. [Cityscapes](https://www.cityscapes-dataset.com/login/)
+2. New York City
+3. ……
+
+### Commute flow
+
+1. [Longitudinal Employer-Household Dynamics](https://lehd.ces.census.gov/data/)
+2. ……
+
+### Point of Interest/Land use
+
+1. [PLUTO](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page)
 
 ## Toolkits
+
+1. [Open Source Routing Machine](http://project-osrm.org)
 
 ## Conferences
 
@@ -62,6 +81,4 @@ Useful resources for traffic prediction.
 
 1. [paper with code](https://paperswithcode.com/task/traffic-prediction)
 2. https://github.com/topics/traffic-prediction
-
-
 
