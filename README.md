@@ -2,7 +2,7 @@
 
 Useful resources for traffic prediction.
 
-## Papers
+## 0x00 Papers
 
 ### Reviews
 
@@ -15,6 +15,7 @@ Useful resources for traffic prediction.
 
 1. [ITS 2019] T-GCN: A Temporal Graph Convolutional Network for Traffic Prediction [[paper]](https://arxiv.org/pdf/1811.05320v3.pdf) [[code]](https://github.com/lehaifeng/T-GCN)
 2. [TKDE 2018] Flow prediction in spatio-temporal networks based on multitask deep learning [[paper]](https://ieeexplore.ieee.org/abstract/document/8606218/)
+3. [ITS 2018] Missing Value Imputation for Traffic-Related Time Series Data Based on a Multi-View Learning Method [[paper]](https://ieeexplore.ieee.org/abstract/document/8478191)
 
 ##### 2019
 
@@ -27,6 +28,7 @@ Useful resources for traffic prediction.
 7. [KDD 2019] Urban Traffic Prediction from Spatio-Temporal Data Using Deep Meta Learning [[paper]](https://dl.acm.org/doi/abs/10.1145/3292500.3330884)[[code]](https://github.com/panzheyi/ST-MetaNet)
 8. [ICIKM 2019] Matrix Factorization for Spatio-Temporal Neural Networks with Applications to Urban Flow Prediction [[paper]](https://dl.acm.org/doi/abs/10.1145/3357384.3357832)
 9. [TKDE 2019] Flow prediction in spatio-temporal networks based on multitask deep learning [[paper]](https://ieeexplore.ieee.org/document/8606218)
+10. [IJGIS 2019] Traffic speed prediction for intelligent transportation system based on a deep feature fusion model [[paper]](https://www.tandfonline.com/doi/abs/10.1080/15472450.2019.1583965?journalCode=gits20)
 
 ##### 2020
 
@@ -36,22 +38,32 @@ Useful resources for traffic prediction.
 4. [AAAI 2020] Spatio-Temporal Graph Structure Learning for Traffic Forecasting [[paper]](https://ojs.aaai.org//index.php/AAAI/article/view/5470)
 5. [AAAI 2020] Learning Geo-Contextual Embeddings for Commuting Flow Prediction [[paper]](https://ojs.aaai.org//index.php/AAAI/article/view/5425)
 6. [Access 2020] STGAT: Spatial-Temporal Graph Attention Networks for Traffic Flow Forecasting [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9146162)
-7. [Mobile Computing 2020] BuildSenSys: Reusing Building Sensing Data for Traffic Prediction with Cross-domain Learning [[paper]](https://ieeexplore.ieee.org/abstract/document/9018140)
-8. [TKDE 2020] Spatio-Temporal Meta Learning for Urban Traffic Prediction [[paper]](https://ieeexplore.ieee.org/document/9096591)
-9. [WC 2020] What is the Human Mobility in a New City: Transfer Mobility Knowledge Across Cities [[paper]](http://urban-computing.com/pdf/www1208tianfu.pdf)
-10. ……
+7. [Sensor 2020] City-Wide Traffic Flow Forecasting Using a Deep Convolutional Neural Network [[paper]](https://www.mdpi.com/1424-8220/20/2/421)
+8. [Mobile Computing 2020] BuildSenSys: Reusing Building Sensing Data for Traffic Prediction with Cross-domain Learning [[paper]](https://ieeexplore.ieee.org/abstract/document/9018140)
+9. [TKDE 2020] Spatio-Temporal Meta Learning for Urban Traffic Prediction [[paper]](https://ieeexplore.ieee.org/document/9096591)
+10. [WC 2020] What is the Human Mobility in a New City: Transfer Mobility Knowledge Across Cities [[paper]](http://urban-computing.com/pdf/www1208tianfu.pdf)
+11. ……
 
 ### Statistic Based Methods
 
-## Textbook
+#### 2018
+
+1. [ITS 2018] Probabilistic Data Fusion for Short-Term Traffic Prediction With Semiparametric Density Ratio Model [[paper]](https://ieeexplore.ieee.org/document/8479367)
+
+#### 2019
+
+1. [TRPET 2019] A generalized Bayesian traffic model [[paper]]([A generalized Bayesian traffic model](https://www.sciencedirect.com/science/article/pii/S0968090X18318199))
+
+## 0x01 Textbook
 
 1. [Urban Computing](https://mitpress.mit.edu/books/urban-computing)
-2. ……
+2. [Multimodal Analytics for Next-Generation Big Data Technologies and Applications](https://www.springer.com/gp/book/9783319975979)
+3. ……
 
-## Datasets
+## 0x02 Datasets
 
 1. [Cityscapes](https://www.cityscapes-dataset.com/login/)
-2. New York City
+2. [New York City](https://www.kaggle.com/c/nyc-taxi-trip-duration/overview)
 3. ……
 
 ### Commute flow
@@ -63,21 +75,21 @@ Useful resources for traffic prediction.
 
 1. [PLUTO](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page)
 
-## Toolkits
+## 0x03 Toolkits
 
 1. [Open Source Routing Machine](http://project-osrm.org)
 
-## Conferences
+## 0x04 Conferences
 
 1. ACM SIGSPATIAL SpatialDI
 2. Trans on ITS
 
-## Research Group
+## 0x05 Research Group
 
 1. http://urban-computing.com/yuzheng
 2. ……
 
-## Related Repositories
+## 0x06 Related Repositories
 
 1. [paper with code](https://paperswithcode.com/task/traffic-prediction)
 2. https://github.com/topics/traffic-prediction
