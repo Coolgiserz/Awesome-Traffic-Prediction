@@ -24,7 +24,9 @@ Useful resources for traffic prediction.
 1. [TITS 2019] T-GCN: A Temporal Graph Convolutional Network for Traffic Prediction [[paper]](https://arxiv.org/pdf/1811.05320v3.pdf) [[code]](https://github.com/lehaifeng/T-GCN)
 2. [TKDE 2018] Flow prediction in spatio-temporal networks based on multitask deep learning [[paper]](https://ieeexplore.ieee.org/abstract/document/8606218/)
 3. [TITS 2018] Missing Value Imputation for Traffic-Related Time Series Data Based on a Multi-View Learning Method [[paper]](https://ieeexplore.ieee.org/abstract/document/8478191)
-4. ……
+4. [IJCAI 2018] Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting [[paper]](https://www.ijcai.org/Proceedings/2018/0505.pdf) [[code]](https://paperswithcode.com/paper/spatio-temporal-graph-convolutional-networks)
+5. [ICLR 2018] Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting [[paper]](https://arxiv.org/abs/1707.01926) [[code-official-tf]](https://github.com/liyaguang/DCRNN) [[code-pytorch]](https://github.com/xlwang233/pytorch-DCRNN)
+6. ……
 
 ##### 2019
 
@@ -65,11 +67,18 @@ Useful resources for traffic prediction.
 
 1. [TRPET 2019] A generalized Bayesian traffic model [[paper]]([A generalized Bayesian traffic model](https://www.sciencedirect.com/science/article/pii/S0968090X18318199))
 
-## 0x01 Textbook
+## 0x01 Tutorial
+
+### Textbook
 
 1. [Urban Computing](https://mitpress.mit.edu/books/urban-computing)
 2. [Multimodal Analytics for Next-Generation Big Data Technologies and Applications](https://www.springer.com/gp/book/9783319975979)
 3. ……
+
+### Blogs
+
+1. [Traffic prediction with advanced Graph Neural Networks](https://deepmind.com/blog/article/traffic-prediction-with-advanced-graph-neural-networks)
+2. ……
 
 ## 0x02 Datasets
 
@@ -79,13 +88,19 @@ Useful resources for traffic prediction.
 
 3. [NYC Bike](https://www.citibikenyc.com/system-data)
 
-4. [Train Station Dataset](http://www.ee.cuhk.edu.hk/~xgwang/grandcentral.html)
+4. [NYC Taxi](https://www.kaggle.com/c/nyc-taxi-trip-duration)
 
-5. [Apolloscape](http://apolloscape.auto/trajectory.html)
+5. [Train Station Dataset](http://www.ee.cuhk.edu.hk/~xgwang/grandcentral.html)
+
+6. [Apolloscape](http://apolloscape.auto/trajectory.html)
 
    该轨迹数据集由基于摄像头的图像、激光雷达扫描的点云和人工标注的轨迹组成。该数据集是在中国北京各种光照条件和交通密度下收集的。更具体地说，它包含了高度复杂的交通流，混合了车辆、乘客和行人。
 
-6. ……
+7. [data.world.traffic](https://data.world/datasets/traffic)
+
+8. 
+
+9. ……
 
 ### Commute flow
 
@@ -108,7 +123,8 @@ Useful resources for traffic prediction.
 ## 0x05 Research Group
 
 1. http://urban-computing.com/yuzheng
-2. ……
+2. [DeepMind](https://deepmind.com/about/deepmind-for-google)
+3. ……
 
 ## 0x06 Related Repositories
 
