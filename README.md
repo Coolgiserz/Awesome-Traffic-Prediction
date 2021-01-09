@@ -68,7 +68,9 @@ Useful resources for traffic prediction.
 11. [TITS 2020] Traffic Graph Convolutional Recurrent Neural Network: A Deep Learning Framework for Network-Scale Traffic Learning and Forecasting [[paper]](https://ieeexplore.ieee.org/document/8917706) [[code]](https://github.com/zhiyongc/Graph_Convolutional_LSTM)
 12. [NIPS 2020] Adaptive Graph Convolutional Recurrent Network for Traffic Forecasting [[code]](https://github.com/LeiBAI/AGCRN)
 13. [AAAI 2020] **GMAN: A Graph Multi-Attention Network for Traffic Prediction** [[paper]](https://arxiv.org/abs/1911.08415) [[code]](https://github.com/zhengchuanpan/GMAN)
-14. ……
+14. [KDD 2020] ConSTGAT: Contextual Spatial-Temporal Graph Attention Network for Travel Time Estimation at Baidu Maps [[paper]](https://www.kdd.org/kdd2020/accepted-papers/view/constgat-contextual-spatial-temporal-graph-attention-network-for-travel-tim)
+15. [KDD 2020] Preserving Dynamic Attention for Long-Term Spatial-Temporal Prediction [[paper]](https://arxiv.org/abs/2006.08849)
+16. ……
 
 ### Statistic Based Traffic Prediction Methods
 
