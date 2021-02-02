@@ -2,7 +2,7 @@
 
 ![Awesome--Traffic-v1.0](https://img.shields.io/badge/Awesome--Traffic-v1.0-brightgreen)
 
-Useful resources for traffic prediction.
+This repository contains useful resources for traffic prediction, including popular papers, datasets, tutorials, toolkits, and other helpful repositories.
 
 ## 0x00 Papers
 
@@ -211,4 +211,8 @@ Useful resources for traffic prediction.
 9. [Discovering millions of datasets on the web](https://blog.google/products/search/discovering-millions-datasets-web/)
 
 10. ……
+
+## Contribution
+
+To make contributions on this repo, visit [here](./CONTRIBUTION.md)
 
