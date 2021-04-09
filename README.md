@@ -88,7 +88,8 @@ This repository contains useful resources for traffic prediction, including popu
 21. [IJGIS 2020] **Graph attention temporal convolutional network for traffic speed forecasting on road networks** [[paper]](https://www.tandfonline.com/doi/abs/10.1080/21680566.2020.1822765?journalCode=ttrb20)
 22. [Arxiv 2020] ST-GRAT: A Novel Spatio-temporal Graph Attention Network for Accurately Forecasting Dynamically Changing Road Speed [[paper]](https://arxiv.org/abs/1911.13181)
 23. [IF 2020] **Spatial Temporal Incidence Dynamic Graph Neural Networks for Traffic Flow Forecasting** [[paper]](https://www.sciencedirect.com/science/article/abs/pii/S0020025520300451?via%3Dihub)
-24. ……
+24. [ICDM 2020] TSSRGCN: Temporal Spectral Spatial Retrieval Graph Convolutional Network  for Traffic Flow Forecasting [[paper]](https://ieeexplore.ieee.org/document/9338393)
+25. ……
 
 #### 2021
 
@@ -181,11 +182,12 @@ This repository contains useful resources for traffic prediction, including popu
 
 1. [Open Source Routing Machine](http://project-osrm.org)
 
-## 0x04 Conferences
+## 0x04 Conferences & Journals
 
 1. ACM SIGSPATIAL SpatialDI
 2. [IEEE Transactions on Intelligent Transportation Systems](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6979)
 3. [Association for the Advancement of Artificial Intelligence](https://www.aaai.org)
+4. 
 
 ## 0x05 Research Group
 
