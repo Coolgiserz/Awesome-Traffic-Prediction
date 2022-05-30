@@ -102,6 +102,10 @@ This repository contains useful resources for traffic prediction, including popu
 3. [Arxiv 2021] Time Series is a Special Sequence: Forecasting with Sample Convolution and Interaction [[paper]](https://arxiv.org/pdf/2106.09305v2.pdf) [[code]](https://paperswithcode.com/paper/time-series-is-a-special-sequence-forecasting#code)
 4. ……
 
+#### 2022
+
+1. [TITS 2022] 2F-TP:Learning Flexible Spatiotemporal Dependency for Flexible Traffic Prediction. [[paper]](https://ieeexplore.ieee.org/abstract/document/9703274/)
+
 ### Statistic Based Traffic Prediction Methods
 
 #### 2018
@@ -147,13 +151,13 @@ This repository contains useful resources for traffic prediction, including popu
 5. [Train Station Dataset](http://www.ee.cuhk.edu.hk/~xgwang/grandcentral.html)
 
 6. [Apolloscape](http://apolloscape.auto/trajectory.html)
-
+   
    该轨迹数据集由基于摄像头的图像、激光雷达扫描的点云和人工标注的轨迹组成。该数据集是在中国北京各种光照条件和交通密度下收集的。更具体地说，它包含了高度复杂的交通流，混合了车辆、乘客和行人。
 
 7. [data.world.traffic](https://data.world/datasets/traffic)
 
 8. [PEMS-SF Dataset From UCI](https://archive.ics.uci.edu/ml/datasets/PEMS-SF)
-
+   
    每个属性都描述了测量站在一天中的某个时间戳记录的捕获器位置的占用率测量值（在0和1之间）。每个测站的ID在 stations_list文本文件中给出。更多关于每个测量站的位置(GPS, 公路, 方向)的信息请参考PEMS网站。每条记录有963个（站点）x144个（时间戳）=138.672个属性。
 
 9. [Seattle Inductive Loop Detector Dataset](https://github.com/zhiyongc/Seattle-Loop-Data)
@@ -161,7 +165,7 @@ This repository contains useful resources for traffic prediction, including popu
 10. [Road location and traffic data](https://www.data.qld.gov.au/dataset/road-location-and-traffic-data)
 
 11. [INRIX – Driving Intelligence](https://datarade.ai/data-providers/inrix/profile)
-
+    
     收费数据
 
 12. [Los Angeles (METR-LA)](datasets/METR.md)
@@ -173,11 +177,11 @@ This repository contains useful resources for traffic prediction, including popu
 1. [百度开放数据](https://ai.baidu.com/broad/download?dataset=traffic)
 
 2. [滴滴盖亚计划]()
-
+   
    西安市脱敏路况预测数据，包括路网拓扑、道路属性、历史和实时车流等信息
 
 3. [HZJTD](http://www.hzjtydzs.com/index2.html)
-
+   
    杭州综合交通研究中心收集的数据，包括杭州主城区202条道路的交通状况、速度、拥堵指数。
 
 4. 
@@ -190,7 +194,7 @@ This repository contains useful resources for traffic prediction, including popu
 #### Point of Interest/Land use
 
 1. [PLUTO](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page)
-
+   
    以CSV文件格式提供广泛的土地使用和地理数据。PLUTO文件包含七十多个来自城市机构维护的数据的字段。
 
 2. ……
@@ -229,7 +233,7 @@ This repository contains useful resources for traffic prediction, including popu
 ### College
 
 1. [北京交通大学 万怀宇老师团队](http://faculty.bjtu.edu.cn/8793/)
-
+   
    主要研究方向为**数据挖掘**与**信息抽取**，具体研究兴趣包括**时空数据挖掘**、**社交网络挖掘**、**文本信息抽取**、**知识图谱应用**等
 
 ## 0x06 Related Repositories
@@ -243,7 +247,7 @@ This repository contains useful resources for traffic prediction, including popu
 4. [traffic_prediction]([traffic_prediction](https://github.com/aprbw/traffic_prediction))
 
 5. [transdim](https://github.com/xinychen/transdim)
-
+   
    本项目的战略目标是为时空交通数据的拟合和预测任务创建准确和高效的解决方案。
 
 6. [城市数据派](https://www.udparty.com/index.php/lists/cases?page=0&keyword=交通)
@@ -258,12 +262,14 @@ This repository contains useful resources for traffic prediction, including popu
 
 11. [LibCity](https://libcity.ai)
     汇总交通预测算法、数据，统一评价体系的开源实验平台
+    An open-source research platform for intergrating several algorithms, data, and evalution metrics for traffic prediction.
 
-12. [交通轨迹数据、工具、论文汇总](https://zhuanlan.zhihu.com/p/119425995)
+12. [GNN4Traffic](https://github.com/jwwthu/GNN4Traffic)
 
-13. ……
+13. [交通轨迹数据、工具、论文汇总](https://zhuanlan.zhihu.com/p/119425995)
+
+14. ……
 
 ## Contribution
 
 To make contributions on this repo, visit [here](./CONTRIBUTION.md)
-
