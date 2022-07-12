@@ -1,6 +1,6 @@
 # Awesome Traffic Prediction
 
-![Awesome--Traffic-v1.0](https://img.shields.io/badge/Awesome--Traffic-v1.0-brightgreen)![](https://img.shields.io/badge/dataset-v0.1-green)![](https://img.shields.io/badge/paper-v0.2-orange)
+![Awesome--Traffic-v1.0](https://img.shields.io/badge/Awesome--Traffic-v1.0-brightgreen)![](https://img.shields.io/badge/dataset-v0.1-green)![](https://img.shields.io/badge/paper-v0.5-orange)
 
 This repository contains useful resources for traffic prediction, including popular papers, datasets, tutorials, toolkits, and other helpful repositories.
 
@@ -173,7 +173,7 @@ This repository contains useful resources for traffic prediction, including popu
 
 11. [INRIX – Driving Intelligence](https://datarade.ai/data-providers/inrix/profile)
     
-    收费数据
+    Charged Data
 
 12. [Los Angeles (METR-LA)](datasets/METR.md)
 
@@ -202,7 +202,7 @@ This repository contains useful resources for traffic prediction, including popu
 
 1. [PLUTO](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page)
    
-   以CSV文件格式提供广泛的土地使用和地理数据。PLUTO文件包含七十多个来自城市机构维护的数据的字段。
+   provide landuse data organized in .csv format, including more than 70 fields managed by city insititution.
 
 2. ……
 
@@ -241,9 +241,7 @@ This repository contains useful resources for traffic prediction, including popu
 
 1. [北京交通大学 万怀宇老师团队](http://faculty.bjtu.edu.cn/8793/)
    
-   Data mining and information extraction. 
-   
-   主要研究方向为**数据挖掘**与**信息抽取**，具体研究兴趣包括**时空数据挖掘**、**社交网络挖掘**、**文本信息抽取**、**知识图谱应用**等
+   Research Interest: Data mining and information extraction. e.g. Spatio-temporal data mining, social network mining, text information extraction and application of knowledge graph.
 
 ## 0x06 Related Repositories
 
