@@ -1,8 +1,52 @@
 # Awesome Traffic Prediction
 
-![Awesome--Traffic-v1.0](https://img.shields.io/badge/Awesome--Traffic-v1.0-brightgreen)![](https://img.shields.io/badge/dataset-v0.1-green)![](https://img.shields.io/badge/paper-v0.5-orange)
+![Awesome--Traffic-v1.0](https://img.shields.io/badge/Awesome--Traffic-v1.0-brightgreen)![](https://img.shields.io/badge/dataset-v0.2-green)![](https://img.shields.io/badge/paper-v0.5-orange)
 
 This repository contains useful resources for traffic prediction, including popular papers, datasets, tutorials, toolkits, and other helpful repositories.
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Awesome Traffic Prediction](#awesome-traffic-prediction)
+  - [0x00 Papers](#0x00-papers)
+    - [Reviews](#reviews)
+    - [Deep Learning Based Traffic Prediction Methods](#deep-learning-based-traffic-prediction-methods)
+      - [2015](#2015)
+      - [2016](#2016)
+      - [2017](#2017)
+      - [2018](#2018)
+      - [2019](#2019)
+      - [2020](#2020)
+        - [2021](#2021)
+        - [2022](#2022)
+    - [Statistic Based Traffic Prediction Methods](#statistic-based-traffic-prediction-methods)
+      - [2018](#2018-1)
+      - [2019](#2019-1)
+    - [Time Series Forecasting](#time-series-forecasting)
+  - [0x01 Tutorial](#0x01-tutorial)
+    - [Textbook](#textbook)
+    - [Blogs](#blogs)
+  - [0x02 DataSource](#0x02-datasource)
+    - [Datasets](#datasets)
+      - [Traffic Dataset in Non-China Region](#traffic-dataset-in-non-china-region)
+      - [Traffic Dataset in China](#traffic-dataset-in-china)
+      - [Commute flow](#commute-flow)
+      - [Point of Interest/Land use](#point-of-interestland-use)
+    - [Trajectory](#trajectory)
+    - [ETA](#eta)
+    - [Website](#website)
+  - [0x03 Toolkits](#0x03-toolkits)
+  - [0x04 Conferences & Journals](#0x04-conferences--journals)
+  - [0x05 Research Group](#0x05-research-group)
+    - [Company](#company)
+    - [College](#college)
+  - [0x06 Related Repositories](#0x06-related-repositories)
+  - [Contribution](#contribution)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## 0x00 Papers
 
