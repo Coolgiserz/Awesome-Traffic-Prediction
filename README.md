@@ -4,6 +4,8 @@
 
 This repository contains useful resources for traffic prediction, including popular papers, datasets, tutorials, toolkits, and other helpful repositories.
 
+[toc]
+
 ## 0x00 Papers
 
 ### Reviews
