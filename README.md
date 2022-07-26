@@ -174,6 +174,12 @@ This repository contains useful resources for traffic prediction, including popu
 1. [Context-aware Forecasting for Multivariate Stationary Time-series](https://openreview.net/pdf?id=B1xHUiC5tm)
 2. [Arxiv 2020] Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting [[paper]](https://arxiv.org/pdf/2012.07436.pdf) [[code]](https://github.com/zhouhaoyi/Informer2020)
 
+## Temporal Network Embedding
+
+#### 2021
+
+1. [KDD 2021] [Discrete-time Temporal Network Embedding via Implicit Hierarchical Learning in Hyperbolic Space](https://dl.acm.org/doi/abs/10.1145/3447548.3467422)
+
 ## 0x01 Tutorial
 
 ### Textbook
