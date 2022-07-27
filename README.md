@@ -1,7 +1,8 @@
 # Awesome Traffic Prediction
 
-![Awesome--Traffic-v1.0](https://img.shields.io/badge/Awesome--Traffic-v1.0-brightgreen)![](https://img.shields.io/badge/dataset-v0.2-green)![](https://img.shields.io/badge/paper-v0.5-orange)
-
+![Awesome--Traffic-v1.0](https://img.shields.io/badge/Awesome--Traffic-Predictionv1.0-brightgreen)![](https://img.shields.io/badge/dataset-v0.2-green)![](https://img.shields.io/badge/paper-v0.5-orange)
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
 This repository contains useful resources for traffic prediction, including popular papers, datasets, tutorials, toolkits, and other helpful repositories.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -331,3 +332,9 @@ This repository contains useful resources for traffic prediction, including popu
 ## Contribution
 
 To make contributions on this repo, visit [here](./CONTRIBUTION.md)
+
+<!-- links -->
+[forks-shield]: https://img.shields.io/github/forks/Cooolgiserz/Awesome-Traffic-Prediction.svg?style=flat-square
+[forks-url]: https://github.com/Cooolgiserz/Awesome-Traffic-Prediction/network/members
+[stars-shield]: https://img.shields.io/github/stars/Cooolgiserz/Awesome-Traffic-Prediction.svg?style=flat-square
+[stars-url]: https://github.com/Cooolgiserz/Awesome-Traffic-Prediction/stargazers
