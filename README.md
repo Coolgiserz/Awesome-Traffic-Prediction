@@ -1,6 +1,6 @@
 # Awesome Traffic Prediction
 
-![Awesome--Traffic-Predictionv1.0](https://img.shields.io/badge/Awesome-Traffic-Prediction-v1.0-brightgreen)![](https://img.shields.io/badge/dataset-v0.2-green)![](https://img.shields.io/badge/paper-v0.5-orange)
+![Awesome-Traffic-Predictionv1.0](https://img.shields.io/badge/Awesome-Traffic-Prediction-v1.0-brightgreen)![](https://img.shields.io/badge/dataset-v0.2-green)![](https://img.shields.io/badge/paper-v0.5-orange)
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 
