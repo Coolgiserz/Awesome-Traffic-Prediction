@@ -334,7 +334,7 @@ This repository contains useful resources for traffic prediction, including popu
 To make contributions on this repo, visit [here](./CONTRIBUTION.md)
 
 <!-- links -->
-[forks-shield]: https://img.shields.io/github/forks/Cooolgiserz/Awesome-Traffic-Prediction.svg?style=flat-square
-[forks-url]: https://github.com/Cooolgiserz/Awesome-Traffic-Prediction/network/members
+[forks-shield]: https://img.shields.io/github/forks/Coolgiserz/Awesome-Traffic-Prediction.svg?style=flat-square
+[forks-url]: https://github.com/Coolgiserz/Awesome-Traffic-Prediction/network/members
 [stars-shield]: https://img.shields.io/github/stars/Cooolgiserz/Awesome-Traffic-Prediction.svg?style=flat-square
-[stars-url]: https://github.com/Cooolgiserz/Awesome-Traffic-Prediction/stargazers
+[stars-url]: https://github.com/Coolgiserz/Awesome-Traffic-Prediction/stargazers
