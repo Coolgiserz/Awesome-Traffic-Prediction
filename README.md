@@ -7,20 +7,22 @@
 This repository contains useful resources for traffic prediction, including popular papers, datasets, tutorials, toolkits, and other helpful repositories.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [0x00 Papers](#0x00-papers)
   - [Reviews](#reviews)
   - [Deep Learning Based Traffic Prediction Methods](#deep-learning-based-traffic-prediction-methods)
-      - [2015](#2015)
-      - [2016](#2016)
-      - [2017](#2017)
-      - [2018](#2018)
-      - [2019](#2019)
-      - [2020](#2020)
-    - [2021](#2021)
-    - [2022](#2022)
+    - [2015](#2015)
+    - [2016](#2016)
+    - [2017](#2017)
+    - [2018](#2018)
+    - [2019](#2019)
+    - [2020](#2020)
+      - [2021](#2021)
+      - [2022](#2022)
   - [Statistic Based Traffic Prediction Methods](#statistic-based-traffic-prediction-methods)
     - [2018](#2018-1)
     - [2019](#2019-1)
@@ -152,13 +154,15 @@ This repository contains useful resources for traffic prediction, including popu
 4. [KDD 2021] Dynamic Graph Convolutional Recurrent Network for Traffic Prediction: Benchmark and Solution [[paper]](https://dl.acm.org/doi/10.1145/3532611) [[code]](https://github.com/tsinghua-fib-lab/Traffic-Benchmark)
 5. [KDD 2021] Dynamic and Multi-faceted Spatio-temporal Deep Learning for Traffic Speed Forecasting [[paper]](https://dl.acm.org/doi/abs/10.1145/3447548.3467275)
 6. [AAAI 2021] TS2Vec: Towards Universal Representation of Time Series [[paper]](https://www.aaai.org/AAAI22Papers/AAAI-8809.YueZ.pdf)
-7. ……
+7. [Arxiv 2021] Spatio-temporal joint graph convolutional networks for traffic forecasting [[paper]](https://arxiv.org/abs/2111.13684)
+8. ……
 
 #### 2022
 
 1. [TITS 2022] 2F-TP:Learning Flexible Spatiotemporal Dependency for Flexible Traffic Prediction. [[paper]](https://ieeexplore.ieee.org/abstract/document/9703274/)
 2. [Arxiv 2022] Pre-training Enhanced Spatial-temporal Graph Neural Network
    for Multivariate Time Series Forecasting [[paper]](https://arxiv.org/pdf/2206.09113.pdf)
+3. [Arxiv 2022] A Lightweight and Accurate Spatial-Temporal Transformer for Traffic Forecasting [[paper]](https://arxiv.org/pdf/2201.00008.pdf)
 
 ### Statistic Based Traffic Prediction Methods
 
@@ -334,6 +338,7 @@ This repository contains useful resources for traffic prediction, including popu
 To make contributions on this repo, visit [here](./CONTRIBUTION.md)
 
 <!-- links -->
+
 [forks-shield]: https://img.shields.io/github/forks/Coolgiserz/Awesome-Traffic-Prediction.svg?style=flat-square
 [forks-url]: https://github.com/Coolgiserz/Awesome-Traffic-Prediction/network/members
 [stars-shield]: https://img.shields.io/github/stars/Coolgiserz/Awesome-Traffic-Prediction.svg?style=flat-square
