@@ -8,5 +8,5 @@
 
 #### SOTA: [Traffic Prediction on METR-LA](https://paperswithcode.com/sota/traffic-prediction-on-metr-la)
 
-![](images/metr-la.png)
+![METR-LA traffic sensor network visualization](images/metr-la.png)
 
