@@ -8,6 +8,24 @@
 
 本仓库汇总交通流预测相关资源，包括论文、数据集、教程、工具库与相关仓库等。
 
+## 重点可视化
+
+最新月度论文标题词云：
+
+![月度论文词云](updates/wordcloud/monthly-paper-wordcloud-latest.png)
+
+最新 Top-K 术语频次图：
+
+![月度Top术语](updates/wordcloud/monthly-paper-wordcloud-topk-latest.png)
+
+按年份热点对比图：
+
+![年度热点趋势](updates/hotspots/yearly-hotspots-trend.png)
+
+按年份主题线图：
+
+![年度主题趋势](updates/hotspots/yearly-theme-trends.png)
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
@@ -425,16 +443,6 @@
 3. 常用指标：MAE、RMSE、MAPE 为主；建议同时报告不同预测步长的指标，避免只给单一预测步。
 4. 训练划分：按时间顺序划分训练/验证/测试，避免随机划分造成信息泄露。
 5. 复现实验：建议提供随机种子、硬件信息、训练时长与参数规模，以便结果可复现。
-
-### 自动趋势可视化
-
-最新月度论文标题词云：
-
-![月度论文词云](updates/wordcloud/monthly-paper-wordcloud-latest.png)
-
-最新 Top-K 术语频次图：
-
-![月度Top术语](updates/wordcloud/monthly-paper-wordcloud-topk-latest.png)
 
 ## 贡献
 

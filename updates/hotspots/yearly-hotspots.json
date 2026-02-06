@@ -1,0 +1,526 @@
+{
+  "generated_utc": "2026-02-06T19:24:05.281015+00:00",
+  "topk": 12,
+  "years": {
+    "2015": [
+      {
+        "term": "flow",
+        "count": 1
+      },
+      {
+        "term": "big",
+        "count": 1
+      },
+      {
+        "term": "traffic flow",
+        "count": 1
+      },
+      {
+        "term": "convolutional",
+        "count": 1
+      },
+      {
+        "term": "lstm",
+        "count": 1
+      },
+      {
+        "term": "machine",
+        "count": 1
+      },
+      {
+        "term": "precipitation",
+        "count": 1
+      },
+      {
+        "term": "nowcasting",
+        "count": 1
+      }
+    ],
+    "2016": [
+      {
+        "term": "dnn-based",
+        "count": 1
+      },
+      {
+        "term": "spatio-temporal",
+        "count": 1
+      }
+    ],
+    "2017": [
+      {
+        "term": "road",
+        "count": 2
+      },
+      {
+        "term": "spatio-temporal",
+        "count": 1
+      },
+      {
+        "term": "residual",
+        "count": 1
+      },
+      {
+        "term": "citywide",
+        "count": 1
+      },
+      {
+        "term": "crowd",
+        "count": 1
+      },
+      {
+        "term": "flows",
+        "count": 1
+      },
+      {
+        "term": "vec",
+        "count": 1
+      },
+      {
+        "term": "measuring",
+        "count": 1
+      },
+      {
+        "term": "interactions",
+        "count": 1
+      },
+      {
+        "term": "urban",
+        "count": 1
+      },
+      {
+        "term": "massive",
+        "count": 1
+      },
+      {
+        "term": "travel",
+        "count": 1
+      }
+    ],
+    "2018": [
+      {
+        "term": "series",
+        "count": 2
+      },
+      {
+        "term": "multi-view",
+        "count": 2
+      },
+      {
+        "term": "spatio-temporal",
+        "count": 2
+      },
+      {
+        "term": "graph",
+        "count": 2
+      },
+      {
+        "term": "convolutional",
+        "count": 2
+      },
+      {
+        "term": "missing",
+        "count": 1
+      },
+      {
+        "term": "value",
+        "count": 1
+      },
+      {
+        "term": "imputation",
+        "count": 1
+      },
+      {
+        "term": "traffic-related",
+        "count": 1
+      },
+      {
+        "term": "lc-rnn",
+        "count": 1
+      },
+      {
+        "term": "speed",
+        "count": 1
+      },
+      {
+        "term": "traffic speed",
+        "count": 1
+      }
+    ],
+    "2019": [
+      {
+        "term": "spatial-temporal",
+        "count": 9
+      },
+      {
+        "term": "graph",
+        "count": 7
+      },
+      {
+        "term": "flow",
+        "count": 5
+      },
+      {
+        "term": "convolutional",
+        "count": 4
+      },
+      {
+        "term": "spatio-temporal",
+        "count": 4
+      },
+      {
+        "term": "temporal",
+        "count": 3
+      },
+      {
+        "term": "spatial",
+        "count": 2
+      },
+      {
+        "term": "modeling",
+        "count": 2
+      },
+      {
+        "term": "traffic flow",
+        "count": 2
+      },
+      {
+        "term": "context-aware",
+        "count": 2
+      },
+      {
+        "term": "attention",
+        "count": 2
+      },
+      {
+        "term": "clustering",
+        "count": 2
+      }
+    ],
+    "2020": [
+      {
+        "term": "graph",
+        "count": 16
+      },
+      {
+        "term": "flow",
+        "count": 11
+      },
+      {
+        "term": "traffic flow",
+        "count": 9
+      },
+      {
+        "term": "convolutional",
+        "count": 9
+      },
+      {
+        "term": "spatial-temporal",
+        "count": 8
+      },
+      {
+        "term": "attention",
+        "count": 6
+      },
+      {
+        "term": "spatio-temporal",
+        "count": 5
+      },
+      {
+        "term": "temporal",
+        "count": 5
+      },
+      {
+        "term": "transformer",
+        "count": 3
+      },
+      {
+        "term": "gcn",
+        "count": 3
+      },
+      {
+        "term": "spatial",
+        "count": 3
+      },
+      {
+        "term": "survey",
+        "count": 2
+      }
+    ],
+    "2021": [
+      {
+        "term": "graph",
+        "count": 5
+      },
+      {
+        "term": "spatio-temporal",
+        "count": 4
+      },
+      {
+        "term": "gnn",
+        "count": 3
+      },
+      {
+        "term": "temporal",
+        "count": 3
+      },
+      {
+        "term": "spatial",
+        "count": 2
+      },
+      {
+        "term": "series",
+        "count": 2
+      },
+      {
+        "term": "convolutional",
+        "count": 2
+      },
+      {
+        "term": "survey",
+        "count": 1
+      },
+      {
+        "term": "attention",
+        "count": 1
+      },
+      {
+        "term": "wavenet",
+        "count": 1
+      },
+      {
+        "term": "considering",
+        "count": 1
+      },
+      {
+        "term": "dependencies",
+        "count": 1
+      }
+    ],
+    "2022": [
+      {
+        "term": "spatial-temporal",
+        "count": 2
+      },
+      {
+        "term": "flexible",
+        "count": 2
+      },
+      {
+        "term": "graph",
+        "count": 1
+      },
+      {
+        "term": "overview",
+        "count": 1
+      },
+      {
+        "term": "open",
+        "count": 1
+      },
+      {
+        "term": "research",
+        "count": 1
+      },
+      {
+        "term": "issues",
+        "count": 1
+      },
+      {
+        "term": "gnn",
+        "count": 1
+      },
+      {
+        "term": "f-tp",
+        "count": 1
+      },
+      {
+        "term": "spatiotemporal",
+        "count": 1
+      },
+      {
+        "term": "dependency",
+        "count": 1
+      },
+      {
+        "term": "lightweight",
+        "count": 1
+      }
+    ],
+    "2023": [
+      {
+        "term": "flow",
+        "count": 2
+      },
+      {
+        "term": "traffic flow",
+        "count": 2
+      },
+      {
+        "term": "graph",
+        "count": 1
+      },
+      {
+        "term": "convolution",
+        "count": 1
+      },
+      {
+        "term": "hypergraph",
+        "count": 1
+      },
+      {
+        "term": "structure",
+        "count": 1
+      }
+    ],
+    "2024": [
+      {
+        "term": "spatio-temporal",
+        "count": 3
+      },
+      {
+        "term": "graph",
+        "count": 3
+      },
+      {
+        "term": "unist",
+        "count": 1
+      },
+      {
+        "term": "prompt-empowered",
+        "count": 1
+      },
+      {
+        "term": "universal",
+        "count": 1
+      },
+      {
+        "term": "urban",
+        "count": 1
+      },
+      {
+        "term": "cool",
+        "count": 1
+      },
+      {
+        "term": "conjoint",
+        "count": 1
+      },
+      {
+        "term": "perspective",
+        "count": 1
+      },
+      {
+        "term": "gnn",
+        "count": 1
+      },
+      {
+        "term": "generalized",
+        "count": 1
+      },
+      {
+        "term": "spatial",
+        "count": 1
+      }
+    ],
+    "2025": [
+      {
+        "term": "flow",
+        "count": 3
+      },
+      {
+        "term": "traffic flow",
+        "count": 2
+      },
+      {
+        "term": "graphsparsenet",
+        "count": 1
+      },
+      {
+        "term": "large",
+        "count": 1
+      },
+      {
+        "term": "scale",
+        "count": 1
+      },
+      {
+        "term": "trafffic",
+        "count": 1
+      },
+      {
+        "term": "embedding",
+        "count": 1
+      },
+      {
+        "term": "spatial",
+        "count": 1
+      },
+      {
+        "term": "context",
+        "count": 1
+      },
+      {
+        "term": "urban",
+        "count": 1
+      },
+      {
+        "term": "contrastive",
+        "count": 1
+      },
+      {
+        "term": "pre-training",
+        "count": 1
+      }
+    ],
+    "2026": [
+      {
+        "term": "flow",
+        "count": 4
+      },
+      {
+        "term": "traffic flow",
+        "count": 4
+      },
+      {
+        "term": "graph",
+        "count": 3
+      },
+      {
+        "term": "spatio-temporal",
+        "count": 2
+      },
+      {
+        "term": "spatial-temporal",
+        "count": 1
+      },
+      {
+        "term": "convolutional",
+        "count": 1
+      },
+      {
+        "term": "information",
+        "count": 1
+      },
+      {
+        "term": "bottleneck",
+        "count": 1
+      },
+      {
+        "term": "information bottleneck",
+        "count": 1
+      },
+      {
+        "term": "conditioned",
+        "count": 1
+      },
+      {
+        "term": "spatiotemporal",
+        "count": 1
+      },
+      {
+        "term": "pimcst",
+        "count": 1
+      }
+    ]
+  }
+}

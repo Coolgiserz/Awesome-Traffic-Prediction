@@ -56,14 +56,22 @@ jobs:
             --prefix monthly-paper-wordcloud \
             --extra-noise "paper,traffic,forecasting,prediction,method,model,framework"
 
+      - name: Generate yearly hotspots
+        run: |
+          python3 scripts/yearly_hotspots.py \
+            --input README.md \
+            --out-dir updates/hotspots \
+            --topk 12 \
+            --extra-noise "paper,traffic,forecasting,prediction,method,model,framework"
+
       - name: Commit and push if changed
         run: |
-          if git diff --quiet -- updates/monthly-paper-candidates.md updates/wordcloud; then
+          if git diff --quiet -- updates/monthly-paper-candidates.md updates/wordcloud updates/hotspots; then
             echo "No changes to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add updates/monthly-paper-candidates.md updates/wordcloud
-          git commit -m "chore: refresh monthly paper candidates and wordcloud"
+          git add updates/monthly-paper-candidates.md updates/wordcloud updates/hotspots
+          git commit -m "chore: refresh monthly paper candidates and visuals"
           git push origin HEAD:main

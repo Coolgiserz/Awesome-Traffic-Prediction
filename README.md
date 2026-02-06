@@ -8,6 +8,24 @@ Chinese version: [README.zh.md](./README.zh.md)
 
 This repository contains useful resources for traffic prediction, including popular papers, datasets, tutorials, toolkits, and other helpful repositories.
 
+## Visual Highlights
+
+Latest monthly title-term word cloud:
+
+![Monthly Paper Word Cloud](updates/wordcloud/monthly-paper-wordcloud-latest.png)
+
+Latest Top-K term frequency chart:
+
+![Monthly Top Terms](updates/wordcloud/monthly-paper-wordcloud-topk-latest.png)
+
+Yearly hotspot comparison:
+
+![Yearly Hotspot Trend](updates/hotspots/yearly-hotspots-trend.png)
+
+Yearly theme trend lines:
+
+![Yearly Theme Trends](updates/hotspots/yearly-theme-trends.png)
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
@@ -425,16 +443,6 @@ Method tags are lightweight manual labels for quick indexing.
 3. Common metrics: MAE, RMSE, MAPE. Recommend reporting metrics across multiple horizons, not a single step.
 4. Splits: Use chronological train/val/test splits to avoid leakage from random splits.
 5. Reproducibility: Provide random seeds, hardware details, training time, and parameter counts.
-
-### Auto Trend Visuals
-
-Latest monthly title-term word cloud:
-
-![Monthly Paper Word Cloud](updates/wordcloud/monthly-paper-wordcloud-latest.png)
-
-Latest Top-K term frequency chart:
-
-![Monthly Top Terms](updates/wordcloud/monthly-paper-wordcloud-topk-latest.png)
 
 ## Contribution
 

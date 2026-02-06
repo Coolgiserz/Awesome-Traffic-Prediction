@@ -49,4 +49,5 @@ python3 scripts/paper_wordcloud.py \
 - Output file: `updates/monthly-paper-candidates.md`
 - Word cloud outputs: `updates/wordcloud/monthly-paper-wordcloud-latest.png` and monthly archive png.
 - Top-K terms chart: `updates/wordcloud/monthly-paper-wordcloud-topk-latest.png`
+- Yearly hotspots: `updates/hotspots/yearly-hotspots-trend.png` (single trend heatmap), `updates/hotspots/yearly-theme-trends.png` (theme line chart), `updates/hotspots/yearly-hotspots.png`, `updates/hotspots/yearly-hotspots.md`, `updates/hotspots/yearly-hotspots.json`
 - The workflow commits directly to `main` when outputs change.
