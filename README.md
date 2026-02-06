@@ -147,9 +147,29 @@ This repository contains useful resources for traffic prediction, including popu
    for Multivariate Time Series Forecasting [[paper]](https://arxiv.org/pdf/2206.09113.pdf)
 3. [Arxiv 2022] A Lightweight and Accurate Spatial-Temporal Transformer for Traffic Forecasting [[paper]](https://arxiv.org/pdf/2201.00008.pdf)
 
+#### 2023
+
+1. [Arxiv 2023] Adaptive Graph Convolution Networks for Traffic Flow Forecasting [[paper]](https://arxiv.org/abs/2307.05517) [[code]](https://github.com/zhengdaoli/AGC-net)
+2. [ICDE 2023] Dynamic Hypergraph Structure Learning for Traffic Flow Forecasting [[paper]](https://arxiv.org/abs/2309.12028)
+
 #### 2024
 
 1. [Arxiv 2024] UniST: A Prompt-Empowered Universal Model for Urban Spatio-Temporal Prediction [[paper]](https://arxiv.org/abs/2402.11838)
+2. [Arxiv 2024] COOL: A Conjoint Perspective on Spatio-Temporal Graph Neural Network for Traffic Forecasting [[paper]](https://arxiv.org/abs/2403.01091)
+3. [Complex & Intelligent Systems 2024] Generalized spatial–temporal regression graph convolutional transformer for traffic forecasting [[paper]](https://link.springer.com/article/10.1007/s40747-024-01578-x)
+4. [ISPRS IJGI 2024] Traffic Flow Prediction Based on Federated Learning and Spatio-Temporal Graph Neural Networks [[paper]](https://www.mdpi.com/2220-9964/13/6/210)
+
+#### 2025
+
+1. [Arxiv 2025] GraphSparseNet: a Novel Method for Large Scale Trafffic Flow Prediction [[paper]](https://arxiv.org/abs/2502.19823)
+2. [Arxiv 2025] Embedding spatial context in urban traffic forecasting with contrastive pre-training [[paper]](https://arxiv.org/abs/2503.14980) [[code]](https://github.com/mattchrlw/forecasting-on-new-roads)
+3. [Sensors 2025] An Adaptive Spatio-Temporal Traffic Flow Prediction Using Self-Attention and Multi-Graph Networks [[paper]](https://www.mdpi.com/1424-8220/25/1/282)
+4. [Neural Computing and Applications 2025] Short-term multi-step-ahead sector-based traffic flow prediction based on the attention-enhanced graph convolutional LSTM network (AGC-LSTM) [[paper]](https://link.springer.com/article/10.1007/s00521-024-09827-3)
+
+#### 2026
+
+1. [Neural Networks 2026] Adaptive dynamic spatial-temporal graph convolutional neural network for traffic flow prediction [[paper]](https://www.sciencedirect.com/science/article/abs/pii/S0893608025014108)
+
 
 ### Statistic Based Traffic Prediction Methods
 
@@ -264,6 +284,9 @@ This repository contains useful resources for traffic prediction, including popu
 1. [Open Source Routing Machine](http://project-osrm.org)
 2. [PyG Temporal](https://pytorch-geometric-temporal.readthedocs.io/en/latest/)
 3. [LibCity](https://libcity.ai)
+4. [OpenSTL](https://github.com/chengtan9907/OpenSTL)
+5. [Traffic-Benchmark](https://github.com/tsinghua-fib-lab/Traffic-Benchmark)
+6. [UrbanPy](https://github.com/EL-BID/urbanpy)
 
 ## 0x04 Conferences & Journals
 
@@ -316,7 +339,11 @@ This repository contains useful resources for traffic prediction, including popu
 
 13. [交通轨迹数据、工具、论文汇总](https://zhuanlan.zhihu.com/p/119425995)
 
-14. ……
+14. [AGC-net](https://github.com/zhengdaoli/AGC-net)
+
+15. [Forecasting on New Roads](https://github.com/mattchrlw/forecasting-on-new-roads)
+
+16. ……
 
 ## Contribution
 
