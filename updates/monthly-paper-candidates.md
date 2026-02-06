@@ -1,0 +1,32 @@
+# Monthly Paper Candidates
+
+Generated on: 2026-02-06 18:37:33 UTC
+
+These are auto-collected candidates. Please manually verify relevance and quality before merging into README files.
+
+1. [Electronics 2026] Dynamic Graph Information Bottleneck for Traffic Prediction [[paper]](https://doi.org/10.3390/electronics15030623)
+2. [arXiv (Cornell University) 2026] Incident-Guided Spatiotemporal Traffic Forecasting [[paper]](https://openalex.org/W7127739835)
+3. [Scientific Reports 2026] 6G conditioned spatiotemporal graph neural networks for real time traffic flow prediction [[paper]](https://doi.org/10.1038/s41598-025-32795-0)
+4. [OpenAlex 2026] The application of STGCN with integrated attention mechanism in traffic speed prediction [[paper]](https://doi.org/10.1117/12.3095243)
+5. [International Journal on Semantic Web and Information Systems 2026] Ontology-Assisted Dynamic Spatiotemporal Feature Extraction for Short-Term Traffic Forecasting [[paper]](https://doi.org/10.4018/ijswis.399501)
+6. [arXiv (Cornell University) 2026] PIMCST: Physics-Informed Multi-Phase Consensus and Spatio-Temporal Few-Shot Learning for Traffic Flow Forecasting [[paper]](https://doi.org/10.48550/arxiv.2602.01936)
+7. [Signal Image and Video Processing 2026] Adaptive Spatio-Temporal Graph Neural Networks for Transferable Traffic Forecasting: Insights into AI-Driven Computing and Informatics [[paper]](https://doi.org/10.1007/s11760-026-05158-z)
+8. [IEEE DataPort 2026] "PeMS04 and PeMS08 Traffic Flow Datasets for Traffic Flow Forecasting" [[paper]](https://doi.org/10.21227/m4p8-ag97)
+9. [Electronics 2026] Multi-Scale Graph-Decoupling Spatial–Temporal Network for Traffic Flow Forecasting in Complex Urban Environments [[paper]](https://doi.org/10.3390/electronics15030495)
+10. [Systems 2026] PDR-STGCN: An Enhanced STGCN with Multi-Scale Periodic Fusion and a Dynamic Relational Graph for Traffic Forecasting [[paper]](https://doi.org/10.3390/systems14010102)
+11. [Expert Systems with Applications 2026] HySRD-Net: Hybrid spectral residual diffusion on spatio-temporal graphs for probabilistic traffic forecasting [[paper]](https://doi.org/10.1016/j.eswa.2026.131214)
+12. [ISPRS International Journal of Geo-Information 2026] Data–Knowledge Collaborative Learning Framework for Cellular Traffic Forecasting via Enhanced Correlation Modeling [[paper]](https://doi.org/10.3390/ijgi15010043)
+13. [PLoS ONE 2026] Feature-enhanced iTransformer: A two-stage framework for high-accuracy long-horizon traffic flow forecasting [[paper]](https://doi.org/10.1371/journal.pone.0340389)
+14. [International Journal of Electrical Power & Energy Systems 2026] Stochastic urban EV load forecasting: integrating markov-monte carlo simulation with spatio-temporal and traffic-weather dynamics [[paper]](https://doi.org/10.1016/j.ijepes.2025.111510)
+15. [IEEE Transactions on Consumer Electronics 2026] Generative Spatio-Temporal Graph Network for Long-Range Urban Mobility Prediction [[paper]](https://doi.org/10.1109/tce.2026.3656431)
+16. [Lecture notes in computer science 2026] STVMamba: A Spatio-Temporal-Variable Modeling Network with Selective State Space Mechanism for Long-Horizon Traffic Forecasting [[paper]](https://doi.org/10.1007/978-981-95-5761-5_18)
+17. [Future Transportation 2026] A Custom Transformer-Based Framework for Joint Traffic Flow and Speed Prediction in Autonomous Driving Contexts [[paper]](https://doi.org/10.3390/futuretransp6010015)
+18. [International Journal of Latest Technology in Engineering Management & Applied Science 2026] A Machine Learning-Based CNN–Bilstm Framework for Traffic Congestion and Travel Time Prediction [[paper]](https://doi.org/10.51583/ijltemas.2025.1412000102)
+19. [OpenAlex 2026] Short-term traffic flow prediction of expressways based on VMD-XGBoost [[paper]](https://doi.org/10.1117/12.3095981)
+20. [PLoS ONE 2026] An intrinsic dynamics capture network for long-term airspace traffic prediction [[paper]](https://doi.org/10.1371/journal.pone.0338949)
+21. [Electronics 2026] TSAformer: A Traffic Flow Prediction Model Based on Cross-Dimensional Dependency Capture [[paper]](https://doi.org/10.3390/electronics15010231)
+22. [IET Intelligent Transport Systems 2026] A Novel Attention‐Weighted VMD‐LSSVM Model for High‐Accuracy Short‐Term Traffic Prediction [[paper]](https://doi.org/10.1049/itr2.70144)
+23. [IET Intelligent Transport Systems 2026] XGBoost–LSTM Regional Traffic Congestion Ratio Prediction Integrating Spatio‐Temporal and Weather Features [[paper]](https://doi.org/10.1049/itr2.70145)
+24. [Engineering Research Express 2026] Long-term traffic flow prediction by integrating multi-scale temporal features and spatially constrained attention mechanisms [[paper]](https://doi.org/10.1088/2631-8695/ae2faa)
+25. [arXiv (Cornell University) 2026] Sim-MSTNet: sim2real based Multi-task SpatioTemporal Network Traffic Forecasting [[paper]](https://openalex.org/W7126282185)
+
