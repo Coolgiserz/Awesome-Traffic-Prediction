@@ -2,7 +2,7 @@
 
 英文版：[README.md](./README.md)
 
-![](https://img.shields.io/badge/dataset-v0.3-green)![](https://img.shields.io/badge/paper-v0.6-orange)
+![](https://img.shields.io/badge/dataset-v0.3-green)![](https://img.shields.io/badge/paper-v1.1-orange)
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 
