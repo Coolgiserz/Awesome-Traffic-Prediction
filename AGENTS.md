@@ -92,7 +92,10 @@ Awesome-Traffic-Prediction/
 
 ## Tools and Dependencies
 
-**NONE** - This repository requires no special tools, dependencies, or development environment setup. All content is standard markdown that can be edited with any text editor.
+Primary repository content remains markdown-only, but lightweight local maintenance scripts are allowed under `scripts/` when they help update documentation efficiently.
+
+- Recommended baseline: `python3` standard library only (no mandatory project-level dependency setup)
+- Scripts should generate or assist markdown updates; they should not introduce build pipelines or runtime services
 
 ## Common Tasks
 
@@ -103,7 +106,8 @@ Awesome-Traffic-Prediction/
 
 ## Important Notes
 
-- This is NOT a code repository - do not add executable code, scripts, or build files
+- This is a documentation-first repository. Avoid introducing application code, build systems, or deployment files.
+- Lightweight maintenance scripts under `scripts/` are allowed for citation/link/resource update workflows.
 - Maintain the academic research focus and professional tone
 - Preserve the bilingual (English/Chinese) content mix where established
 - All content should be relevant to traffic prediction research
