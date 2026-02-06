@@ -316,13 +316,48 @@
 
 1. http://urban-computing.com/yuzheng
 2. [DeepMind](https://deepmind.com/about/deepmind-for-google)
-3. ……
+3. [Waymo Research](https://waymo.com/research/)
+4. [百度 Apollo](https://apollo.auto/)
+5. ……
 
 ### 高校
 
 1. [北京交通大学 万怀宇老师团队](http://faculty.bjtu.edu.cn/8793/)
    
    Research Interest: Data mining and information extraction. e.g. Spatio-temporal data mining, social network mining, text information extraction and application of knowledge graph.
+2. [清华大学 未来智能实验室 (FIB)](https://fi.ee.tsinghua.edu.cn/)
+   
+   方向：城市科学、时空建模与大规模 AI 系统。
+3. [同济大学 ITS 研究中心（杨晓光团队）](https://itscenter.tongji.edu.cn/)
+   
+   方向：交通系统工程、交通控制、公共交通系统与智能交通。
+4. [同济大学 STEP Lab（杜豫川团队）](https://steps.tongji.edu.cn/)
+   
+   方向：交通感知、交通基础设施智能化与交通 AI。
+5. [中南大学 智能测控与信息技术研究所](https://stte.csu.edu.cn/info/1031/5767.htm)
+   
+   方向：交通系统感知、诊断与智能协同。
+6. [中南大学 综合运输智能仿真与决策研究所](https://stte.csu.edu.cn/info/1031/5764.htm)
+   
+   方向：交通优化、仿真与数据驱动决策。
+7. [西南交通大学 复杂交通系统智能设计实验室](https://idctslab.swjtu.edu.cn/)
+   
+   方向：复杂交通系统的数据驱动与人工智能方法。
+8. [加州大学伯克利分校 交通研究所 (ITS)](https://its.berkeley.edu/)
+   
+   方向：交通系统分析、智能交通系统、交通运行与出行研究。
+9. [加州大学伯克利分校 PATH](https://its.berkeley.edu/research-centers/path)
+   
+   方向：智能交通、车路协同与自动驾驶相关交通系统研究。
+10. [麻省理工学院 Senseable City Lab](https://senseable.mit.edu/)
+    
+    方向：数据驱动城市计算、出行行为分析与实时城市感知。
+11. [伦敦大学学院 CASA](https://www.ucl.ac.uk/casa)
+    
+    方向：城市分析、时空建模与计算城市科学。
+12. [新加坡南洋理工大学 TRC](https://www.ntu.edu.sg/trc)
+    
+    方向：陆路交通系统、公共交通与数据驱动出行研究。
 
 ## 0x06 相关仓库
 

@@ -316,13 +316,48 @@ This repository contains useful resources for traffic prediction, including popu
 
 1. http://urban-computing.com/yuzheng
 2. [DeepMind](https://deepmind.com/about/deepmind-for-google)
-3. ……
+3. [Waymo Research](https://waymo.com/research/)
+4. [Baidu Apollo](https://apollo.auto/)
+5. ……
 
 ### College
 
 1. [Beijing Jiaotong University - Dr. Huaiyu Wan's group](http://faculty.bjtu.edu.cn/8793/)
    
    Research Interest: Data mining and information extraction. e.g. Spatio-temporal data mining, social network mining, text information extraction and application of knowledge graph.
+2. [Tsinghua University - Future Intelligence Lab (FIB)](https://fi.ee.tsinghua.edu.cn/)
+   
+   Focus: urban science, spatio-temporal modeling, and large-scale AI systems.
+3. [Tongji University - ITS Research Center (Prof. Xiaoguang Yang)](https://itscenter.tongji.edu.cn/)
+   
+   Focus: traffic system engineering, traffic control, public transportation systems, and ITS.
+4. [Tongji University - STEP Lab (Prof. Yuchuan Du)](https://steps.tongji.edu.cn/)
+   
+   Focus: traffic sensing, transport infrastructure intelligence, and AI for transportation systems.
+5. [Central South University - Institute of Intelligent Measurement, Control and Information Technology](https://stte.csu.edu.cn/info/1031/5767.htm)
+   
+   Focus: sensing, diagnosis, and intelligent collaboration for transportation systems.
+6. [Central South University - Institute of Intelligent Simulation and Decision for Integrated Transport](https://stte.csu.edu.cn/info/1031/5764.htm)
+   
+   Focus: transport optimization, simulation, and data-driven decision support.
+7. [Southwest Jiaotong University - Intelligent Design Lab for Complex Transportation Systems](https://idctslab.swjtu.edu.cn/)
+   
+   Focus: data-driven and AI-based methods for complex transportation system design.
+8. [UC Berkeley - Institute of Transportation Studies (ITS)](https://its.berkeley.edu/)
+   
+   Focus: transportation systems analysis, ITS, traffic operations, and mobility research.
+9. [UC Berkeley - PATH](https://its.berkeley.edu/research-centers/path)
+   
+   Focus: intelligent transportation systems, connected/autonomous mobility, and corridor management.
+10. [MIT - Senseable City Lab](https://senseable.mit.edu/)
+    
+    Focus: data-driven urban science, mobility analytics, and real-time city sensing.
+11. [UCL - Centre for Advanced Spatial Analysis (CASA)](https://www.ucl.ac.uk/casa)
+    
+    Focus: urban analytics, spatial-temporal modeling, and computational city science.
+12. [NTU Singapore - Transport Research Centre (TRC)](https://www.ntu.edu.sg/trc)
+    
+    Focus: land transport systems, public transport, and data-driven mobility research.
 
 ## 0x06 Related Repositories
 
