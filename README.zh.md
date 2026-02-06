@@ -200,13 +200,20 @@
 ### 教材
 
 1. [Urban Computing](https://mitpress.mit.edu/books/urban-computing)
-2. [Multimodal Analytics for Next-Generation Big Data Technologies and Applications](https://www.springer.com/gp/book/9783319975979)
-3. ……
+2. [Traffic Flow Dynamics: Data, Models and Simulation](https://link.springer.com/book/10.1007/978-3-642-32460-4)
+3. [Transportation Network Analysis](https://link.springer.com/book/10.1007/978-1-4419-6142-6)
+4. [Fundamentals of Transportation and Traffic Operations](https://www.elsevier.com/books/fundamentals-of-transportation-and-traffic-operations/garber/978-0-08-102671-7)
+5. ……
 
 ### 博客
 
 1. [Traffic prediction with advanced Graph Neural Networks](https://deepmind.com/blog/article/traffic-prediction-with-advanced-graph-neural-networks)
-2. ……
+2. [LibCity Documentation (Quick Start)](https://libcity.ai/quick_start.html)
+3. [LibCity Tutorials](https://libcity.ai/tutorials.html)
+4. [DCRNN Official Repository](https://github.com/liyaguang/DCRNN)
+5. [Traffic-Benchmark (KDD 2021)](https://github.com/tsinghua-fib-lab/Traffic-Benchmark)
+6. [PyTorch Geometric Temporal Documentation](https://pytorch-geometric-temporal.readthedocs.io/en/latest/)
+7. ……
 
 ## 0x02 数据源
 
