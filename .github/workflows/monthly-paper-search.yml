@@ -1,0 +1,57 @@
+name: Monthly Paper Search
+
+on:
+  schedule:
+    - cron: "0 2 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh-paper-candidates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Run monthly search
+        run: |
+          mkdir -p updates
+          python3 scripts/paper_search.py \
+            "traffic flow forecasting graph neural network" \
+            --extra-queries "traffic speed prediction;spatio-temporal traffic forecasting;short-term traffic flow prediction;probabilistic traffic forecasting;transferable traffic forecasting" \
+            --year-from 2024 \
+            --year-to "$(date -u +%Y)" \
+            --limit 25 \
+            --sources openalex \
+            --out /tmp/monthly_papers.md
+
+          {
+            echo "# Monthly Paper Candidates"
+            echo
+            echo "Generated on: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+            echo
+            echo "These are auto-collected candidates. Please manually verify relevance and quality before merging into README files."
+            echo
+            cat /tmp/monthly_papers.md
+            echo
+          } > updates/monthly-paper-candidates.md
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: refresh monthly paper candidates"
+          title: "chore: refresh monthly paper candidates"
+          body: |
+            Auto-generated monthly update from `scripts/paper_search.py`.
+
+            Please review and manually curate items before merging into README.
+          branch: "codex/monthly-paper-search"
+          delete-branch: true

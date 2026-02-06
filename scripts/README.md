@@ -26,3 +26,10 @@ python3 scripts/paper_search.py \
 - Output is candidate-only; manual curation is still required.
 - Use `--must-keywords` to constrain domain relevance in titles.
 - Use `--pred-keywords` and `--exclude-keywords` to improve precision for traffic forecasting papers.
+
+## Monthly GitHub Action
+
+- Workflow file: `.github/workflows/monthly-paper-search.yml`
+- Schedule: monthly at `02:00 UTC` on day 1 (`cron: 0 2 1 * *`)
+- Output file: `updates/monthly-paper-candidates.md`
+- The workflow opens/updates a PR automatically for review.
