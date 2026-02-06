@@ -1,44 +1,44 @@
-# Awesome Traffic Prediction
+# 交通流预测资源汇总
 
-Chinese version: [README.zh.md](./README.zh.md)
+英文版：[README.md](./README.md)
 
 ![](https://img.shields.io/badge/dataset-v0.3-green)![](https://img.shields.io/badge/paper-v0.6-orange)
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 
-This repository contains useful resources for traffic prediction, including popular papers, datasets, tutorials, toolkits, and other helpful repositories.
+本仓库汇总交通流预测相关资源，包括论文、数据集、教程、工具库与相关仓库等。
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [0x00 Papers](#0x00-papers)
-  - [Reviews](#reviews)
-  - [Deep Learning Based Traffic Prediction Methods](#deep-learning-based-traffic-prediction-methods)
-  - [Statistic Based Traffic Prediction Methods](#statistic-based-traffic-prediction-methods)
-  - [Time Series Forecasting](#time-series-forecasting)
-  - [Temporal Network Embedding](#temporal-network-embedding)
-- [0x01 Tutorial](#0x01-tutorial)
-  - [Textbook](#textbook)
-  - [Blogs](#blogs)
-- [0x02 DataSource](#0x02-datasource)
-  - [Datasets](#datasets)
-  - [Trajectory](#trajectory)
+- [0x00 论文](#0x00-论文)
+  - [综述](#综述)
+  - [基于深度学习的交通预测方法](#基于深度学习的交通预测方法)
+  - [基于统计的交通预测方法](#基于统计的交通预测方法)
+  - [时间序列预测](#时间序列预测)
+  - [时序网络嵌入](#时序网络嵌入)
+- [0x01 教程](#0x01-教程)
+  - [教材](#教材)
+  - [博客](#博客)
+- [0x02 数据源](#0x02-数据源)
+  - [数据集](#数据集)
+  - [轨迹](#轨迹)
   - [ETA](#eta)
-  - [Website](#website)
-- [0x03 Toolkits](#0x03-toolkits)
-- [0x04 Conferences & Journals](#0x04-conferences--journals)
-- [0x05 Research Group](#0x05-research-group)
-  - [Company](#company)
-  - [College](#college)
-- [0x06 Related Repositories](#0x06-related-repositories)
-- [0x07 Benchmark & Evaluation](#0x07-benchmark--evaluation)
-- [Contribution](#contribution)
+  - [网站](#网站)
+- [0x03 工具库](#0x03-工具库)
+- [0x04 会议与期刊](#0x04-会议与期刊)
+- [0x05 研究团队](#0x05-研究团队)
+  - [公司](#公司)
+  - [高校](#高校)
+- [0x06 相关仓库](#0x06-相关仓库)
+- [0x07 基准与评测](#0x07-基准与评测)
+- [贡献](#贡献)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## 0x00 Papers
+## 0x00 论文
 
-### Reviews
+### 综述
 
 1. [TITS 2015] Traffic Flow Prediction With Big Data: A Deep Learning Approach [[paper]](https://bookdown.org/amanas/traficomadrid/docs/Traffic%20flow%20prediction%20with%20big%20data%20-%20A%20deep%20learning%20approach.pdf)
 2. [KDD 2020] Deep Learning for Spatio-Temporal Data Mining: A Survey [[paper]](https://ieeexplore.ieee.org/abstract/document/9204396/)
@@ -47,7 +47,7 @@ This repository contains useful resources for traffic prediction, including popu
 5. [Arxiv 2021] Graph Neural Network for Traffic Forecasting:  A Survey [[paper]](https://arxiv.org/abs/2101.11174)
 6. [Applied Intelligence 2022] Spatial-temporal graph neural network for traffic forecasting: An overview and open research issues [[paper]](https://link.springer.com/content/pdf/10.1007/s10489-021-02587-w.pdf)
 
-### Deep Learning Based Traffic Prediction Methods
+### 基于深度学习的交通预测方法
 
 #### 2015
 
@@ -174,7 +174,7 @@ This repository contains useful resources for traffic prediction, including popu
 1. [Neural Networks 2026] Adaptive dynamic spatial-temporal graph convolutional neural network for traffic flow prediction [[paper]](https://www.sciencedirect.com/science/article/abs/pii/S0893608025014108)
 
 
-### Statistic Based Traffic Prediction Methods
+### 基于统计的交通预测方法
 
 #### 2018
 
@@ -184,33 +184,33 @@ This repository contains useful resources for traffic prediction, including popu
 
 1. [TRPET 2019] A generalized Bayesian traffic model [[paper]](https://www.sciencedirect.com/science/article/pii/S0968090X18318199)
 
-### Time Series Forecasting
+### 时间序列预测
 
 1. [ICLR 2019] Context-aware Forecasting for Multivariate Stationary Time-series [[paper]](https://openreview.net/pdf?id=B1xHUiC5tm)
 2. [Arxiv 2020] Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting [[paper]](https://arxiv.org/pdf/2012.07436.pdf) [[code]](https://github.com/zhouhaoyi/Informer2020)
 
-### Temporal Network Embedding
+### 时序网络嵌入
 
 #### 2021
 
 1. [KDD 2021] [Discrete-time Temporal Network Embedding via Implicit Hierarchical Learning in Hyperbolic Space](https://dl.acm.org/doi/abs/10.1145/3447548.3467422)
 
-## 0x01 Tutorial
+## 0x01 教程
 
-### Textbook
+### 教材
 
 1. [Urban Computing](https://mitpress.mit.edu/books/urban-computing)
 2. [Multimodal Analytics for Next-Generation Big Data Technologies and Applications](https://www.springer.com/gp/book/9783319975979)
 3. ……
 
-### Blogs
+### 博客
 
 1. [Traffic prediction with advanced Graph Neural Networks](https://deepmind.com/blog/article/traffic-prediction-with-advanced-graph-neural-networks)
 2. ……
 
-## 0x02 DataSource
+## 0x02 数据源
 
-### Datasets
+### 数据集
 
 #### Traffic Dataset in Non-China Region
 
@@ -225,14 +225,14 @@ This repository contains useful resources for traffic prediction, including popu
 5. [Train Station Dataset](http://www.ee.cuhk.edu.hk/~xgwang/grandcentral.html)
 
 6. [Apolloscape](http://apolloscape.auto/trajectory.html)
-  
-   The trajectory dataset includes camera images, LiDAR point clouds, and manually annotated trajectories collected in Beijing under varying lighting and traffic conditions.
+   
+   该轨迹数据集由基于摄像头的图像、激光雷达扫描的点云和人工标注的轨迹组成。该数据集是在中国北京各种光照条件和交通密度下收集的。更具体地说，它包含了高度复杂的交通流，混合了车辆、乘客和行人。
 
 7. [data.world.traffic](https://data.world/datasets/traffic)
 
 8. [PEMS-SF Dataset From UCI](https://archive.ics.uci.edu/ml/datasets/PEMS-SF)
-  
-   Each attribute describes detector occupancy at a station for a given timestamp (0-1). Station IDs are listed in the stations_list file; location metadata (GPS, freeway, direction) is available from PeMS.
+   
+   每个属性都描述了测量站在一天中的某个时间戳记录的捕获器位置的占用率测量值（在0和1之间）。每个测站的ID在 stations_list文本文件中给出。更多关于每个测量站的位置(GPS, 公路, 方向)的信息请参考PEMS网站。每条记录有963个（站点）x144个（时间戳）=138.672个属性。
 
 9. [Seattle Inductive Loop Detector Dataset](https://github.com/zhiyongc/Seattle-Loop-Data)
 
@@ -248,15 +248,15 @@ This repository contains useful resources for traffic prediction, including popu
 
 #### Traffic Dataset in China
 
-1. [Baidu Open Data](https://ai.baidu.com/broad/download?dataset=traffic)
+1. [百度开放数据](https://ai.baidu.com/broad/download?dataset=traffic)
 
-2. [DiDi Gaia Initiative](https://outreach.didichuxing.com/)
-  
-   An anonymized road condition dataset for Xi'an, including road network topology, road attributes, and historical/real-time traffic flow.
+2. [滴滴盖亚计划](https://outreach.didichuxing.com/)
+   
+   西安市脱敏路况预测数据，包括路网拓扑、道路属性、历史和实时车流等信息
 
 3. [HZJTD](http://www.hzjtydzs.com/index2.html)
 
-   Data collected by the Hangzhou Comprehensive Transportation Research Center, including traffic conditions, speed, and congestion indices on 202 roads in the urban area.
+   杭州综合交通研究中心收集的数据，包括杭州主城区202条道路的交通状况、速度、拥堵指数。
 
 #### Commute flow
 
@@ -271,18 +271,18 @@ This repository contains useful resources for traffic prediction, including popu
 
 2. ……
 
-### Trajectory
+### 轨迹
 
 ### ETA
 
-1. [Shenzhen ride-hailing trajectory dataset (SIGSPATIAL 2021 GISCUP ETA)](https://outreach.didichuxing.com/app-vue/DatasetProjectDetail?id=1028)
+1. [深圳网约车行程轨迹数据-SIGSPATISL 2021 GISCUP 预估到达时间数据集](https://outreach.didichuxing.com/app-vue/DatasetProjectDetail?id=1028)
 
-### Website
+### 网站
 
 1. [Welcome to PeMS](http://pems.dot.ca.gov)
 2. ……
 
-## 0x03 Toolkits
+## 0x03 工具库
 
 1. [Open Source Routing Machine](http://project-osrm.org)
 2. [PyG Temporal](https://pytorch-geometric-temporal.readthedocs.io/en/latest/)
@@ -291,27 +291,27 @@ This repository contains useful resources for traffic prediction, including popu
 5. [Traffic-Benchmark](https://github.com/tsinghua-fib-lab/Traffic-Benchmark)
 6. [UrbanPy](https://github.com/EL-BID/urbanpy)
 
-## 0x04 Conferences & Journals
+## 0x04 会议与期刊
 
 1. ACM SIGSPATIAL SpatialDI
 2. [IEEE Transactions on Intelligent Transportation Systems](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6979)
 3. [Association for the Advancement of Artificial Intelligence](https://www.aaai.org)
 
-## 0x05 Research Group
+## 0x05 研究团队
 
-### Company
+### 公司
 
 1. http://urban-computing.com/yuzheng
 2. [DeepMind](https://deepmind.com/about/deepmind-for-google)
 3. ……
 
-### College
+### 高校
 
-1. [Beijing Jiaotong University - Dr. Huaiyu Wan's group](http://faculty.bjtu.edu.cn/8793/)
+1. [北京交通大学 万怀宇老师团队](http://faculty.bjtu.edu.cn/8793/)
    
    Research Interest: Data mining and information extraction. e.g. Spatio-temporal data mining, social network mining, text information extraction and application of knowledge graph.
 
-## 0x06 Related Repositories
+## 0x06 相关仓库
 
 1. [paper with code](https://paperswithcode.com/task/traffic-prediction)
 
@@ -325,7 +325,7 @@ This repository contains useful resources for traffic prediction, including popu
    
    This project aim at provide accurate and efficient solution for spatio-temporal data prediction.
 
-6. [Urban Data Party](https://www.udparty.com/index.php/lists/cases?page=0&keyword=交通)
+6. [城市数据派](https://www.udparty.com/index.php/lists/cases?page=0&keyword=交通)
 
 7. [Multivariate Time Series Forecasting](https://paperswithcode.com/task/multivariate-time-series-forecasting/latest)
 
@@ -340,7 +340,7 @@ This repository contains useful resources for traffic prediction, including popu
 
 12. [GNN4Traffic](https://github.com/jwwthu/GNN4Traffic)
 
-13. [Traffic trajectory data/tools/papers collection](https://zhuanlan.zhihu.com/p/119425995)
+13. [交通轨迹数据、工具、论文汇总](https://zhuanlan.zhihu.com/p/119425995)
 
 14. [AGC-net](https://github.com/zhengdaoli/AGC-net)
 
@@ -348,17 +348,17 @@ This repository contains useful resources for traffic prediction, including popu
 
 16. ……
 
-## 0x07 Benchmark & Evaluation
+## 0x07 基准与评测
 
-1. Task definition: Focus on short-term traffic flow/speed forecasting, typically evaluated with multi-horizon predictions (15/30/60 minutes).
-2. Common datasets: METR-LA and PEMS-BAY are the most widely used public benchmarks. Recommend documenting time granularity, sampling interval, missing rate, and spatial coverage.
-3. Common metrics: MAE, RMSE, MAPE. Recommend reporting metrics across multiple horizons, not a single step.
-4. Splits: Use chronological train/val/test splits to avoid leakage from random splits.
-5. Reproducibility: Provide random seeds, hardware details, training time, and parameter counts.
+1. 任务定义：以短期交通流/速度预测为主，通常以多步预测（15/30/60 分钟）衡量模型的短时与中时性能。
+2. 常用数据集：METR-LA、PEMS-BAY 是最常用的公开基准；建议标注时间粒度、采样周期、缺失率和空间覆盖范围。
+3. 常用指标：MAE、RMSE、MAPE 为主；建议同时报告不同预测步长的指标，避免只给单一预测步。
+4. 训练划分：按时间顺序划分训练/验证/测试，避免随机划分造成信息泄露。
+5. 复现实验：建议提供随机种子、硬件信息、训练时长与参数规模，以便结果可复现。
 
-## Contribution
+## 贡献
 
-To make contributions on this repo, visit [here](./CONTRIBUTION.md)
+贡献方式请参考 [这里](./CONTRIBUTION.md)
 
 <!-- links -->
 
