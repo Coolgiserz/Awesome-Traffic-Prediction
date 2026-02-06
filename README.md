@@ -14,6 +14,7 @@ This repository contains useful resources for traffic prediction, including popu
 - [0x00 Papers](#0x00-papers)
   - [Reviews](#reviews)
   - [Deep Learning Based Traffic Prediction Methods](#deep-learning-based-traffic-prediction-methods)
+  - [Curated Digest (2024-2026)](#curated-digest-2024-2026)
   - [Statistic Based Traffic Prediction Methods](#statistic-based-traffic-prediction-methods)
   - [Time Series Forecasting](#time-series-forecasting)
   - [Temporal Network Embedding](#temporal-network-embedding)
@@ -32,6 +33,7 @@ This repository contains useful resources for traffic prediction, including popu
   - [College](#college)
 - [0x06 Related Repositories](#0x06-related-repositories)
 - [0x07 Benchmark & Evaluation](#0x07-benchmark--evaluation)
+  - [Auto Trend Visuals](#auto-trend-visuals)
 - [Contribution](#contribution)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -178,6 +180,26 @@ This repository contains useful resources for traffic prediction, including popu
 5. [Expert Systems with Applications 2026] HySRD-Net: Hybrid spectral residual diffusion on spatio-temporal graphs for probabilistic traffic forecasting [[paper]](https://doi.org/10.1016/j.eswa.2026.131214)
 6. [PLoS ONE 2026] Feature-enhanced iTransformer: A two-stage framework for high-accuracy long-horizon traffic flow forecasting [[paper]](https://doi.org/10.1371/journal.pone.0340389)
 7. [IET Intelligent Transport Systems 2026] A Novel Attention‐Weighted VMD‐LSSVM Model for High‐Accuracy Short‐Term Traffic Prediction [[paper]](https://doi.org/10.1049/itr2.70144)
+
+### Curated Digest (2024-2026)
+
+This digest reorganizes recent traffic flow forecasting papers by task and method tags for faster navigation.
+Method tags are lightweight manual labels for quick indexing.
+
+| Year | Paper | Task | Method Tags | Code | Note |
+| --- | --- | --- | --- | --- | --- |
+| 2024 | [UniST](https://arxiv.org/abs/2402.11838) | Urban spatio-temporal prediction | Prompting, Foundation Model | N/A | Universal/prompt-based perspective |
+| 2024 | [COOL](https://arxiv.org/abs/2403.01091) | Traffic forecasting | STGNN, Graph Modeling | N/A | Conjoint STGNN perspective |
+| 2024 | [GSTRGCT](https://link.springer.com/article/10.1007/s40747-024-01578-x) | Traffic forecasting | Transformer, GCN | N/A | Regression + graph transformer design |
+| 2024 | [FL + STGNN](https://www.mdpi.com/2220-9964/13/6/210) | Traffic flow prediction | Federated Learning, STGNN | N/A | Privacy-aware distributed training setting |
+| 2025 | [GraphSparseNet](https://arxiv.org/abs/2502.19823) | Large-scale traffic flow prediction | Graph Sparsification, Efficiency | N/A | Focus on scalability |
+| 2025 | [Contrastive Pre-training](https://arxiv.org/abs/2503.14980) | Urban traffic forecasting | Contrastive Learning, Transfer | [code](https://github.com/mattchrlw/forecasting-on-new-roads) | Better generalization to new roads |
+| 2025 | [ASTAM + Multi-Graph](https://www.mdpi.com/1424-8220/25/1/282) | Traffic flow prediction | Self-Attention, Multi-Graph | N/A | Adaptive spatio-temporal modeling |
+| 2026 | [AD-STGCN](https://www.sciencedirect.com/science/article/abs/pii/S0893608025014108) | Traffic flow prediction | Dynamic Graph, STGCN | N/A | Adaptive dynamic spatial-temporal graph |
+| 2026 | [Dynamic Graph Information Bottleneck](https://doi.org/10.3390/electronics15030623) | Traffic prediction | Information Bottleneck, Dynamic Graph | N/A | Representation compression with graph dynamics |
+| 2026 | [PIMCST](https://doi.org/10.48550/arxiv.2602.01936) | Traffic flow forecasting | Physics-Informed Learning, Few-shot | N/A | Few-shot transfer-oriented design |
+| 2026 | [HySRD-Net](https://doi.org/10.1016/j.eswa.2026.131214) | Probabilistic traffic forecasting | Probabilistic Forecasting, Graph Diffusion | N/A | Uncertainty-aware forecasting |
+| 2026 | [Feature-enhanced iTransformer](https://doi.org/10.1371/journal.pone.0340389) | Long-horizon traffic flow forecasting | Transformer, Long-Horizon | N/A | Two-stage long-horizon framework |
 
 
 ### Statistic Based Traffic Prediction Methods
@@ -403,6 +425,16 @@ This repository contains useful resources for traffic prediction, including popu
 3. Common metrics: MAE, RMSE, MAPE. Recommend reporting metrics across multiple horizons, not a single step.
 4. Splits: Use chronological train/val/test splits to avoid leakage from random splits.
 5. Reproducibility: Provide random seeds, hardware details, training time, and parameter counts.
+
+### Auto Trend Visuals
+
+Latest monthly title-term word cloud:
+
+![Monthly Paper Word Cloud](updates/wordcloud/monthly-paper-wordcloud-latest.png)
+
+Latest Top-K term frequency chart:
+
+![Monthly Top Terms](updates/wordcloud/monthly-paper-wordcloud-topk-latest.png)
 
 ## Contribution
 

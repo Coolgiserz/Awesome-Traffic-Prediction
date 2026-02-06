@@ -27,9 +27,26 @@ python3 scripts/paper_search.py \
 - Use `--must-keywords` to constrain domain relevance in titles.
 - Use `--pred-keywords` and `--exclude-keywords` to improve precision for traffic forecasting papers.
 
+## `paper_wordcloud.py`
+
+Generates a keyword word cloud from markdown paper titles with stopword/noise filtering.
+It also outputs a Top-K term bar chart for easier trend reading.
+
+### Example
+
+```bash
+python3 scripts/paper_wordcloud.py \
+  --input updates/monthly-paper-candidates.md \
+  --out-dir updates/wordcloud \
+  --prefix monthly-paper-wordcloud \
+  --extra-noise "paper,traffic,forecasting,prediction"
+```
+
 ## Monthly GitHub Action
 
 - Workflow file: `.github/workflows/monthly-paper-search.yml`
 - Schedule: monthly at `02:00 UTC` on day 1 (`cron: 0 2 1 * *`)
 - Output file: `updates/monthly-paper-candidates.md`
-- The workflow opens/updates a PR automatically for review.
+- Word cloud outputs: `updates/wordcloud/monthly-paper-wordcloud-latest.png` and monthly archive png.
+- Top-K terms chart: `updates/wordcloud/monthly-paper-wordcloud-topk-latest.png`
+- The workflow commits directly to `main` when outputs change.

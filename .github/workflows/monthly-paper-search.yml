@@ -20,6 +20,11 @@ jobs:
         with:
           python-version: "3.x"
 
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install wordcloud matplotlib
+
       - name: Run monthly search
         run: |
           mkdir -p updates
@@ -43,14 +48,22 @@ jobs:
             echo
           } > updates/monthly-paper-candidates.md
 
+      - name: Generate word cloud
+        run: |
+          python3 scripts/paper_wordcloud.py \
+            --input updates/monthly-paper-candidates.md \
+            --out-dir updates/wordcloud \
+            --prefix monthly-paper-wordcloud \
+            --extra-noise "paper,traffic,forecasting,prediction,method,model,framework"
+
       - name: Commit and push if changed
         run: |
-          if git diff --quiet -- updates/monthly-paper-candidates.md; then
+          if git diff --quiet -- updates/monthly-paper-candidates.md updates/wordcloud; then
             echo "No changes to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add updates/monthly-paper-candidates.md
-          git commit -m "chore: refresh monthly paper candidates"
+          git add updates/monthly-paper-candidates.md updates/wordcloud
+          git commit -m "chore: refresh monthly paper candidates and wordcloud"
           git push origin HEAD:main

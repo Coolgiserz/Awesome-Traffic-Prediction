@@ -14,6 +14,7 @@
 - [0x00 论文](#0x00-论文)
   - [综述](#综述)
   - [基于深度学习的交通预测方法](#基于深度学习的交通预测方法)
+  - [重点整理（2024-2026）](#重点整理2024-2026)
   - [基于统计的交通预测方法](#基于统计的交通预测方法)
   - [时间序列预测](#时间序列预测)
   - [时序网络嵌入](#时序网络嵌入)
@@ -32,6 +33,7 @@
   - [高校](#高校)
 - [0x06 相关仓库](#0x06-相关仓库)
 - [0x07 基准与评测](#0x07-基准与评测)
+  - [自动趋势可视化](#自动趋势可视化)
 - [贡献](#贡献)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -178,6 +180,26 @@
 5. [Expert Systems with Applications 2026] HySRD-Net: Hybrid spectral residual diffusion on spatio-temporal graphs for probabilistic traffic forecasting [[paper]](https://doi.org/10.1016/j.eswa.2026.131214)
 6. [PLoS ONE 2026] Feature-enhanced iTransformer: A two-stage framework for high-accuracy long-horizon traffic flow forecasting [[paper]](https://doi.org/10.1371/journal.pone.0340389)
 7. [IET Intelligent Transport Systems 2026] A Novel Attention‐Weighted VMD‐LSSVM Model for High‐Accuracy Short‐Term Traffic Prediction [[paper]](https://doi.org/10.1049/itr2.70144)
+
+### 重点整理（2024-2026）
+
+该小节将近三年交通流预测论文按任务和方法标签做结构化整理，便于快速筛选与对比。
+方法标签为便于检索的轻量人工标注。
+
+| 年份 | 论文 | 任务 | 方法标签 | 代码 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| 2024 | [UniST](https://arxiv.org/abs/2402.11838) | 城市时空预测 | Prompting, Foundation Model | N/A | 偏通用模型与提示式框架 |
+| 2024 | [COOL](https://arxiv.org/abs/2403.01091) | 交通预测 | STGNN, Graph Modeling | N/A | 联合视角的 STGNN 建模 |
+| 2024 | [GSTRGCT](https://link.springer.com/article/10.1007/s40747-024-01578-x) | 交通预测 | Transformer, GCN | N/A | 回归与图 Transformer 结合 |
+| 2024 | [FL + STGNN](https://www.mdpi.com/2220-9964/13/6/210) | 交通流预测 | Federated Learning, STGNN | N/A | 联邦学习场景下的时空图建模 |
+| 2025 | [GraphSparseNet](https://arxiv.org/abs/2502.19823) | 大规模交通流预测 | Graph Sparsification, Efficiency | N/A | 面向大规模和高效率 |
+| 2025 | [Contrastive Pre-training](https://arxiv.org/abs/2503.14980) | 城市交通预测 | Contrastive Learning, Transfer | [code](https://github.com/mattchrlw/forecasting-on-new-roads) | 强调跨道路泛化能力 |
+| 2025 | [ASTAM + Multi-Graph](https://www.mdpi.com/1424-8220/25/1/282) | 交通流预测 | Self-Attention, Multi-Graph | N/A | 自适应时空建模 |
+| 2026 | [AD-STGCN](https://www.sciencedirect.com/science/article/abs/pii/S0893608025014108) | 交通流预测 | Dynamic Graph, STGCN | N/A | 自适应动态图时空卷积 |
+| 2026 | [Dynamic Graph Information Bottleneck](https://doi.org/10.3390/electronics15030623) | 交通预测 | Information Bottleneck, Dynamic Graph | N/A | 动态图表示压缩思路 |
+| 2026 | [PIMCST](https://doi.org/10.48550/arxiv.2602.01936) | 交通流预测 | Physics-Informed Learning, Few-shot | N/A | 偏少样本迁移能力 |
+| 2026 | [HySRD-Net](https://doi.org/10.1016/j.eswa.2026.131214) | 概率交通预测 | Probabilistic Forecasting, Graph Diffusion | N/A | 不确定性建模导向 |
+| 2026 | [Feature-enhanced iTransformer](https://doi.org/10.1371/journal.pone.0340389) | 长时域交通流预测 | Transformer, Long-Horizon | N/A | 两阶段长预测框架 |
 
 
 ### 基于统计的交通预测方法
@@ -403,6 +425,16 @@
 3. 常用指标：MAE、RMSE、MAPE 为主；建议同时报告不同预测步长的指标，避免只给单一预测步。
 4. 训练划分：按时间顺序划分训练/验证/测试，避免随机划分造成信息泄露。
 5. 复现实验：建议提供随机种子、硬件信息、训练时长与参数规模，以便结果可复现。
+
+### 自动趋势可视化
+
+最新月度论文标题词云：
+
+![月度论文词云](updates/wordcloud/monthly-paper-wordcloud-latest.png)
+
+最新 Top-K 术语频次图：
+
+![月度Top术语](updates/wordcloud/monthly-paper-wordcloud-topk-latest.png)
 
 ## 贡献
 
