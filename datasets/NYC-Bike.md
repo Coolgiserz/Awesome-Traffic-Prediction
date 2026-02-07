@@ -8,4 +8,4 @@ New York City bike sharing data containing trip records including start/end loca
 
 #### SOTA: [Traffic Prediction on NYC Bike Dataset](https://paperswithcode.com/sota/traffic-prediction-on-nyc-bike-dataset)
 
-![NYC Bike sharing system](images/nyc-bike.png)
+![NYC Bike sharing system](images/nyc-bike.svg)

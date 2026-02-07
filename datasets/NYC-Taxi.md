@@ -8,4 +8,4 @@ New York City taxi trip data including pickup/dropoff locations, timestamps, far
 
 #### SOTA: [Traffic Prediction on NYC Taxi Dataset](https://paperswithcode.com/sota/traffic-prediction-on-nyc-taxi-dataset)
 
-![NYC Taxi trip visualization](images/nyc-taxi.png)
+![NYC Taxi trip visualization](images/nyc-taxi.svg)

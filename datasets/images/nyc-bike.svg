@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="NYC Bike dataset placeholder illustration">
+  <rect width="1200" height="640" fill="#f4f8fb"/>
+  <rect x="70" y="70" width="1060" height="500" rx="18" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+  <text x="100" y="145" font-family="Arial, sans-serif" font-size="42" fill="#111827">NYC Bike Dataset</text>
+  <text x="100" y="195" font-family="Arial, sans-serif" font-size="26" fill="#374151">Trip demand and station-level mobility signals</text>
+  <circle cx="290" cy="430" r="110" fill="#eaf2ff" stroke="#2563eb" stroke-width="12"/>
+  <circle cx="820" cy="430" r="110" fill="#eaf2ff" stroke="#2563eb" stroke-width="12"/>
+  <line x1="290" y1="430" x2="530" y2="290" stroke="#2563eb" stroke-width="18" stroke-linecap="round"/>
+  <line x1="530" y1="290" x2="650" y2="430" stroke="#2563eb" stroke-width="18" stroke-linecap="round"/>
+  <line x1="650" y1="430" x2="820" y2="430" stroke="#2563eb" stroke-width="18" stroke-linecap="round"/>
+  <line x1="530" y1="290" x2="740" y2="240" stroke="#2563eb" stroke-width="18" stroke-linecap="round"/>
+  <line x1="740" y1="240" x2="820" y2="430" stroke="#2563eb" stroke-width="18" stroke-linecap="round"/>
+  <text x="100" y="540" font-family="Arial, sans-serif" font-size="22" fill="#4b5563">Placeholder figure for repository documentation.</text>
+</svg>
