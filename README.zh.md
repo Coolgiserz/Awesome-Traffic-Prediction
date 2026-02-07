@@ -32,7 +32,7 @@
 - [0x00 论文](#0x00-论文)
   - [综述](#综述)
   - [基于深度学习的交通预测方法](#基于深度学习的交通预测方法)
-  - [重点整理（2024-2026）](#重点整理2024-2026)
+  - [重点整理（近年）](#重点整理近年)
   - [基于统计的交通预测方法](#基于统计的交通预测方法)
   - [时间序列预测](#时间序列预测)
   - [时序网络嵌入](#时序网络嵌入)
@@ -51,6 +51,7 @@
   - [高校](#高校)
 - [0x06 相关仓库](#0x06-相关仓库)
 - [0x07 基准与评测](#0x07-基准与评测)
+  - [基准矩阵](#基准矩阵)
   - [自动趋势可视化](#自动趋势可视化)
 - [贡献](#贡献)
 
@@ -182,6 +183,7 @@
 3. [Complex & Intelligent Systems 2024] Generalized spatial–temporal regression graph convolutional transformer for traffic forecasting [[paper]](https://link.springer.com/article/10.1007/s40747-024-01578-x)
 4. [ISPRS IJGI 2024] Traffic Flow Prediction Based on Federated Learning and Spatio-Temporal Graph Neural Networks [[paper]](https://www.mdpi.com/2220-9964/13/6/210)
 
+<!-- START AUTO RECENT PAPERS -->
 #### 2025
 
 1. [Arxiv 2025] GraphSparseNet: a Novel Method for Large Scale Trafffic Flow Prediction [[paper]](https://arxiv.org/abs/2502.19823)
@@ -197,15 +199,21 @@
 4. [Arxiv 2026] PIMCST: Physics-Informed Multi-Phase Consensus and Spatio-Temporal Few-Shot Learning for Traffic Flow Forecasting [[paper]](https://doi.org/10.48550/arxiv.2602.01936)
 5. [Expert Systems with Applications 2026] HySRD-Net: Hybrid spectral residual diffusion on spatio-temporal graphs for probabilistic traffic forecasting [[paper]](https://doi.org/10.1016/j.eswa.2026.131214)
 6. [PLoS ONE 2026] Feature-enhanced iTransformer: A two-stage framework for high-accuracy long-horizon traffic flow forecasting [[paper]](https://doi.org/10.1371/journal.pone.0340389)
-7. [IET Intelligent Transport Systems 2026] A Novel Attention‐Weighted VMD‐LSSVM Model for High‐Accuracy Short‐Term Traffic Prediction [[paper]](https://doi.org/10.1049/itr2.70144)
+7. [IET Intelligent Transport Systems 2026] A Novel Attention-Weighted VMD-LSSVM Model for High-Accuracy Short-Term Traffic Prediction [[paper]](https://doi.org/10.1049/itr2.70144)
+8. [Electronics 2026] Multi-Scale Graph-Decoupling Spatial-Temporal Network for Traffic Flow Forecasting in Complex Urban Environments [[paper]](https://doi.org/10.3390/electronics15030495)
+9. [Systems 2026] PDR-STGCN: An Enhanced STGCN with Multi-Scale Periodic Fusion and a Dynamic Relational Graph for Traffic Forecasting [[paper]](https://doi.org/10.3390/systems14010102)
+10. [Lecture Notes in Computer Science 2026] STVMamba: A Spatio-Temporal-Variable Modeling Network with Selective State Space Mechanism for Long-Horizon Traffic Forecasting [[paper]](https://doi.org/10.1007/978-981-95-5761-5_18)
+11. [Electronics 2026] TSAformer: A Traffic Flow Prediction Model Based on Cross-Dimensional Dependency Capture [[paper]](https://doi.org/10.3390/electronics15010231)
+<!-- END AUTO RECENT PAPERS -->
 
-### 重点整理（2024-2026）
+### 重点整理（近年）
 
 该小节将近三年交通流预测论文按任务和方法标签做结构化整理，便于快速筛选与对比。
 方法标签为便于检索的轻量人工标注。
 
 | 年份 | 论文 | 任务 | 方法标签 | 代码 | 备注 |
 | --- | --- | --- | --- | --- | --- |
+<!-- START AUTO CURATED DIGEST ROWS -->
 | 2024 | [UniST](https://arxiv.org/abs/2402.11838) | 城市时空预测 | Prompting, Foundation Model | N/A | 偏通用模型与提示式框架 |
 | 2024 | [COOL](https://arxiv.org/abs/2403.01091) | 交通预测 | STGNN, Graph Modeling | N/A | 联合视角的 STGNN 建模 |
 | 2024 | [GSTRGCT](https://link.springer.com/article/10.1007/s40747-024-01578-x) | 交通预测 | Transformer, GCN | N/A | 回归与图 Transformer 结合 |
@@ -218,6 +226,7 @@
 | 2026 | [PIMCST](https://doi.org/10.48550/arxiv.2602.01936) | 交通流预测 | Physics-Informed Learning, Few-shot | N/A | 偏少样本迁移能力 |
 | 2026 | [HySRD-Net](https://doi.org/10.1016/j.eswa.2026.131214) | 概率交通预测 | Probabilistic Forecasting, Graph Diffusion | N/A | 不确定性建模导向 |
 | 2026 | [Feature-enhanced iTransformer](https://doi.org/10.1371/journal.pone.0340389) | 长时域交通流预测 | Transformer, Long-Horizon | N/A | 两阶段长预测框架 |
+<!-- END AUTO CURATED DIGEST ROWS -->
 
 
 ### 基于统计的交通预测方法
@@ -443,6 +452,24 @@
 3. 常用指标：MAE、RMSE、MAPE 为主；建议同时报告不同预测步长的指标，避免只给单一预测步。
 4. 训练划分：按时间顺序划分训练/验证/测试，避免随机划分造成信息泄露。
 5. 复现实验：建议提供随机种子、硬件信息、训练时长与参数规模，以便结果可复现。
+
+### 基准矩阵
+
+| 数据集 | 区域 | 预测信号 | 节点/传感器 | 时间粒度 | 常见预测步长 | 常用指标 | 划分方式 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| METR-LA | 美国洛杉矶 | 交通速度 | 207 传感器 | 5 分钟 | 15/30/60 分钟 | MAE, RMSE, MAPE | 按时间顺序 |
+| PEMS-BAY | 美国湾区 | 交通速度 | 325 传感器 | 5 分钟 | 15/30/60 分钟 | MAE, RMSE, MAPE | 按时间顺序 |
+| NYC-Bike | 美国纽约 | 单车需求/行程 | 站点图 | 依论文设置 | 常见 30/60 分钟 | MAE, RMSE, MAPE | 按时间顺序 |
+| NYC-Taxi | 美国纽约 | 出租车需求/OD | 区域图或网格 | 依论文设置 | 常见 30/60 分钟 | MAE, RMSE, MAPE | 按时间顺序 |
+
+跨论文对比时建议统一指标定义与缺失值掩码策略。
+
+### 自动趋势可视化
+
+- 月度候选列表：`updates/monthly-paper-candidates.md`
+- 词云与Top术语：`updates/wordcloud/`
+- 年度热点与主题趋势：`updates/hotspots/`
+- 生成流水线：`.github/workflows/monthly-paper-search.yml`（产物变化时自动提PR待人工审核）
 
 ## 贡献
 

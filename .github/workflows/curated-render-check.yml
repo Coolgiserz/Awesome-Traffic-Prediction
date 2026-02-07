@@ -1,0 +1,38 @@
+name: Curated Render Check
+
+on:
+  pull_request:
+    paths:
+      - "README.md"
+      - "README.zh.md"
+      - "scripts/render_curated_recent.py"
+      - "updates/curated/recent-papers.json"
+      - ".github/workflows/curated-render-check.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "README.md"
+      - "README.zh.md"
+      - "scripts/render_curated_recent.py"
+      - "updates/curated/recent-papers.json"
+
+jobs:
+  check-curated-render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Check rendered sections
+        run: |
+          python3 scripts/render_curated_recent.py \
+            --data updates/curated/recent-papers.json \
+            --readme-en README.md \
+            --readme-zh README.zh.md \
+            --check

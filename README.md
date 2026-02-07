@@ -32,7 +32,7 @@ Yearly theme trend lines:
 - [0x00 Papers](#0x00-papers)
   - [Reviews](#reviews)
   - [Deep Learning Based Traffic Prediction Methods](#deep-learning-based-traffic-prediction-methods)
-  - [Curated Digest (2024-2026)](#curated-digest-2024-2026)
+  - [Curated Digest (Recent Years)](#curated-digest-recent-years)
   - [Statistic Based Traffic Prediction Methods](#statistic-based-traffic-prediction-methods)
   - [Time Series Forecasting](#time-series-forecasting)
   - [Temporal Network Embedding](#temporal-network-embedding)
@@ -51,6 +51,7 @@ Yearly theme trend lines:
   - [College](#college)
 - [0x06 Related Repositories](#0x06-related-repositories)
 - [0x07 Benchmark & Evaluation](#0x07-benchmark--evaluation)
+  - [Benchmark Matrix](#benchmark-matrix)
   - [Auto Trend Visuals](#auto-trend-visuals)
 - [Contribution](#contribution)
 
@@ -182,6 +183,7 @@ Yearly theme trend lines:
 3. [Complex & Intelligent Systems 2024] Generalized spatial–temporal regression graph convolutional transformer for traffic forecasting [[paper]](https://link.springer.com/article/10.1007/s40747-024-01578-x)
 4. [ISPRS IJGI 2024] Traffic Flow Prediction Based on Federated Learning and Spatio-Temporal Graph Neural Networks [[paper]](https://www.mdpi.com/2220-9964/13/6/210)
 
+<!-- START AUTO RECENT PAPERS -->
 #### 2025
 
 1. [Arxiv 2025] GraphSparseNet: a Novel Method for Large Scale Trafffic Flow Prediction [[paper]](https://arxiv.org/abs/2502.19823)
@@ -197,15 +199,21 @@ Yearly theme trend lines:
 4. [Arxiv 2026] PIMCST: Physics-Informed Multi-Phase Consensus and Spatio-Temporal Few-Shot Learning for Traffic Flow Forecasting [[paper]](https://doi.org/10.48550/arxiv.2602.01936)
 5. [Expert Systems with Applications 2026] HySRD-Net: Hybrid spectral residual diffusion on spatio-temporal graphs for probabilistic traffic forecasting [[paper]](https://doi.org/10.1016/j.eswa.2026.131214)
 6. [PLoS ONE 2026] Feature-enhanced iTransformer: A two-stage framework for high-accuracy long-horizon traffic flow forecasting [[paper]](https://doi.org/10.1371/journal.pone.0340389)
-7. [IET Intelligent Transport Systems 2026] A Novel Attention‐Weighted VMD‐LSSVM Model for High‐Accuracy Short‐Term Traffic Prediction [[paper]](https://doi.org/10.1049/itr2.70144)
+7. [IET Intelligent Transport Systems 2026] A Novel Attention-Weighted VMD-LSSVM Model for High-Accuracy Short-Term Traffic Prediction [[paper]](https://doi.org/10.1049/itr2.70144)
+8. [Electronics 2026] Multi-Scale Graph-Decoupling Spatial-Temporal Network for Traffic Flow Forecasting in Complex Urban Environments [[paper]](https://doi.org/10.3390/electronics15030495)
+9. [Systems 2026] PDR-STGCN: An Enhanced STGCN with Multi-Scale Periodic Fusion and a Dynamic Relational Graph for Traffic Forecasting [[paper]](https://doi.org/10.3390/systems14010102)
+10. [Lecture Notes in Computer Science 2026] STVMamba: A Spatio-Temporal-Variable Modeling Network with Selective State Space Mechanism for Long-Horizon Traffic Forecasting [[paper]](https://doi.org/10.1007/978-981-95-5761-5_18)
+11. [Electronics 2026] TSAformer: A Traffic Flow Prediction Model Based on Cross-Dimensional Dependency Capture [[paper]](https://doi.org/10.3390/electronics15010231)
+<!-- END AUTO RECENT PAPERS -->
 
-### Curated Digest (2024-2026)
+### Curated Digest (Recent Years)
 
 This digest reorganizes recent traffic flow forecasting papers by task and method tags for faster navigation.
 Method tags are lightweight manual labels for quick indexing.
 
 | Year | Paper | Task | Method Tags | Code | Note |
 | --- | --- | --- | --- | --- | --- |
+<!-- START AUTO CURATED DIGEST ROWS -->
 | 2024 | [UniST](https://arxiv.org/abs/2402.11838) | Urban spatio-temporal prediction | Prompting, Foundation Model | N/A | Universal/prompt-based perspective |
 | 2024 | [COOL](https://arxiv.org/abs/2403.01091) | Traffic forecasting | STGNN, Graph Modeling | N/A | Conjoint STGNN perspective |
 | 2024 | [GSTRGCT](https://link.springer.com/article/10.1007/s40747-024-01578-x) | Traffic forecasting | Transformer, GCN | N/A | Regression + graph transformer design |
@@ -218,6 +226,7 @@ Method tags are lightweight manual labels for quick indexing.
 | 2026 | [PIMCST](https://doi.org/10.48550/arxiv.2602.01936) | Traffic flow forecasting | Physics-Informed Learning, Few-shot | N/A | Few-shot transfer-oriented design |
 | 2026 | [HySRD-Net](https://doi.org/10.1016/j.eswa.2026.131214) | Probabilistic traffic forecasting | Probabilistic Forecasting, Graph Diffusion | N/A | Uncertainty-aware forecasting |
 | 2026 | [Feature-enhanced iTransformer](https://doi.org/10.1371/journal.pone.0340389) | Long-horizon traffic flow forecasting | Transformer, Long-Horizon | N/A | Two-stage long-horizon framework |
+<!-- END AUTO CURATED DIGEST ROWS -->
 
 
 ### Statistic Based Traffic Prediction Methods
@@ -443,6 +452,24 @@ Method tags are lightweight manual labels for quick indexing.
 3. Common metrics: MAE, RMSE, MAPE. Recommend reporting metrics across multiple horizons, not a single step.
 4. Splits: Use chronological train/val/test splits to avoid leakage from random splits.
 5. Reproducibility: Provide random seeds, hardware details, training time, and parameter counts.
+
+### Benchmark Matrix
+
+| Dataset | Region | Signal | Nodes/Sensors | Interval | Common Horizons | Metrics | Split |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| METR-LA | Los Angeles, US | Traffic speed | 207 sensors | 5 min | 15/30/60 min | MAE, RMSE, MAPE | Chronological |
+| PEMS-BAY | Bay Area, US | Traffic speed | 325 sensors | 5 min | 15/30/60 min | MAE, RMSE, MAPE | Chronological |
+| NYC-Bike | New York, US | Bike demand/trips | Station graph | Varies by paper | 30/60 min (common) | MAE, RMSE, MAPE | Chronological |
+| NYC-Taxi | New York, US | Taxi demand/OD | Zone graph or grid | Varies by paper | 30/60 min (common) | MAE, RMSE, MAPE | Chronological |
+
+Use consistent metric definitions and masking policies when comparing papers.
+
+### Auto Trend Visuals
+
+- Monthly candidates: `updates/monthly-paper-candidates.md`
+- Word cloud and top terms: `updates/wordcloud/`
+- Yearly hotspots and theme trends: `updates/hotspots/`
+- Pipeline: `.github/workflows/monthly-paper-search.yml` (opens a PR for review when artifacts change)
 
 ## Contribution
 

@@ -1,0 +1,31 @@
+name: README Sync Check
+
+on:
+  pull_request:
+    paths:
+      - "README.md"
+      - "README.zh.md"
+      - "scripts/check_readme_sync.py"
+      - ".github/workflows/readme-sync-check.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "README.md"
+      - "README.zh.md"
+      - "scripts/check_readme_sync.py"
+
+jobs:
+  check-readme-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Run sync check
+        run: python3 scripts/check_readme_sync.py --en README.md --zh README.zh.md

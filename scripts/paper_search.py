@@ -23,6 +23,22 @@ from typing import Iterable, List
 
 USER_AGENT = "awesome-traffic-prediction-search/0.1 (mailto:2811159909@qq.com)"
 
+# Hard filters to remove non-road-traffic topics that often leak into broad search results.
+NON_ROAD_HINTS = (
+    "airspace",
+    "air traffic",
+    "aviation",
+    "flight",
+    "uav",
+    "drone",
+    "maritime",
+    "shipping",
+    "vessel",
+    "power load",
+    "ev load",
+    "microgrid",
+)
+
 
 @dataclass
 class Paper:
@@ -176,6 +192,16 @@ def remove_excluded(papers: Iterable[Paper], exclude_keywords: List[str]) -> Lis
     return out
 
 
+def remove_non_road_domain(papers: Iterable[Paper]) -> List[Paper]:
+    out: List[Paper] = []
+    for p in papers:
+        title = p.title.lower()
+        if any(hint in title for hint in NON_ROAD_HINTS):
+            continue
+        out.append(p)
+    return out
+
+
 def to_markdown(papers: List[Paper]) -> str:
     lines = []
     for i, p in enumerate(papers, 1):
@@ -207,7 +233,10 @@ def parse_args() -> argparse.Namespace:
     )
     ap.add_argument(
         "--exclude-keywords",
-        default="air quality,dengue,maritime,shipping,anomaly,accident,risk,aqi",
+        default=(
+            "air quality,dengue,maritime,shipping,anomaly,accident,risk,aqi,"
+            "airspace,aviation,flight,uav,drone,vessel,power load,ev load,microgrid"
+        ),
         help="Comma list; drop papers whose title contains these keywords.",
     )
     ap.add_argument("--out", default="", help="Optional output markdown file path")
@@ -233,6 +262,7 @@ def main() -> int:
     papers = dedupe(papers)
     papers = keep_domain_relevant(papers, args.must_keywords.split(","))
     papers = keep_prediction_focused(papers, args.pred_keywords.split(","))
+    papers = remove_non_road_domain(papers)
     papers = remove_excluded(papers, args.exclude_keywords.split(","))
     papers.sort(key=lambda p: p.year, reverse=True)
     papers = papers[: args.limit]
