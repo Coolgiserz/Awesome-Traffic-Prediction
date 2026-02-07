@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   refresh-paper-candidates:
@@ -37,14 +38,20 @@ jobs:
             --sources openalex \
             --out /tmp/monthly_papers.md
 
+          python3 scripts/dedupe_readme_papers.py \
+            --input /tmp/monthly_papers.md \
+            --readme README.md README.zh.md \
+            --out /tmp/monthly_papers_dedup.md \
+            --report-json /tmp/monthly_papers_dedup_report.json
+
           {
             echo "# Monthly Paper Candidates"
             echo
             echo "Generated on: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
             echo
-            echo "These are auto-collected candidates. Please manually verify relevance and quality before merging into README files."
+            echo "These are auto-collected candidates after README dedup (title + DOI keys). Please manually verify relevance and quality before merging into README files."
             echo
-            cat /tmp/monthly_papers.md
+            cat /tmp/monthly_papers_dedup.md
             echo
           } > updates/monthly-paper-candidates.md
 
@@ -64,14 +71,30 @@ jobs:
             --topk 12 \
             --extra-noise "paper,traffic,forecasting,prediction,method,model,framework"
 
-      - name: Commit and push if changed
+      - name: Detect changes
+        id: changes
         run: |
           if git diff --quiet -- updates/monthly-paper-candidates.md updates/wordcloud updates/hotspots; then
-            echo "No changes to commit."
-            exit 0
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add updates/monthly-paper-candidates.md updates/wordcloud updates/hotspots
-          git commit -m "chore: refresh monthly paper candidates and visuals"
-          git push origin HEAD:main
+
+      - name: Create pull request
+        if: steps.changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: refresh monthly paper candidates and visuals"
+          branch: automation/monthly-paper-refresh
+          base: main
+          title: "chore: refresh monthly paper candidates and visuals"
+          body: |
+            This PR was generated automatically by the monthly refresh workflow.
+
+            Updated artifacts:
+            - `updates/monthly-paper-candidates.md`
+            - `updates/wordcloud/*`
+            - `updates/hotspots/*`
+
+            Please review candidate relevance before merging.
+          delete-branch: true
