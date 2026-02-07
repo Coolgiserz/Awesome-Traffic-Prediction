@@ -15,8 +15,9 @@ from typing import Any
 
 RECENT_START = "<!-- START AUTO RECENT PAPERS -->"
 RECENT_END = "<!-- END AUTO RECENT PAPERS -->"
-DIGEST_START = "<!-- START AUTO CURATED DIGEST ROWS -->"
-DIGEST_END = "<!-- END AUTO CURATED DIGEST ROWS -->"
+DIGEST_TABLE_START = "<!-- START AUTO CURATED DIGEST TABLE -->"
+DIGEST_TABLE_END = "<!-- END AUTO CURATED DIGEST TABLE -->"
+
 
 
 def load_entries(path: Path) -> list[dict[str, Any]]:
@@ -89,6 +90,16 @@ def render_digest_rows(entries: list[dict[str, Any]], lang: str, digest_window_y
     return "\n".join(rows).rstrip() + "\n"
 
 
+def render_digest_table(entries: list[dict[str, Any]], lang: str, digest_window_years: int) -> str:
+    header = (
+        "| Year | Paper | Task | Method Tags | Code | Note |\n| --- | --- | --- | --- | --- | --- |\n"
+        if lang == "en"
+        else "| 年份 | 论文 | 任务 | 方法标签 | 代码 | 备注 |\n| --- | --- | --- | --- | --- | --- |\n"
+    )
+    rows = render_digest_rows(entries, lang, digest_window_years)
+    return header + rows
+
+
 def replace_block(text: str, start_marker: str, end_marker: str, new_block: str) -> str:
     start = text.find(start_marker)
     end = text.find(end_marker)
@@ -102,7 +113,8 @@ def replace_block(text: str, start_marker: str, end_marker: str, new_block: str)
 def apply_to_readme(path: Path, recent_block: str, digest_rows: str, check: bool) -> bool:
     original = path.read_text(encoding="utf-8")
     rendered = replace_block(original, RECENT_START, RECENT_END, recent_block)
-    rendered = replace_block(rendered, DIGEST_START, DIGEST_END, digest_rows)
+    rendered = replace_block(rendered, DIGEST_TABLE_START, DIGEST_TABLE_END, digest_rows)
+
     changed = rendered != original
     if check:
         return changed
@@ -133,8 +145,8 @@ def main() -> int:
 
     entries = sort_entries(load_entries(Path(args.data)))
     recent_block = render_recent_block(entries, args.recent_window_years)
-    digest_en = render_digest_rows(entries, "en", args.digest_window_years)
-    digest_zh = render_digest_rows(entries, "zh", args.digest_window_years)
+    digest_en = render_digest_table(entries, "en", args.digest_window_years)
+    digest_zh = render_digest_table(entries, "zh", args.digest_window_years)
 
     changed_en = apply_to_readme(Path(args.readme_en), recent_block, digest_en, args.check)
     changed_zh = apply_to_readme(Path(args.readme_zh), recent_block, digest_zh, args.check)

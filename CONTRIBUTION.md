@@ -47,7 +47,7 @@ The script checks yearly paper-count alignment, digest row-count alignment, and 
 - Source of truth: `updates/curated/recent-papers.json`
 - Do not manually edit auto blocks in README files:
   - `<!-- START AUTO RECENT PAPERS --> ... <!-- END AUTO RECENT PAPERS -->`
-  - `<!-- START AUTO CURATED DIGEST ROWS --> ... <!-- END AUTO CURATED DIGEST ROWS -->`
+  - `<!-- START AUTO CURATED DIGEST TABLE --> ... <!-- END AUTO CURATED DIGEST TABLE -->`
 - After JSON edits, render with:
 
 ```bash

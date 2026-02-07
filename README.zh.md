@@ -211,9 +211,9 @@
 该小节将近三年交通流预测论文按任务和方法标签做结构化整理，便于快速筛选与对比。
 方法标签为便于检索的轻量人工标注。
 
+<!-- START AUTO CURATED DIGEST TABLE -->
 | 年份 | 论文 | 任务 | 方法标签 | 代码 | 备注 |
 | --- | --- | --- | --- | --- | --- |
-<!-- START AUTO CURATED DIGEST ROWS -->
 | 2024 | [UniST](https://arxiv.org/abs/2402.11838) | 城市时空预测 | Prompting, Foundation Model | N/A | 偏通用模型与提示式框架 |
 | 2024 | [COOL](https://arxiv.org/abs/2403.01091) | 交通预测 | STGNN, Graph Modeling | N/A | 联合视角的 STGNN 建模 |
 | 2024 | [GSTRGCT](https://link.springer.com/article/10.1007/s40747-024-01578-x) | 交通预测 | Transformer, GCN | N/A | 回归与图 Transformer 结合 |
@@ -226,7 +226,7 @@
 | 2026 | [PIMCST](https://doi.org/10.48550/arxiv.2602.01936) | 交通流预测 | Physics-Informed Learning, Few-shot | N/A | 偏少样本迁移能力 |
 | 2026 | [HySRD-Net](https://doi.org/10.1016/j.eswa.2026.131214) | 概率交通预测 | Probabilistic Forecasting, Graph Diffusion | N/A | 不确定性建模导向 |
 | 2026 | [Feature-enhanced iTransformer](https://doi.org/10.1371/journal.pone.0340389) | 长时域交通流预测 | Transformer, Long-Horizon | N/A | 两阶段长预测框架 |
-<!-- END AUTO CURATED DIGEST ROWS -->
+<!-- END AUTO CURATED DIGEST TABLE -->
 
 
 ### 基于统计的交通预测方法

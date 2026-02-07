@@ -211,9 +211,9 @@ Yearly theme trend lines:
 This digest reorganizes recent traffic flow forecasting papers by task and method tags for faster navigation.
 Method tags are lightweight manual labels for quick indexing.
 
+<!-- START AUTO CURATED DIGEST TABLE -->
 | Year | Paper | Task | Method Tags | Code | Note |
 | --- | --- | --- | --- | --- | --- |
-<!-- START AUTO CURATED DIGEST ROWS -->
 | 2024 | [UniST](https://arxiv.org/abs/2402.11838) | Urban spatio-temporal prediction | Prompting, Foundation Model | N/A | Universal/prompt-based perspective |
 | 2024 | [COOL](https://arxiv.org/abs/2403.01091) | Traffic forecasting | STGNN, Graph Modeling | N/A | Conjoint STGNN perspective |
 | 2024 | [GSTRGCT](https://link.springer.com/article/10.1007/s40747-024-01578-x) | Traffic forecasting | Transformer, GCN | N/A | Regression + graph transformer design |
@@ -226,7 +226,7 @@ Method tags are lightweight manual labels for quick indexing.
 | 2026 | [PIMCST](https://doi.org/10.48550/arxiv.2602.01936) | Traffic flow forecasting | Physics-Informed Learning, Few-shot | N/A | Few-shot transfer-oriented design |
 | 2026 | [HySRD-Net](https://doi.org/10.1016/j.eswa.2026.131214) | Probabilistic traffic forecasting | Probabilistic Forecasting, Graph Diffusion | N/A | Uncertainty-aware forecasting |
 | 2026 | [Feature-enhanced iTransformer](https://doi.org/10.1371/journal.pone.0340389) | Long-horizon traffic flow forecasting | Transformer, Long-Horizon | N/A | Two-stage long-horizon framework |
-<!-- END AUTO CURATED DIGEST ROWS -->
+<!-- END AUTO CURATED DIGEST TABLE -->
 
 
 ### Statistic Based Traffic Prediction Methods

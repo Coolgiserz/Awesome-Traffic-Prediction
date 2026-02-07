@@ -86,7 +86,7 @@ Renders recent-paper year blocks and curated digest rows in both README files fr
   - `README.zh.md`
 - Controlled blocks:
   - `<!-- START AUTO RECENT PAPERS --> ...`
-  - `<!-- START AUTO CURATED DIGEST ROWS --> ...`
+  - `<!-- START AUTO CURATED DIGEST TABLE --> ...`
 - Default behavior:
   - Recent year blocks: latest 2 years in JSON (`--recent-window-years 2`)
   - Digest rows: featured papers from latest 3 years (`--digest-window-years 3`)
