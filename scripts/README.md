@@ -7,7 +7,11 @@ This folder contains lightweight maintenance scripts for documentation updates.
 Searches recent papers from free sources and outputs markdown list items usable in README sections.
 
 - Sources: OpenAlex + arXiv
+- Extended sources: Semantic Scholar + Crossref
 - Dependency: `python3` only (standard library)
+- Supports two modes:
+  - Legacy CLI parameters
+  - Domain config v2 (`--config`)
 
 ### Example
 
@@ -21,12 +25,56 @@ python3 scripts/paper_search.py \
   --out /tmp/traffic_papers.md
 ```
 
+### Config-driven example (recommended)
+
+```bash
+python3 scripts/paper_search.py \
+  --config scripts/configs/traffic-monthly.json \
+  --out /tmp/traffic_papers.md \
+  --report-json /tmp/traffic_papers_report.json
+```
+
 ### Notes
 
 - Output is candidate-only; manual curation is still required.
-- Use `--must-keywords` to constrain domain relevance in titles.
-- Use `--pred-keywords` and `--exclude-keywords` to improve precision for traffic forecasting papers.
-- Non-road topics (for example airspace/aviation/maritime/power-load papers) are filtered by default.
+- The HTTP layer is polite by default:
+  - request pacing per source
+  - retry + backoff for `429`/`5xx`
+  - request budget cap (`runtime.max_requests`)
+  - local response cache (`runtime.cache_*`)
+- Supported `search.sources` values:
+  - `openalex`
+  - `arxiv`
+  - `semantic_scholar`
+  - `crossref`
+- `post.rules[]` in config is extensible:
+  - `required=true`: mandatory match rule
+  - `exclude=true`: hard rejection rule
+  - `weight`: contributes to ranking score when matched
+- `post.min_score` is the final score threshold after rule match + ranking components.
+- `rank` controls ranking only:
+  - `recency_weight`: favors recent years
+  - `source_weights`: source-level preference
+  - `tie_breakers`: deterministic ordering when scores tie
+- Optional runtime knobs:
+  - in config: `runtime` object
+  - in CLI override: `--max-requests`, `--min-interval-seconds`, `--max-retries`, `--retry-base-seconds`, `--cache-dir`, `--cache-ttl-hours`
+
+## Domain Config Files
+
+- Schema reference: `scripts/configs/domain-config-v2.schema.json`
+- Logic guide: `scripts/configs/README.md`
+- Traffic monthly workflow config: `scripts/configs/traffic-monthly.json`
+
+## `validate_domain_config.py`
+
+Validates domain config v2 before runtime.
+
+### Example
+
+```bash
+python3 scripts/validate_domain_config.py scripts/configs/traffic-monthly.json
+```
 
 ## `dedupe_readme_papers.py`
 
@@ -115,10 +163,11 @@ python3 scripts/render_curated_recent.py \
 - Workflow file: `.github/workflows/monthly-paper-search.yml`
 - Schedule: monthly at `02:00 UTC` on day 1 (`cron: 0 2 1 * *`)
 - Pipeline:
-  1. Search candidate papers (`scripts/paper_search.py`)
-  2. Deduplicate against README (`scripts/dedupe_readme_papers.py`, title + DOI)
-  3. Write `updates/monthly-paper-candidates.md`
-  4. Generate visuals (`wordcloud` + `yearly hotspots`)
+  1. Validate domain config (`scripts/validate_domain_config.py`)
+  2. Search candidate papers (`scripts/paper_search.py --config scripts/configs/traffic-monthly.json`)
+  3. Deduplicate against README (`scripts/dedupe_readme_papers.py`, title + DOI)
+  4. Write `updates/monthly-paper-candidates.md`
+  5. Generate visuals (`wordcloud` + `yearly hotspots`)
 - Word cloud outputs: `updates/wordcloud/monthly-paper-wordcloud-latest.png` and monthly archive png.
 - Top-K terms chart: `updates/wordcloud/monthly-paper-wordcloud-topk-latest.png`
 - Yearly hotspots: `updates/hotspots/yearly-hotspots-trend.png` (single trend heatmap), `updates/hotspots/yearly-theme-trends.png` (theme line chart), `updates/hotspots/yearly-hotspots.png`, `updates/hotspots/yearly-hotspots.md`, `updates/hotspots/yearly-hotspots.json`

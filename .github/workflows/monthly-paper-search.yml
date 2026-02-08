@@ -26,17 +26,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install wordcloud matplotlib
 
+      - name: Validate domain config
+        run: |
+          python3 scripts/validate_domain_config.py scripts/configs/traffic-monthly.json
+
       - name: Run monthly search
         run: |
           mkdir -p updates
           python3 scripts/paper_search.py \
-            "traffic flow forecasting graph neural network" \
-            --extra-queries "traffic speed prediction;spatio-temporal traffic forecasting;short-term traffic flow prediction;probabilistic traffic forecasting;transferable traffic forecasting" \
-            --year-from 2024 \
-            --year-to "$(date -u +%Y)" \
-            --limit 25 \
-            --sources openalex \
-            --out /tmp/monthly_papers.md
+            --config scripts/configs/traffic-monthly.json \
+            --out /tmp/monthly_papers.md \
+            --report-json /tmp/monthly_papers_report.json
 
           python3 scripts/dedupe_readme_papers.py \
             --input /tmp/monthly_papers.md \

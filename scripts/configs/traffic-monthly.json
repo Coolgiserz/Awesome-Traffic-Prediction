@@ -1,0 +1,93 @@
+{
+  "version": 2,
+  "name": "traffic-monthly",
+  "search": {
+    "queries": [
+      "traffic flow forecasting graph neural network",
+      "traffic speed prediction spatio-temporal",
+      "short-term traffic flow prediction",
+      "probabilistic traffic forecasting",
+      "transferable traffic forecasting"
+    ],
+    "sources": ["openalex"],
+    "year_range": {
+      "mode": "rolling",
+      "lookback_years": 3
+    },
+    "limit_per_query": 25,
+    "output_limit": 25
+  },
+  "post": {
+    "rules": [
+      {
+        "id": "domain",
+        "field": "title",
+        "op": "any",
+        "keywords": ["traffic", "transport", "road", "mobility", "flow"],
+        "required": true,
+        "exclude": false,
+        "weight": 1.4
+      },
+      {
+        "id": "intent",
+        "field": "title",
+        "op": "any",
+        "keywords": ["forecast", "prediction", "predicting"],
+        "required": true,
+        "exclude": false,
+        "weight": 1.3
+      },
+      {
+        "id": "method-boost",
+        "field": "title",
+        "op": "any",
+        "keywords": ["graph", "spatio-temporal", "transformer", "diffusion", "uncertainty"],
+        "required": false,
+        "exclude": false,
+        "weight": 0.35
+      },
+      {
+        "id": "non-road-exclude",
+        "field": "title",
+        "op": "any",
+        "keywords": [
+          "airspace",
+          "air traffic",
+          "aviation",
+          "flight",
+          "uav",
+          "drone",
+          "maritime",
+          "shipping",
+          "vessel",
+          "power load",
+          "ev load",
+          "microgrid"
+        ],
+        "required": false,
+        "exclude": true,
+        "weight": 0.0
+      }
+    ],
+    "min_score": 2.0
+  },
+  "rank": {
+    "recency_weight": 0.35,
+    "source_weights": {
+      "openalex": 0.2,
+      "arxiv": 0.1
+    },
+    "tie_breakers": ["year_desc", "title_asc"]
+  },
+  "runtime": {
+    "max_requests": 80,
+    "min_interval_seconds": 0.8,
+    "max_retries": 2,
+    "retry_base_seconds": 2.0,
+    "cache_dir": ".cache/paper-search-http",
+    "cache_ttl_hours": 48,
+    "source_min_interval_seconds": {
+      "openalex": 0.8
+    }
+  }
+}
