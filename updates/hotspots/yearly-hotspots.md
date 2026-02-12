@@ -1,6 +1,6 @@
 # Yearly Paper Hotspots
 
-Generated at: 2026-02-06 19:24:05 UTC
+Generated at: 2026-02-12 07:27:51 UTC
 
 ## 2015
 
@@ -149,15 +149,15 @@ Generated at: 2026-02-06 19:24:05 UTC
 
 ## 2026
 
-1. `flow` (4)
-2. `traffic flow` (4)
-3. `graph` (3)
-4. `spatio-temporal` (2)
-5. `spatial-temporal` (1)
-6. `convolutional` (1)
-7. `information` (1)
-8. `bottleneck` (1)
-9. `information bottleneck` (1)
-10. `conditioned` (1)
-11. `spatiotemporal` (1)
-12. `pimcst` (1)
+1. `flow` (6)
+2. `traffic flow` (6)
+3. `graph` (4)
+4. `spatial-temporal` (2)
+5. `spatio-temporal` (2)
+6. `high-accuracy` (2)
+7. `long-horizon` (2)
+8. `multi-scale` (2)
+9. `convolutional` (1)
+10. `information` (1)
+11. `bottleneck` (1)
+12. `information bottleneck` (1)

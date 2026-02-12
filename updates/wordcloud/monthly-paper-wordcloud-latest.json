@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-02-06T19:12:42.842248+00:00",
+  "generated_utc": "2026-02-12T07:27:50.954773+00:00",
   "input": "updates/monthly-paper-candidates.md",
   "phrase_rules": [
     "traffic flow",
@@ -21,7 +21,11 @@
   ],
   "top_words": [
     [
-      "traffic forecasting",
+      "graph",
+      14
+    ],
+    [
+      "spatio-temporal",
       11
     ],
     [
@@ -30,30 +34,26 @@
     ],
     [
       "traffic flow",
-      10
+      9
     ],
     [
-      "graph",
+      "speed",
+      7
+    ],
+    [
+      "traffic speed",
       6
     ],
     [
+      "convolutional",
+      4
+    ],
+    [
+      "traffic forecasting",
+      4
+    ],
+    [
       "spatiotemporal",
-      5
-    ],
-    [
-      "spatio-temporal",
-      5
-    ],
-    [
-      "attention",
-      3
-    ],
-    [
-      "multi-scale",
-      3
-    ],
-    [
-      "temporal",
       3
     ],
     [
@@ -61,280 +61,32 @@
       3
     ],
     [
-      "integrating",
+      "transformer",
       3
     ],
     [
-      "stgcn",
+      "temporal",
+      3
+    ],
+    [
+      "future",
       2
-    ],
-    [
-      "mechanism",
-      2
-    ],
-    [
-      "speed",
-      2
-    ],
-    [
-      "short-term",
-      2
-    ],
-    [
-      "pems",
-      2
-    ],
-    [
-      "modeling",
-      2
-    ],
-    [
-      "long-horizon",
-      2
-    ],
-    [
-      "dynamics",
-      2
-    ],
-    [
-      "congestion",
-      2
-    ],
-    [
-      "capture",
-      2
-    ],
-    [
-      "long-term",
-      2
-    ],
-    [
-      "features",
-      2
-    ],
-    [
-      "information",
-      1
-    ],
-    [
-      "bottleneck",
-      1
-    ],
-    [
-      "incident-guided",
-      1
-    ],
-    [
-      "conditioned",
-      1
-    ],
-    [
-      "application",
-      1
-    ],
-    [
-      "integrated",
-      1
-    ],
-    [
-      "ontology-assisted",
-      1
-    ],
-    [
-      "feature",
-      1
-    ],
-    [
-      "extraction",
-      1
-    ],
-    [
-      "pimcst",
-      1
-    ],
-    [
-      "physics-informed",
-      1
-    ],
-    [
-      "multi-phase",
-      1
-    ],
-    [
-      "consensus",
-      1
-    ],
-    [
-      "few-shot",
-      1
-    ],
-    [
-      "transferable",
-      1
-    ],
-    [
-      "insights",
-      1
-    ],
-    [
-      "ai-driven",
-      1
-    ],
-    [
-      "computing",
-      1
-    ],
-    [
-      "informatics",
-      1
-    ],
-    [
-      "datasets",
-      1
-    ],
-    [
-      "graph-decoupling",
-      1
-    ],
-    [
-      "spatial",
-      1
-    ],
-    [
-      "complex",
-      1
-    ],
-    [
-      "environments",
-      1
-    ],
-    [
-      "pdr-stgcn",
-      1
-    ],
-    [
-      "periodic",
-      1
-    ],
-    [
-      "fusion",
-      1
-    ],
-    [
-      "relational",
-      1
-    ],
-    [
-      "hysrd-net",
-      1
     ],
     [
       "hybrid",
-      1
+      2
     ],
     [
-      "spectral",
-      1
+      "spatial",
+      2
     ],
     [
-      "residual",
-      1
+      "integrating",
+      2
     ],
     [
-      "diffusion",
-      1
-    ],
-    [
-      "probabilistic",
-      1
-    ],
-    [
-      "knowledge",
-      1
-    ],
-    [
-      "collaborative",
-      1
-    ],
-    [
-      "cellular",
-      1
-    ],
-    [
-      "correlation",
-      1
-    ],
-    [
-      "feature-enhanced",
-      1
-    ],
-    [
-      "itransformer",
-      1
-    ],
-    [
-      "two-stage",
-      1
-    ],
-    [
-      "high-accuracy",
-      1
-    ],
-    [
-      "stochastic",
-      1
-    ],
-    [
-      "load",
-      1
-    ],
-    [
-      "markov-monte",
-      1
-    ],
-    [
-      "carlo",
-      1
-    ],
-    [
-      "simulation",
-      1
-    ],
-    [
-      "traffic-weather",
-      1
-    ],
-    [
-      "generative",
-      1
-    ],
-    [
-      "long-range",
-      1
-    ],
-    [
-      "mobility",
-      1
-    ],
-    [
-      "stvmamba",
-      1
-    ],
-    [
-      "spatio-temporal-variable",
-      1
-    ],
-    [
-      "selective",
-      1
-    ],
-    [
-      "state",
-      1
-    ],
-    [
-      "space",
-      1
+      "gnn",
+      2
     ],
     [
       "custom",
@@ -361,63 +113,271 @@
       1
     ],
     [
-      "machine",
+      "transferable",
       1
     ],
     [
-      "learning-based",
+      "insights",
       1
     ],
     [
-      "cnn",
+      "ai-driven",
       1
     ],
     [
-      "bilstm",
+      "computing",
       1
     ],
     [
-      "travel",
+      "informatics",
       1
     ],
     [
-      "expressways",
+      "empowering",
       1
     ],
     [
-      "vmd-xgboost",
+      "architecture",
       1
     ],
     [
-      "intrinsic",
+      "research",
       1
     ],
     [
-      "airspace",
+      "attention",
       1
     ],
     [
-      "tsaformer",
+      "mechanism",
       1
     ],
     [
-      "cross-dimensional",
+      "stuaformer",
       1
     ],
     [
-      "dependency",
+      "unified",
       1
     ],
     [
-      "weighted",
+      "aggregate",
       1
     ],
     [
-      "vmd",
+      "transfer",
       1
     ],
     [
-      "lssvm",
+      "taxonomy",
+      1
+    ],
+    [
+      "directions",
+      1
+    ],
+    [
+      "cloud-based",
+      1
+    ],
+    [
+      "gnn-transformer",
+      1
+    ],
+    [
+      "external",
+      1
+    ],
+    [
+      "feature",
+      1
+    ],
+    [
+      "integration",
+      1
+    ],
+    [
+      "dual-stream",
+      1
+    ],
+    [
+      "ast-gnnformer",
+      1
+    ],
+    [
+      "layer-aware",
+      1
+    ],
+    [
+      "preservation",
+      1
+    ],
+    [
+      "multi",
+      1
+    ],
+    [
+      "objective",
+      1
+    ],
+    [
+      "optimizing",
+      1
+    ],
+    [
+      "features",
+      1
+    ],
+    [
+      "gaussian",
+      1
+    ],
+    [
+      "dual",
+      1
+    ],
+    [
+      "adjacency",
+      1
+    ],
+    [
+      "correlated",
+      1
+    ],
+    [
+      "dependent",
+      1
+    ],
+    [
+      "bangalore",
+      1
+    ],
+    [
+      "city",
+      1
+    ],
+    [
+      "geolstm",
+      1
+    ],
+    [
+      "road",
+      1
+    ],
+    [
+      "geometry-aware",
+      1
+    ],
+    [
+      "highway",
+      1
+    ],
+    [
+      "intensity",
+      1
+    ],
+    [
+      "innovative",
+      1
+    ],
+    [
+      "practical",
+      1
+    ],
+    [
+      "usage",
+      1
+    ],
+    [
+      "superiority",
+      1
+    ],
+    [
+      "comprehensive",
+      1
+    ],
+    [
+      "review",
+      1
+    ],
+    [
+      "perspectives",
+      1
+    ],
+    [
+      "lstm",
+      1
+    ],
+    [
+      "metr-la",
+      1
+    ],
+    [
+      "dataset",
+      1
+    ],
+    [
+      "heterogeneous",
+      1
+    ],
+    [
+      "interactions",
+      1
+    ],
+    [
+      "patvtn",
+      1
+    ],
+    [
+      "period-aware",
+      1
+    ],
+    [
+      "time-varying",
+      1
+    ],
+    [
+      "topological",
+      1
+    ],
+    [
+      "risk-aware",
+      1
+    ],
+    [
+      "multi-horizon",
+      1
+    ],
+    [
+      "airport",
+      1
+    ],
+    [
+      "departure",
+      1
+    ],
+    [
+      "patch-based",
+      1
+    ],
+    [
+      "time-series",
+      1
+    ],
+    [
+      "real-time",
+      1
+    ],
+    [
+      "zealand",
+      1
+    ],
+    [
+      "attention-enhanced",
+      1
+    ],
+    [
+      "transfer learning",
       1
     ]
   ]
