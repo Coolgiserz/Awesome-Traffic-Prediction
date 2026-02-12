@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-02-06T19:24:05.281015+00:00",
+  "generated_utc": "2026-02-12T07:27:51.511516+00:00",
   "topk": 12,
   "years": {
     "2015": [
@@ -475,23 +475,35 @@
     "2026": [
       {
         "term": "flow",
-        "count": 4
+        "count": 6
       },
       {
         "term": "traffic flow",
-        "count": 4
+        "count": 6
       },
       {
         "term": "graph",
-        "count": 3
+        "count": 4
+      },
+      {
+        "term": "spatial-temporal",
+        "count": 2
       },
       {
         "term": "spatio-temporal",
         "count": 2
       },
       {
-        "term": "spatial-temporal",
-        "count": 1
+        "term": "high-accuracy",
+        "count": 2
+      },
+      {
+        "term": "long-horizon",
+        "count": 2
+      },
+      {
+        "term": "multi-scale",
+        "count": 2
       },
       {
         "term": "convolutional",
@@ -507,18 +519,6 @@
       },
       {
         "term": "information bottleneck",
-        "count": 1
-      },
-      {
-        "term": "conditioned",
-        "count": 1
-      },
-      {
-        "term": "spatiotemporal",
-        "count": 1
-      },
-      {
-        "term": "pimcst",
         "count": 1
       }
     ]
