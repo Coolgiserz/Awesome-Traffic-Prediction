@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-02-12T07:27:50.954773+00:00",
+  "generated_utc": "2026-10-01T08:41:39.188922+00:00",
   "input": "updates/monthly-paper-candidates.md",
   "phrase_rules": [
     "traffic flow",
@@ -21,287 +21,11 @@
   ],
   "top_words": [
     [
-      "graph",
-      14
-    ],
-    [
-      "spatio-temporal",
-      11
-    ],
-    [
-      "flow",
-      10
-    ],
-    [
-      "traffic flow",
-      9
-    ],
-    [
-      "speed",
-      7
-    ],
-    [
-      "traffic speed",
-      6
-    ],
-    [
-      "convolutional",
-      4
-    ],
-    [
-      "traffic forecasting",
-      4
-    ],
-    [
-      "spatiotemporal",
-      3
-    ],
-    [
-      "urban",
-      3
-    ],
-    [
-      "transformer",
-      3
-    ],
-    [
-      "temporal",
-      3
-    ],
-    [
-      "future",
-      2
-    ],
-    [
       "hybrid",
-      2
-    ],
-    [
-      "spatial",
-      2
-    ],
-    [
-      "integrating",
-      2
-    ],
-    [
-      "gnn",
-      2
-    ],
-    [
-      "custom",
       1
     ],
     [
-      "transformer-based",
-      1
-    ],
-    [
-      "joint",
-      1
-    ],
-    [
-      "autonomous",
-      1
-    ],
-    [
-      "driving",
-      1
-    ],
-    [
-      "contexts",
-      1
-    ],
-    [
-      "transferable",
-      1
-    ],
-    [
-      "insights",
-      1
-    ],
-    [
-      "ai-driven",
-      1
-    ],
-    [
-      "computing",
-      1
-    ],
-    [
-      "informatics",
-      1
-    ],
-    [
-      "empowering",
-      1
-    ],
-    [
-      "architecture",
-      1
-    ],
-    [
-      "research",
-      1
-    ],
-    [
-      "attention",
-      1
-    ],
-    [
-      "mechanism",
-      1
-    ],
-    [
-      "stuaformer",
-      1
-    ],
-    [
-      "unified",
-      1
-    ],
-    [
-      "aggregate",
-      1
-    ],
-    [
-      "transfer",
-      1
-    ],
-    [
-      "taxonomy",
-      1
-    ],
-    [
-      "directions",
-      1
-    ],
-    [
-      "cloud-based",
-      1
-    ],
-    [
-      "gnn-transformer",
-      1
-    ],
-    [
-      "external",
-      1
-    ],
-    [
-      "feature",
-      1
-    ],
-    [
-      "integration",
-      1
-    ],
-    [
-      "dual-stream",
-      1
-    ],
-    [
-      "ast-gnnformer",
-      1
-    ],
-    [
-      "layer-aware",
-      1
-    ],
-    [
-      "preservation",
-      1
-    ],
-    [
-      "multi",
-      1
-    ],
-    [
-      "objective",
-      1
-    ],
-    [
-      "optimizing",
-      1
-    ],
-    [
-      "features",
-      1
-    ],
-    [
-      "gaussian",
-      1
-    ],
-    [
-      "dual",
-      1
-    ],
-    [
-      "adjacency",
-      1
-    ],
-    [
-      "correlated",
-      1
-    ],
-    [
-      "dependent",
-      1
-    ],
-    [
-      "bangalore",
-      1
-    ],
-    [
-      "city",
-      1
-    ],
-    [
-      "geolstm",
-      1
-    ],
-    [
-      "road",
-      1
-    ],
-    [
-      "geometry-aware",
-      1
-    ],
-    [
-      "highway",
-      1
-    ],
-    [
-      "intensity",
-      1
-    ],
-    [
-      "innovative",
-      1
-    ],
-    [
-      "practical",
-      1
-    ],
-    [
-      "usage",
-      1
-    ],
-    [
-      "superiority",
-      1
-    ],
-    [
-      "comprehensive",
-      1
-    ],
-    [
-      "review",
-      1
-    ],
-    [
-      "perspectives",
+      "xgboost",
       1
     ],
     [
@@ -309,39 +33,11 @@
       1
     ],
     [
-      "metr-la",
+      "short-term",
       1
     ],
     [
-      "dataset",
-      1
-    ],
-    [
-      "heterogeneous",
-      1
-    ],
-    [
-      "interactions",
-      1
-    ],
-    [
-      "patvtn",
-      1
-    ],
-    [
-      "period-aware",
-      1
-    ],
-    [
-      "time-varying",
-      1
-    ],
-    [
-      "topological",
-      1
-    ],
-    [
-      "risk-aware",
+      "flow",
       1
     ],
     [
@@ -349,35 +45,107 @@
       1
     ],
     [
-      "airport",
+      "empirical",
       1
     ],
     [
-      "departure",
+      "explainability",
       1
     ],
     [
-      "patch-based",
+      "robustness",
       1
     ],
     [
-      "time-series",
+      "multi-scale",
       1
     ],
     [
-      "real-time",
+      "traffic-state",
       1
     ],
     [
-      "zealand",
+      "gated",
       1
     ],
     [
-      "attention-enhanced",
+      "attention",
       1
     ],
     [
-      "transfer learning",
+      "bus",
+      1
+    ],
+    [
+      "arrival",
+      1
+    ],
+    [
+      "explainable",
+      1
+    ],
+    [
+      "machine",
+      1
+    ],
+    [
+      "thermal",
+      1
+    ],
+    [
+      "discomfort",
+      1
+    ],
+    [
+      "multipollutant",
+      1
+    ],
+    [
+      "exposure",
+      1
+    ],
+    [
+      "dhaka",
+      1
+    ],
+    [
+      "roadways",
+      1
+    ],
+    [
+      "road",
+      1
+    ],
+    [
+      "freight",
+      1
+    ],
+    [
+      "transport",
+      1
+    ],
+    [
+      "spain",
+      1
+    ],
+    [
+      "mixed-methods",
+      1
+    ],
+    [
+      "assessment",
+      1
+    ],
+    [
+      "sarima",
+      1
+    ],
+    [
+      "forecasts",
+      1
+    ],
+    [
+      "traffic flow",
       1
     ]
   ]
