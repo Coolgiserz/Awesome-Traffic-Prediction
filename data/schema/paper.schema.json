@@ -254,7 +254,7 @@
     "featured": {
       "type": "boolean",
       "default": false,
-      "description": "Legacy field: drives the curated digest table."
+      "description": "Legacy field, kept for the README digest table. Significance is expressed by `impact`, not by this flag."
     },
     "in_digest": {
       "type": "boolean",
@@ -369,6 +369,45 @@
         "maximum": 2100
       },
       "description": "Other publication years this work appeared under (e.g. arXiv preprint year vs proceedings year)."
+    },
+    "impact": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "description": "Curator-assigned significance. This is a judgement call about the paper's role in the field, deliberately not an automated citation count.",
+      "properties": {
+        "tier": {
+          "type": "string",
+          "enum": [
+            "landmark",
+            "notable",
+            "standard"
+          ],
+          "description": "landmark: defined a research line or is a standard baseline; notable: strong, frequently compared against; standard: worth indexing, not load-bearing."
+        },
+        "role": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "One sentence: what this paper established or solved. Required for landmark."
+        },
+        "role_zh": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "track": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Research track used to group landmarks, e.g. graph_basics, adaptive_graph, transformer, foundation_model."
+        }
+      }
     }
   }
 }

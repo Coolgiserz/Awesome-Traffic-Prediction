@@ -63,7 +63,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "trafficgan-2019",
@@ -125,7 +131,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "contextualized-spatial-temporal-network-for-taxi-2019",
@@ -191,7 +203,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "deep-spatial-temporal-3d-convolutional-neural-ne-2019",
@@ -226,7 +244,7 @@
     "task_en": "Traffic forecasting",
     "task_zh": null,
     "method_tags": [
-      "Spatio-Temporal CNN"
+      "Temporal Convolution"
     ],
     "note_en": null,
     "note_zh": null,
@@ -251,7 +269,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "graph-wavenet-for-deep-spatial-temporal-graph-mo-2019",
@@ -290,7 +314,12 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Graph Convolution",
+      "Temporal Convolution",
+      "Adaptive Graph",
+      "STGNN"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -314,7 +343,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "landmark",
+      "role": "Graph WaveNet: dilated causal convolutions plus a learned adaptive adjacency; long the default baseline.",
+      "role_zh": "Graph WaveNet：膨胀因果卷积 + 可学习的自适应邻接矩阵，长期是默认对比基线。",
+      "track": "graph_basics"
+    }
   },
   {
     "id": "gstnet-2019",
@@ -372,7 +407,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "revisiting-spatial-temporal-similarity-a-deep-le-2019",
@@ -433,7 +474,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "deepstn-2019",
@@ -496,7 +543,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "attention-based-spatial-temporal-graph-convoluti-2019",
@@ -563,7 +616,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "landmark",
+      "role": "ASTGCN: brought spatial and temporal attention into graph-based forecasting.",
+      "role_zh": "ASTGCN：把空间与时间注意力引入图结构预测。",
+      "track": "graph_basics"
+    }
   },
   {
     "id": "multi-range-attentive-bicomponent-graph-convolut-2019",
@@ -625,7 +684,13 @@
     "updated_at": "2026-11-24",
     "alt_years": [
       2019
-    ]
+    ],
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "learning-from-multiple-cities-a-meta-learning-ap-2019",
@@ -634,7 +699,7 @@
     "section": "deep_learning",
     "title": "Learning from Multiple Cities: A Meta-Learning Approach for Spatial-Temporal Prediction",
     "title_zh": null,
-    "venue": "WWWC",
+    "venue": "WWW",
     "venue_id": "www",
     "venue_type": "conference",
     "paper_url": "https://doi.org/10.1145/3308558.3313577",
@@ -687,7 +752,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "spatio-temporal-clustering-of-traffic-data-with-2019",
@@ -719,8 +790,7 @@
     "task_en": "Traffic forecasting",
     "task_zh": null,
     "method_tags": [
-      "Clustering",
-      "Deep Clustering"
+      "Clustering"
     ],
     "note_en": null,
     "note_zh": null,
@@ -745,7 +815,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "stgat-2019",
@@ -810,7 +886,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "urban-traffic-prediction-from-spatio-temporal-da-2019",
@@ -850,7 +932,11 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Meta-Learning",
+      "STGNN",
+      "Adaptive Graph"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -874,7 +960,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "landmark",
+      "role": "ST-MetaNet: meta-learning over graphs, removing the need for a hand-crafted adjacency.",
+      "role_zh": "ST-MetaNet：用元学习生成图结构，摆脱人工邻接矩阵。",
+      "track": "adaptive_graph"
+    }
   },
   {
     "id": "matrix-factorization-for-spatio-temporal-neural-2019",
@@ -883,7 +975,7 @@
     "section": "deep_learning",
     "title": "Matrix Factorization for Spatio-Temporal Neural Networks with Applications to Urban Flow Prediction",
     "title_zh": null,
-    "venue": "ICIKM",
+    "venue": "CIKM",
     "venue_id": "cikm",
     "venue_type": "conference",
     "paper_url": "https://doi.org/10.1145/3357384.3357832",
@@ -935,7 +1027,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "flow-prediction-in-spatio-temporal-networks-base-2019",
@@ -992,7 +1090,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "traffic-speed-prediction-for-intelligent-transpo-2019",
@@ -1050,7 +1154,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "spatial-temporal-graph-attention-networks-a-deep-2019",
@@ -1109,7 +1219,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "forecaster-2019",
@@ -1118,7 +1234,7 @@
     "section": "deep_learning",
     "title": "Forecaster: A graph transformer for forecasting spatial and time dependent data",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "https://arxiv.org/abs/1909.04019",
@@ -1169,7 +1285,13 @@
     "updated_at": "2026-11-24",
     "alt_years": [
       2019
-    ]
+    ],
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "temporal-fusion-transformers-for-interpretable-m-2019",
@@ -1178,7 +1300,7 @@
     "section": "deep_learning",
     "title": "Temporal fusion transformers for interpretable multi-horizon time series forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "https://arxiv.org/abs/1912.09363",
@@ -1231,7 +1353,13 @@
     "updated_at": "2026-11-24",
     "alt_years": [
       2019
-    ]
+    ],
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "a-generalized-bayesian-traffic-model-2019",
@@ -1240,8 +1368,8 @@
     "section": "statistic",
     "title": "A generalized Bayesian traffic model",
     "title_zh": null,
-    "venue": "TRPET",
-    "venue_id": "trpart-c",
+    "venue": "TR-C",
+    "venue_id": "trc",
     "venue_type": "journal",
     "paper_url": "https://doi.org/10.1016/j.trc.2019.09.011",
     "alt_urls": {
@@ -1290,7 +1418,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "context-aware-forecasting-for-multivariate-stati-2019",
@@ -1340,6 +1474,12 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   }
 ]

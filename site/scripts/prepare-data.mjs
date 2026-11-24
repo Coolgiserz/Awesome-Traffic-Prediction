@@ -90,7 +90,7 @@ function fingerprint(obj) {
  * the structured schema fall back to the same heuristics the README scrape uses,
  * so a partially migrated year still renders sensibly.
  */
-function normalizePaper(item, file) {
+function normalizePaper(item, file, venues) {
   const title = item.title ?? item.name;
   if (!title) return null;
   const year = Number(item.year ?? 0) || null;
@@ -135,13 +135,26 @@ function normalizePaper(item, file) {
     noteZh: item.note_zh ?? null,
     featured: Boolean(item.featured ?? item.in_digest),
     status: item.status ?? 'active',
+    impact: item.impact ?? null,
+    venueTier: venues.get(item.venue_id)?.tier ?? null,
     verification: item.verification ?? null,
     provenance: item.provenance ?? null,
     source: `data/papers/${file}`,
   };
 }
 
-async function loadStructuredPapers() {
+/** venue_id -> {tier, shortName}, from data/venues.json. */
+async function loadVenues() {
+  const raw = await readJsonSafe(path.join(REPO_DIR, 'data', 'venues.json'));
+  const map = new Map();
+  if (Array.isArray(raw)) {
+    for (const v of raw) if (v && v.id) map.set(v.id, v);
+  }
+  log(`venues: ${map.size}`);
+  return map;
+}
+
+async function loadStructuredPapers(venues) {
   const dir = path.join(REPO_DIR, 'data', 'papers');
   if (!existsSync(dir)) return null;
   const files = (await readdir(dir)).filter((f) => f.endsWith('.json')).sort();
@@ -153,7 +166,7 @@ async function loadStructuredPapers() {
     if (!raw) continue;
     const arr = Array.isArray(raw) ? raw : raw.papers ?? raw.items ?? [];
     for (const item of arr) {
-      const p = normalizePaper(item, f);
+      const p = normalizePaper(item, f, venues);
       if (p) papers.push(p);
     }
   }
@@ -382,12 +395,16 @@ async function buildChartData(papers) {
   const byYear = new Map();
   const byVenue = new Map();
   const byTask = new Map();
+  const byTier = new Map();
+  const byImpact = new Map();
   const byLayer = new Map();
   const byDirection = new Map();
   for (const p of papers) {
     if (p.year) byYear.set(p.year, (byYear.get(p.year) ?? 0) + 1);
     if (p.venue) byVenue.set(p.venue, (byVenue.get(p.venue) ?? 0) + 1);
     if (p.task) byTask.set(p.task, (byTask.get(p.task) ?? 0) + 1);
+    if (p.venueTier) byTier.set(p.venueTier, (byTier.get(p.venueTier) ?? 0) + 1);
+    if (p.impact?.tier) byImpact.set(p.impact.tier, (byImpact.get(p.impact.tier) ?? 0) + 1);
     for (const l of p.layers ?? []) byLayer.set(l, (byLayer.get(l) ?? 0) + 1);
     for (const d of p.directionTags ?? []) byDirection.set(d, (byDirection.get(d) ?? 0) + 1);
   }
@@ -399,6 +416,8 @@ async function buildChartData(papers) {
     papersByYear: [...byYear.entries()].sort((a, b) => a[0] - b[0]),
     topVenues: top(byVenue),
     taskCounts: [...byTask.entries()].sort((a, b) => b[1] - a[1]),
+    venueTiers: [...byTier.entries()],
+    impactTiers: [...byImpact.entries()],
     layerCounts: top(byLayer),
     directionCounts: top(byDirection, 20),
     hotspots: yearly
@@ -417,7 +436,8 @@ async function buildChartData(papers) {
 /* ---------------------------------------------------------------- main */
 
 async function main() {
-  const structured = await loadStructuredPapers();
+  const venues = await loadVenues();
+  const structured = await loadStructuredPapers(venues);
 
   let papers;
   let provenance;
@@ -479,7 +499,9 @@ async function main() {
   log(
     `years ${Math.min(...years)}..${Math.max(...years)} | with code ${papers.filter((p) => p.codeUrl).length}` +
       ` | with data ${papers.filter((p) => p.dataUrl).length}` +
-      ` | with doi ${papers.filter((p) => p.doi).length}`,
+      ` | with doi ${papers.filter((p) => p.doi).length}` +
+      ` | landmarks ${papers.filter((p) => p.impact?.tier === 'landmark').length}` +
+      ` | top venues ${papers.filter((p) => p.venueTier === 'top').length}`,
   );
 }
 

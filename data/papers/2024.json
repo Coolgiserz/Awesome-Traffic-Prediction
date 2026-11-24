@@ -6,8 +6,8 @@
     "section": "deep_learning",
     "title": "UniST: A Prompt-Empowered Universal Model for Urban Spatio-Temporal Prediction",
     "title_zh": null,
-    "venue": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)",
-    "venue_id": "arxiv",
+    "venue": "KDD",
+    "venue_id": "kdd",
     "venue_type": "conference",
     "paper_url": "https://arxiv.org/abs/2402.11838",
     "alt_urls": {},
@@ -30,7 +30,6 @@
     "task_en": "Urban spatio-temporal prediction",
     "task_zh": "城市时空预测",
     "method_tags": [
-      "Prompting",
       "Foundation Model"
     ],
     "note_en": "Universal/prompt-based perspective",
@@ -59,7 +58,13 @@
       "curated_labels": true
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "landmark",
+      "role": "UniST: one prompt-driven model trained across many urban datasets, the foundation-model pivot.",
+      "role_zh": "UniST：单一提示驱动模型跨多城市数据集训练，是转向基础模型的标志性工作。",
+      "track": "foundation_model"
+    }
   },
   {
     "id": "cool-2024",
@@ -69,7 +74,7 @@
     "title": "COOL: A Conjoint Perspective on Spatio-Temporal Graph Neural Network for Traffic Forecasting",
     "title_zh": null,
     "venue": "Information Fusion",
-    "venue_id": "arxiv",
+    "venue_id": "infofusion",
     "venue_type": "journal",
     "paper_url": "https://arxiv.org/abs/2403.01091",
     "alt_urls": {},
@@ -96,8 +101,7 @@
     "task_en": "Traffic forecasting",
     "task_zh": "交通预测",
     "method_tags": [
-      "STGNN",
-      "Graph Modeling"
+      "STGNN"
     ],
     "note_en": "Conjoint STGNN perspective",
     "note_zh": "联合视角的 STGNN 建模",
@@ -123,7 +127,13 @@
       "curated_labels": true
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "gstrgct-2024",
@@ -132,8 +142,8 @@
     "section": "deep_learning",
     "title": "Generalized spatial–temporal regression graph convolutional transformer for traffic forecasting",
     "title_zh": null,
-    "venue": "Complex & Intelligent Systems",
-    "venue_id": "complex-intelligent-systems",
+    "venue": "Systems",
+    "venue_id": "systems",
     "venue_type": "journal",
     "paper_url": "https://doi.org/10.1007/s40747-024-01578-x",
     "alt_urls": {
@@ -160,7 +170,7 @@
     "task_zh": "交通预测",
     "method_tags": [
       "Transformer",
-      "GCN"
+      "Graph Convolution"
     ],
     "note_en": "Regression + graph transformer design",
     "note_zh": "回归与图 Transformer 结合",
@@ -188,7 +198,13 @@
       "curated_labels": true
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "fl-stgnn-2024",
@@ -250,7 +266,13 @@
       "curated_labels": true
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "a-novel-hybrid-time-varying-graph-neural-2024",
@@ -259,7 +281,7 @@
     "section": "deep_learning",
     "title": "A novel hybrid time-varying graph neural network for traffic flow forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2401.10155v4",
@@ -306,7 +328,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "deep-multi-view-channel-wise-spatio-temp-2024",
@@ -315,7 +343,7 @@
     "section": "deep_learning",
     "title": "Deep Multi-View Channel-Wise Spatio-Temporal Network for Traffic Flow Prediction",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2404.15034v1",
@@ -363,7 +391,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "enhanced-traffic-flow-prediction-with-mu-2024",
@@ -372,7 +406,7 @@
     "section": "deep_learning",
     "title": "Enhanced Traffic Flow Prediction with Multi-Segment Fusion Tensor Graph Convolutional Networks",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2408.04232v1",
@@ -418,7 +452,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "global-aware-enhanced-spatial-temporal-g-2024",
@@ -427,7 +467,7 @@
     "section": "deep_learning",
     "title": "Global-Aware Enhanced Spatial-Temporal Graph Recurrent Networks: A New Framework For Traffic Flow Prediction",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2401.04135v1",
@@ -472,7 +512,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "lsttn-a-long-short-term-transformer-base-2024",
@@ -481,8 +527,8 @@
     "section": "deep_learning",
     "title": "LSTTN: A Long-Short Term Transformer-based Spatio-temporal Neural Network for Traffic Flow Forecasting",
     "title_zh": null,
-    "venue": "Knowledge-Based Systems",
-    "venue_id": "arxiv",
+    "venue": "Systems",
+    "venue_id": "systems",
     "venue_type": "journal",
     "paper_url": "https://doi.org/10.1016/j.knosys.2024.111637",
     "alt_urls": {},
@@ -532,7 +578,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "multimodal-joint-prediction-of-traffic-s-2024",
@@ -542,7 +594,7 @@
     "title": "Multimodal joint prediction of traffic spatial-temporal data with graph sparse attention mechanism and bidirectional temporal convolutional network",
     "title_zh": null,
     "venue": "Advanced Engineering Informatics",
-    "venue_id": "arxiv",
+    "venue_id": "advenginformatcs",
     "venue_type": "journal",
     "paper_url": "http://arxiv.org/abs/2412.19842v1",
     "alt_urls": {},
@@ -590,7 +642,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "predicting-traffic-flow-with-federated-l-2024",
@@ -600,7 +658,7 @@
     "title": "Predicting Traffic Flow with Federated Learning and Graph Neural with Asynchronous Computations Network",
     "title_zh": null,
     "venue": "Array",
-    "venue_id": "arxiv",
+    "venue_id": "array",
     "venue_type": "journal",
     "paper_url": "http://arxiv.org/abs/2401.02723v2",
     "alt_urls": {},
@@ -654,7 +712,13 @@
     "updated_at": "2026-11-24",
     "alt_years": [
       2024
-    ]
+    ],
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "st-mamba-spatial-temporal-selective-stat-2024",
@@ -663,7 +727,7 @@
     "section": "deep_learning",
     "title": "ST-Mamba: Spatial-Temporal Selective State Space Model for Traffic Flow Prediction",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2404.13257v2",
@@ -715,6 +779,12 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   }
 ]

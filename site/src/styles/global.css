@@ -334,3 +334,41 @@ footer.site .wrap { display: flex; flex-wrap: wrap; gap: 16px; justify-content: 
   .header-tools .btn span { display: none; }
   .hero { padding: 30px 0 18px; }
 }
+
+/* Quality signals on paper cards: venue tier and landmark status. */
+.pill.tier-top {
+  background: #e8f0fe;
+  color: #1a4b8c;
+  border-color: #cfdcf7;
+}
+.pill.tier-pre {
+  background: transparent;
+  border-style: dashed;
+  color: var(--fg-muted);
+}
+.pill.landmark {
+  background: #fff4e5;
+  color: #8a4b00;
+  border-color: #f3d9b5;
+  font-weight: 600;
+}
+
+
+/* Front-page landmark cards: the reason-why line is what carries the value. */
+.landmark-card {
+  border-left: 3px solid #e0a458;
+}
+.landmark-card .why {
+  color: var(--fg-muted);
+  font-size: 12.5px;
+  line-height: 1.55;
+  margin-top: 6px;
+}
+.tier-badge {
+  display: inline-block;
+  padding: 0 5px;
+  border-radius: 3px;
+  background: #e8f0fe;
+  color: #1a4b8c;
+  font-size: 11px;
+}

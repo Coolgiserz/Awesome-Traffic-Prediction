@@ -63,6 +63,7 @@ const topVenues = [...venueCount.entries()]
     autocomplete="off"
   />
   <select id="paper-sort" aria-label={t.papers.sort}>
+    <option value="impact">{t.papers.sortImpact}</option>
     <option value="newest">{t.papers.sortNewest}</option>
     <option value="oldest">{t.papers.sortOldest}</option>
     <option value="venue">{t.papers.sortVenue}</option>
@@ -110,16 +111,23 @@ const topVenues = [...venueCount.entries()]
       <article
         class="paper"
         data-pagefind-filter={`year:${p.year ?? ''}, venue:${facetVenue(p.venue)}`}
+        data-tier={p.venueTier ?? ''}
+        data-impact={p.impact?.tier ?? ''}
         data-year={p.year ?? ''}
         data-venue={p.venue}
         data-task={p.task}
         data-tag={(p.methodTags ?? []).join('|')}
         data-sort-key={`${p.year ?? 0}|${p.venue}|${p.title.toLowerCase()}`}
+        data-rank={p.impact?.tier ?? 'standard'}
         data-text={`${p.title} ${p.venue} ${p.shortName} ${(p.methodTags ?? []).join(' ')} ${p.task} ${(p.authors ?? []).join(' ')}`.toLowerCase()}
       >
         <div class="meta">
           {p.year && <span class="pill year">{p.year}</span>}
           <span class="pill">{p.venue}</span>
+          {p.venueTier === 'top' && <span class="pill tier-top">{t.papers.tierTop}</span>}
+          {p.venueTier === 'preprint' && <span class="pill tier-pre">{t.papers.tierPreprint}</span>}
+          {p.venueTier === 'low' && <span class="pill tier-pre">{t.papers.tierLow}</span>}
+          {p.impact?.tier === 'landmark' && <span class="pill landmark">{t.papers.landmark}</span>}
           {(p.methodTags ?? []).slice(0, 4).map((tag) => (
             <span class="pill">{tag}</span>
           ))}
@@ -177,7 +185,7 @@ const topVenues = [...venueCount.entries()]
       venues: new Set(),
       tasks: new Set(),
       tags: new Set(),
-      sort: 'newest',
+      sort: 'impact',
     };
 
     /** URL is the source of truth on first paint (shareable filter views). */
@@ -189,7 +197,7 @@ const topVenues = [...venueCount.entries()]
       for (const v of p.getAll('v')) state.venues.add(v);
       for (const v of p.getAll('t')) state.tasks.add(v);
       for (const v of p.getAll('m')) state.tags.add(v);
-      state.sort = p.get('s') ?? 'newest';
+      state.sort = p.get('s') ?? 'impact';
       if (searchEl) searchEl.value = state.q;
       if (sortEl) sortEl.value = state.sort;
     }
@@ -208,7 +216,7 @@ const topVenues = [...venueCount.entries()]
       for (const v of state.venues) p.append('v', v);
       for (const v of state.tasks) p.append('t', v);
       for (const v of state.tags) p.append('m', v);
-      if (state.sort !== 'newest') p.set('s', state.sort);
+      if (state.sort !== 'impact') p.set('s', state.sort);
       const qs = p.toString();
       history.replaceState(null, '', qs ? `?${qs}` : u.pathname);
     }
@@ -230,6 +238,14 @@ const topVenues = [...venueCount.entries()]
       const sorted = [...cards].sort((a, b) => {
         const [ay, av, at] = a.dataset.sortKey!.split('|');
         const [by, bv, bt] = b.dataset.sortKey!.split('|');
+        if (state.sort === 'impact') {
+          const rank = a.dataset.rank ?? 'standard';
+          const rankB = b.dataset.rank ?? 'standard';
+          const order: Record<string, number> = { landmark: 0, notable: 1, standard: 2 };
+          const d = (order[rank] ?? 2) - (order[rankB] ?? 2);
+          // Within a tier, newest first: a landmark list still reads chronologically.
+          return d || Number(by) - Number(ay) || at.localeCompare(bt);
+        }
         if (state.sort === 'venue') {
           return av.localeCompare(bv) || Number(by) - Number(ay) || at.localeCompare(bt);
         }
@@ -302,9 +318,9 @@ const topVenues = [...venueCount.entries()]
       state.venues.clear();
       state.tasks.clear();
       state.tags.clear();
-      state.sort = 'newest';
+      state.sort = 'impact';
       if (searchEl) searchEl.value = '';
-      if (sortEl) sortEl.value = 'newest';
+      if (sortEl) sortEl.value = 'impact';
       applySort();
       render();
     });

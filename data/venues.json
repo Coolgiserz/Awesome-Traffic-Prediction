@@ -1,0 +1,485 @@
+[
+  {
+    "id": "aaai",
+    "short_name": "AAAI",
+    "tier": "top",
+    "type": "conference",
+    "aliases": [
+      "aaai",
+      "proceedings of the aaai conference on artificial intelligence",
+      "proceedings of the aaai conference on artificial intelligence (aaai)"
+    ]
+  },
+  {
+    "id": "access",
+    "short_name": "Access",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "access",
+      "ieee access"
+    ]
+  },
+  {
+    "id": "advenginformatcs",
+    "short_name": "Advanced Engineering Informatics",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "advanced engineering informatics"
+    ]
+  },
+  {
+    "id": "appliedintell",
+    "short_name": "Applied Intelligence",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "applied intelligence"
+    ]
+  },
+  {
+    "id": "array",
+    "short_name": "Array",
+    "tier": "low",
+    "type": "journal",
+    "aliases": [
+      "array"
+    ]
+  },
+  {
+    "id": "arxiv",
+    "short_name": "arXiv",
+    "tier": "preprint",
+    "type": "preprint",
+    "aliases": [
+      "arxiv",
+      "arxiv (cornell university)"
+    ]
+  },
+  {
+    "id": "ccis",
+    "short_name": "CCIS",
+    "tier": "mid",
+    "type": "conference",
+    "aliases": [
+      "communications in computer and information science"
+    ]
+  },
+  {
+    "id": "chaos",
+    "short_name": "Chaos",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "chaos: an interdisciplinary journal of nonlinear science",
+      "chaos"
+    ]
+  },
+  {
+    "id": "cikm",
+    "short_name": "CIKM",
+    "tier": "top",
+    "type": "conference",
+    "aliases": [
+      "cikm",
+      "icikm",
+      "acm international conference on information and knowledge management",
+      "acm international conference on information and knowledge management (cikm)"
+    ]
+  },
+  {
+    "id": "computernetworks",
+    "short_name": "Computer Networks",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "computer networks"
+    ]
+  },
+  {
+    "id": "cs224w",
+    "short_name": "CS224W",
+    "tier": "preprint",
+    "type": "workshop",
+    "aliases": [
+      "cs224w"
+    ]
+  },
+  {
+    "id": "cvpr",
+    "short_name": "CVPR",
+    "tier": "top",
+    "type": "conference",
+    "aliases": [
+      "cvpr"
+    ]
+  },
+  {
+    "id": "dmkd",
+    "short_name": "DMKD",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "data mining and knowledge discovery"
+    ]
+  },
+  {
+    "id": "electronics",
+    "short_name": "Electronics",
+    "tier": "low",
+    "type": "journal",
+    "aliases": [
+      "electronics"
+    ]
+  },
+  {
+    "id": "eswa",
+    "short_name": "ESWA",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "expert systems with applications"
+    ]
+  },
+  {
+    "id": "icc",
+    "short_name": "ICC",
+    "tier": "mid",
+    "type": "conference",
+    "aliases": [
+      "icc 2022 - ieee international conference on communications"
+    ]
+  },
+  {
+    "id": "iccv",
+    "short_name": "ICCV",
+    "tier": "top",
+    "type": "conference",
+    "aliases": [
+      "iccv"
+    ]
+  },
+  {
+    "id": "icde",
+    "short_name": "ICDE",
+    "tier": "top",
+    "type": "conference",
+    "aliases": [
+      "icde",
+      "ieee international conference on data engineering",
+      "ieee international conference on data engineering (icde)",
+      "2023 ieee 39th international conference on data engineering"
+    ]
+  },
+  {
+    "id": "icdm",
+    "short_name": "ICDM",
+    "tier": "top",
+    "type": "conference",
+    "aliases": [
+      "icdm",
+      "ieee international conference on data mining"
+    ]
+  },
+  {
+    "id": "iclr",
+    "short_name": "ICLR",
+    "tier": "top",
+    "type": "conference",
+    "aliases": [
+      "iclr",
+      "international conference on learning representations"
+    ]
+  },
+  {
+    "id": "icton",
+    "short_name": "ICTON",
+    "tier": "low",
+    "type": "conference",
+    "aliases": [
+      "icton"
+    ]
+  },
+  {
+    "id": "iet-its",
+    "short_name": "IET ITS",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "iet intelligent transport systems"
+    ]
+  },
+  {
+    "id": "ijcai",
+    "short_name": "IJCAI",
+    "tier": "top",
+    "type": "conference",
+    "aliases": [
+      "ijcai",
+      "international joint conference on artificial intelligence"
+    ]
+  },
+  {
+    "id": "ijcai-ws",
+    "short_name": "IJCAI Workshop",
+    "tier": "preprint",
+    "type": "workshop",
+    "aliases": [
+      "ijcai workshop"
+    ]
+  },
+  {
+    "id": "ijcnn",
+    "short_name": "IJCNN",
+    "tier": "mid",
+    "type": "conference",
+    "aliases": [
+      "ijcnn"
+    ]
+  },
+  {
+    "id": "ijgis",
+    "short_name": "IJGIS",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "ijgis"
+    ]
+  },
+  {
+    "id": "infofusion",
+    "short_name": "Information Fusion",
+    "tier": "top",
+    "type": "journal",
+    "aliases": [
+      "information fusion",
+      "if"
+    ]
+  },
+  {
+    "id": "iotj",
+    "short_name": "IEEE IoT Journal",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "ieee internet of things journal"
+    ]
+  },
+  {
+    "id": "isc2",
+    "short_name": "ISC2",
+    "tier": "mid",
+    "type": "conference",
+    "aliases": [
+      "international conference on innovations"
+    ]
+  },
+  {
+    "id": "isprs-ijgi",
+    "short_name": "ISPRS IJGI",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "isprs ijgi",
+      "isprs"
+    ]
+  },
+  {
+    "id": "iwphm",
+    "short_name": "IWPHM",
+    "tier": "preprint",
+    "type": "workshop",
+    "aliases": [
+      "iwphm"
+    ]
+  },
+  {
+    "id": "kdd",
+    "short_name": "KDD",
+    "tier": "top",
+    "type": "conference",
+    "aliases": [
+      "kdd",
+      "acm sigkdd conference on knowledge discovery and data mining",
+      "sigkdd",
+      "acm sigkdd conference on knowledge discovery and data mining (kdd)"
+    ]
+  },
+  {
+    "id": "lncs",
+    "short_name": "LNCS",
+    "tier": "mid",
+    "type": "conference",
+    "aliases": [
+      "lecture notes in computer science"
+    ]
+  },
+  {
+    "id": "mobilecomputing",
+    "short_name": "Mobile Computing",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "mobile computing"
+    ]
+  },
+  {
+    "id": "neuralcomputing",
+    "short_name": "Neural Computing and Applications",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "neural computing and applications"
+    ]
+  },
+  {
+    "id": "neuralnetworks",
+    "short_name": "Neural Networks",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "neural networks"
+    ]
+  },
+  {
+    "id": "neurips",
+    "short_name": "NeurIPS",
+    "tier": "top",
+    "type": "conference",
+    "aliases": [
+      "neurips",
+      "nips",
+      "advances in neural information processing systems"
+    ]
+  },
+  {
+    "id": "pakdd",
+    "short_name": "PAKDD",
+    "tier": "mid",
+    "type": "conference",
+    "aliases": [
+      "pakdd"
+    ]
+  },
+  {
+    "id": "plosone",
+    "short_name": "PLoS ONE",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "plos one",
+      "plos one"
+    ]
+  },
+  {
+    "id": "scirep",
+    "short_name": "Scientific Reports",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "scientific reports"
+    ]
+  },
+  {
+    "id": "sensors",
+    "short_name": "Sensors",
+    "tier": "low",
+    "type": "journal",
+    "aliases": [
+      "sensor",
+      "sensors"
+    ]
+  },
+  {
+    "id": "sigspatial",
+    "short_name": "SIGSPATIAL",
+    "tier": "top",
+    "type": "conference",
+    "aliases": [
+      "sigspatial",
+      "acm sigspatial"
+    ]
+  },
+  {
+    "id": "ssci",
+    "short_name": "SSCI",
+    "tier": "mid",
+    "type": "conference",
+    "aliases": [
+      "ieee symposium series on computational intelligence (ssci)"
+    ]
+  },
+  {
+    "id": "systems",
+    "short_name": "Systems",
+    "tier": "low",
+    "type": "journal",
+    "aliases": [
+      "systems"
+    ]
+  },
+  {
+    "id": "tgis",
+    "short_name": "TGIS",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "tgis"
+    ]
+  },
+  {
+    "id": "tits",
+    "short_name": "TITS",
+    "tier": "top",
+    "type": "journal",
+    "aliases": [
+      "tits",
+      "ieee transactions on intelligent transportation systems"
+    ]
+  },
+  {
+    "id": "tkde",
+    "short_name": "TKDE",
+    "tier": "top",
+    "type": "journal",
+    "aliases": [
+      "tkde",
+      "ieee transactions on knowledge and data engineering"
+    ]
+  },
+  {
+    "id": "trc",
+    "short_name": "TR-C",
+    "tier": "top",
+    "type": "journal",
+    "aliases": [
+      "tr-c",
+      "trpet",
+      "transportation research part c: emerging technologies"
+    ]
+  },
+  {
+    "id": "wsdm",
+    "short_name": "WSDM",
+    "tier": "top",
+    "type": "conference",
+    "aliases": [
+      "wsdm",
+      "acm international conference on web search and data mining",
+      "acm international conference on web search and data mining (wsdm)"
+    ]
+  },
+  {
+    "id": "www",
+    "short_name": "WWW",
+    "tier": "top",
+    "type": "conference",
+    "aliases": [
+      "www",
+      "wwwc",
+      "wc",
+      "the web conference"
+    ]
+  }
+]

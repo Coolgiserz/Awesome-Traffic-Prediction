@@ -60,7 +60,17 @@ const taskChart = {
   ],
 };
 
-const recent = papers.filter((p) => (p.year ?? 0) >= stats.maxYear - 1).slice(0, 8);
+// Front page shows the papers that matter, not the papers that are newest.
+// A newcomer needs an ordered entry path; recency is one click away in the
+// library. Landmarks first, then the most significant recent work.
+const landmarks = papers
+  .filter((p) => p.impact?.tier === 'landmark')
+  .sort((a, b) => (a.impact?.track ?? '').localeCompare(b.impact?.track ?? '') || (a.year ?? 0) - (b.year ?? 0))
+  .slice(0, 6);
+const recent = papers
+  .filter((p) => p.impact?.tier !== 'landmark' && (p.year ?? 0) >= stats.maxYear - 1)
+  .sort((a, b) => (b.year ?? 0) - (a.year ?? 0))
+  .slice(0, 4);
 ---
 
 <BaseLayout
@@ -116,12 +126,32 @@ const recent = papers.filter((p) => (p.year ?? 0) >= stats.maxYear - 1).slice(0,
     </section>
 
     <section>
+      <h2>{t.landmarks.title}</h2>
+      <p class="section-lead">{t.landmarks.lead}</p>
+      <div class="grid">
+        {
+          landmarks.map((p) => (
+            <a class="card landmark-card" href={l(`/papers/${p.id}/`)}>
+              <h3>{lang === 'zh' ? (p.titleZh ?? p.title) : p.title}</h3>
+              <p>
+                {p.year} · {p.venue}
+                {p.venueTier === 'top' && <span class="tier-badge"> {t.papers.tierTop}</span>}
+              </p>
+              <p class="why">{(lang === 'zh' ? (p.impact?.role_zh ?? p.impact?.role) : p.impact?.role) ?? ''}</p>
+            </a>
+          ))
+        }
+      </div>
+      <p class="result-count"><a href={l('/landmarks/')}>{t.landmarks.title} →</a></p>
+    </section>
+
+    <section>
       <h2>{t.papers.title}</h2>
       <p class="section-lead">{t.papers.lead}</p>
       <div class="grid">
         {
           recent.map((p) => (
-            <a class="card" href={l('/papers/')}>
+            <a class="card" href={l(`/papers/${p.id}/`)}>
               <h3>{p.shortName || p.title}</h3>
               <p>
                 {p.year} · {p.venue}
@@ -131,6 +161,7 @@ const recent = papers.filter((p) => (p.year ?? 0) >= stats.maxYear - 1).slice(0,
           ))
         }
       </div>
+      <p class="result-count"><a href={l('/papers/')}>{t.papers.title} →</a></p>
     </section>
 
     <section>

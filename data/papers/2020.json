@@ -47,7 +47,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "urban-flow-prediction-from-spatiotemporal-data-u-2020",
@@ -57,7 +63,7 @@
     "title": "Urban flow prediction from spatiotemporal data using machine learning: A survey",
     "title_zh": null,
     "venue": "Information Fusion",
-    "venue_id": "information-fusion",
+    "venue_id": "infofusion",
     "venue_type": "journal",
     "paper_url": "https://www.sciencedirect.com/science/article/pii/S1566253519303094",
     "alt_urls": {},
@@ -97,7 +103,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "deep-learning-on-traffic-prediction-methods-anal-2020",
@@ -106,7 +118,7 @@
     "section": "reviews",
     "title": "Deep Learning on Traffic Prediction: Methods, Analysis and Future Directions",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "https://arxiv.org/abs/2004.08555",
@@ -147,7 +159,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "spatial-temporal-transformer-networks-for-traffi-2020",
@@ -156,7 +174,7 @@
     "section": "deep_learning",
     "title": "Spatial-Temporal Transformer Networks for Traffic Flow Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "https://arxiv.org/abs/2001.02908",
@@ -206,7 +224,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "transfer-learning-with-graph-neural-networks-for-2020",
@@ -215,7 +239,7 @@
     "section": "deep_learning",
     "title": "Transfer Learning with Graph Neural Networks for Short-Term Highway Traffic Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "https://arxiv.org/abs/2004.08038",
@@ -266,7 +290,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "bayesian-spatio-temporal-graph-convolutional-net-2020",
@@ -275,7 +305,7 @@
     "section": "deep_learning",
     "title": "Bayesian Spatio-Temporal Graph Convolutional Network for Traffic Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "https://www.researchgate.net/publication/344678512_Bayesian_Spatio-Temporal_Graph_Convolutional_Network_for_Traffic_Forecasting",
@@ -320,7 +350,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "traffic-transformer-2020",
@@ -331,7 +367,7 @@
     "title_zh": null,
     "venue": "TGIS",
     "venue_id": "tgis",
-    "venue_type": "unknown",
+    "venue_type": "journal",
     "paper_url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/tgis.12644",
     "alt_urls": {},
     "code_url": null,
@@ -374,7 +410,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "traffic-prediction-in-optical-networks-using-gra-2020",
@@ -385,7 +427,7 @@
     "title_zh": null,
     "venue": "ICTON",
     "venue_id": "icton",
-    "venue_type": "unknown",
+    "venue_type": "conference",
     "paper_url": "https://ieeexplore.ieee.org/document/9203477",
     "alt_urls": {},
     "code_url": null,
@@ -429,7 +471,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "spatio-temporal-graph-structure-learning-for-tra-2020",
@@ -485,7 +533,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "learning-geo-contextual-embeddings-for-commuting-2020",
@@ -537,7 +591,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "spatial-temporal-synchronous-graph-convolutional-2020",
@@ -594,7 +654,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "notable",
+      "role": "STSGCN: synchronous modelling of spatial and temporal correlations in one module.",
+      "role_zh": null,
+      "track": "graph_basics"
+    }
   },
   {
     "id": "stgat-2020",
@@ -647,7 +713,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "city-wide-traffic-flow-forecasting-using-a-deep-2020",
@@ -656,7 +728,7 @@
     "section": "deep_learning",
     "title": "City-Wide Traffic Flow Forecasting Using a Deep Convolutional Neural Network",
     "title_zh": null,
-    "venue": "Sensor",
+    "venue": "Sensors",
     "venue_id": "sensors",
     "venue_type": "journal",
     "paper_url": "https://www.mdpi.com/1424-8220/20/2/421",
@@ -697,7 +769,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "buildsensys-2020",
@@ -707,8 +785,8 @@
     "title": "BuildSenSys: Reusing Building Sensing Data for Traffic Prediction with Cross-domain Learning",
     "title_zh": null,
     "venue": "Mobile Computing",
-    "venue_id": "mobile-computing",
-    "venue_type": "unknown",
+    "venue_id": "mobilecomputing",
+    "venue_type": "journal",
     "paper_url": "https://ieeexplore.ieee.org/abstract/document/9018140",
     "alt_urls": {},
     "code_url": null,
@@ -747,7 +825,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "spatio-temporal-meta-learning-for-urban-traffic-2020",
@@ -797,7 +881,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "what-is-the-human-mobility-in-a-new-city-transfe-2020",
@@ -806,7 +896,7 @@
     "section": "deep_learning",
     "title": "What is the Human Mobility in a New City: Transfer Mobility Knowledge Across Cities",
     "title_zh": null,
-    "venue": "WC",
+    "venue": "WWW",
     "venue_id": "www",
     "venue_type": "conference",
     "paper_url": "http://urban-computing.com/pdf/www1208tianfu.pdf",
@@ -851,7 +941,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "traffic-graph-convolutional-recurrent-neural-net-2020",
@@ -908,7 +1004,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "adaptive-graph-convolutional-recurrent-network-f-2020",
@@ -968,7 +1070,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "landmark",
+      "role": "AGCRN: node-adaptive parameters, so parameters no longer scale with graph size.",
+      "role_zh": "AGCRN：节点自适应参数化，参数量不再随图规模增长。",
+      "track": "adaptive_graph"
+    }
   },
   {
     "id": "gman-2020",
@@ -1025,7 +1133,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "landmark",
+      "role": "GMAN: multi-attention over a transformed spatio-temporal graph; established the attention line.",
+      "role_zh": "GMAN：在时空图上做多头注意力，开启了 attention 路线。",
+      "track": "transformer"
+    }
   },
   {
     "id": "constgat-2020",
@@ -1078,7 +1192,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "preserving-dynamic-attention-for-long-term-spati-2020",
@@ -1130,7 +1250,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "temporal-multi-graph-convolutional-network-for-t-2020",
@@ -1182,7 +1308,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "a-spatial-temporal-attention-approach-for-traffi-2020",
@@ -1234,7 +1366,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "traffic-flow-imputation-using-parallel-data-and-2020",
@@ -1289,7 +1427,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "traffic-flow-prediction-via-spatial-temporal-gra-2020",
@@ -1341,7 +1485,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "graph-attention-temporal-convolutional-network-f-2020",
@@ -1394,7 +1544,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "st-grat-2020",
@@ -1403,7 +1559,7 @@
     "section": "deep_learning",
     "title": "ST-GRAT: A Novel Spatio-temporal Graph Attention Network for Accurately Forecasting Dynamically Changing Road Speed",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "https://arxiv.org/abs/1911.13181",
@@ -1448,7 +1604,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "spatial-temporal-incidence-dynamic-graph-neural-2020",
@@ -1457,9 +1619,9 @@
     "section": "deep_learning",
     "title": "Spatial Temporal Incidence Dynamic Graph Neural Networks for Traffic Flow Forecasting",
     "title_zh": null,
-    "venue": "IF",
-    "venue_id": "if",
-    "venue_type": "unknown",
+    "venue": "Information Fusion",
+    "venue_id": "infofusion",
+    "venue_type": "journal",
     "paper_url": "https://www.sciencedirect.com/science/article/abs/pii/S0020025520300451?via%3Dihub",
     "alt_urls": {},
     "code_url": null,
@@ -1503,7 +1665,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "tssrgcn-2020",
@@ -1555,7 +1723,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "spatial-temporal-fusion-graph-neural-networks-fo-2020",
@@ -1564,7 +1738,7 @@
     "section": "deep_learning",
     "title": "Spatial-Temporal Fusion Graph Neural Networks for Traffic Flow Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "https://arxiv.org/abs/2012.09641",
@@ -1612,7 +1786,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "notable",
+      "role": "STFGNN: fuses multiple spatio-temporal similarity graphs inside one layer.",
+      "role_zh": null,
+      "track": "graph_basics"
+    }
   },
   {
     "id": "informer-2020",
@@ -1621,7 +1801,7 @@
     "section": "time_series",
     "title": "Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "https://arxiv.org/pdf/2012.07436.pdf",
@@ -1671,6 +1851,12 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   }
 ]

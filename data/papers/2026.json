@@ -7,7 +7,7 @@
     "title": "Adaptive dynamic spatial-temporal graph convolutional neural network for traffic flow prediction",
     "title_zh": null,
     "venue": "Neural Networks",
-    "venue_id": null,
+    "venue_id": "neuralnetworks",
     "venue_type": "journal",
     "paper_url": "https://doi.org/10.1016/j.neunet.2025.108529",
     "alt_urls": {},
@@ -33,8 +33,7 @@
     "task_en": "Traffic flow prediction",
     "task_zh": "交通流预测",
     "method_tags": [
-      "Dynamic Graph",
-      "STGCN"
+      "Adaptive Graph"
     ],
     "note_en": "Adaptive dynamic spatial-temporal graph",
     "note_zh": "自适应动态图时空卷积",
@@ -59,7 +58,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": "adaptive_graph"
+    }
   },
   {
     "id": "dgib-2026",
@@ -69,7 +74,7 @@
     "title": "Dynamic Graph Information Bottleneck for Traffic Prediction",
     "title_zh": null,
     "venue": "Electronics",
-    "venue_id": null,
+    "venue_id": "electronics",
     "venue_type": "journal",
     "paper_url": "https://doi.org/10.3390/electronics15030623",
     "alt_urls": {},
@@ -92,8 +97,8 @@
     "task_en": "Traffic prediction",
     "task_zh": "交通预测",
     "method_tags": [
-      "Information Bottleneck",
-      "Dynamic Graph"
+      "Meta-Learning",
+      "Adaptive Graph"
     ],
     "note_en": "Representation compression with graph dynamics",
     "note_zh": "动态图表示压缩思路",
@@ -118,7 +123,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "6g-stgnn-2026",
@@ -128,7 +139,7 @@
     "title": "6G conditioned spatiotemporal graph neural networks for real time traffic flow prediction",
     "title_zh": null,
     "venue": "Scientific Reports",
-    "venue_id": null,
+    "venue_id": "scirep",
     "venue_type": "journal",
     "paper_url": "https://doi.org/10.1038/s41598-025-32795-0",
     "alt_urls": {},
@@ -151,7 +162,7 @@
     "task_zh": "实时交通流预测",
     "method_tags": [
       "STGNN",
-      "Real-time"
+      "Efficiency"
     ],
     "note_en": "Network-condition-aware spatio-temporal modeling",
     "note_zh": "融合网络条件信息的时空建模",
@@ -176,7 +187,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "pimcst-2026",
@@ -185,8 +202,8 @@
     "section": "deep_learning",
     "title": "PIMCST: Physics-Informed Multi-Phase Consensus and Spatio-Temporal Few-Shot Learning for Traffic Flow Forecasting",
     "title_zh": null,
-    "venue": "IEEE Internet of Things Journal",
-    "venue_id": null,
+    "venue": "IEEE IoT Journal",
+    "venue_id": "iotj",
     "venue_type": "journal",
     "paper_url": "https://doi.org/10.1109/jiot.2026.3700641",
     "alt_urls": {},
@@ -207,8 +224,8 @@
     "task_en": "Traffic flow forecasting",
     "task_zh": "交通流预测",
     "method_tags": [
-      "Physics-Informed Learning",
-      "Few-shot"
+      "Physics-Informed",
+      "Few-Shot"
     ],
     "note_en": "Few-shot transfer-oriented design",
     "note_zh": "偏少样本迁移能力",
@@ -233,7 +250,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "hysrd-net-2026",
@@ -242,8 +265,8 @@
     "section": "deep_learning",
     "title": "HySRD-Net: Hybrid spectral residual diffusion on spatio-temporal graphs for probabilistic traffic forecasting",
     "title_zh": null,
-    "venue": "Expert Systems with Applications",
-    "venue_id": null,
+    "venue": "ESWA",
+    "venue_id": "eswa",
     "venue_type": "journal",
     "paper_url": "https://doi.org/10.1016/j.eswa.2026.131214",
     "alt_urls": {},
@@ -264,8 +287,7 @@
     "task_en": "Probabilistic traffic forecasting",
     "task_zh": "概率交通预测",
     "method_tags": [
-      "Probabilistic Forecasting",
-      "Graph Diffusion"
+      "Diffusion"
     ],
     "note_en": "Uncertainty-aware forecasting",
     "note_zh": "不确定性建模导向",
@@ -290,7 +312,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "feature-itransformer-2026",
@@ -300,7 +328,7 @@
     "title": "Feature-enhanced iTransformer: A two-stage framework for high-accuracy long-horizon traffic flow forecasting",
     "title_zh": null,
     "venue": "PLoS ONE",
-    "venue_id": null,
+    "venue_id": "plosone",
     "venue_type": "journal",
     "paper_url": "https://doi.org/10.1371/journal.pone.0340389",
     "alt_urls": {},
@@ -324,8 +352,7 @@
     "task_en": "Long-horizon traffic flow forecasting",
     "task_zh": "长时域交通流预测",
     "method_tags": [
-      "Transformer",
-      "Long-Horizon"
+      "Transformer"
     ],
     "note_en": "Two-stage long-horizon framework",
     "note_zh": "两阶段长预测框架",
@@ -350,7 +377,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "vmd-lssvm-2026",
@@ -359,8 +392,8 @@
     "section": "deep_learning",
     "title": "A Novel Attention-Weighted VMD-LSSVM Model for High-Accuracy Short-Term Traffic Prediction",
     "title_zh": null,
-    "venue": "IET Intelligent Transport Systems",
-    "venue_id": null,
+    "venue": "IET ITS",
+    "venue_id": "iet-its",
     "venue_type": "journal",
     "paper_url": "https://doi.org/10.1049/itr2.70144",
     "alt_urls": {},
@@ -382,8 +415,8 @@
     "task_en": "Short-term traffic prediction",
     "task_zh": "短期交通预测",
     "method_tags": [
-      "Hybrid Model",
-      "Short-Term"
+      "STGNN",
+      "Efficiency"
     ],
     "note_en": "Classical hybrid baseline with attention weighting",
     "note_zh": "带注意力加权的传统混合模型",
@@ -408,7 +441,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "msgdstn-2026",
@@ -418,7 +457,7 @@
     "title": "Multi-Scale Graph-Decoupling Spatial-Temporal Network for Traffic Flow Forecasting in Complex Urban Environments",
     "title_zh": null,
     "venue": "Electronics",
-    "venue_id": null,
+    "venue_id": "electronics",
     "venue_type": "journal",
     "paper_url": "https://doi.org/10.3390/electronics15030495",
     "alt_urls": {},
@@ -439,9 +478,9 @@
     "task_en": "Traffic flow forecasting",
     "task_zh": "交通流预测",
     "method_tags": [
-      "Multi-Scale",
-      "Graph Decoupling",
-      "ST Modeling"
+      "Temporal Convolution",
+      "Adaptive Graph",
+      "STGNN"
     ],
     "note_en": "Multi-scale graph-decoupled modeling for complex urban environments",
     "note_zh": "面向复杂城市路网的多尺度图解耦时空建模",
@@ -466,7 +505,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "pdr-stgcn-2026",
@@ -476,7 +521,7 @@
     "title": "PDR-STGCN: An Enhanced STGCN with Multi-Scale Periodic Fusion and a Dynamic Relational Graph for Traffic Forecasting",
     "title_zh": null,
     "venue": "Systems",
-    "venue_id": null,
+    "venue_id": "systems",
     "venue_type": "journal",
     "paper_url": "https://doi.org/10.3390/systems14010102",
     "alt_urls": {},
@@ -500,9 +545,8 @@
     "task_en": "Traffic forecasting",
     "task_zh": "交通预测",
     "method_tags": [
-      "STGCN",
-      "Dynamic Graph",
-      "Periodicity"
+      "Adaptive Graph",
+      "Temporal Convolution"
     ],
     "note_en": "Enhanced STGCN with periodic fusion and dynamic relation modeling",
     "note_zh": "融合周期性与动态关系建模的增强 STGCN",
@@ -527,7 +571,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "stvmamba-2026",
@@ -536,8 +586,8 @@
     "section": "deep_learning",
     "title": "STVMamba: A Spatio-Temporal-Variable Modeling Network with Selective State Space Mechanism for Long-Horizon Traffic Forecasting",
     "title_zh": null,
-    "venue": "Lecture Notes in Computer Science",
-    "venue_id": null,
+    "venue": "LNCS",
+    "venue_id": "lncs",
     "venue_type": "conference",
     "paper_url": "https://doi.org/10.1007/978-981-95-5761-5_18",
     "alt_urls": {},
@@ -559,9 +609,8 @@
     "task_en": "Long-horizon traffic forecasting",
     "task_zh": "长时域交通预测",
     "method_tags": [
-      "State Space Model",
-      "Long-Horizon",
-      "Spatio-Temporal"
+      "Mamba / State Space",
+      "STGNN"
     ],
     "note_en": "Selective state-space modeling for long-horizon forecasting",
     "note_zh": "面向长时域预测的选择性状态空间建模",
@@ -586,7 +635,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "tsaformer-2026",
@@ -596,7 +651,7 @@
     "title": "TSAformer: A Traffic Flow Prediction Model Based on Cross-Dimensional Dependency Capture",
     "title_zh": null,
     "venue": "Electronics",
-    "venue_id": null,
+    "venue_id": "electronics",
     "venue_type": "journal",
     "paper_url": "https://doi.org/10.3390/electronics15010231",
     "alt_urls": {},
@@ -618,7 +673,7 @@
     "task_zh": "交通流预测",
     "method_tags": [
       "Transformer",
-      "Cross-Dimensional Dependency"
+      "Efficiency"
     ],
     "note_en": "Cross-dimensional dependency capture for traffic flow prediction",
     "note_zh": "通过跨维依赖建模提升交通流预测",
@@ -643,7 +698,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "a-global-local-graph-attention-network-f-2026",
@@ -652,7 +713,7 @@
     "section": "deep_learning",
     "title": "A Global-Local Graph Attention Network for Traffic Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2605.16726v1",
@@ -699,7 +760,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "admformer-an-adaptive-decomposition-tran-2026",
@@ -708,7 +775,7 @@
     "section": "deep_learning",
     "title": "ADMFormer: An Adaptive-Decomposition Transformer with Time-Varying Masked Spatial Attention for Traffic Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2605.25543v1",
@@ -759,7 +826,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "buttermamba-butterworth-enhanced-spatial-2026",
@@ -768,7 +841,7 @@
     "section": "deep_learning",
     "title": "ButterMamba: Butterworth-Enhanced Spatial-Temporal Mamba for Efficient Traffic Flow Prediction",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2608.29658v1",
@@ -820,7 +893,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "emagn-efficient-multi-attention-graph-ne-2026",
@@ -829,7 +908,7 @@
     "section": "deep_learning",
     "title": "EMAGN: Efficient Multi-Attention Graph Network via Learned Clustering for Scalable Traffic Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2607.13241v1",
@@ -883,7 +962,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "evost-adapting-traffic-forecasters-to-ev-2026",
@@ -892,7 +977,7 @@
     "section": "deep_learning",
     "title": "EvoST: Adapting Traffic Forecasters to Evolving Sensor Graphs",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2607.25875v5",
@@ -946,7 +1031,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "explaining-spatial-information-flow-in-s-2026",
@@ -955,7 +1046,7 @@
     "section": "deep_learning",
     "title": "Explaining spatial information flow in short-term traffic forecasting models using a gated graph attention network",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2609.20217v1",
@@ -1004,7 +1095,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "fast-a-synergistic-framework-of-attentio-2026",
@@ -1013,7 +1110,7 @@
     "section": "deep_learning",
     "title": "FAST: A Synergistic Framework of Attention and State-space Models for Spatiotemporal Traffic Prediction",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2604.13453v1",
@@ -1068,7 +1165,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "fedllm-a-privacy-preserving-federated-la-2026",
@@ -1077,7 +1180,7 @@
     "section": "deep_learning",
     "title": "FedLLM: A Privacy-Preserving Federated Large Language Model for Explainable Traffic Flow Prediction",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2604.16612v1",
@@ -1128,7 +1231,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "gamma-net-adaptive-long-horizon-traffic-2026",
@@ -1137,7 +1246,7 @@
     "section": "deep_learning",
     "title": "GAMMA-Net: Adaptive Long-Horizon Traffic Spatio-Temporal Forecasting Model based on Interleaved Graph Attention and Multi-Axis Mamba",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2604.16859v1",
@@ -1186,7 +1295,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "gas-pfn-graph-aware-spatiotemporal-prior-2026",
@@ -1195,7 +1310,7 @@
     "section": "deep_learning",
     "title": "GAS-PFN: Graph-Aware Spatiotemporal Prior-Data Fitted Networks for Zero-Shot Traffic Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2610.37598v1",
@@ -1247,7 +1362,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "genshin-graphical-enhanced-spatio-tempor-2026",
@@ -1256,7 +1377,7 @@
     "section": "deep_learning",
     "title": "GEnSHIN: Graphical Enhanced Spatio-temporal Hierarchical Inference Network for Traffic Flow Prediction",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2601.04550v1",
@@ -1303,7 +1424,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "long-horizon-traffic-forecasting-via-inc-2026",
@@ -1312,7 +1439,7 @@
     "section": "deep_learning",
     "title": "Long-Horizon Traffic Forecasting via Incident-Aware Conformal Spatio-Temporal Transformers",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2603.16857v1",
@@ -1367,7 +1494,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "meta-dynamic-graph-for-traffic-flow-pred-2026",
@@ -1376,8 +1509,8 @@
     "section": "deep_learning",
     "title": "Meta Dynamic Graph for Traffic Flow Prediction",
     "title_zh": null,
-    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
-    "venue_id": "arxiv",
+    "venue": "AAAI",
+    "venue_id": "aaai",
     "venue_type": "conference",
     "paper_url": "http://arxiv.org/abs/2601.10328v1",
     "alt_urls": {},
@@ -1428,7 +1561,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "patchstg-scalable-spatiotemporal-graph-t-2026",
@@ -1437,7 +1576,7 @@
     "section": "deep_learning",
     "title": "PatchSTG: Scalable Spatiotemporal Graph Transformers for Traffic Forecasting on Irregular Sensor Networks",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2606.09872v1",
@@ -1486,7 +1625,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "revisiting-the-adversarial-robustness-of-2026",
@@ -1495,7 +1640,7 @@
     "section": "deep_learning",
     "title": "Revisiting the Adversarial Robustness of Graph-Based Traffic Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2607.27604v1",
@@ -1541,7 +1686,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "spectral-adaptive-graph-transformer-for-2026",
@@ -1550,7 +1701,7 @@
     "section": "deep_learning",
     "title": "Spectral Adaptive Graph Transformer for Efficient and Scalable Traffic Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2610.25140v1",
@@ -1601,7 +1752,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "stmemollm-a-spatial-temporal-memory-augm-2026",
@@ -1610,7 +1767,7 @@
     "section": "deep_learning",
     "title": "STMemoLLM: A Spatial-Temporal Memory-Augmented LLM for Robust Traffic Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2611.30148v1",
@@ -1655,7 +1812,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "structure-guided-spatiotemporal-attentio-2026",
@@ -1664,7 +1827,7 @@
     "section": "deep_learning",
     "title": "Structure-Guided Spatiotemporal Attention Graph Neural Network for Traffic Flow Prediction",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2608.14177v1",
@@ -1712,7 +1875,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "unist-pred-a-robust-unified-framework-fo-2026",
@@ -1721,8 +1890,8 @@
     "section": "deep_learning",
     "title": "UniST-Pred: A Robust Unified Framework for Spatio-Temporal Traffic Forecasting in Transportation Networks Under Disruptions",
     "title_zh": null,
-    "venue": "International Joint Conference on Artificial Intelligence",
-    "venue_id": "arxiv",
+    "venue": "IJCAI",
+    "venue_id": "ijcai",
     "venue_type": "conference",
     "paper_url": "http://arxiv.org/abs/2602.14049v3",
     "alt_urls": {},
@@ -1767,7 +1936,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "visifold-long-term-traffic-forecasting-v-2026",
@@ -1776,8 +1951,8 @@
     "section": "deep_learning",
     "title": "VisiFold: Long-Term Traffic Forecasting via Temporal Folding Graph and Node Visibility",
     "title_zh": null,
-    "venue": "IEEE International Conference on Data Engineering (ICDE)",
-    "venue_id": "arxiv",
+    "venue": "ICDE",
+    "venue_id": "icde",
     "venue_type": "conference",
     "paper_url": "http://arxiv.org/abs/2603.11816v1",
     "alt_urls": {},
@@ -1825,6 +2000,12 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   }
 ]

@@ -23,6 +23,7 @@ const en = {
     benchmark: 'Benchmark',
     trends: 'Trends',
     lineage: 'Lineage',
+    landmarks: 'Landmarks',
   },
   langSwitch: '中文',
   hero: {
@@ -33,7 +34,7 @@ const en = {
   },
   papers: {
     title: 'Paper library',
-    lead: 'Every paper in the collection, tagged by year, venue, task and method.',
+    lead: 'Every paper in the collection, tagged by year, venue, task and method. Landmarks are marked, and the venue tier tells you how hard a paper was to get into.',
     search: 'Search title, venue or tag…',
     filters: 'Filters',
     year: 'Year',
@@ -42,6 +43,7 @@ const en = {
     method: 'Method tags',
     reset: 'Reset',
     sort: 'Sort',
+    sortImpact: 'Most significant first',
     sortNewest: 'Newest first',
     sortOldest: 'Oldest first',
     sortVenue: 'By venue',
@@ -58,6 +60,10 @@ const en = {
     direction: 'Direction',
     openDetails: 'Open paper page',
     totalLabel: 'total',
+    tierTop: 'top venue',
+    tierPreprint: 'preprint',
+    tierLow: 'rapid pub',
+    landmark: 'landmark',
   },
   detail: {
     overview: 'Overview',
@@ -102,6 +108,20 @@ const en = {
     noJs: 'Charts need JavaScript to draw. The same numbers are listed below.',
   },
   lineage: { title: 'Research lineage', lead: 'The collection in chronological order, year by year.' },
+  landmarks: {
+    title: 'Landmarks',
+    lead: 'The papers that defined how this field is done, in the order the ideas arrived. Start here.',
+    track: {
+      early_deep: 'Before graphs: grid and sequence models',
+      graph_basics: 'Graph convolution becomes the standard',
+      adaptive_graph: 'Learning the graph instead of assuming it',
+      transformer: 'Attention replaces recurrence',
+      foundation_model: 'Pretraining and general-purpose models',
+    } as Record<string, string>,
+    why: 'Why it matters',
+    readNext: 'Read next',
+    count: 'landmark papers',
+  },
   search: { title: 'Search', placeholder: 'Search the site…', open: 'Search', close: 'Close' },
   footer: {
     repo: 'Source repository',
@@ -126,12 +146,13 @@ const zh: typeof en = {
     benchmark: '基准评测',
     trends: '趋势',
     lineage: '研究脉络',
+    landmarks: '奠基论文',
   },
   langSwitch: 'English',
   hero: { total: '篇论文', years: '个年份', code: '有代码', data: '有数据' },
   papers: {
     title: '论文库',
-    lead: '收录的全部论文，按年份、会议/期刊、任务与方法标注。',
+    lead: '收录的全部论文，按年份、会议/期刊、任务与方法标注。奠基论文另有标记，会议等级可以看出发表门槛。',
     search: '搜索标题、期刊或标签…',
     filters: '筛选',
     year: '年份',
@@ -140,6 +161,7 @@ const zh: typeof en = {
     method: '方法标签',
     reset: '重置',
     sort: '排序',
+    sortImpact: '重要优先',
     sortNewest: '最新优先',
     sortOldest: '最早优先',
     sortVenue: '按期刊',
@@ -156,6 +178,10 @@ const zh: typeof en = {
     direction: '研究方向',
     openDetails: '打开论文页',
     totalLabel: '总条目',
+    tierTop: '顶会/顶刊',
+    tierPreprint: '预印本',
+    tierLow: '快速出版',
+    landmark: '奠基',
   },
   detail: {
     overview: '基本信息',
@@ -200,6 +226,20 @@ const zh: typeof en = {
     noJs: '图表需要 JavaScript 绘制，同样的数据在下方以表格列出。',
   },
   lineage: { title: '研究脉络', lead: '按年份排列的完整论文列表。' },
+  landmarks: {
+    title: '奠基论文',
+    lead: '定义了这一领域做法的那批论文，按思想出现的顺序排列。建议从这里读起。',
+    track: {
+      early_deep: '图结构之前：网格与序列模型',
+      graph_basics: '图卷积成为标准做法',
+      adaptive_graph: '不再假设图，而是学习图',
+      transformer: '注意力取代循环结构',
+      foundation_model: '预训练与通用模型',
+    } as Record<string, string>,
+    why: '为什么重要',
+    readNext: '接着读',
+    count: '篇奠基论文',
+  },
   search: { title: '搜索', placeholder: '全站搜索…', open: '搜索', close: '关闭' },
   footer: {
     repo: '源仓库',
@@ -323,6 +363,7 @@ export const routes = {
   benchmark: '/benchmark/',
   trends: '/trends/',
   lineage: '/lineage/',
+  landmarks: '/landmarks/',
 } as const;
 
 export function pathFor(lang: Lang, route: keyof typeof routes): string {

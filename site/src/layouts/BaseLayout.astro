@@ -32,6 +32,7 @@ const xDefaultUrl = new URL(withBase(pathFor('en', route)), Astro.site).href;
 
 const nav = [
   { key: 'home', label: t.nav.home, route: 'home' as const },
+  { key: 'landmarks', label: t.nav.landmarks, route: 'landmarks' as const },
   { key: 'papers', label: t.nav.papers, route: 'papers' as const },
   { key: 'datasets', label: t.nav.datasets, route: 'datasets' as const },
   { key: 'toolkits', label: t.nav.toolkits, route: 'toolkits' as const },

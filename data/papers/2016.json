@@ -6,7 +6,7 @@
     "section": "deep_learning",
     "title": "DNN-Based Prediction Model for Spatio-Temporal Data",
     "title_zh": null,
-    "venue": "Sigspatial",
+    "venue": "SIGSPATIAL",
     "venue_id": "sigspatial",
     "venue_type": "conference",
     "paper_url": "https://doi.org/10.1145/2996913.2997016",
@@ -60,6 +60,12 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   }
 ]

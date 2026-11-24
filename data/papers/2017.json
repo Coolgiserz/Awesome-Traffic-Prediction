@@ -27,7 +27,10 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Temporal Convolution",
+      "Residual Network"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -51,7 +54,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "landmark",
+      "role": "ST-ResNet: introduced residual spatio-temporal networks for citywide grid crowd flow.",
+      "role_zh": "ST-ResNet：首次把残差时空网络用于全城网格人流预测，后续网格类方法的标准参照。",
+      "track": "early_deep"
+    }
   },
   {
     "id": "road2vec-2017",
@@ -60,7 +69,7 @@
     "section": "deep_learning",
     "title": "Road2Vec: Measuring Traffic Interactions in Urban Road System from Massive Travel Routes",
     "title_zh": null,
-    "venue": "ISPRS",
+    "venue": "ISPRS IJGI",
     "venue_id": "isprs-ijgi",
     "venue_type": "journal",
     "paper_url": "https://doi.org/10.3390/ijgi6110321",
@@ -110,7 +119,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "deeptransport-2017",
@@ -119,7 +134,7 @@
     "section": "deep_learning",
     "title": "DeepTransport: Learning Spatial-Temporal Dependency for Traffic Condition Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "https://arxiv.org/pdf/1709.09585.pdf",
@@ -168,6 +183,12 @@
     "updated_at": "2026-11-24",
     "alt_years": [
       2017
-    ]
+    ],
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   }
 ]

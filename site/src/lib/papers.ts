@@ -28,6 +28,13 @@ export interface Provenance {
   migrated_at?: string | null;
 }
 
+export interface Impact {
+  tier: 'landmark' | 'notable' | 'standard';
+  role?: string | null;
+  role_zh?: string | null;
+  track?: string | null;
+}
+
 export interface Paper {
   id: string;
   lang: string | null;
@@ -63,6 +70,9 @@ export interface Paper {
   noteZh: string | null;
   featured: boolean;
   status: string;
+  impact: Impact | null;
+  /** Venue tier from data/venues.json: top / mid / low / preprint. */
+  venueTier: string | null;
   verification: Verification | null;
   provenance: Provenance | null;
   source: string;
@@ -192,4 +202,49 @@ export function related(p: Paper, limit = 6): Paper[] {
         Math.abs((a.year ?? 0) - (p.year ?? 0)) - Math.abs((b.year ?? 0) - (p.year ?? 0)),
     )
     .slice(0, limit);
+}
+
+/** Landmark papers grouped by research track, oldest first inside a track. */
+export const TRACKS = [
+  'early_deep',
+  'graph_basics',
+  'adaptive_graph',
+  'transformer',
+  'foundation_model',
+] as const;
+export type Track = (typeof TRACKS)[number];
+
+export interface TrackGroup {
+  track: Track;
+  papers: Paper[];
+}
+
+export function landmarksByTrack(): TrackGroup[] {
+  const groups: TrackGroup[] = [];
+  for (const track of TRACKS) {
+    const list = papers
+      .filter((p) => p.impact?.tier === 'landmark' && p.impact.track === track)
+      .sort((a, b) => (a.year ?? 0) - (b.year ?? 0));
+    if (list.length) groups.push({ track, papers: list });
+  }
+  return groups;
+}
+
+export const landmarkPapers = papers.filter((p) => p.impact?.tier === 'landmark');
+
+export function impactCounts(): Record<string, number> {
+  const out: Record<string, number> = { landmark: 0, notable: 0, standard: 0 };
+  for (const p of papers) {
+    const t = p.impact?.tier;
+    if (t) out[t] = (out[t] ?? 0) + 1;
+  }
+  return out;
+}
+
+export function venueTierCounts(): Record<string, number> {
+  const out: Record<string, number> = {};
+  for (const p of papers) {
+    if (p.venueTier) out[p.venueTier] = (out[p.venueTier] ?? 0) + 1;
+  }
+  return out;
 }

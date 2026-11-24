@@ -6,9 +6,9 @@
     "section": "deep_learning",
     "title": "GraphSparseNet: a Novel Method for Large Scale Trafffic Flow Prediction",
     "title_zh": null,
-    "venue": "Arxiv",
-    "venue_id": null,
-    "venue_type": "unknown",
+    "venue": "arXiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
     "paper_url": "https://arxiv.org/abs/2502.19823",
     "alt_urls": {},
     "code_url": null,
@@ -24,7 +24,7 @@
     "task_en": "Large-scale traffic flow prediction",
     "task_zh": "大规模交通流预测",
     "method_tags": [
-      "Graph Sparsification",
+      "Adaptive Graph",
       "Efficiency"
     ],
     "note_en": "Focus on scalability",
@@ -50,7 +50,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "contrastive-pretraining-2025",
@@ -59,8 +65,8 @@
     "section": "deep_learning",
     "title": "Embedding spatial context in urban traffic forecasting with contrastive pre-training",
     "title_zh": null,
-    "venue": "Arxiv",
-    "venue_id": null,
+    "venue": "arXiv",
+    "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "https://arxiv.org/abs/2503.14980",
     "alt_urls": {},
@@ -88,7 +94,7 @@
     "task_zh": "城市交通预测",
     "method_tags": [
       "Contrastive Learning",
-      "Transfer"
+      "Transfer Learning"
     ],
     "note_en": "Better generalization to new roads",
     "note_zh": "强调跨道路泛化能力",
@@ -113,7 +119,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "astam-multigraph-2025",
@@ -123,7 +135,7 @@
     "title": "An Adaptive Spatio-Temporal Traffic Flow Prediction Using Self-Attention and Multi-Graph Networks",
     "title_zh": null,
     "venue": "Sensors",
-    "venue_id": null,
+    "venue_id": "sensors",
     "venue_type": "journal",
     "paper_url": "https://doi.org/10.3390/s25010282",
     "alt_urls": {},
@@ -145,8 +157,8 @@
     "task_en": "Traffic flow prediction",
     "task_zh": "交通流预测",
     "method_tags": [
-      "Self-Attention",
-      "Multi-Graph"
+      "Transformer",
+      "STGNN"
     ],
     "note_en": "Adaptive spatio-temporal modeling",
     "note_zh": "自适应时空建模",
@@ -171,7 +183,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "agc-lstm-2025",
@@ -181,7 +199,7 @@
     "title": "Short-term multi-step-ahead sector-based traffic flow prediction based on the attention-enhanced graph convolutional LSTM network (AGC-LSTM)",
     "title_zh": null,
     "venue": "Neural Computing and Applications",
-    "venue_id": null,
+    "venue_id": "neuralcomputing",
     "venue_type": "journal",
     "paper_url": "https://doi.org/10.1007/s00521-024-09827-3",
     "alt_urls": {},
@@ -205,8 +223,8 @@
     "task_en": "Short-term multi-step traffic flow prediction",
     "task_zh": "短期多步交通流预测",
     "method_tags": [
-      "GCN-LSTM",
-      "Attention"
+      "RNN / LSTM",
+      "Transformer"
     ],
     "note_en": "Sector-based short-term multi-step setting",
     "note_zh": "面向分区场景的短期多步预测",
@@ -234,7 +252,13 @@
     "updated_at": "2026-11-24",
     "alt_years": [
       2025
-    ]
+    ],
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "a-cloud-based-spatio-temporal-gnn-transf-2025",
@@ -243,8 +267,8 @@
     "section": "deep_learning",
     "title": "A Cloud-Based Spatio-Temporal GNN-Transformer Hybrid Model for Traffic Flow Forecasting with External Feature Integration",
     "title_zh": null,
-    "venue": "Fundamental Scientific Reports in Multidisciplinary Areas",
-    "venue_id": "arxiv",
+    "venue": "Information Fusion",
+    "venue_id": "infofusion",
     "venue_type": "journal",
     "paper_url": "http://arxiv.org/abs/2510.27039v1",
     "alt_urls": {},
@@ -296,7 +320,13 @@
     "updated_at": "2026-11-24",
     "alt_years": [
       2025
-    ]
+    ],
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "a-multi-layer-cnn-gruskip-model-based-on-2025",
@@ -360,7 +390,13 @@
     "updated_at": "2026-11-24",
     "alt_years": [
       2025
-    ]
+    ],
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "efficient-traffic-prediction-through-spa-2025",
@@ -369,8 +405,8 @@
     "section": "deep_learning",
     "title": "Efficient Traffic Prediction Through Spatio-Temporal Distillation",
     "title_zh": null,
-    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
-    "venue_id": "arxiv",
+    "venue": "AAAI",
+    "venue_id": "aaai",
     "venue_type": "conference",
     "paper_url": "http://arxiv.org/abs/2501.10459v2",
     "alt_urls": {},
@@ -393,7 +429,7 @@
     "task_en": "Traffic forecasting",
     "task_zh": null,
     "method_tags": [
-      "Distillation"
+      "Knowledge Distillation"
     ],
     "note_en": null,
     "note_zh": null,
@@ -420,7 +456,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "fastersts-a-faster-spatio-temporal-synch-2025",
@@ -429,7 +471,7 @@
     "section": "deep_learning",
     "title": "FasterSTS: A Faster Spatio-Temporal Synchronous Graph Convolutional Networks for Traffic flow Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2501.00756v1",
@@ -476,7 +518,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "flowdistill-scalable-traffic-flow-predic-2025",
@@ -485,7 +533,7 @@
     "section": "deep_learning",
     "title": "FlowDistill: Scalable Traffic Flow Prediction via Distillation from LLMs",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2504.02094v1",
@@ -508,7 +556,7 @@
     "task_en": "Traffic flow prediction",
     "task_zh": null,
     "method_tags": [
-      "Distillation"
+      "Knowledge Distillation"
     ],
     "note_en": null,
     "note_zh": null,
@@ -536,7 +584,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "mscmhmst-a-traffic-flow-prediction-model-2025",
@@ -545,7 +599,7 @@
     "section": "deep_learning",
     "title": "MSCMHMST: A traffic flow prediction model based on Transformer",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2503.13540v1",
@@ -590,7 +644,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "pptnet-a-hybrid-periodic-pattern-transfo-2025",
@@ -599,7 +659,7 @@
     "section": "deep_learning",
     "title": "PPTNet: A Hybrid Periodic Pattern-Transformer Architecture for Traffic Flow Prediction and Congestion Identification",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2505.13047v2",
@@ -651,7 +711,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "sfadnet-spatio-temporal-fused-graph-base-2025",
@@ -710,6 +776,12 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   }
 ]

@@ -56,7 +56,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "stgcn-2018",
@@ -121,7 +127,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "landmark",
+      "role": "STGCN: replaced recurrence with pure convolution on graphs; the canonical STGNN baseline.",
+      "role_zh": "STGCN：用图上的纯卷积替代循环结构，是 STGNN 的标准基线。",
+      "track": "graph_basics"
+    }
   },
   {
     "id": "lc-rnn-2018",
@@ -182,7 +194,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "geoman-2018",
@@ -242,7 +260,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "diffusion-convolutional-recurrent-neural-network-2018",
@@ -315,7 +339,13 @@
     "updated_at": "2026-11-24",
     "alt_years": [
       2018
-    ]
+    ],
+    "impact": {
+      "tier": "landmark",
+      "role": "DCRNN: first to model traffic as diffusion on a directed road graph; defined METR-LA/PEMS-BAY protocol.",
+      "role_zh": "DCRNN：首次用有向图上的扩散过程建模交通，并确立了 METR-LA / PEMS-BAY 评测协议。",
+      "track": "graph_basics"
+    }
   },
   {
     "id": "hetero-convlstm-2018",
@@ -348,7 +378,7 @@
     "task_en": "Accident / incident prediction",
     "task_zh": null,
     "method_tags": [
-      "Spatio-Temporal CNN"
+      "Temporal Convolution"
     ],
     "note_en": null,
     "note_zh": null,
@@ -373,7 +403,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "efficient-traffic-forecasting-with-graph-embeddi-2018",
@@ -430,7 +466,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "social-gan-2018",
@@ -498,7 +540,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "deep-multi-view-spatial-temporal-network-for-tax-2018",
@@ -567,7 +615,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "probabilistic-data-fusion-for-short-term-traffic-2018",
@@ -628,6 +682,12 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   }
 ]

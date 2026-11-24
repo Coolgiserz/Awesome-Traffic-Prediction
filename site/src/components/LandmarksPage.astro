@@ -1,0 +1,173 @@
+---
+/**
+ * LandmarksPage — the entry path for someone new to the field.
+ *
+ * The plain library sorts by year, which puts a 2026 PLoS ONE article above
+ * DCRNN. This page groups the papers that defined the field by research track,
+ * in the order the ideas arrived, and says in one sentence what each one
+ * established.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ui, pathFor, localizeVenueType, type Lang } from '../lib/i18n';
+import { withBase } from '../lib/url';
+import { landmarksByTrack, landmarkPapers } from '../lib/papers';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang];
+const groups = landmarksByTrack();
+
+const tierLabel: Record<string, string> = {
+  top: lang === 'zh' ? '顶会/顶刊' : 'Top venue',
+  mid: lang === 'zh' ? '常规期刊' : 'Peer-reviewed',
+  low: lang === 'zh' ? '快速出版' : 'Rapid publication',
+  preprint: lang === 'zh' ? '预印本' : 'Preprint',
+};
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${t.landmarks.title} — ${t.siteName}`}
+  description={t.landmarks.lead}
+  route="landmarks"
+>
+  <div class="wrap landmarks">
+    <h2>{t.landmarks.title}</h2>
+    <p class="section-lead">{t.landmarks.lead}</p>
+    <p class="result-count">{landmarkPapers.length} {t.landmarks.count}</p>
+
+    {
+      groups.map((g) => (
+        <section class="track">
+          <h3>{t.landmarks.track[g.track] ?? g.track}</h3>
+          <ol class="landmark-list">
+            {g.papers.map((p) => (
+              <li>
+                <div class="row-head">
+                  <a class="lm-title" href={withBase(`${pathFor(lang, 'papers')}${p.id}/`)}>
+                    {lang === 'zh' ? (p.titleZh ?? p.title) : p.title}
+                  </a>
+                  <span class="meta">
+                    {p.year} · {p.venue}
+                    {p.venueTier && <span class={`tier ${p.venueTier}`}>{tierLabel[p.venueTier] ?? p.venueTier}</span>}
+                  </span>
+                </div>
+                <p class="role">
+                  {lang === 'zh' ? (p.impact?.role_zh ?? p.impact?.role) : p.impact?.role}
+                </p>
+                <div class="links">
+                  {p.codeUrl && (
+                    <a href={p.codeUrl} target="_blank" rel="noopener nofollow">{t.papers.code}</a>
+                  )}
+                  {p.paperUrl && (
+                    <a href={p.paperUrl} target="_blank" rel="noopener nofollow">{t.papers.pdf}</a>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+      ))
+    }
+
+    <p class="section-lead" style="margin-top:28px">
+      <a href={withBase(pathFor(lang, 'papers'))}>{t.papers.title} →</a>
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .track + .track {
+    margin-top: 30px;
+  }
+  .track h3 {
+    font-size: 16px;
+    margin: 0 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  .landmark-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: lm;
+  }
+  .landmark-list li {
+    counter-increment: lm;
+    padding: 10px 0 10px 34px;
+    position: relative;
+    border-bottom: 1px dashed var(--border);
+  }
+  .landmark-list li::before {
+    content: counter(lm);
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--bg-soft);
+    color: var(--fg-muted);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .row-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .lm-title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .meta {
+    font-size: 12.5px;
+    color: var(--fg-muted);
+    white-space: nowrap;
+  }
+  .tier {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+  }
+  .tier.top {
+    background: #e8f0fe;
+    color: #1a4b8c;
+  }
+  .tier.mid {
+    background: var(--bg-soft);
+    color: var(--fg-muted);
+  }
+  .tier.preprint {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--fg-muted);
+  }
+  .tier.low {
+    background: transparent;
+    border: 1px dashed var(--border);
+    color: var(--fg-muted);
+  }
+  .role {
+    margin: 6px 0 0;
+    font-size: 13.5px;
+    color: var(--fg-muted);
+    line-height: 1.55;
+  }
+  .links {
+    margin-top: 6px;
+    font-size: 12.5px;
+  }
+  .links a {
+    margin-right: 14px;
+  }
+</style>

@@ -180,6 +180,35 @@ def slugify(text: str, max_len: int = 48) -> str:
     return s or "paper"
 
 
+def load_venues(path: Path) -> dict[str, dict[str, Any]]:
+    """venue_id -> {short_name, tier, type, aliases}."""
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+    return {v["id"]: v for v in data if isinstance(v, dict) and v.get("id")}
+
+
+def canonical_venue(venue: str | None, venues: dict[str, dict[str, Any]]) -> tuple[str | None, str | None, str]:
+    """Resolve a README venue tag through data/venues.json.
+
+    The alias table is the single place that decides "KDD" and "ACM SIGKDD
+    Conference..." are the same venue, so the migration and the enrichment pass
+    cannot disagree.
+    """
+    if not venue:
+        return None, None, "unknown"
+    key = venue.strip().lower()
+    for vid, entry in venues.items():
+        names = [vid.lower(), entry.get("short_name", "").lower(), *[a.lower() for a in entry.get("aliases", [])]]
+        if key in names and key:
+            return vid, entry.get("short_name") or venue, entry.get("type", "unknown")
+    # Fall back to the built-in table for anything not yet listed.
+    return venue_info(venue)
+
+
 def venue_info(venue: str | None) -> tuple[str | None, str | None, str]:
     if not venue:
         return None, None, "unknown"
@@ -203,8 +232,42 @@ def pick_task(title: str) -> str:
     return "Traffic forecasting"
 
 
+# Controlled tag vocabulary. Keep in sync with the one-off normalisation pass:
+# a tag that is not in this list should not be produced by the rules at all.
+TAG_CANON = {
+    "GCN": "Graph Convolution",
+    "Recurrent": "RNN / LSTM",
+    "Dynamic Graph": "Adaptive Graph",
+    "Graph Modeling": "STGNN",
+    "Spatio-Temporal CNN": "Temporal Convolution",
+    "Deep Clustering": "Clustering",
+    "STGCN": None,
+    "Long-Horizon": None,
+    "Prompting": "Foundation Model",
+}
+
+# Titles that carry no method keyword but whose method is not in doubt.
+MANUAL_TAGS: dict[str, list[str]] = {
+    "Deep Spatio-Temporal Residual Networks for Citywide Crowd Flows Prediction":
+        ["Temporal Convolution", "Residual Network"],
+    "Graph WaveNet for Deep Spatial-Temporal Graph Modeling":
+        ["Graph Convolution", "Temporal Convolution", "Adaptive Graph", "STGNN"],
+    "Urban Traffic Prediction from Spatio-Temporal Data Using Deep Meta Learning":
+        ["Meta-Learning", "STGNN", "Adaptive Graph"],
+}
+
+
 def pick_tags(title: str) -> list[str]:
-    return [name for name, rx in METHOD_RULES if rx.search(title)]
+    out: list[str] = []
+    for name, rx in METHOD_RULES:
+        if not rx.search(title):
+            continue
+        mapped = TAG_CANON.get(name, name)
+        if mapped and mapped not in out:
+            out.append(mapped)
+    if not out and title in MANUAL_TAGS:
+        return list(MANUAL_TAGS[title])
+    return out
 
 
 def pick_short_name(title: str) -> str | None:
@@ -371,6 +434,7 @@ def build_record(
     order: int,
     curated: dict[str, Any] | None,
     prev: dict[str, Any] | None,
+    venues: dict[str, dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
     title = entry["title"]
     year = int(entry["year"])
@@ -389,7 +453,7 @@ def build_record(
         for key in fix.get("drop_alt", []):
             links.pop(key, None)
 
-    venue_id, _, venue_type = venue_info(venue)
+    venue_id, venue_short, venue_type = canonical_venue(venue, venues or {})
     paper_url = links.get("paper") or links.get("paper-ieee") or links.get("paper-arxiv")
     code_links = []
     for label in ("code", "code-official", "code-official-tf", "code-pytorch", "code-not-official"):
@@ -420,9 +484,10 @@ def build_record(
         "section": entry["section"],
         "title": title,
         "title_zh": None,
-        "venue": venue,
+        "venue": venue_short or venue,
         "venue_id": venue_id,
-        "venue_type": venue_type,
+        # A venue's type comes from the venue table, not from guessing per record.
+        "venue_type": (venues.get(venue_id, {}).get("type") or venue_type) if venue_id else venue_type,
         "paper_url": paper_url,
         "alt_urls": alt_urls,
         "code_url": code_url,
@@ -495,7 +560,7 @@ def build_record(
         for field in ("title_zh", "note_en", "note_zh", "task_zh", "authors", "datasets",
                       "affiliations", "layers", "direction_tags", "status", "featured",
                       "in_digest", "short_name", "doi", "arxiv_id", "openalex_id",
-                      "alt_years", "project_url", "data_url"):
+                      "alt_years", "project_url", "data_url", "impact"):
             if prev.get(field) not in (None, [], False, {}):
                 record[field] = prev[field]
         # Enrichment upgrades a provisional "Arxiv"/"preprint" to the venue the
@@ -504,6 +569,7 @@ def build_record(
         prev_verified = (prev.get("verification") or {}).get("metadata_source") in ("openalex", "crossref")
         if prev_verified and prev.get("venue_type") in ("journal", "conference", "workshop"):
             record["venue"] = prev.get("venue") or record.get("venue")
+            record["venue_id"] = prev.get("venue_id") or record.get("venue_id")
             record["venue_type"] = prev["venue_type"]
         # Labels that a curator already reviewed must not be replaced by the
         # keyword rules on a re-run.
@@ -537,6 +603,7 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--readme", default="README.md")
     ap.add_argument("--curated", default="updates/curated/recent-papers.json")
+    ap.add_argument("--venues", default="data/venues.json")
     ap.add_argument("--out-dir", default="data/papers")
     ap.add_argument("--year", type=int, action="append", help="Only migrate this year (repeatable).")
     ap.add_argument("--all", action="store_true", help="Migrate every year found in the README.")
@@ -551,6 +618,7 @@ def main() -> int:
 
     entries = iter_readme_entries(Path(args.readme))
     curated = load_curated(Path(args.curated))
+    venues = load_venues(Path(args.venues))
     out_dir = Path(args.out_dir)
     prev_index = existing_index(out_dir)
 
@@ -575,7 +643,7 @@ def main() -> int:
             key = re.sub(r"[^a-z0-9]+", "", entry["title"].lower())
             c = curated.get(key)
             prev = prev_index.get((year, key))
-            record = build_record(entry, order, c, prev)
+            record = build_record(entry, order, c, prev, venues)
             if not record["provenance"].get("migrated_at"):
                 record["provenance"]["migrated_at"] = today
             if not record["created_at"]:

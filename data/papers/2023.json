@@ -6,7 +6,7 @@
     "section": "deep_learning",
     "title": "Adaptive Graph Convolution Networks for Traffic Flow Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "https://arxiv.org/abs/2307.05517",
@@ -61,7 +61,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "dynamic-hypergraph-structure-learning-for-traffi-2023",
@@ -122,7 +128,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "adaptive-dependency-learning-graph-neura-2023",
@@ -181,7 +193,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "samsgl-series-aligned-multi-scale-graph-2023",
@@ -190,8 +208,8 @@
     "section": "deep_learning",
     "title": "SAMSGL: Series-Aligned Multi-Scale Graph Learning for Spatio-Temporal Forecasting",
     "title_zh": null,
-    "venue": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
-    "venue_id": "arxiv",
+    "venue": "Chaos",
+    "venue_id": "chaos",
     "venue_type": "journal",
     "paper_url": "https://doi.org/10.1063/5.0211403",
     "alt_urls": {},
@@ -241,7 +259,13 @@
     "updated_at": "2026-11-24",
     "alt_years": [
       2023
-    ]
+    ],
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "multispans-a-multi-range-spatial-tempora-2023",
@@ -250,8 +274,8 @@
     "section": "deep_learning",
     "title": "MultiSPANS: A Multi-range Spatial-Temporal Transformer Network for Traffic Forecast via Structural Entropy Optimization",
     "title_zh": null,
-    "venue": "ACM International Conference on Web Search and Data Mining (WSDM)",
-    "venue_id": "arxiv",
+    "venue": "WSDM",
+    "venue_id": "wsdm",
     "venue_type": "conference",
     "paper_url": "http://arxiv.org/abs/2311.02880v1",
     "alt_urls": {},
@@ -307,7 +331,13 @@
     "updated_at": "2026-11-24",
     "alt_years": [
       2023
-    ]
+    ],
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "distil-the-informative-essence-of-loop-d-2023",
@@ -316,7 +346,7 @@
     "section": "deep_learning",
     "title": "Distil the informative essence of loop detector data set: Is network-level traffic forecasting hungry for more data?",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2310.20366v1",
@@ -362,7 +392,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "improving-traffic-density-forecasting-in-2023",
@@ -371,8 +407,8 @@
     "section": "deep_learning",
     "title": "Improving Traffic Density Forecasting in Intelligent Transportation Systems Using Gated Graph Neural Networks",
     "title_zh": null,
-    "venue": "International Conference on Innovations in Information Technology",
-    "venue_id": "arxiv",
+    "venue": "ISC2",
+    "venue_id": "isc2",
     "venue_type": "conference",
     "paper_url": "http://arxiv.org/abs/2310.17729v1",
     "alt_urls": {},
@@ -420,7 +456,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "spatio-temporal-meta-contrastive-learnin-2023",
@@ -429,8 +471,8 @@
     "section": "deep_learning",
     "title": "Spatio-Temporal Meta Contrastive Learning",
     "title_zh": null,
-    "venue": "ACM International Conference on Information and Knowledge Management (CIKM)",
-    "venue_id": "arxiv",
+    "venue": "CIKM",
+    "venue_id": "cikm",
     "venue_type": "conference",
     "paper_url": "http://arxiv.org/abs/2310.17678v1",
     "alt_urls": {},
@@ -481,7 +523,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "spatial-temporal-hypergraph-neural-netwo-2023",
@@ -490,7 +538,7 @@
     "section": "deep_learning",
     "title": "Spatial-Temporal Hypergraph Neural Network for Traffic Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2310.16070v1",
@@ -536,7 +584,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "networkwide-traffic-state-forecasting-us-2023",
@@ -595,7 +649,13 @@
     "updated_at": "2026-11-24",
     "alt_years": [
       2023
-    ]
+    ],
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "revealing-the-power-of-masked-autoencode-2023",
@@ -604,8 +664,8 @@
     "section": "deep_learning",
     "title": "Revealing the Power of Masked Autoencoders in Traffic Forecasting",
     "title_zh": null,
-    "venue": "ACM International Conference on Information and Knowledge Management (CIKM)",
-    "venue_id": "arxiv",
+    "venue": "CIKM",
+    "venue_id": "cikm",
     "venue_type": "conference",
     "paper_url": "http://arxiv.org/abs/2309.15169v2",
     "alt_urls": {},
@@ -654,7 +714,13 @@
     "updated_at": "2026-11-24",
     "alt_years": [
       2023
-    ]
+    ],
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "rethinking-sensors-modeling-hierarchical-2023",
@@ -663,8 +729,8 @@
     "section": "deep_learning",
     "title": "Rethinking Sensors Modeling: Hierarchical Information Enhanced Traffic Forecasting",
     "title_zh": null,
-    "venue": "ACM International Conference on Information and Knowledge Management (CIKM)",
-    "venue_id": "arxiv",
+    "venue": "CIKM",
+    "venue_id": "cikm",
     "venue_type": "conference",
     "paper_url": "http://arxiv.org/abs/2309.11284v1",
     "alt_urls": {},
@@ -713,7 +779,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "test-time-compensated-representation-lea-2023",
@@ -722,7 +794,7 @@
     "section": "deep_learning",
     "title": "Test-Time Compensated Representation Learning for Extreme Traffic Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2309.09074v1",
@@ -770,7 +842,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "irregular-traffic-time-series-forecastin-2023",
@@ -779,7 +857,7 @@
     "section": "deep_learning",
     "title": "Irregular Traffic Time Series Forecasting Based on Asynchronous Spatio-Temporal Graph Convolutional Network",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2308.16818v3",
@@ -823,7 +901,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "meta-attentive-graph-convolutional-recur-2023",
@@ -832,7 +916,7 @@
     "section": "deep_learning",
     "title": "Meta Attentive Graph Convolutional Recurrent Network for Traffic Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2308.14377v1",
@@ -883,7 +967,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "staeformer-spatio-temporal-adaptive-embe-2023",
@@ -892,7 +982,7 @@
     "section": "deep_learning",
     "title": "STAEformer: Spatio-Temporal Adaptive Embedding Makes Vanilla Transformer SOTA for Traffic Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2308.10425v5",
@@ -939,7 +1029,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "landmark",
+      "role": "STAEformer: showed a plain Transformer with spatio-temporal adaptive embeddings beats complex STGNNs.",
+      "role_zh": "STAEformer：证明配好时空自适应嵌入的朴素 Transformer 就能超过复杂 STGNN。",
+      "track": "transformer"
+    }
   },
   {
     "id": "cross-city-few-shot-traffic-forecasting-2023",
@@ -948,8 +1044,8 @@
     "section": "deep_learning",
     "title": "Cross-city Few-Shot Traffic Forecasting via Traffic Pattern Bank",
     "title_zh": null,
-    "venue": "ACM International Conference on Information and Knowledge Management (CIKM)",
-    "venue_id": "arxiv",
+    "venue": "CIKM",
+    "venue_id": "cikm",
     "venue_type": "conference",
     "paper_url": "http://arxiv.org/abs/2308.09727v1",
     "alt_urls": {},
@@ -997,7 +1093,13 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   },
   {
     "id": "st-mlp-a-cascaded-spatio-temporal-linear-2023",
@@ -1006,7 +1108,7 @@
     "section": "deep_learning",
     "title": "ST-MLP: A Cascaded Spatio-Temporal Linear Framework with Channel-Independence Strategy for Traffic Forecasting",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "arXiv",
     "venue_id": "arxiv",
     "venue_type": "preprint",
     "paper_url": "http://arxiv.org/abs/2308.07496v1",
@@ -1056,6 +1158,12 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "impact": {
+      "tier": "standard",
+      "role": null,
+      "role_zh": null,
+      "track": null
+    }
   }
 ]
