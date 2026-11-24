@@ -315,8 +315,79 @@ README 与站点现在渲染同一份数据：
 
 ### 8.5 仍未处理
 
-- **`featured` 字段已完全失去作用**。digest 表现在由 `impact` 驱动，
-  `updates/curated/recent-papers.json` 只剩「curated 备注与中文文案」这一项价值，
-  可以考虑把其中的人工备注迁进 `data/papers` 后退休这个文件。
-- 2015–2021 仍是手写区块（数据层有 79 条）。这些年份读者相对熟悉、
-  内容也稳定，暂不纳入自动渲染，避免一次 diff 过大。
+- ~~`featured` 字段与 curated JSON~~ —— **已完成退休**，见第九节。
+- ~~2015–2021 仍是手写区块~~ —— **已全部纳入自动渲染**，见第九节。
+
+---
+
+## 九、收尾：退休 curated JSON，README 全量同源
+
+### 9.1 迁移人工文案
+
+`updates/curated/recent-papers.json` 的 19 条记录里唯一不可替代的是人工写的
+**中文备注**（如「偏通用模型与提示式框架」「两阶段长预测框架」）与 `task_zh`。
+这些已迁入 `data/papers`：
+
+- 只填空字段，不覆盖已有内容（`note_zh` 19 条、`task_zh` 19 条、`short_name` 补到 43 条）。
+- 与 `impact.role_zh` 做过逐条比对，**无一条重复**——role 讲「为什么重要」，
+  note 讲「这篇做了什么」，两者互补。
+
+文件本身移到 `docs/evolution/legacy-curated-snapshot.json` 并加了说明头，仅作审计留档。
+
+### 9.2 迁移脚本与 README 的关系重新定义
+
+移走手写区块后暴露一个设计问题：`migrate_readme_to_json.py` 认为「README 里的条目
+= 数据的全部」，于是把 2018/2019/2020/2021 的 `order` 全部重排为 1、2……，
+`--check` 每次都报 DIFF。
+
+现在脚本会先比较「README 提供的条数」与「磁盘上该年份的记录数」，
+当 README 只贡献少数几条时判定该年份**已由数据层拥有**，直接跳过并打印：
+
+```
+[INFO] 5 year(s) now have no manually written entries; their records are
+       owned by data/papers and rendered back into the README, so they are
+       skipped here.
+```
+
+`--curated` 参数默认值改为空串，缺文件不再是错误。
+
+### 9.3 README 全量同源
+
+`render_curated_recent.py --recent-window-years 0 --per-year 0` 渲染全部 12 个年份：
+
+| 年份 | 条目 | 年份 | 条目 |
+| --- | --- | --- | --- |
+| 2015 | 2 | 2021 | 10 |
+| 2016 | 1 | 2022 | 43 |
+| 2017 | 3 | 2023 | 18 |
+| 2018 | 10 | 2024 | 12 |
+| 2019 | 22 | 2025 | 12 |
+| 2020 | 31 | 2026 | 31 |
+
+合计 **195 条**，与 `data/papers` 一一对应。`--per-year 0` 表示不限条数。
+
+现在 README 的深度学习小节不再是手写内容，而是纯渲染产物；
+`CONTRIBUTION.md` 的「Source of truth」也已改为 `data/papers/*.json`。
+
+### 9.4 修改 README 的唯一路径
+
+```
+编辑 data/papers/YYYY.json
+  → python3 scripts/render_curated_recent.py --recent-window-years 0 --per-year 0
+  → python3 scripts/check_readme_sync.py
+```
+
+CI 的 `curated-render-check.yml` 使用同一组参数，手改 README 自动块会直接失败。
+
+### 9.5 最终状态
+
+| 检查 | 结果 |
+| --- | --- |
+| readme-sync | OK（12 年小节 / 15 digest 行） |
+| render --check | OK（195 条 / 2015–2026 / 15 行） |
+| migrate --check | OK（数据层拥有的年份自动跳过） |
+| venue consistency | OK |
+| schema | 195 条，0 错误 |
+| 站点 | 408 页，0 处开发向文本 |
+
+仓库只有一个编辑入口：改 JSON，渲染 README，站点构建时读取同一份数据。

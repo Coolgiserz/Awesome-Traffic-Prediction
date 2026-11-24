@@ -44,14 +44,14 @@ The script checks yearly paper-count alignment, digest row-count alignment, and 
 
 ### Structured Recent Papers
 
-- Source of truth: `updates/curated/recent-papers.json`
+- Source of truth: `data/papers/*.json` (see `docs/evolution/01-data-model.md`)
 - Do not manually edit auto blocks in README files:
   - `<!-- START AUTO RECENT PAPERS --> ... <!-- END AUTO RECENT PAPERS -->`
   - `<!-- START AUTO CURATED DIGEST TABLE --> ... <!-- END AUTO CURATED DIGEST TABLE -->`
 - After JSON edits, render with:
 
 ```bash
-python3 scripts/render_curated_recent.py --data updates/curated/recent-papers.json
+python3 scripts/render_curated_recent.py
 ```
 
 ## Pull Request Checklist

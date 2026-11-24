@@ -401,8 +401,14 @@ def iter_readme_entries(path: Path) -> list[dict[str, Any]]:
 
 
 def load_curated(path: Path) -> dict[str, dict[str, Any]]:
-    """Index updates/curated/recent-papers.json by normalized title."""
-    if not path.exists():
+    """Index the legacy curated JSON by normalized title.
+
+    This file is being retired: its human-written Chinese copy and short names
+    have been migrated into data/papers, and the README digest is now driven by
+    `impact`. The loader stays so an existing checkout still migrates cleanly,
+    but a missing file is not an error.
+    """
+    if not path or not path.exists():
         return {}
     data = json.loads(path.read_text(encoding="utf-8"))
     index: dict[str, dict[str, Any]] = {}
@@ -602,7 +608,11 @@ def build_record(
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--readme", default="README.md")
-    ap.add_argument("--curated", default="updates/curated/recent-papers.json")
+    ap.add_argument(
+        "--curated",
+        default="",
+        help="Legacy curated JSON to merge from (optional; retired in favour of data/papers).",
+    )
     ap.add_argument("--venues", default="data/venues.json")
     ap.add_argument("--out-dir", default="data/papers")
     ap.add_argument("--year", type=int, action="append", help="Only migrate this year (repeatable).")
@@ -617,7 +627,7 @@ def main() -> int:
     today = args.today or date.today().isoformat()
 
     entries = iter_readme_entries(Path(args.readme))
-    curated = load_curated(Path(args.curated))
+    curated = load_curated(Path(args.curated)) if args.curated else {}
     venues = load_venues(Path(args.venues))
     out_dir = Path(args.out_dir)
     prev_index = existing_index(out_dir)
@@ -635,8 +645,29 @@ def main() -> int:
         print("[INFO] nothing selected; pass --year YYYY or --all")
         return 2
 
-    drifted = False
     stats: Counter[str] = Counter()
+    # A year whose entries all live inside the auto-rendered block is no longer
+    # README-owned: data/papers is its source and render_curated_recent.py writes
+    # it back out. Rewriting those files from a partial README would renumber
+    # `order` on every run, so they are left alone.
+    on_disk_years = {
+        int(path.stem) for path in out_dir.glob("*.json") if path.stem.isdigit()
+    } if out_dir.exists() else set()
+    kept: list[int] = []
+    for y in years:
+        count = len(per_year[y])
+        if y in on_disk_years:
+            disk = len(prev_index.get((y, ""), {})) if False else None
+            # Count records on disk for this year without a README line: if the
+            # README contributes only a handful, the year has moved to data-owned.
+            disk_count = sum(1 for (yy, _k) in prev_index if yy == y)
+            if count * 2 < disk_count:
+                stats["no_manual_left"] += 1
+                continue
+        kept.append(y)
+    years = kept
+
+    drifted = False
     for year in years:
         records = []
         for order, entry in enumerate(per_year[year], 1):
@@ -697,6 +728,13 @@ def main() -> int:
                 print(f"[DIFF ] {target} ({len(records)} records)")
         else:
             print(f"[SAME ] {target} ({len(records)} records)")
+
+    if stats["no_manual_left"]:
+        print(
+            f"[INFO] {stats['no_manual_left']} year(s) now have no manually written "
+            "entries; their records are owned by data/papers and rendered back into "
+            "the README, so they are skipped here."
+        )
 
     print(
         f"[SUMMARY] years={len(years)} records={stats['records']} "

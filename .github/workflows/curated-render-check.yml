@@ -33,4 +33,4 @@ jobs:
 
       - name: Check rendered sections
         run: |
-          python3 scripts/render_curated_recent.py --recent-window-years 5 --check
+          python3 scripts/render_curated_recent.py --recent-window-years 0 --per-year 0 --check

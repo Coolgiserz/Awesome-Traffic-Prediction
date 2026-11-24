@@ -167,7 +167,8 @@ def render_recent_block(
         bucket.sort(key=lambda x: sort_key(x, venues))
         out.append(f"#### {year}")
         out.append("")
-        for i, p in enumerate(bucket[:per_year], 1):
+        limit = len(bucket) if per_year <= 0 else per_year
+        for i, p in enumerate(bucket[:limit], 1):
             out.append(format_recent_item(i, p, venues))
         out.append("")
     return "\n".join(out).rstrip() + "\n"
