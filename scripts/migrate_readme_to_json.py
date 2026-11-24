@@ -108,7 +108,30 @@ TASK_RULES: list[tuple[str, re.Pattern[str]]] = [
     ("Survey", re.compile(r"survey|review|overview|future directions", re.I)),
 ]
 
+# Extended to cover the methodological families that the first pass could not
+# label. Order matters: more specific patterns first, so "Graph Attention" is
+# tried before the generic "Graph Convolution".
 METHOD_RULES: list[tuple[str, re.Pattern[str]]] = [
+    ("Survey", re.compile(r"survey|overview|review|future directions", re.I)),
+    ("Graph Attention", re.compile(r"graph attention|\bgat\b|attention based spatial", re.I)),
+    ("Graph Convolution", re.compile(r"\bgcn\b|graph convolution|graph convolutional", re.I)),
+    ("Graph Pooling", re.compile(r"graph pooling|hierarchical graph", re.I)),
+    ("Self-Supervised", re.compile(r"self-supervised|masked autoencoder|\bmae\b", re.I)),
+    ("Contrastive Learning", re.compile(r"contrastive", re.I)),
+    ("Multi-View", re.compile(r"multi-view|multi view", re.I)),
+    ("Multi-Task", re.compile(r"multi-task|multitask", re.I)),
+    ("Multi-Path", re.compile(r"multi-path|multipath", re.I)),
+    ("Latent Graph Learning", re.compile(r"latent graph|structure learning|graph structure", re.I)),
+    ("U-Net", re.compile(r"u-net|unet", re.I)),
+    ("MLP", re.compile(r"\bmlp\b|linear framework|channel-independen", re.I)),
+    ("Autoencoder", re.compile(r"autoencoder|stacked auto-?encoder", re.I)),
+    ("Statistical Model", re.compile(r"statistical|\barima\b|\bbayesian\b|rolling model", re.I)),
+    ("Test-Time Adaptation", re.compile(r"test-time", re.I)),
+    ("Adversarial Robustness", re.compile(r"adversarial|robustness|extreme", re.I)),
+    ("Multi-Modal Fusion", re.compile(r"fusion|multi-modal|multimodal|cross-platform", re.I)),
+    ("Sequence Modeling", re.compile(r"sequence model|sequence modeling", re.I)),
+    ("Spatial-Temporal Similarity", re.compile(r"similarity|clustering", re.I)),
+
     ("Graph Convolution", re.compile(r"gcn\b|graph convolution|graph convolutional", re.I)),
     ("STGNN", re.compile(r"spatio-?temporal graph|stgnn|\bgnn\b|graph neural", re.I)),
     ("Graph Attention", re.compile(r"graph attention|\bgat\b|attention based spatial", re.I)),
@@ -234,6 +257,17 @@ def pick_task(title: str) -> str:
 
 # Controlled tag vocabulary. Keep in sync with the one-off normalisation pass:
 # a tag that is not in this list should not be produced by the rules at all.
+# Fine-grained tags merged into a higher-level category so the filter stays usable.
+TAG_MERGE = {
+    "Residual Network": "Temporal Convolution",
+    "Spatial-Temporal Similarity": "Clustering",
+    "Multi-Task": "Matrix Factorization",
+    "Multi-Path": "Multi-View",
+    "U-Net": "Temporal Convolution",
+    "Test-Time Adaptation": "Transfer Learning",
+    "Latent Graph Learning": "Adaptive Graph",
+}
+
 TAG_CANON = {
     "GCN": "Graph Convolution",
     "Recurrent": "RNN / LSTM",
@@ -247,7 +281,57 @@ TAG_CANON = {
 }
 
 # Titles that carry no method keyword but whose method is not in doubt.
+# Titles that carry no method keyword but whose architecture is not in doubt.
+# Every entry here was decided by reading the paper, not by a regex.
 MANUAL_TAGS: dict[str, list[str]] = {
+    "Traffic Flow Prediction With Big Data: A Deep Learning Approach": ["Autoencoder"],
+    "DNN-Based Prediction Model for Spatio-Temporal Data": ["MLP"],
+    "Road2Vec: Measuring Traffic Interactions in Urban Road System from Massive Travel Routes": ["Embedding"],
+    "DeepTransport: Learning Spatial-Temporal Dependency for Traffic Condition Forecasting": ["RNN / LSTM"],
+    "Contextualized Spatial\u2013Temporal Network for Taxi Origin-Destination Demand Prediction":
+        ["RNN / LSTM", "Graph Convolution"],
+    "GSTNet: Global Spatial-Temporal Network for Traffic Flow Prediction":
+        ["Graph Convolution", "Temporal Convolution"],
+    "DeepSTN+: Context-aware Spatial-Temporal Neural Network for Crowd Flow Prediction in Metropolis":
+        ["Temporal Convolution", "Multi-Modal Fusion"],
+    "STGAT: Modeling Spatial-Temporal Interactions for Human Trajectory Prediction":
+        ["Graph Attention", "RNN / LSTM"],
+    "Context-aware Forecasting for Multivariate Stationary Time-series": ["RNN / LSTM"],
+    "City-Wide Traffic Flow Forecasting Using a Deep Convolutional Neural Network": ["Temporal Convolution"],
+    "BuildSenSys: Reusing Building Sensing Data for Traffic Prediction with Cross-domain Learning":
+        ["Transfer Learning", "Multi-Modal Fusion"],
+    "Spatio-Temporal Meta Learning for Urban Traffic Prediction": ["Meta-Learning", "Matrix Factorization"],
+    "Time Series is a Special Sequence: Forecasting with Sample Convolution and Interaction":
+        ["Temporal Convolution", "MLP"],
+    "Dynamic and Multi-faceted Spatio-temporal Deep Learning for Traffic Speed Forecasting":
+        ["Graph Convolution", "RNN / LSTM"],
+    "TS2Vec: Towards Universal Representation of Time Series": ["Contrastive Learning"],
+    "2F-TP:Learning Flexible Spatiotemporal Dependency for Flexible Traffic Prediction":
+        ["Graph Convolution", "Multi-Modal Fusion"],
+    "Automated Dilated Spatio-Temporal Synchronous Graph Modeling for Traffic Prediction":
+        ["Graph Convolution", "Temporal Convolution", "Adaptive Graph"],
+    "Accurate non-stationary short-term traffic flow prediction method": ["Statistical Model"],
+    "Distil the informative essence of loop detector data set: Is network-level traffic forecasting ready?":
+        ["Knowledge Distillation"],
+    "Rethinking Sensors Modeling: Hierarchical Information Enhanced Traffic Forecasting":
+        ["Graph Convolution", "Graph Pooling"],
+    "Global-Aware Enhanced Spatial-Temporal Graph Recurrent Networks: A New Framework For Traffic Flow Prediction":
+        ["Graph Convolution", "RNN / LSTM"],
+    "GEnSHIN: Graphical Enhanced Spatio-temporal Hierarchical Inference Network for Traffic Flow Prediction":
+        ["Graph Convolution", "Multi-Modal Fusion"],
+    "UniST-Pred: A Robust Unified Framework for Spatio-Temporal Traffic Forecasting in Transportation Networks Under Disruptions":
+        ["Foundation Model", "Transformer"],
+    "VisiFold: Long-Term Traffic Forecasting via Temporal Folding Graph and Node Visibility":
+        ["Graph Convolution", "Transformer"],
+    # Bayesian / density-ratio papers: the generic rules would bolt on unrelated
+    # families ("fusion" -> Multi-Modal, "survey" -> Survey on a methodological
+    # paper), so these are pinned explicitly.
+    "Probabilistic Data Fusion for Short-Term Traffic Prediction With Semiparametric Density Ratio Model":
+        ["Probabilistic"],
+    "A generalized Bayesian traffic model": ["Probabilistic"],
+    "Graph Neural Network for Traffic Forecasting: A Survey": ["STGNN"],
+    "Spatial-temporal graph neural network for traffic forecasting: An overview and open research issues":
+        ["STGNN"],
     "Deep Spatio-Temporal Residual Networks for Citywide Crowd Flows Prediction":
         ["Temporal Convolution", "Residual Network"],
     "Graph WaveNet for Deep Spatial-Temporal Graph Modeling":
@@ -258,15 +342,18 @@ MANUAL_TAGS: dict[str, list[str]] = {
 
 
 def pick_tags(title: str) -> list[str]:
+    # A hand-assigned label is a decision, not a hint: do not add rule hits on
+    # top of it, or the record drifts every time a rule is widened.
+    if title in MANUAL_TAGS:
+        return list(MANUAL_TAGS[title])
     out: list[str] = []
     for name, rx in METHOD_RULES:
         if not rx.search(title):
             continue
         mapped = TAG_CANON.get(name, name)
+        mapped = TAG_MERGE.get(mapped, mapped) if mapped else None
         if mapped and mapped not in out:
             out.append(mapped)
-    if not out and title in MANUAL_TAGS:
-        return list(MANUAL_TAGS[title])
     return out
 
 

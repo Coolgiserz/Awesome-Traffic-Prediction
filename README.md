@@ -188,34 +188,30 @@ Yearly theme trend lines:
 13. [AAAI 2022] Spatio-Temporal Self-Supervised Learning for Traffic Flow Prediction [[paper]](https://doi.org/10.1609/aaai.v37i4.25555)
 14. [ICDE 2022] Uncertainty Quantification for Traffic Forecasting: A Unified Approach [[paper]](https://doi.org/10.1109/icde55515.2023.00081)
 15. [Neural Networks 2022] A Graph-based U-Net Model for Predicting Traffic in unseen Cities [[paper]](http://arxiv.org/abs/2202.06725v4)
-16. [IWCMC 2022] An Empirical Study on Internet Traffic Prediction Using Statistical Rolling Model [[paper]](https://doi.org/10.1109/iwcmc55113.2022.9825059)
-17. [ICC 2022] Deep Sequence Modeling for Anomalous ISP Traffic Prediction [[paper]](https://doi.org/10.1109/icc45855.2022.9838262)
-18. [IEEE IoT Journal 2022] Energy-Efficient Wake-Up Signalling for Machine-Type Devices Based on Traffic-Aware Long-Short Term Memory Prediction [[paper]](https://doi.org/10.1109/jiot.2022.3181889)
-19. [Computer Networks 2022] Federated Learning for 5G Base Station Traffic Forecasting [[paper]](https://doi.org/10.1016/j.comnet.2023.109950)
-20. [DMKD 2022] Graph Convolutional Networks for Traffic Forecasting with Missing Values [[paper]](http://arxiv.org/abs/2212.06419v1)
-21. [SSCI 2022] Simpler is better: Multilevel Abstraction with Graph Convolutional Recurrent Neural Network Cells for Traffic Prediction [[paper]](http://arxiv.org/abs/2209.03858v1)
-22. [CCIS 2022] Spatial-Temporal Adaptive Graph Convolution with Attention Network for Traffic Forecasting [[paper]](https://doi.org/10.1007/978-981-19-8915-5_8)
-23. [Applied Intelligence 2022] Spatial-temporal graph neural network for traffic forecasting: An overview and open research issues [[paper]](https://doi.org/10.1007/s10489-021-02587-w)
-24. [Neural Networks 2022] Spatio-Temporal Latent Graph Structure Learning for Traffic Forecasting [[paper]](https://doi.org/10.1109/ijcnn55064.2022.9892191)
-25. [LNCS 2022] STLGRU: Spatio-Temporal Lightweight Graph GRU for Traffic Flow Prediction [[paper]](https://doi.org/10.1007/978-981-97-2266-2_23)
-26. [arXiv 2022] A spatial-temporal short-term traffic flow prediction model based on dynamical-learning graph convolution mechanism [[paper]](http://arxiv.org/abs/2205.04762v1)
-27. [arXiv 2022] Accurate non-stationary short-term traffic flow prediction method [[paper]](http://arxiv.org/abs/2205.00517v1)
-28. [arXiv 2022] Adaptive Graph Spatial-Temporal Transformer Network for Traffic Flow Forecasting [[paper]](http://arxiv.org/abs/2207.05064v1)
-29. [arXiv 2022] Deep-Ensemble-Based Uncertainty Quantification in Spatiotemporal Graph Neural Networks for Traffic Forecasting [[paper]](http://arxiv.org/abs/2204.01618v2)
-30. [arXiv 2022] Domain Adversarial Spatial-Temporal Network: A Transferable Framework for Short-term Traffic Forecasting across Cities [[paper]](http://arxiv.org/abs/2202.03630v2)
-31. [arXiv 2022] Efficient Traffic State Forecasting using Spatio-Temporal Network Dependencies: A Sparse Graph Neural Network Approach [[paper]](http://arxiv.org/abs/2211.03033v1)
-32. [arXiv 2022] Explainable Graph Pyramid Autoformer for Long-Term Traffic Forecasting [[paper]](http://arxiv.org/abs/2209.13123v1)
-33. [arXiv 2022] Hierarchical Graph Pooling is an Effective Citywide Traffic Condition Prediction Model [[paper]](http://arxiv.org/abs/2209.03629v1)
-34. [arXiv 2022] Hierarchical Graph Structures for Congestion and ETA Prediction [[paper]](http://arxiv.org/abs/2211.11762v1)
-35. [arXiv 2022] Learning spatiotemporal features from incomplete data for traffic flow prediction using hybrid deep neural networks [[paper]](http://arxiv.org/abs/2204.10222v1)
-36. [arXiv 2022] NodeTrans: A Graph Transfer Learning Approach for Traffic Prediction [[paper]](http://arxiv.org/abs/2207.01301v1)
-37. [arXiv 2022] Spatial-Temporal Graph Convolutional Gated Recurrent Network for Traffic Forecasting [[paper]](http://arxiv.org/abs/2210.02737v1)
-38. [arXiv 2022] Spatial-Temporal Interactive Dynamic Graph Convolution Network for Traffic Forecasting [[paper]](http://arxiv.org/abs/2205.08689v5)
-39. [arXiv 2022] STCGAT: A Spatio-temporal Causal Graph Attention Network for traffic flow prediction in Intelligent Transportation Systems [[paper]](http://arxiv.org/abs/2203.10749v3)
-40. [arXiv 2022] STGC-GNNs: A GNN-based traffic prediction framework with a spatial-temporal Granger causality graph [[paper]](https://doi.org/10.2139/ssrn.4378318)
-41. [arXiv 2022] SwinUNet3D -- A Hierarchical Architecture for Deep Traffic Prediction using Shifted Window Transformers [[paper]](http://arxiv.org/abs/2201.06390v1)
-42. [arXiv 2022] Towards Spatio-Temporal Cross-Platform Graph Embedding Fusion for Urban Traffic Flow Prediction [[paper]](http://arxiv.org/abs/2208.06947v2)
-43. [arXiv 2022] Traffic-Twitter Transformer: A Nature Language Processing-joined Framework For Network-wide Traffic Forecasting [[paper]](http://arxiv.org/abs/2206.11078v3)
+16. [DMKD 2022] Graph Convolutional Networks for Traffic Forecasting with Missing Values [[paper]](http://arxiv.org/abs/2212.06419v1)
+17. [SSCI 2022] Simpler is better: Multilevel Abstraction with Graph Convolutional Recurrent Neural Network Cells for Traffic Prediction [[paper]](http://arxiv.org/abs/2209.03858v1)
+18. [CCIS 2022] Spatial-Temporal Adaptive Graph Convolution with Attention Network for Traffic Forecasting [[paper]](https://doi.org/10.1007/978-981-19-8915-5_8)
+19. [Applied Intelligence 2022] Spatial-temporal graph neural network for traffic forecasting: An overview and open research issues [[paper]](https://doi.org/10.1007/s10489-021-02587-w)
+20. [Neural Networks 2022] Spatio-Temporal Latent Graph Structure Learning for Traffic Forecasting [[paper]](https://doi.org/10.1109/ijcnn55064.2022.9892191)
+21. [LNCS 2022] STLGRU: Spatio-Temporal Lightweight Graph GRU for Traffic Flow Prediction [[paper]](https://doi.org/10.1007/978-981-97-2266-2_23)
+22. [arXiv 2022] A spatial-temporal short-term traffic flow prediction model based on dynamical-learning graph convolution mechanism [[paper]](http://arxiv.org/abs/2205.04762v1)
+23. [arXiv 2022] Accurate non-stationary short-term traffic flow prediction method [[paper]](http://arxiv.org/abs/2205.00517v1)
+24. [arXiv 2022] Adaptive Graph Spatial-Temporal Transformer Network for Traffic Flow Forecasting [[paper]](http://arxiv.org/abs/2207.05064v1)
+25. [arXiv 2022] Deep-Ensemble-Based Uncertainty Quantification in Spatiotemporal Graph Neural Networks for Traffic Forecasting [[paper]](http://arxiv.org/abs/2204.01618v2)
+26. [arXiv 2022] Domain Adversarial Spatial-Temporal Network: A Transferable Framework for Short-term Traffic Forecasting across Cities [[paper]](http://arxiv.org/abs/2202.03630v2)
+27. [arXiv 2022] Efficient Traffic State Forecasting using Spatio-Temporal Network Dependencies: A Sparse Graph Neural Network Approach [[paper]](http://arxiv.org/abs/2211.03033v1)
+28. [arXiv 2022] Explainable Graph Pyramid Autoformer for Long-Term Traffic Forecasting [[paper]](http://arxiv.org/abs/2209.13123v1)
+29. [arXiv 2022] Hierarchical Graph Pooling is an Effective Citywide Traffic Condition Prediction Model [[paper]](http://arxiv.org/abs/2209.03629v1)
+30. [arXiv 2022] Hierarchical Graph Structures for Congestion and ETA Prediction [[paper]](http://arxiv.org/abs/2211.11762v1)
+31. [arXiv 2022] Learning spatiotemporal features from incomplete data for traffic flow prediction using hybrid deep neural networks [[paper]](http://arxiv.org/abs/2204.10222v1)
+32. [arXiv 2022] NodeTrans: A Graph Transfer Learning Approach for Traffic Prediction [[paper]](http://arxiv.org/abs/2207.01301v1)
+33. [arXiv 2022] Spatial-Temporal Graph Convolutional Gated Recurrent Network for Traffic Forecasting [[paper]](http://arxiv.org/abs/2210.02737v1)
+34. [arXiv 2022] Spatial-Temporal Interactive Dynamic Graph Convolution Network for Traffic Forecasting [[paper]](http://arxiv.org/abs/2205.08689v5)
+35. [arXiv 2022] STCGAT: A Spatio-temporal Causal Graph Attention Network for traffic flow prediction in Intelligent Transportation Systems [[paper]](http://arxiv.org/abs/2203.10749v3)
+36. [arXiv 2022] STGC-GNNs: A GNN-based traffic prediction framework with a spatial-temporal Granger causality graph [[paper]](https://doi.org/10.2139/ssrn.4378318)
+37. [arXiv 2022] SwinUNet3D -- A Hierarchical Architecture for Deep Traffic Prediction using Shifted Window Transformers [[paper]](http://arxiv.org/abs/2201.06390v1)
+38. [arXiv 2022] Towards Spatio-Temporal Cross-Platform Graph Embedding Fusion for Urban Traffic Flow Prediction [[paper]](http://arxiv.org/abs/2208.06947v2)
+39. [arXiv 2022] Traffic-Twitter Transformer: A Nature Language Processing-joined Framework For Network-wide Traffic Forecasting [[paper]](http://arxiv.org/abs/2206.11078v3)
 
 #### 2023
 
@@ -311,7 +307,7 @@ Method tags are lightweight manual labels for quick indexing.
 <!-- START AUTO CURATED DIGEST TABLE -->
 | Year | Paper | Task | Method Tags | Code | Note |
 | --- | --- | --- | --- | --- | --- |
-| 2017 | [Deep Spatio-Temporal Residual Networks](https://arxiv.org/pdf/1610.00081.pdf) | Traffic forecasting | Temporal Convolution, Residual Network | N/A | AAAI · ST-ResNet: introduced residual spatio-temporal networks for citywide grid crowd flow. |
+| 2017 | [Deep Spatio-Temporal Residual Networks](https://arxiv.org/pdf/1610.00081.pdf) | Traffic forecasting | Temporal Convolution | N/A | AAAI · ST-ResNet: introduced residual spatio-temporal networks for citywide grid crowd flow. |
 | 2018 | [Diffusion Convolutional Recurrent](https://arxiv.org/abs/1707.01926) | Traffic forecasting | Diffusion | [code](https://github.com/liyaguang/DCRNN) | ICLR · DCRNN: first to model traffic as diffusion on a directed road graph; defined METR-LA/PEMS-BAY protocol. |
 | 2018 | [STGCN](https://doi.org/10.24963/ijcai.2018/505) | Traffic forecasting | Graph Convolution, STGNN | [code](https://github.com/VeritasYin/STSGCN) | IJCAI · STGCN: replaced recurrence with pure convolution on graphs; the canonical STGNN baseline. |
 | 2019 | [Attention Based Spatial-Temporal Graph](https://doi.org/10.1609/aaai.v33i01.3301922) | Traffic flow prediction | Graph Convolution, Graph Attention, Transformer | [code](https://github.com/guoshnBJTU/ASTGCN-r-pytorch) | AAAI · ASTGCN: brought spatial and temporal attention into graph-based forecasting. |
@@ -324,7 +320,7 @@ Method tags are lightweight manual labels for quick indexing.
 | 2024 | [UniST](https://arxiv.org/abs/2402.11838) | Urban spatio-temporal prediction | Foundation Model | N/A | KDD · UniST: one prompt-driven model trained across many urban datasets, the foundation-model pivot. |
 | 2020 | [Spatial-Temporal Synchronous Graph](https://ojs.aaai.org/index.php/AAAI/article/view/5438) | Traffic forecasting | Graph Convolution | [code](https://github.com/Davidham3/STSGCN) | AAAI · STSGCN: synchronous modelling of spatial and temporal correlations in one module. |
 | 2015 | [Convolutional LSTM Network](https://doi.org/10.48550/arxiv.1506.04214) | Nowcasting | RNN / LSTM | N/A | NeurIPS · Introduced the ConvLSTM cell used by grid-based spatio-temporal models. |
-| 2015 | [Traffic Flow Prediction With Big Data](https://doi.org/10.1109/tits.2014.2345663) | Traffic flow prediction | — | N/A | TITS · Early demonstration that stacked autoencoders beat classical baselines on traffic flow. |
+| 2015 | [Traffic Flow Prediction With Big Data](https://doi.org/10.1109/tits.2014.2345663) | Traffic flow prediction | Autoencoder | N/A | TITS · Early demonstration that stacked autoencoders beat classical baselines on traffic flow. |
 | 2020 | [Spatial-Temporal Fusion Graph Neural](https://arxiv.org/abs/2012.09641) | Traffic flow prediction | STGNN | [code](https://github.com/MengzhangLI/STFGNN) | arXiv · STFGNN: fuses multiple spatio-temporal similarity graphs inside one layer. |
 <!-- END AUTO CURATED DIGEST TABLE -->
 

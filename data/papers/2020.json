@@ -23,7 +23,9 @@
     "affiliations": [],
     "task_en": "Survey",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Survey"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -79,7 +81,9 @@
     "affiliations": [],
     "task_en": "Traffic flow prediction",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Survey"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -135,7 +139,9 @@
     "affiliations": [],
     "task_en": "Survey",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Survey"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -745,7 +751,9 @@
     "affiliations": [],
     "task_en": "Traffic flow prediction",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Temporal Convolution"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -801,7 +809,10 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Transfer Learning",
+      "Multi-Modal Fusion"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -857,7 +868,10 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Meta-Learning",
+      "Matrix Factorization"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],

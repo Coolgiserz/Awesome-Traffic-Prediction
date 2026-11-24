@@ -10,7 +10,7 @@
  *   - Filter state is mirrored into the URL query string (?y=&v=&t=&m=&q=),
  *     which makes every view shareable and restorable on reload.
  */
-import { ui, pathFor, localizeTask, type Lang } from '../lib/i18n';
+import { ui, pathFor, localizeTask, localizeMethodTag, type Lang } from '../lib/i18n';
 import { withBase } from '../lib/url';
 import type { Paper } from '../lib/papers';
 
@@ -96,7 +96,7 @@ const topVenues = [...venueCount.entries()]
 <div class="facet-group">
   <span class="facet-label">{t.papers.method}</span>
   <div class="facets" role="group" aria-label={t.papers.method}>
-    {methodTags.map((tag) => <button class="facet" type="button" data-facet="tag" data-value={tag} aria-pressed="false">{tag}</button>)}
+    {methodTags.map((tag) => <button class="facet" type="button" data-facet="tag" data-value={tag} aria-pressed="false">{localizeMethodTag(tag, lang)}</button>)}
   </div>
 </div>
 

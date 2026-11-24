@@ -102,7 +102,10 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Graph Convolution",
+      "Multi-Modal Fusion"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -306,7 +309,9 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Multi-View"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -369,7 +374,9 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Temporal Convolution"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -554,7 +561,11 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Graph Convolution",
+      "Temporal Convolution",
+      "Adaptive Graph"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -1001,7 +1012,9 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Graph Pooling"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -1060,7 +1073,10 @@
     "affiliations": [],
     "task_en": "Travel time estimation",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Graph Pooling",
+      "Adaptive Graph"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -1637,7 +1653,9 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Adaptive Graph"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -1778,7 +1796,9 @@
     "affiliations": [],
     "task_en": "Traffic flow prediction",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Self-Supervised"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -2090,7 +2110,10 @@
     "affiliations": [],
     "task_en": "Traffic flow prediction",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Multi-Modal Fusion",
+      "Embedding"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -2339,7 +2362,9 @@
     "affiliations": [],
     "task_en": "Traffic flow prediction",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Statistical Model"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -2372,129 +2397,9 @@
     }
   },
   {
-    "id": "an-empirical-study-on-internet-traffic-p-2022",
-    "year": 2022,
-    "order": 38,
-    "section": "deep_learning",
-    "title": "An Empirical Study on Internet Traffic Prediction Using Statistical Rolling Model",
-    "title_zh": null,
-    "venue": "IWCMC",
-    "venue_id": "iwcmc",
-    "venue_type": "conference",
-    "paper_url": "https://doi.org/10.1109/iwcmc55113.2022.9825059",
-    "alt_urls": {},
-    "code_url": null,
-    "code_links": [],
-    "data_url": null,
-    "project_url": null,
-    "doi": "10.1109/iwcmc55113.2022.9825059",
-    "arxiv_id": "2205.01590v1",
-    "openalex_id": "W4285813782",
-    "short_name": null,
-    "authors": [
-      "Sajal Saha",
-      "Anwar Haque",
-      "Greg Sidebottom"
-    ],
-    "affiliations": [],
-    "task_en": "Traffic forecasting",
-    "task_zh": null,
-    "method_tags": [],
-    "note_en": null,
-    "note_zh": null,
-    "datasets": [],
-    "layers": [
-      "sota_core"
-    ],
-    "direction_tags": [],
-    "featured": false,
-    "in_digest": false,
-    "status": "active",
-    "verification": {
-      "checked_at": "2026-11-24",
-      "link_ok": true,
-      "metadata_source": "openalex",
-      "confidence": "high"
-    },
-    "provenance": {
-      "source": "search_pipeline",
-      "readme_line": null,
-      "legacy_id": null,
-      "migrated_at": "2026-11-24"
-    },
-    "created_at": "2026-11-24",
-    "updated_at": "2026-11-24",
-    "impact": {
-      "tier": "standard",
-      "role": null,
-      "role_zh": null,
-      "track": null
-    }
-  },
-  {
-    "id": "deep-sequence-modeling-for-anomalous-isp-2022",
-    "year": 2022,
-    "order": 39,
-    "section": "deep_learning",
-    "title": "Deep Sequence Modeling for Anomalous ISP Traffic Prediction",
-    "title_zh": null,
-    "venue": "ICC",
-    "venue_id": "icc",
-    "venue_type": "conference",
-    "paper_url": "https://doi.org/10.1109/icc45855.2022.9838262",
-    "alt_urls": {},
-    "code_url": null,
-    "code_links": [],
-    "data_url": null,
-    "project_url": null,
-    "doi": "10.1109/icc45855.2022.9838262",
-    "arxiv_id": "2205.01685v1",
-    "openalex_id": "W4290996254",
-    "short_name": null,
-    "authors": [
-      "Sajal Saha",
-      "Anwar Haque",
-      "Greg Sidebottom"
-    ],
-    "affiliations": [],
-    "task_en": "Traffic forecasting",
-    "task_zh": null,
-    "method_tags": [],
-    "note_en": null,
-    "note_zh": null,
-    "datasets": [],
-    "layers": [
-      "sota_core"
-    ],
-    "direction_tags": [],
-    "featured": false,
-    "in_digest": false,
-    "status": "active",
-    "verification": {
-      "checked_at": "2026-11-24",
-      "link_ok": true,
-      "metadata_source": "openalex",
-      "confidence": "high"
-    },
-    "provenance": {
-      "source": "search_pipeline",
-      "readme_line": null,
-      "legacy_id": null,
-      "migrated_at": "2026-11-24"
-    },
-    "created_at": "2026-11-24",
-    "updated_at": "2026-11-24",
-    "impact": {
-      "tier": "standard",
-      "role": null,
-      "role_zh": null,
-      "track": null
-    }
-  },
-  {
     "id": "domain-adversarial-spatial-temporal-netw-2022",
     "year": 2022,
-    "order": 40,
+    "order": 38,
     "section": "deep_learning",
     "title": "Domain Adversarial Spatial-Temporal Network: A Transferable Framework for Short-term Traffic Forecasting across Cities",
     "title_zh": null,
@@ -2553,72 +2458,9 @@
     }
   },
   {
-    "id": "energy-efficient-wake-up-signalling-for-2022",
-    "year": 2022,
-    "order": 41,
-    "section": "deep_learning",
-    "title": "Energy-Efficient Wake-Up Signalling for Machine-Type Devices Based on Traffic-Aware Long-Short Term Memory Prediction",
-    "title_zh": null,
-    "venue": "IEEE IoT Journal",
-    "venue_id": "iotj",
-    "venue_type": "journal",
-    "paper_url": "https://doi.org/10.1109/jiot.2022.3181889",
-    "alt_urls": {},
-    "code_url": null,
-    "code_links": [],
-    "data_url": null,
-    "project_url": null,
-    "doi": "10.1109/jiot.2022.3181889",
-    "arxiv_id": "2206.06058v1",
-    "openalex_id": "W4282947427",
-    "short_name": null,
-    "authors": [
-      "David  Ernesto Ruiz-Guirola",
-      "Carlos Alberto Rodríguez López",
-      "Samuel Montejo‐Sánchez",
-      "Richard Demo Souza",
-      "Onel L. Alcaraz López",
-      "Hirley Alves"
-    ],
-    "affiliations": [],
-    "task_en": "Traffic forecasting",
-    "task_zh": null,
-    "method_tags": [],
-    "note_en": null,
-    "note_zh": null,
-    "datasets": [],
-    "layers": [
-      "sota_core"
-    ],
-    "direction_tags": [],
-    "featured": false,
-    "in_digest": false,
-    "status": "active",
-    "verification": {
-      "checked_at": "2026-11-24",
-      "link_ok": true,
-      "metadata_source": "openalex",
-      "confidence": "high"
-    },
-    "provenance": {
-      "source": "search_pipeline",
-      "readme_line": null,
-      "legacy_id": null,
-      "migrated_at": "2026-11-24"
-    },
-    "created_at": "2026-11-24",
-    "updated_at": "2026-11-24",
-    "impact": {
-      "tier": "standard",
-      "role": null,
-      "role_zh": null,
-      "track": null
-    }
-  },
-  {
     "id": "enhancing-the-robustness-via-adversarial-2022",
     "year": 2022,
-    "order": 42,
+    "order": 39,
     "section": "deep_learning",
     "title": "Enhancing the Robustness via Adversarial Learning and Joint Spatial-Temporal Embeddings in Traffic Forecasting",
     "title_zh": null,
@@ -2645,7 +2487,10 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Adversarial Robustness",
+      "Embedding"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -2655,72 +2500,6 @@
     "direction_tags": [
       "diffusion_probabilistic",
       "benchmark_reproducibility"
-    ],
-    "featured": false,
-    "in_digest": false,
-    "status": "active",
-    "verification": {
-      "checked_at": "2026-11-24",
-      "link_ok": true,
-      "metadata_source": "openalex",
-      "confidence": "high"
-    },
-    "provenance": {
-      "source": "search_pipeline",
-      "readme_line": null,
-      "legacy_id": null,
-      "migrated_at": "2026-11-24"
-    },
-    "created_at": "2026-11-24",
-    "updated_at": "2026-11-24",
-    "alt_years": [
-      2022
-    ],
-    "impact": {
-      "tier": "standard",
-      "role": null,
-      "role_zh": null,
-      "track": null
-    }
-  },
-  {
-    "id": "federated-learning-for-5g-base-station-t-2022",
-    "year": 2022,
-    "order": 43,
-    "section": "deep_learning",
-    "title": "Federated Learning for 5G Base Station Traffic Forecasting",
-    "title_zh": null,
-    "venue": "Computer Networks",
-    "venue_id": "computernetworks",
-    "venue_type": "journal",
-    "paper_url": "https://doi.org/10.1016/j.comnet.2023.109950",
-    "alt_urls": {},
-    "code_url": null,
-    "code_links": [],
-    "data_url": null,
-    "project_url": null,
-    "doi": "10.1016/j.comnet.2023.109950",
-    "arxiv_id": "2211.15220v2",
-    "openalex_id": "W4385484188",
-    "short_name": null,
-    "authors": [
-      "Vasileios Perifanis",
-      "Nikolaos Pavlidis",
-      "Remous-Aris Koutsiamanis",
-      "Pavlos S. Efraimidis"
-    ],
-    "affiliations": [],
-    "task_en": "Traffic forecasting",
-    "task_zh": null,
-    "method_tags": [],
-    "note_en": null,
-    "note_zh": null,
-    "datasets": [],
-    "layers": [
-      "sota_core"
-    ],
-    "direction_tags": [
-      "privacy_federated"
     ],
     "featured": false,
     "in_digest": false,

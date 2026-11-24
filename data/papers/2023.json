@@ -368,7 +368,9 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Knowledge Distillation"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -687,7 +689,10 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Self-Supervised",
+      "Autoencoder"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -755,7 +760,10 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Graph Convolution",
+      "Graph Pooling"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -816,7 +824,11 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Transfer Learning",
+      "Adversarial Robustness",
+      "Embedding"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -1132,7 +1144,9 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "MLP"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],

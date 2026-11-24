@@ -30,7 +30,9 @@
     "affiliations": [],
     "task_en": "Missing value imputation",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Multi-View"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -589,7 +591,9 @@
     "affiliations": [],
     "task_en": "Demand prediction",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Multi-View"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],

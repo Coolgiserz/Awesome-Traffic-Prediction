@@ -247,8 +247,7 @@ Graph WaveNet 原本一个标签都没有，按「Graph Convolution」筛选会�
 
 ## 七、尚未处理
 
-1. **49 条记录方法标签仍为空**。它们多为早期统计方法或边缘应用，
-   需要在扩展受控词表（`Bayesian`、`Kalman Filter`、`ARIMA` 等）后重跑规则。
+1. ~~49 条记录方法标签仍为空~~ —— **已清零**，见第十节。
 2. **`featured` 与新 `impact` 并存**。README 的 curated digest 表仍由 `featured` 驱动，
    两者语义重叠但不一致；建议下一步让 digest 表按 `impact.tier` 选取。
 3. ~~README 与数据层未同源~~ —— **已完成**，见第八节。
@@ -391,3 +390,74 @@ CI 的 `curated-render-check.yml` 使用同一组参数，手改 README 自动�
 | 站点 | 408 页，0 处开发向文本 |
 
 仓库只有一个编辑入口：改 JSON，渲染 README，站点构建时读取同一份数据。
+
+---
+
+## 十、标签补齐与降噪
+
+### 10.1 先剔除跑偏的记录
+
+49 条空标签里混着 4 条**不属于本领域**的论文，是早期检索管线放进来的：
+
+| 记录 | 为什么不属于 |
+| --- | --- |
+| An Empirical Study on Internet Traffic Prediction | 互联网/WWW 流量，不是道路交通 |
+| Deep Sequence Modeling for Anomalous ISP Traffic | ISP 网络流量 |
+| Energy-Efficient Wake-Up Signalling for Machine-Type Devices | M2M 唤醒信令 |
+| Federated Learning for 5G Base Station Traffic | 5G 基站负载 |
+
+已删除，`order` 重新编号。**195 → 191 条。** 这一条比补标签更重要：
+一个交通预测的库里有 ISP 流量论文，比少几十条标签更伤可信度。
+
+### 10.2 扩规则 + 人工判定
+
+剩下 45 条分两步：
+
+- **规则扩展**：`METHOD_RULES` 从 17 条扩到 38 条，新增 Graph Pooling、Self-Supervised、
+  Multi-View、Latent Graph Learning、U-Net、MLP、Autoencoder、Statistical Model、
+  Test-Time Adaptation、Adversarial Robustness 等族。补齐 21 条。
+- **人工判定**：剩余 24 条标题里确实不含方法词（如 "DNN-Based Prediction Model"、
+  "Road2Vec"、"2F-TP"），逐条读题判定，写进 `MANUAL_TAGS`（现在共 27 条条目）。
+
+关键设计：**`MANUAL_TAGS` 里的记录，规则不再叠加。**
+
+原因是复查时发现迁移会多打标签——`"Probabilistic Data Fusion ..."` 因为标题里有 "fusion"
+被打上 `Multi-Modal Fusion`，两篇综述因为标题里有 "Survey" 被同时打上 `Survey` 和 `STGNN`。
+人工标签是**结论**不是提示，规则不该在其上再叠。改完后迁移对全库 method_tags 的复现差异为 **0**。
+
+### 10.3 标签降噪
+
+补齐后出现 9 个只出现 1 次的标签，筛选时点击它们只能得到单行结果，没有意义。
+按「上位类别」合并：
+
+| 细粒度 | 合并到 |
+| --- | --- |
+| Residual Network / U-Net | Temporal Convolution |
+| Spatial-Temporal Similarity | Clustering |
+| Multi-Task | Matrix Factorization |
+| Multi-Path | Multi-View |
+| Test-Time Adaptation | Transfer Learning |
+| Latent Graph Learning | Adaptive Graph |
+
+**词表 40 → 33 个**，保留两个单例（`Statistical Model`、`Physics-Informed`），
+因为它们是独立范式而非某个类别的细分。
+
+最终分面分布：Transformer 50 / STGNN 41 / Graph Convolution 36 / Adaptive Graph 30 /
+RNN·LSTM 13 / Temporal Convolution 12 / Graph Attention 12 …
+
+### 10.4 中文标签
+
+33 个方法标签补了中文映射（`Graph Convolution` → 图卷积、`STGNN` → 时空图网络 …），
+`data-value` 仍是英文，筛选逻辑与 URL 不受影响。
+
+### 10.5 最终状态
+
+| 指标 | 值 |
+| --- | --- |
+| 记录 | 191（删除 4 条跑偏） |
+| 空方法标签 | **0** |
+| 方法标签词表 | 33 |
+| 站点页面 | 400 |
+
+所有门禁通过：readme-sync、render --check、migrate --check（含 method_tags 复现差异 0）、
+venue consistency、schema（191 条 0 错误）、站点文案审计（400 页 0 处开发向文本）。

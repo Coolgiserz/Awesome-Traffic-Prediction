@@ -7,7 +7,7 @@
  * canonical link, so search engines and Zotero-style tooling can reach it.
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { ui, pathFor, localizeTask, localizeLayer, localizeVenueType, localizeDirection, type Lang } from '../lib/i18n';
+import { ui, pathFor, localizeTask, localizeLayer, localizeVenueType, localizeDirection, localizeMethodTag, type Lang } from '../lib/i18n';
 import { withBase } from '../lib/url';
 import { related, type Paper } from '../lib/papers';
 
@@ -98,7 +98,7 @@ const verified = p.verification?.checked_at ?? null;
               <p>
                 <strong>{d.methodTags}:</strong>{' '}
                 {p.methodTags.map((tag) => (
-                  <a class="chip" href={`${withBase(pathFor(lang, 'papers'))}?m=${encodeURIComponent(tag)}`}>{tag}</a>
+                  <a class="chip" href={`${withBase(pathFor(lang, 'papers'))}?m=${encodeURIComponent(tag)}`}>{localizeMethodTag(tag, lang)}</a>
                 ))}
               </p>
             )}

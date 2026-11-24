@@ -36,7 +36,9 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "MLP"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],

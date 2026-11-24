@@ -31,7 +31,9 @@
     "affiliations": [],
     "task_en": "Traffic flow prediction",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Autoencoder"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],

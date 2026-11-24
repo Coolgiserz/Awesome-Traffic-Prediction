@@ -348,6 +348,47 @@ export function localizeDirection(tag: string, lang: Lang): string {
   return lang === 'zh' ? (directionZh[tag] ?? tag) : tag.replace(/_/g, ' ');
 }
 
+/** Method-tag vocabulary -> Chinese. Kept in the same order as the data. */
+const methodTagZh: Record<string, string> = {
+  'Adaptive Graph': '自适应图',
+  'Adversarial Robustness': '对抗鲁棒性',
+  Autoencoder: '自编码器',
+  Clustering: '聚类',
+  'Contrastive Learning': '对比学习',
+  Diffusion: '扩散模型',
+  Efficiency: '效率优化',
+  Embedding: '表征学习',
+  'Federated Learning': '联邦学习',
+  'Few-Shot': '少样本',
+  'Foundation Model': '基础模型',
+  GAN: '生成对抗网络',
+  'Graph Attention': '图注意力',
+  'Graph Convolution': '图卷积',
+  'Graph Pooling': '图池化',
+  'Knowledge Distillation': '知识蒸馏',
+  MLP: '多层感知机',
+  'Mamba / State Space': 'Mamba / 状态空间',
+  'Matrix Factorization': '矩阵分解',
+  'Meta-Learning': '元学习',
+  'Missing Value': '缺失值处理',
+  'Multi-Modal Fusion': '多模态融合',
+  'Multi-View': '多视图',
+  'Physics-Informed': '物理约束',
+  Probabilistic: '概率建模',
+  'RNN / LSTM': '循环网络',
+  STGNN: '时空图网络',
+  'Self-Supervised': '自监督',
+  'Statistical Model': '统计模型',
+  Survey: '综述',
+  'Temporal Convolution': '时间卷积',
+  'Transfer Learning': '迁移学习',
+  Transformer: 'Transformer',
+};
+
+export function localizeMethodTag(tag: string, lang: Lang): string {
+  return lang === 'zh' ? (methodTagZh[tag] ?? tag) : tag;
+}
+
 export const ui = { en, zh } as const;
 
 export function t(lang: Lang) {

@@ -144,7 +144,10 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Temporal Convolution",
+      "MLP"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -267,7 +270,10 @@
     "affiliations": [],
     "task_en": "Traffic speed prediction",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Graph Convolution",
+      "RNN / LSTM"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -323,7 +329,9 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Contrastive Learning"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],

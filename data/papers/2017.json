@@ -28,8 +28,7 @@
     "task_en": "Traffic forecasting",
     "task_zh": null,
     "method_tags": [
-      "Temporal Convolution",
-      "Residual Network"
+      "Temporal Convolution"
     ],
     "note_en": null,
     "note_zh": null,
@@ -95,7 +94,9 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "Embedding"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
@@ -156,7 +157,9 @@
     "affiliations": [],
     "task_en": "Traffic forecasting",
     "task_zh": null,
-    "method_tags": [],
+    "method_tags": [
+      "RNN / LSTM"
+    ],
     "note_en": null,
     "note_zh": null,
     "datasets": [],
