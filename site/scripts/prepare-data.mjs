@@ -90,7 +90,7 @@ function fingerprint(obj) {
  * the structured schema fall back to the same heuristics the README scrape uses,
  * so a partially migrated year still renders sensibly.
  */
-function normalizePaper(item, file, venues) {
+function normalizePaper(item, file, venues, citations) {
   const title = item.title ?? item.name;
   if (!title) return null;
   const year = Number(item.year ?? 0) || null;
@@ -137,10 +137,28 @@ function normalizePaper(item, file, venues) {
     status: item.status ?? 'active',
     impact: item.impact ?? null,
     venueTier: venues.get(item.venue_id)?.tier ?? null,
+    citations: citations.get(item.id)?.cited_by_count ?? null,
     verification: item.verification ?? null,
     provenance: item.provenance ?? null,
     source: `data/papers/${file}`,
   };
+}
+
+/**
+ * Committed citation snapshot, if present. Read-only: the file is produced by
+ * scripts/snapshot_citations.py and reviewed like any other data. Nothing here
+ * contacts OpenAlex — a build must never depend on a third party being up.
+ */
+async function loadCitations() {
+  const raw = await readJsonSafe(path.join(REPO_DIR, 'data', 'citations.json'));
+  const map = new Map();
+  if (raw && Array.isArray(raw.entries)) {
+    for (const e of raw.entries) {
+      if (e && e.id) map.set(e.id, e);
+    }
+    log(`citations: ${map.size} entries, snapshot ${raw.retrieved_on ?? 'undated'}`);
+  }
+  return map;
 }
 
 /** venue_id -> {tier, shortName}, from data/venues.json. */
@@ -154,7 +172,7 @@ async function loadVenues() {
   return map;
 }
 
-async function loadStructuredPapers(venues) {
+async function loadStructuredPapers(venues, citations) {
   const dir = path.join(REPO_DIR, 'data', 'papers');
   if (!existsSync(dir)) return null;
   const files = (await readdir(dir)).filter((f) => f.endsWith('.json')).sort();
@@ -166,7 +184,7 @@ async function loadStructuredPapers(venues) {
     if (!raw) continue;
     const arr = Array.isArray(raw) ? raw : raw.papers ?? raw.items ?? [];
     for (const item of arr) {
-      const p = normalizePaper(item, f, venues);
+      const p = normalizePaper(item, f, venues, citations);
       if (p) papers.push(p);
     }
   }
@@ -437,7 +455,8 @@ async function buildChartData(papers) {
 
 async function main() {
   const venues = await loadVenues();
-  const structured = await loadStructuredPapers(venues);
+  const citations = await loadCitations();
+  const structured = await loadStructuredPapers(venues, citations);
 
   let papers;
   let provenance;
@@ -468,6 +487,7 @@ async function main() {
   const shaped = {
     generatedUtc: new Date().toISOString(),
     provenance,
+    citationsRetrievedOn: (await readJsonSafe(path.join(REPO_DIR, 'data', 'citations.json')))?.retrieved_on ?? null,
     count: papers.length,
     papers,
   };

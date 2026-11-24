@@ -9,7 +9,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { ui, pathFor, localizeTask, localizeLayer, localizeVenueType, localizeDirection, localizeMethodTag, type Lang } from '../lib/i18n';
 import { withBase } from '../lib/url';
-import { related, type Paper } from '../lib/papers';
+import { related, citationsRetrievedOn, type Paper } from '../lib/papers';
 
 interface Props {
   lang: Lang;
@@ -48,6 +48,11 @@ if (p.doi) facts.push([d.doi, p.doi]);
 if (p.arxivId) facts.push([d.arxiv, `arXiv:${p.arxivId}`]);
 if (taskLabel) facts.push([t.papers.task, taskLabel]);
 if (p.layers.length) facts.push([d.layers, p.layers.map((x) => localizeLayer(x, lang)).join(', ')]);
+if (typeof p.citations === 'number') {
+  // Always show the snapshot date next to the number: a citation count without
+  // an "as of" date is not evidence.
+  facts.push([d.citations, `${p.citations.toLocaleString()}${citationsRetrievedOn ? ` (${citationsRetrievedOn})` : ''}`]);
+}
 
 const neighbours = related(p);
 const verified = p.verification?.checked_at ?? null;

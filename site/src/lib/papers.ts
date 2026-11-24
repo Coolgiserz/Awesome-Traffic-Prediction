@@ -73,6 +73,8 @@ export interface Paper {
   impact: Impact | null;
   /** Venue tier from data/venues.json: top / mid / low / preprint. */
   venueTier: string | null;
+  /** Citation count from the committed snapshot, or null when not snapshotted. */
+  citations: number | null;
   verification: Verification | null;
   provenance: Provenance | null;
   source: string;
@@ -80,6 +82,8 @@ export interface Paper {
 
 export interface Dataset {
   generatedUtc: string;
+  /** ISO date the citation snapshot was taken, so the UI can show its age. */
+  citationsRetrievedOn: string | null;
   provenance: {
     source: string;
     files: string[];
@@ -95,6 +99,7 @@ const data = generated as unknown as Dataset;
 
 export const provenance = data.provenance;
 export const generatedUtc = data.generatedUtc;
+export const citationsRetrievedOn = data.citationsRetrievedOn;
 
 /** Deduplicate by normalized title: the same paper can appear under both
  *  year-shifted headings or in both README languages after a merge. */
@@ -247,4 +252,13 @@ export function venueTierCounts(): Record<string, number> {
     if (p.venueTier) out[p.venueTier] = (out[p.venueTier] ?? 0) + 1;
   }
   return out;
+}
+
+
+/** Papers that carry a citation count, most cited first. */
+export function byCitations(limit = 10): Paper[] {
+  return papers
+    .filter((p) => typeof p.citations === 'number')
+    .sort((a, b) => (b.citations ?? 0) - (a.citations ?? 0))
+    .slice(0, limit);
 }

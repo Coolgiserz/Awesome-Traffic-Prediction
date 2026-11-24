@@ -10,7 +10,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { ui, pathFor, localizeVenueType, type Lang } from '../lib/i18n';
 import { withBase } from '../lib/url';
-import { landmarksByTrack, landmarkPapers } from '../lib/papers';
+import { landmarksByTrack, landmarkPapers, citationsRetrievedOn } from '../lib/papers';
 
 interface Props {
   lang: Lang;
@@ -36,7 +36,10 @@ const tierLabel: Record<string, string> = {
   <div class="wrap landmarks">
     <h2>{t.landmarks.title}</h2>
     <p class="section-lead">{t.landmarks.lead}</p>
-    <p class="result-count">{landmarkPapers.length} {t.landmarks.count}</p>
+    <p class="result-count">
+      {landmarkPapers.length} {t.landmarks.count}
+      {citationsRetrievedOn && <> · {t.landmarks.snapshot} {citationsRetrievedOn}</>}
+    </p>
 
     {
       groups.map((g) => (
@@ -52,6 +55,9 @@ const tierLabel: Record<string, string> = {
                   <span class="meta">
                     {p.year} · {p.venue}
                     {p.venueTier && <span class={`tier ${p.venueTier}`}>{tierLabel[p.venueTier] ?? p.venueTier}</span>}
+                    {typeof p.citations === 'number' && (
+                      <span class="cites">{p.citations.toLocaleString()} {t.landmarks.citations}</span>
+                    )}
                   </span>
                 </div>
                 <p class="role">
@@ -156,6 +162,11 @@ const tierLabel: Record<string, string> = {
     background: transparent;
     border: 1px dashed var(--border);
     color: var(--fg-muted);
+  }
+  .cites {
+    margin-left: 8px;
+    color: var(--fg-muted);
+    font-variant-numeric: tabular-nums;
   }
   .role {
     margin: 6px 0 0;

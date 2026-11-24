@@ -1,0 +1,146 @@
+{
+  "_comment": "Dated citation snapshot. Not used at build time; committed so a number always carries the date it was true.",
+  "source": "OpenAlex",
+  "retrieved_at": "2026-11-24T14:48:23Z",
+  "retrieved_on": "2026-11-24",
+  "count": 15,
+  "unresolved": [],
+  "entries": [
+    {
+      "id": "convolutional-lstm-network-a-machine-learning-ap-2015",
+      "title": "Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting",
+      "year": 2015,
+      "tier": "notable",
+      "cited_by_count": 11918,
+      "openalex_id": null,
+      "doi": "10.48550/arxiv.1506.04214"
+    },
+    {
+      "id": "stgcn-2018",
+      "title": "Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting",
+      "year": 2018,
+      "tier": "landmark",
+      "cited_by_count": 7520,
+      "openalex_id": "W2756203131",
+      "doi": "10.24963/ijcai.2018/505"
+    },
+    {
+      "id": "diffusion-convolutional-recurrent-neural-network-2018",
+      "title": "Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting",
+      "year": 2018,
+      "tier": "landmark",
+      "cited_by_count": 5781,
+      "openalex_id": "W2768008502",
+      "doi": "10.48550/arxiv.1707.01926"
+    },
+    {
+      "id": "graph-wavenet-for-deep-spatial-temporal-graph-mo-2019",
+      "title": "Graph WaveNet for Deep Spatial-Temporal Graph Modeling",
+      "year": 2019,
+      "tier": "landmark",
+      "cited_by_count": 4612,
+      "openalex_id": "W2965341826",
+      "doi": "10.24963/ijcai.2019/264"
+    },
+    {
+      "id": "attention-based-spatial-temporal-graph-convoluti-2019",
+      "title": "Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting",
+      "year": 2019,
+      "tier": "landmark",
+      "cited_by_count": 4179,
+      "openalex_id": "W2903871660",
+      "doi": "10.1609/aaai.v33i01.3301922"
+    },
+    {
+      "id": "traffic-flow-prediction-with-big-data-a-deep-lea-2015",
+      "title": "Traffic Flow Prediction With Big Data: A Deep Learning Approach",
+      "year": 2015,
+      "tier": "notable",
+      "cited_by_count": 3659,
+      "openalex_id": "W2036785686",
+      "doi": "10.1109/tits.2014.2345663"
+    },
+    {
+      "id": "deep-spatio-temporal-residual-networks-for-cityw-2017",
+      "title": "Deep Spatio-Temporal Residual Networks for Citywide Crowd Flows Prediction",
+      "year": 2017,
+      "tier": "landmark",
+      "cited_by_count": 2830,
+      "openalex_id": "W2528639018",
+      "doi": "10.1609/aaai.v31i1.10735"
+    },
+    {
+      "id": "gman-2020",
+      "title": "GMAN: A Graph Multi-Attention Network for Traffic Prediction",
+      "year": 2020,
+      "tier": "landmark",
+      "cited_by_count": 2510,
+      "openalex_id": "W2997848713",
+      "doi": "10.1609/aaai.v34i01.5477"
+    },
+    {
+      "id": "adaptive-graph-convolutional-recurrent-network-f-2020",
+      "title": "Adaptive Graph Convolutional Recurrent Network for Traffic Forecasting",
+      "year": 2020,
+      "tier": "landmark",
+      "cited_by_count": 2341,
+      "openalex_id": "W3038981236",
+      "doi": "10.48550/arxiv.2007.02842"
+    },
+    {
+      "id": "spatial-temporal-synchronous-graph-convolutional-2020",
+      "title": "Spatial-Temporal Synchronous Graph Convolutional Networks: A New Framework for Spatial-Temporal Network Data Forecasting",
+      "year": 2020,
+      "tier": "notable",
+      "cited_by_count": 2205,
+      "openalex_id": null,
+      "doi": null
+    },
+    {
+      "id": "spatial-temporal-fusion-graph-neural-networks-fo-2020",
+      "title": "Spatial-Temporal Fusion Graph Neural Networks for Traffic Flow Forecasting",
+      "year": 2020,
+      "tier": "notable",
+      "cited_by_count": 1266,
+      "openalex_id": "W3174022889",
+      "doi": "10.1609/aaai.v35i5.16542"
+    },
+    {
+      "id": "staeformer-spatio-temporal-adaptive-embe-2023",
+      "title": "STAEformer: Spatio-Temporal Adaptive Embedding Makes Vanilla Transformer SOTA for Traffic Forecasting",
+      "year": 2023,
+      "tier": "landmark",
+      "cited_by_count": 766,
+      "openalex_id": "W4387846860",
+      "doi": "10.1145/3583780.3615160"
+    },
+    {
+      "id": "urban-traffic-prediction-from-spatio-temporal-da-2019",
+      "title": "Urban Traffic Prediction from Spatio-Temporal Data Using Deep Meta Learning",
+      "year": 2019,
+      "tier": "landmark",
+      "cited_by_count": 728,
+      "openalex_id": "W2950817888",
+      "doi": "10.1145/3292500.3330884"
+    },
+    {
+      "id": "pre-training-enhanced-spatial-temporal-graph-neu-2022",
+      "title": "Pre-training Enhanced Spatial-temporal Graph Neural Network",
+      "year": 2022,
+      "tier": "landmark",
+      "cited_by_count": 516,
+      "openalex_id": "W4283315029",
+      "doi": "10.1145/3534678.3539396"
+    },
+    {
+      "id": "unist-2024",
+      "title": "UniST: A Prompt-Empowered Universal Model for Urban Spatio-Temporal Prediction",
+      "year": 2024,
+      "tier": "landmark",
+      "cited_by_count": 265,
+      "openalex_id": "W4391987728",
+      "doi": "10.1145/3637528.3671662"
+    }
+  ],
+  "_manual_note": "Two entries were verified by hand after the automated pass could not reach OpenAlex for them on the retrieval date; the counts were read from the same OpenAlex works endpoints."
+}

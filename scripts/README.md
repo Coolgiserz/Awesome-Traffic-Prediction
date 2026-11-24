@@ -277,3 +277,25 @@ produced the label matched the substring "www" inside "iwcmc".
 python3 scripts/check_venue_consistency.py           # report
 python3 scripts/check_venue_consistency.py --strict  # CI: non-zero on findings
 ```
+
+## `snapshot_citations.py`
+
+Takes a **dated** citation snapshot for the papers the collection highlights
+(`impact.tier` = landmark or notable) and writes `data/citations.json`.
+
+Deliberately a snapshot, not a live lookup:
+
+- A build that calls OpenAlex makes the site depend on a third party being up,
+  and silently changes its content whenever the index is refreshed.
+- A citation count without an "as of" date is not evidence. The file records
+  `retrieved_on`, and the site prints it next to every number.
+- Only 15 records are queried. Citations on a 2026 preprint are noise, and
+  fetching all 191 would spend the request budget on numbers nobody would act on.
+
+```bash
+python3 scripts/snapshot_citations.py            # fetch and write
+python3 scripts/snapshot_citations.py --dry-run  # print, do not write
+```
+
+Run it by hand when the numbers matter (e.g. before publishing a release). The
+output is reviewed like any other data file; nothing in CI fetches it.
