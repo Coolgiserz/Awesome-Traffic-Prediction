@@ -182,6 +182,13 @@ p.section-lead { color: var(--fg-muted); margin: 0 0 20px; max-width: 70ch; }
   font-family: inherit;
 }
 .facet:hover { border-color: var(--accent); color: var(--accent); }
+/* Facet counts: dim and tabular so the label stays the primary read. */
+.facet .n {
+  margin-left: 5px;
+  opacity: 0.65;
+  font-variant-numeric: tabular-nums;
+  font-size: 11.5px;
+}
 .facet[aria-pressed='true'] {
   background: var(--accent-soft);
   border-color: var(--accent);

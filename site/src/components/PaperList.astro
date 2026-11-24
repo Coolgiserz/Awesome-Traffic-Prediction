@@ -37,6 +37,16 @@ const extraLinks = (p: Paper) => Object.keys(p.altUrls ?? {}).filter((k) => k !=
 
 // Facet lists are capped: a 200-entry venue chip row is unusable. Top venues by
 // count are enough; the rest stay reachable through the search box.
+/** Facet counts, computed once at build time so the client never has to. */
+function countBy(keys: string[]): Map<string, number> {
+  const m = new Map<string, number>();
+  for (const k of keys) m.set(k, (m.get(k) ?? 0) + 1);
+  return m;
+}
+const yearCount = countBy(papers.map((p) => String(p.year ?? '')));
+const taskCount = countBy(papers.map((p) => p.task));
+const tagCount = countBy(papers.flatMap((p) => p.methodTags ?? []));
+// A facet value only appears once in a paper even if it carries the tag twice.
 const venueCount = new Map<string, number>();
 for (const p of papers) venueCount.set(p.venue, (venueCount.get(p.venue) ?? 0) + 1);
 const topVenues = [...venueCount.entries()]
@@ -75,28 +85,44 @@ const topVenues = [...venueCount.entries()]
 <div class="facet-group">
   <span class="facet-label">{t.papers.year}</span>
   <div class="facets" role="group" aria-label={t.papers.year}>
-    {years.map((y) => <button class="facet" type="button" data-facet="year" data-value={String(y)} aria-pressed="false">{y}</button>)}
+    {years.map((y) => (
+      <button class="facet" type="button" data-facet="year" data-value={String(y)} aria-pressed="false">
+        {y}<span class="n">{yearCount.get(String(y)) ?? 0}</span>
+      </button>
+    ))}
   </div>
 </div>
 
 <div class="facet-group">
   <span class="facet-label">{t.papers.venue}</span>
   <div class="facets" role="group" aria-label={t.papers.venue}>
-    {topVenues.map((v) => <button class="facet" type="button" data-facet="venue" data-value={v} aria-pressed="false">{v}</button>)}
+    {topVenues.map((v) => (
+      <button class="facet" type="button" data-facet="venue" data-value={v} aria-pressed="false">
+        {v}<span class="n">{venueCount.get(v) ?? 0}</span>
+      </button>
+    ))}
   </div>
 </div>
 
 <div class="facet-group">
   <span class="facet-label">{t.papers.task}</span>
   <div class="facets" role="group" aria-label={t.papers.task}>
-    {tasks.map((task) => <button class="facet" type="button" data-facet="task" data-value={task} aria-pressed="false">{localizeTask(task, lang)}</button>)}
+    {tasks.map((task) => (
+      <button class="facet" type="button" data-facet="task" data-value={task} aria-pressed="false">
+        {localizeTask(task, lang)}<span class="n">{taskCount.get(task) ?? 0}</span>
+      </button>
+    ))}
   </div>
 </div>
 
 <div class="facet-group">
   <span class="facet-label">{t.papers.method}</span>
   <div class="facets" role="group" aria-label={t.papers.method}>
-    {methodTags.map((tag) => <button class="facet" type="button" data-facet="tag" data-value={tag} aria-pressed="false">{localizeMethodTag(tag, lang)}</button>)}
+    {methodTags.map((tag) => (
+      <button class="facet" type="button" data-facet="tag" data-value={tag} aria-pressed="false">
+        {localizeMethodTag(tag, lang)}<span class="n">{tagCount.get(tag) ?? 0}</span>
+      </button>
+    ))}
   </div>
 </div>
 
