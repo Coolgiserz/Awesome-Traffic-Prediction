@@ -1,0 +1,114 @@
+# Data layer gate: keep data/papers authoritative and schema-valid.
+#
+# Runs on every PR that can change the structured data or the README it is
+# derived from. Three independent checks, all fast and offline:
+#
+#   1. schema     — every record validates against data/schema/paper.schema.json
+#   2. idempotent — re-running the README migration reproduces data/papers byte
+#                   for byte (this is what catches a hand-edited JSON record)
+#   3. coverage   — data/papers still covers the README (the site's own guard)
+#
+# Design notes: docs/evolution/07-quality-gates.md (L1 tier).
+name: Data Layer Check
+
+on:
+  pull_request:
+    paths:
+      - "data/**"
+      - "README.md"
+      - "README.zh.md"
+      - "scripts/migrate_readme_to_json.py"
+      - "scripts/enrich_openalex.py"
+      - "updates/curated/recent-papers.json"
+      - ".github/workflows/data-check.yml"
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "README.md"
+      - "README.zh.md"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install jsonschema
+        run: python -m pip install --upgrade pip jsonschema
+
+      - name: Validate records against schema
+        run: |
+          python3 - <<'PY'
+          import glob, json, sys
+          import jsonschema
+
+          schema = json.load(open("data/schema/paper.schema.json", encoding="utf-8"))
+          validator = jsonschema.Draft202012Validator(schema)
+
+          records, errors, ids = [], [], []
+          for path in sorted(glob.glob("data/papers/*.json")):
+              data = json.load(open(path, encoding="utf-8"))
+              if not isinstance(data, list):
+                  errors.append(f"{path}: top level must be a list")
+                  continue
+              for rec in data:
+                  records.append((path, rec))
+                  ids.append(rec.get("id"))
+                  for err in validator.iter_errors(rec):
+                      errors.append(f"{path}: {rec.get('id')}: {'/'.join(map(str, err.path))}: {err.message}")
+
+          duplicates = sorted({i for i in ids if ids.count(i) > 1})
+          if duplicates:
+              errors.append(f"duplicate ids: {duplicates[:10]}")
+
+          print(f"records={len(records)} errors={len(errors)}")
+          for e in errors[:40]:
+              print(f"  {e}")
+          sys.exit(1 if errors else 0)
+          PY
+
+      - name: Migration must be idempotent
+        run: python3 scripts/migrate_readme_to_json.py --all --check
+
+      - name: Structured data must still cover the README
+        run: |
+          python3 - <<'PY'
+          import glob, json, re, sys
+
+          readme = open("README.md", encoding="utf-8").read().splitlines()
+          section = None
+          count = 0
+          in_auto = False
+          for line in readme:
+              s = line.strip()
+              if s == "<!-- START AUTO RECENT PAPERS -->":
+                  in_auto = True
+                  continue
+              if s == "<!-- END AUTO RECENT PAPERS -->":
+                  in_auto = False
+                  continue
+              if s.startswith("## "):
+                  section = s[3:]
+                  continue
+              if s.startswith("### ") and ("Deep Learning" in s or "基于深度学习" in s):
+                  section = "deep_learning"
+                  continue
+              if section != "deep_learning" or in_auto:
+                  continue
+              if re.match(r"^\d+\.\s+\[[^\]]+\s+(19|20)\d{2}\]", s):
+                  count += 1
+
+          records = [r for f in sorted(glob.glob("data/papers/*.json")) for r in json.load(open(f, encoding="utf-8"))]
+          print(f"README deep-learning entries={count} data records={len(records)}")
+          if len(records) < count:
+              print(f"[FAIL] data/papers covers {len(records)}/{count} README entries")
+              sys.exit(1)
+          print("[OK] structured data covers the README")
+          PY

@@ -1,0 +1,120 @@
+# Deploy the static site to GitHub Pages.
+#
+# Three-stage official path (configure-pages → upload-pages-artifact →
+# deploy-pages): the only deployment route that needs no PAT, does not write the
+# build output into a branch, and is validated through OIDC.
+#
+# Design notes live in docs/evolution/04-pages-deploy.md; this file is the
+# authoritative copy of that workflow.
+name: Deploy Site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - "data/papers/**"
+      - "README.md"
+      - "README.zh.md"
+      - "updates/**"
+      - "datasets/**"
+      - ".github/workflows/pages.yml"
+  pull_request:
+    paths:
+      - "site/**"
+      - "data/papers/**"
+      - "README.md"
+      - "README.zh.md"
+  workflow_dispatch:
+
+# Only one Pages deployment may run at a time. cancel-in-progress=false keeps a
+# push from cancelling an in-flight deploy, which would leave the site half-old.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+          cache-dependency-path: site/pnpm-lock.yaml
+
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Install dependencies
+        working-directory: site
+        run: pnpm install --frozen-lockfile
+
+      - name: Build site
+        working-directory: site
+        env:
+          # configure-pages reports the real origin and base path, so a custom
+          # domain or a user page needs no workflow change.
+          SITE_URL: ${{ steps.pages.outputs.origin }}
+          SITE_BASE: ${{ steps.pages.outputs.base_path }}/
+          # Astro writes telemetry state under $HOME; nothing here needs it.
+          ASTRO_TELEMETRY_DISABLED: "1"
+        run: |
+          node scripts/prepare-data.mjs
+          npx astro build
+          npx pagefind --site dist
+          # .nojekyll must exist BEFORE upload: without it Pages runs Jekyll and
+          # every _astro/* asset 404s.
+          touch dist/.nojekyll
+
+      - name: Report build size
+        working-directory: site
+        run: |
+          echo "### Site build" >> "$GITHUB_STEP_SUMMARY"
+          du -sh dist | awk '{print "- total: " $1}' >> "$GITHUB_STEP_SUMMARY"
+          echo "- pages: $(find dist -name 'index.html' | wc -l)" >> "$GITHUB_STEP_SUMMARY"
+          echo "- search index: $(du -sh dist/pagefind | cut -f1)" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+          retention-days: 7
+
+      # PRs get a downloadable preview build instead of a deployment: reviewers
+      # can open dist/ locally, nothing touches production.
+      - name: Upload preview artifact
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-preview-${{ github.event.pull_request.number }}
+          path: site/dist
+          retention-days: 7
+
+  deploy:
+    needs: build
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
