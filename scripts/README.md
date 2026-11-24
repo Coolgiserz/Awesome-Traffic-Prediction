@@ -184,3 +184,62 @@ python3 scripts/render_curated_recent.py \
 - Workflow file: `.github/workflows/curated-render-check.yml`
 - Trigger: pull requests (and pushes to `main`) that touch curated JSON, renderer script, or README files.
 - Check command: `python3 scripts/render_curated_recent.py --data updates/curated/recent-papers.json --check`
+
+## `migrate_readme_to_json.py`
+
+One-way bridge from the README paper lists to the structured data source under
+`data/papers/YYYY.json` (Phase 1 of `docs/evolution/01-data-model.md`).
+
+- Source of truth during the grey release: README stays human-editable, JSON is generated.
+- Idempotent: re-running over migrated years keeps ids, human-filled fields, and every
+  value a later stage (enrichment) established. A field is only *added*, never erased.
+- Reversible: `--check` exits non-zero when `data/papers` drifts from the README, which
+  is what the CI gate should run.
+- `URL_FIXES` in the script encodes verified link corrections (for example: papers with
+  code pages that redirect away are replaced by the real repository or dropped).
+
+```bash
+# dry run: show what would change
+python3 scripts/migrate_readme_to_json.py --all --dry-run
+
+# migrate or refresh every year found in the README
+python3 scripts/migrate_readme_to_json.py --all
+
+# CI gate
+python3 scripts/migrate_readme_to_json.py --all --check
+```
+
+Notes:
+
+- Entries inside the auto-rendered blocks (`AUTO RECENT PAPERS`) are skipped: they come
+  from `updates/curated/recent-papers.json` and are merged by provenance, not by line.
+- Legacy `[Venue Year] [Title](url)` entries (title in markdown-link form) are unwrapped,
+  and titles broken across two README lines are joined by the item regex.
+- `provenance.readme_line` records the source line so drift can be audited line by line.
+
+## `enrich_openalex.py`
+
+Fills metadata the README never carried: DOI, OpenAlex work id, author list, venue type,
+and verification stamps. OpenAlex is queried first; Crossref is the fallback when
+OpenAlex rate-limits (HTTP 429), which happens often on shared CI IPs.
+
+- Only metadata fields are written. Notes, tags, layers and featured flags are untouched.
+- `verification.metadata_source` records which provider answered, so a later run can
+  skip already-verified records.
+- The original README link is preserved as `alt_urls.paper-original` when the primary
+  link is upgraded to a DOI.
+
+```bash
+# coverage report, no network
+python3 scripts/enrich_openalex.py --report
+
+# enrich (dry run first, then --apply)
+python3 scripts/enrich_openalex.py --limit 40
+python3 scripts/enrich_openalex.py --apply
+
+# re-verify records that were already stamped
+python3 scripts/enrich_openalex.py --apply --refresh --year 2026
+```
+
+Both scripts are standard-library only, except the optional `jsonschema` package used for
+schema validation (`pip install jsonschema`).
