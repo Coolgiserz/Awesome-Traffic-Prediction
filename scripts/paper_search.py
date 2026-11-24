@@ -407,12 +407,21 @@ def search_arxiv(
     year_to: int,
     limit: int,
     client: HttpClient,
+    max_pages: int = 4,
+    start_offset: int = 0,
 ) -> list[Paper]:
+    """Query arXiv, stopping once `limit` in-range papers are collected.
+
+    arXiv sorts by submittedDate descending, so backfilling an old year means
+    paging past everything newer. `max_pages` (default 4 = 400 results) bounds
+    that walk; pass a larger value for historical backfills. `start_offset`
+    skips ahead, which is how a later run continues where the previous stopped
+    instead of re-reading the same newest pages.
+    """
     batch = min(max(limit, 1), 100)
-    start = 0
+    start = max(0, start_offset)
     out: list[Paper] = []
     ns = {"a": "http://www.w3.org/2005/Atom", "arxiv": "http://arxiv.org/schemas/atom"}
-    max_pages = max(1, min(4, (limit + batch - 1) // batch))
     page = 0
     while len(out) < limit and page < max_pages:
         params = {
@@ -1010,6 +1019,18 @@ def parse_args() -> argparse.Namespace:
     ap.add_argument("--cache-ttl-hours", type=int, default=None, help="Override HTTP cache TTL")
     ap.add_argument("--out", default="", help="Optional output markdown file path")
     ap.add_argument("--report-json", default="", help="Optional JSON report with scores and rule hits")
+    ap.add_argument(
+        "--arxiv-max-pages",
+        type=int,
+        default=0,
+        help="arXiv: how many 100-result pages to walk (default 4). Raise it to backfill old years.",
+    )
+    ap.add_argument(
+        "--arxiv-start-offset",
+        type=int,
+        default=0,
+        help="arXiv: skip this many results first, to continue a previous backfill.",
+    )
     return ap.parse_args()
 
 
@@ -1020,11 +1041,21 @@ def run_source_search(
     year_to: int,
     limit: int,
     client: HttpClient,
+    arxiv_max_pages: int = 4,
+    arxiv_start_offset: int = 0,
 ) -> list[Paper]:
     if source == "openalex":
         return search_openalex(query, year_from, year_to, limit, client)
     if source == "arxiv":
-        return search_arxiv(query, year_from, year_to, limit, client)
+        return search_arxiv(
+            query,
+            year_from,
+            year_to,
+            limit,
+            client,
+            max_pages=max(1, arxiv_max_pages),
+            start_offset=arxiv_start_offset,
+        )
     if source == "semantic_scholar":
         return search_semantic_scholar(query, year_from, year_to, limit, client)
     if source == "crossref":
@@ -1058,6 +1089,8 @@ def main() -> int:
                         year_to=cfg.year_to,
                         limit=cfg.limit_per_query,
                         client=client,
+                        arxiv_max_pages=args.arxiv_max_pages or 4,
+                        arxiv_start_offset=args.arxiv_start_offset or 0,
                     )
                 )
             except Exception as exc:

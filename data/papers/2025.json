@@ -61,7 +61,7 @@
     "title_zh": null,
     "venue": "Arxiv",
     "venue_id": null,
-    "venue_type": "unknown",
+    "venue_type": "preprint",
     "paper_url": "https://arxiv.org/abs/2503.14980",
     "alt_urls": {},
     "code_url": "https://github.com/mattchrlw/forecasting-on-new-roads",
@@ -133,13 +133,13 @@
     "project_url": null,
     "doi": "10.3390/s25010282",
     "arxiv_id": null,
-    "openalex_id": null,
+    "openalex_id": "W4406086309",
     "short_name": "ASTAM + Multi-Graph",
     "authors": [
       "Basma Alsehaimi",
       "Ohoud Alzamzami",
       "Nahed Alowidi",
-      "Manar Ali"
+      "Manar Salamah Ali"
     ],
     "affiliations": [],
     "task_en": "Traffic flow prediction",
@@ -161,7 +161,7 @@
     "verification": {
       "checked_at": "2026-11-24",
       "link_ok": true,
-      "metadata_source": "crossref",
+      "metadata_source": "openalex",
       "confidence": "high"
     },
     "provenance": {
@@ -191,7 +191,7 @@
     "project_url": null,
     "doi": "10.1007/s00521-024-09827-3",
     "arxiv_id": null,
-    "openalex_id": null,
+    "openalex_id": "W4396699608",
     "short_name": "AGC-LSTM",
     "authors": [
       "Ying Zhang",
@@ -221,7 +221,7 @@
     "verification": {
       "checked_at": "2026-11-24",
       "link_ok": true,
-      "metadata_source": "crossref",
+      "metadata_source": "openalex",
       "confidence": "high"
     },
     "provenance": {
@@ -231,7 +231,10 @@
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",
-    "updated_at": "2026-11-24"
+    "updated_at": "2026-11-24",
+    "alt_years": [
+      2025
+    ]
   },
   {
     "id": "a-cloud-based-spatio-temporal-gnn-transf-2025",
@@ -240,9 +243,9 @@
     "section": "deep_learning",
     "title": "A Cloud-Based Spatio-Temporal GNN-Transformer Hybrid Model for Traffic Flow Forecasting with External Feature Integration",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "Fundamental Scientific Reports in Multidisciplinary Areas",
     "venue_id": "arxiv",
-    "venue_type": "preprint",
+    "venue_type": "journal",
     "paper_url": "http://arxiv.org/abs/2510.27039v1",
     "alt_urls": {},
     "code_url": null,
@@ -302,9 +305,9 @@
     "section": "deep_learning",
     "title": "A Multi-Layer CNN-GRUSKIP model based on transformer for spatial TEMPORAL traffic flow prediction",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "Ain Shams Engineering Journal",
     "venue_id": "arxiv",
-    "venue_type": "preprint",
+    "venue_type": "journal",
     "paper_url": "http://arxiv.org/abs/2501.07593v1",
     "alt_urls": {},
     "code_url": null,
@@ -366,9 +369,9 @@
     "section": "deep_learning",
     "title": "Efficient Traffic Prediction Through Spatio-Temporal Distillation",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
     "venue_id": "arxiv",
-    "venue_type": "preprint",
+    "venue_type": "conference",
     "paper_url": "http://arxiv.org/abs/2501.10459v2",
     "alt_urls": {},
     "code_url": null,
@@ -657,9 +660,9 @@
     "section": "deep_learning",
     "title": "SFADNet: Spatio-temporal Fused Graph based on Attention Decoupling Network for Traffic Prediction",
     "title_zh": null,
-    "venue": "Arxiv",
+    "venue": "IEEE International Conference on Acoustics Speech and Signal Processing",
     "venue_id": "arxiv",
-    "venue_type": "preprint",
+    "venue_type": "conference",
     "paper_url": "http://arxiv.org/abs/2501.04060v1",
     "alt_urls": {},
     "code_url": null,

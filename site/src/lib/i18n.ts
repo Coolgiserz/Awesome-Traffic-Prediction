@@ -277,6 +277,37 @@ export function localizeLayer(layer: string, lang: Lang): string {
   return lang === 'zh' ? (layerZh[layer] ?? layer) : layer.replace(/_/g, ' ');
 }
 
+/** Venue type / direction tags: English enum values shown on a Chinese page. */
+const venueTypeZh: Record<string, string> = {
+  journal: '期刊',
+  conference: '会议',
+  preprint: '预印本',
+  workshop: '研讨会',
+  thesis: '学位论文',
+  unknown: '未标注',
+};
+
+const directionZh: Record<string, string> = {
+  st_foundation_llm: '时空基础模型 / LLM',
+  diffusion_probabilistic: '扩散与概率预测',
+  dynamic_graph_learning: '动态图结构学习',
+  long_horizon_transformer: '长时程与 Transformer',
+  fewshot_transfer: '少样本与迁移',
+  privacy_federated: '隐私与联邦学习',
+  benchmark_reproducibility: '基准与可复现',
+  imputation_data_quality: '缺失值与数据质量',
+  trajectory_prediction: '轨迹预测',
+  od_demand: 'OD 与需求预测',
+};
+
+export function localizeVenueType(v: string, lang: Lang): string {
+  return lang === 'zh' ? (venueTypeZh[v] ?? v) : v;
+}
+
+export function localizeDirection(tag: string, lang: Lang): string {
+  return lang === 'zh' ? (directionZh[tag] ?? tag) : tag.replace(/_/g, ' ');
+}
+
 export const ui = { en, zh } as const;
 
 export function t(lang: Lang) {

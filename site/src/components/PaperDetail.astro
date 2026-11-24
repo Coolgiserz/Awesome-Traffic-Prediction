@@ -7,7 +7,7 @@
  * canonical link, so search engines and Zotero-style tooling can reach it.
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { ui, pathFor, localizeTask, localizeLayer, type Lang } from '../lib/i18n';
+import { ui, pathFor, localizeTask, localizeLayer, localizeVenueType, localizeDirection, type Lang } from '../lib/i18n';
 import { withBase } from '../lib/url';
 import { related, type Paper } from '../lib/papers';
 
@@ -42,7 +42,7 @@ const original = p.altUrls['paper-original'];
 if (original && original !== p.paperUrl) links.push({ label: d.originalLink, url: original });
 
 const facts: Array<[string, string]> = [];
-facts.push([d.venue, `${p.venue}${p.venueType !== 'unknown' ? ` · ${localizeLayer(p.venueType, lang)}` : ''}`]);
+facts.push([d.venue, `${p.venue}${p.venueType !== 'unknown' ? ` · ${localizeVenueType(p.venueType, lang)}` : ''}`]);
 if (p.year) facts.push([d.year, String(p.year) + (p.altYears.length ? ` (${p.altYears.join(', ')})` : '')]);
 if (p.doi) facts.push([d.doi, p.doi]);
 if (p.arxivId) facts.push([d.arxiv, `arXiv:${p.arxivId}`]);
@@ -105,7 +105,7 @@ const verified = p.verification?.checked_at ?? null;
             {p.directionTags.length > 0 && (
               <p>
                 <strong>{d.directionTags}:</strong>{' '}
-                {p.directionTags.map((tag) => <span class="chip static">{tag}</span>)}
+                {p.directionTags.map((tag) => <span class="chip static">{localizeDirection(tag, lang)}</span>)}
               </p>
             )}
             {p.datasets.length > 0 && (

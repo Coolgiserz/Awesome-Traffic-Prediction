@@ -49,7 +49,12 @@ CROSSREF_TYPE_MAP = {
 # OpenAlex source type -> schema venue_type.
 TYPE_MAP = {
     "journal": "journal",
+    "journal-article": "journal",
     "conference": "conference",
+    # OpenAlex reports most venue-published CS papers as `conference-paper`,
+    # which was missing from this map — every CIKM/ICDM/KDD record silently fell
+    # through and kept its provisional `preprint` label.
+    "conference-paper": "conference",
     "proceedings-article": "conference",
     "proceedings": "conference",
     "repository": "preprint",
@@ -57,6 +62,18 @@ TYPE_MAP = {
     "book": "journal",
     "dissertation": "thesis",
     "posted-content": "preprint",
+    "preprint": "preprint",
+    "review": "journal",
+    "article": "journal",
+    "letter": "journal",
+    "paratext": "unknown",
+    "erratum": "unknown",
+    "other": "unknown",
+    "report": "preprint",
+    "dataset": "unknown",
+    "libguides": "unknown",
+    "standard": "unknown",
+    "reference-entry": "unknown",
 }
 
 
@@ -156,8 +173,10 @@ def apply_crossref(record: dict[str, Any], item: dict[str, Any], today: str) -> 
     if container and record.get("venue") in (None, "", "Arxiv", "arXiv"):
         record["venue"] = container
     vtype = CROSSREF_TYPE_MAP.get((item.get("type") or "").strip())
-    if vtype and record.get("venue_type") in (None, "unknown"):
+    if vtype and record.get("venue_type") in (None, "unknown", "preprint"):
         record["venue_type"] = vtype
+    if vtype in ("journal", "conference") and container and record.get("venue") in (None, "", "Arxiv", "arXiv"):
+        record["venue"] = container
 
     verification = record.setdefault("verification", {})
     verification["checked_at"] = today
@@ -192,8 +211,22 @@ def apply_work(record: dict[str, Any], work: dict[str, Any], today: str) -> bool
         record["authors"] = authors
 
     vtype = TYPE_MAP.get((work.get("type") or "").strip())
-    if vtype and record.get("venue_type") in (None, "unknown"):
+    # "preprint" is a provisional state, not an assertion: a record imported from
+    # arXiv is marked preprint because that is all we knew at import time. Once a
+    # provider reports a journal or conference venue, upgrade it.
+    if vtype and record.get("venue_type") in (None, "unknown", "preprint"):
         record["venue_type"] = vtype
+    # Same reasoning for the venue label: "Arxiv" is the arXiv crossref container,
+    # not the venue the work was eventually published in.
+    if vtype in ("journal", "conference") and record.get("venue") in (None, "", "Arxiv", "arXiv", "arXiv (Cornell University)"):
+        published_in = (
+            ((work.get("primary_location") or {}).get("source") or {}).get("display_name")
+            or ((work.get("host_venue") or {}).get("display_name"))
+        )
+        # "Proceedings" alone carries no venue identity; keep the placeholder
+        # rather than replacing "Arxiv" with something equally unhelpful.
+        if published_in and published_in.strip().lower() not in ("proceedings", "conference", "book"):
+            record["venue"] = published_in.strip()
 
     # arXiv-only record that turned out to have a real venue.
     year = work.get("publication_year")

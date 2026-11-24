@@ -357,3 +357,64 @@ def _arxiv_query(query):
   目前最多翻 4 页 = 400 条，需要加 `start` 偏移参数）。
 - `venue_type` 对 arXiv 记录统一是 `preprint`，等 OpenAlex/Crossref 给出正式发表信息后
   应更新为会议/期刊，否则「2023 年后零顶会」的现象在数据层面仍然存在。
+
+## 11. 补齐 2022 + 修复 venue 升级链路
+
+### 11.1 arXiv 分页参数
+
+`search_arxiv()` 原先硬编码 `max_pages = 4`（400 条）。arXiv 按提交日期倒序，
+要回捞 2022 年必须翻过 2023–2026 的全部结果，400 条远远不够。新增两个参数：
+
+```
+--arxiv-max-pages N        # 走多少页（默认 4）
+--arxiv-start-offset M     # 跳过前 M 条，用于续跑
+```
+
+`--arxiv-max-pages 12` 跑一次，2022 从 4 条补到 **43 条**，40/40 命中且年份全部正确。
+
+### 11.2 第二个静默 bug：venue 永远升不上去
+
+`enrich_openalex.py` 的 `TYPE_MAP` 缺 `conference-paper` —— 而这正是 OpenAlex 对
+绝大多数已发表 CS 论文使用的类型。实测：
+
+```
+arXiv:2308.10425 (STAEformer)
+  OpenAlex type=conference-paper
+  venue=ACM International Conference on Information and Knowledge Management (CIKM)
+  doi=10.1145/3583780.3615160
+```
+
+数据里明明有 CIKM、ICDM、KDD，但类型没被映射，`venue_type` 保持 `preprint`，
+`venue` 保持 `Arxiv`。于是「2023 年后零顶会」这个现象在数据层是假的 —— 筛选条件把它们过滤掉了。
+
+两处修复：
+
+1. `TYPE_MAP` 补齐 OpenAlex 的完整类型枚举（conference-paper / journal-article /
+   article / letter / review / report …）。
+2. `venue_type == "preprint"` 不再被视为终态。它是 arXiv 导入时的**临时状态**，
+   一旦 provider 报出 journal/conference 就应升级。同理 `venue` 从 `Arxiv` 升级为真实 venue。
+   `Proceedings` / `Conference` / `Book` 这类无信息值不采纳。
+
+### 11.3 第三个静默 bug：迁移会把 venue 改回去
+
+README 里的 `[Arxiv 2022]` 标签是**当时的标注**，不是当前事实。迁移重跑时会用
+README 的 venue 覆盖 enrich 升级后的值，把 CIKM 打回 Arxiv。
+现在：`verification.metadata_source` 属于 openalex/crossref 且 `venue_type` 是
+journal/conference/workshop 的记录，迁移不再覆盖其 venue。
+
+### 11.4 结果
+
+| 指标 | 之前 | 现在 |
+| --- | --- | --- |
+| 总记录 | 156 | **195** |
+| 2022 | 4 | **43** |
+| 2023+ 的 conference+journal | 6 | **37** |
+| DOI | 103 | **135** |
+| 会议/期刊/预印本 | — | 62 / 58 / 66 |
+
+更新 `02-paper-scope.md` 时用的配额（2022–2023 → 12 条）已经被超过，可据此重新校准。
+
+### 11.5 站点
+
+406 页（195 论文 × 2 locale + 版块页），Pagefind 2 filters，产物 8.7 MB。
+新增中文术语表：`venue_type`（期刊 / 会议 / 预印本）与 10 个 `direction_tags`。

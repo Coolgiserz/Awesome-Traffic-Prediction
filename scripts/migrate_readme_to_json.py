@@ -498,6 +498,13 @@ def build_record(
                       "alt_years", "project_url", "data_url"):
             if prev.get(field) not in (None, [], False, {}):
                 record[field] = prev[field]
+        # Enrichment upgrades a provisional "Arxiv"/"preprint" to the venue the
+        # work actually appeared in. The README tag is the *original* label, not
+        # the current truth, so it must not undo that upgrade.
+        prev_verified = (prev.get("verification") or {}).get("metadata_source") in ("openalex", "crossref")
+        if prev_verified and prev.get("venue_type") in ("journal", "conference", "workshop"):
+            record["venue"] = prev.get("venue") or record.get("venue")
+            record["venue_type"] = prev["venue_type"]
         # Labels that a curator already reviewed must not be replaced by the
         # keyword rules on a re-run.
         if (prev.get("provenance") or {}).get("curated_labels"):
