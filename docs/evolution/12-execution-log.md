@@ -254,3 +254,36 @@ Please upgrade Node.js to a supported version: ">=22.23.4"
 修改前的失败模式很坏——`prepare-data` 成功、写了文件，然后 Astro 才崩，
 CI 日志里看起来像"数据桥没问题，是别处挂了"。现在两条命令都会在第一步给出
 明确原因。可用 `PREPARE_DATA_SKIP_NODE_CHECK=1` 绕过（仅用于调试）。
+
+## 9. 站点的产品化收敛：清理开发向文案 + 中文化字段
+
+站点跑起来之后暴露了一类问题：页面在说**它是怎么做出来的**，而不是在说**读者要看什么**。
+这些文字来自设计文档里的原话，被直接抄进了 i18n 字典。
+
+清掉的文本：
+
+| 位置 | 原文 | 问题 |
+| --- | --- | --- |
+| 论文库 lead | 「筛选状态写入 URL，可分享任意视图」 | 在解释实现，不是读者需要的信息 |
+| 趋势页 lead | 「用交互图表替代 README 中的静态 PNG」 | 内部迁移说明 |
+| 图表折叠标签 | `Table view (no-JS fallback)` | `fallback` 是工程术语 |
+| 图表 hint | `monthly-paper-wordcloud-latest.json · generated 2026-10-01` | 暴露内部文件名与构建时间 |
+| 首页 degraded 提示 | `source=README.md · readme entries=104` | 构建细节 |
+| 页脚 | `Data source: data/papers · Built 2026-11-24` | 构建细节 |
+| 论文详情 | `Record source: data/papers/2026.json` | 内部路径 |
+| 论文详情备注 | `Original code release; the paperswithcode landing page now redirects to arXiv.` | 我为了解释链接替换写的备注 |
+
+新增的规则写进了代码注释：**备注是策展文字，不是元数据**，中文页只显示 `note_zh`，
+没有就显示中性的空状态；跨语言复用英文备注会让读者看到无法核实的英文内容。
+
+顺带补上的本地化（原来只有 19/104 条有 `task_zh`）：
+
+- `localizeTask()` —— 最长后缀匹配 + 限定词翻译。只需知道核心名词
+  （traffic forecasting、traffic flow prediction…），`Large-scale` / `Short-term` /
+  `Long-horizon` / `Real-time` / `Multi-step` / `Urban` 作为前缀限定词单独翻译。
+  实测 **21/21 个 task 值全部命中**，新增论文通常不需要加词条。
+- `localizeLayer()` —— `sota_core` / `classic_baseline` / `survey` / `application`
+  在中文页显示为「近年主流 / 经典基线 / 综述 / 应用」。
+
+验证方式：对全部 **224 个页面**做正文提取后扫描 27 个开发向关键词，结果 `0` 命中。
+命令留在 `09-acceptance.md` 的人工检查项里。

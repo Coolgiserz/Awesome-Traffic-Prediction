@@ -688,3 +688,44 @@ git revert <3.6-commit-sha>        # 再撤 leaderboard
 | 3 | `python3 scripts/check_links.py --root .` 里 `redirect_away == 0` | **死链不再伪装成活的**——外部依赖被真正管住 |
 
 这三条分别对应 08 文里 Phase 1 / Phase 3 / Phase 3 的硬闸门，是整条演进链上**一旦失守就会让其余工作白做**的三个点。
+## 附录：站点文案回归检查（Phase 2 之后新增）
+
+站点的 i18n 字典是唯一的用户可见文案来源，但它很容易被设计文档的原话污染
+（例如「用交互图表替代 README 中的静态 PNG」这类内部迁移说明会直接出现在页面上）。
+每次改文案或模板后跑这一段：
+
+```bash
+cd site
+SITE_BASE=/Awesome-Traffic-Prediction/ ASTRO_TELEMETRY_DISABLED=1 npx astro build
+
+python3 - <<'PY'
+import re, glob
+BAD = ['README', 'PNG', 'docs/evolution', 'data/papers', 'generated',
+       '静态 PNG', '交互图表替代', 'no-JS', 'fallback', 'site/public', '_data.json',
+       'prepare-data', 'source=', 'readme entries', 'degraded',
+       'Data source', '数据来源', 'Built', '构建于', 'TODO', 'FIXME']
+files = glob.glob('dist/**/index.html', recursive=True)
+bad = []
+for f in files:
+    h = open(f).read()
+    body = h[h.find('<body'):]
+    text = re.sub(r'<script.*?</script>', '', body, flags=re.S)
+    text = re.sub(r'<[^>]+>', ' ', text)
+    text = re.sub(r'\s+', ' ', text)
+    hits = [b for b in BAD if b.lower() in text.lower()]
+    if hits:
+        bad.append((f, hits))
+print(f"pages={len(files)} with_dev_text={len(bad)}")
+for f, h in bad[:10]:
+    print(" ", f, h)
+PY
+```
+
+期望输出 `with_dev_text=0`。
+
+同时人工确认两件事：
+
+1. **中文页不出现英文策展备注**：`note_zh` 只有 19/104 条有值，
+   其余应显示「暂时还没有该论文的策展备注」，而不是英文原文。
+2. **中文页的 task / layer 已本地化**：`/zh/papers/` 的任务分面应显示
+   「交通预测 / 交通流量预测 / 综述 …」，详情页的脉络层级应显示「近年主流 / 经典基线」。

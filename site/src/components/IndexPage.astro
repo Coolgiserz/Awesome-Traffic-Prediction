@@ -81,18 +81,6 @@ const recent = papers.filter((p) => (p.year ?? 0) >= stats.maxYear - 1).slice(0,
       </div>
     </div>
 
-    {
-      provenance.degraded && (
-        <section>
-          <p class="notice">
-            {t.provenance.degraded} <br />
-            <code>source={provenance.source}</code> · <code>readme entries={provenance.en ?? 0}</code>
-            {' '}· <a href={withBase('/papers/')}>{t.nav.papers} →</a>
-          </p>
-        </section>
-      )
-    }
-
     <section>
       <h2>{t.trends.title}</h2>
       <p class="section-lead">{t.trends.lead}</p>
@@ -102,19 +90,24 @@ const recent = papers.filter((p) => (p.year ?? 0) >= stats.maxYear - 1).slice(0,
           title={t.trends.byYear}
           hint={`${stats.minYear}–${stats.maxYear}`}
           spec={yearChart}
-          fallback={{ headers: [t.papers.year, 'n'], rows: yearSeries.map(([y, c]) => [y, c]) }}
+          tableLabel={t.fallbackTable}
+          tableLabel={t.fallbackTable}
+        fallback={{ headers: [t.papers.year, 'n'], rows: yearSeries.map(([y, c]) => [y, c]) }}
         />
         <TrendChart
           id="home-venue"
           title={t.trends.byVenue}
           spec={venueChart}
+          tableLabel={t.fallbackTable}
           fallback={{ headers: [t.papers.venue, 'n'], rows: venueSeries.map(([v, c]) => [v, c]) }}
         />
         <TrendChart
           id="home-task"
           title={t.trends.byTask}
           spec={taskChart}
-          fallback={{ headers: [t.papers.task, 'n'], rows: taskSeries.map(([k, c]) => [k, c]) }}
+          tableLabel={t.fallbackTable}
+          tableLabel={t.fallbackTable}
+        fallback={{ headers: [t.papers.task, 'n'], rows: taskSeries.map(([k, c]) => [k, c]) }}
         />
       </div>
       <p class="result-count">
@@ -152,8 +145,4 @@ const recent = papers.filter((p) => (p.year ?? 0) >= stats.maxYear - 1).slice(0,
     </section>
   </div>
 
-  <p slot="footer-meta">
-    {t.footer.dataSource}: <code>{provenance.source}</code> · {t.footer.built}{' '}
-    <time datetime={generatedUtc}>{generatedUtc.slice(0, 10)}</time>
-  </p>
 </BaseLayout>

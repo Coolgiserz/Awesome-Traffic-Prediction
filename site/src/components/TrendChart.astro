@@ -12,9 +12,11 @@ interface Props {
   spec: Record<string, unknown>;
   height?: number;
   fallback: { headers: string[]; rows: (string | number)[][] };
+  /** Label for the table disclosure; localized by the caller. */
+  tableLabel?: string;
 }
 
-const { id, title, hint, spec, height = 260, fallback } = Astro.props;
+const { id, title, hint, spec, height = 260, fallback, tableLabel } = Astro.props;
 const specJson = JSON.stringify(spec);
 ---
 
@@ -31,7 +33,7 @@ const specJson = JSON.stringify(spec);
   >
   </div>
   <details class="fallback">
-    <summary>Table view (no-JS fallback)</summary>
+    <summary>{tableLabel ?? 'View as table'}</summary>
     <div class="scroll-x">
       <table class="data">
         <thead>

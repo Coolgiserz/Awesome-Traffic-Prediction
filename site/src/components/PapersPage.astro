@@ -5,7 +5,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PaperList from '../components/PaperList.astro';
 import { ui, type Lang } from '../lib/i18n';
-import { papers, years, venues, tasks, methodTags, provenance } from '../lib/papers';
+import { papers, years, venues, tasks, methodTags } from '../lib/papers';
 
 interface Props {
   lang: Lang;
@@ -23,13 +23,6 @@ const t = ui[lang];
   <div class="wrap" style="padding-top:28px">
     <h2>{t.papers.title}</h2>
     <p class="section-lead">{t.papers.lead}</p>
-    {
-      provenance.degraded && (
-        <p class="notice">
-          {t.provenance.degraded} <code>{provenance.source}</code>
-        </p>
-      )
-    }
     <PaperList
       lang={lang}
       papers={papers}
@@ -39,5 +32,4 @@ const t = ui[lang];
       methodTags={methodTags}
     />
   </div>
-  <p slot="footer-meta">{t.footer.dataSource}: <code>{provenance.source}</code></p>
 </BaseLayout>

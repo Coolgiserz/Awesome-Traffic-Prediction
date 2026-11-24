@@ -33,7 +33,7 @@ const en = {
   },
   papers: {
     title: 'Paper library',
-    lead: 'Filter across year, venue, task and method tags. The URL keeps your filter state, so any view is shareable.',
+    lead: 'Every paper in the collection, tagged by year, venue, task and method.',
     search: 'Search title, venue or tag…',
     filters: 'Filters',
     year: 'Year',
@@ -80,7 +80,6 @@ const en = {
     originalLink: 'Original source link',
     verified: 'Metadata verified',
     unverified: 'Metadata not verified yet',
-    source: 'Record source',
     backToLibrary: 'Back to paper library',
     related: 'Same direction',
     noNotes: 'No curator note for this paper yet.',
@@ -94,27 +93,25 @@ const en = {
   },
   trends: {
     title: 'Trend overview',
-    lead: 'Interactive replacement for the static PNG charts in README.',
+    lead: 'How the field moved: output per year, where it is published, and which terms dominate.',
     byYear: 'Papers per year',
     byVenue: 'Top venues',
     byTask: 'Task distribution',
     hotspots: 'Yearly hotspot terms',
     wordcloud: 'Monthly title terms',
-    noJs: 'Charts need JavaScript. Static data tables are shown instead.',
-    generated: 'Data generated',
+    noJs: 'Charts need JavaScript to draw. The same numbers are listed below.',
   },
-  lineage: { title: 'Research lineage', lead: 'Chronological view of how the field stacked up.' },
+  lineage: { title: 'Research lineage', lead: 'The collection in chronological order, year by year.' },
   search: { title: 'Search', placeholder: 'Search the site…', open: 'Search', close: 'Close' },
   footer: {
     repo: 'Source repository',
-    dataSource: 'Data source',
-    built: 'Built',
     edit: 'Contribution guide',
   },
+  fallbackTable: 'View as table',
   provenance: {
-    structured: 'Structured JSON (data/papers)',
-    readme: 'README fallback scrape',
-    degraded: 'data/papers/*.json is absent — this build parsed README.md instead.',
+    structured: '',
+    readme: '',
+    degraded: '',
   },
 };
 
@@ -134,7 +131,7 @@ const zh: typeof en = {
   hero: { total: '篇论文', years: '个年份', code: '有代码', data: '有数据' },
   papers: {
     title: '论文库',
-    lead: '按年份、会议/期刊、任务与方法标签多维筛选，筛选状态写入 URL，可分享任意视图。',
+    lead: '收录的全部论文，按年份、会议/期刊、任务与方法标注。',
     search: '搜索标题、期刊或标签…',
     filters: '筛选',
     year: '年份',
@@ -181,7 +178,6 @@ const zh: typeof en = {
     originalLink: '原始来源链接',
     verified: '元数据已核验',
     unverified: '元数据尚未核验',
-    source: '记录来源',
     backToLibrary: '返回论文库',
     related: '同方向论文',
     noNotes: '暂时还没有该论文的策展备注。',
@@ -195,29 +191,91 @@ const zh: typeof en = {
   },
   trends: {
     title: '趋势总览',
-    lead: '用交互图表替代 README 中的静态 PNG。',
+    lead: '领域是怎么走的：逐年产出、发表去向与高频术语。',
     byYear: '逐年论文数',
     byVenue: '高频期刊/会议',
     byTask: '任务分布',
     hotspots: '年度热点词',
     wordcloud: '月度标题词频',
-    noJs: '图表需要 JavaScript；此处仍提供静态数据表。',
-    generated: '数据生成时间',
+    noJs: '图表需要 JavaScript 绘制，同样的数据在下方以表格列出。',
   },
-  lineage: { title: '研究脉络', lead: '按时间顺序查看领域演进。' },
+  lineage: { title: '研究脉络', lead: '按年份排列的完整论文列表。' },
   search: { title: '搜索', placeholder: '全站搜索…', open: '搜索', close: '关闭' },
   footer: {
     repo: '源仓库',
-    dataSource: '数据来源',
-    built: '构建于',
     edit: '贡献指南',
   },
+  fallbackTable: '以表格查看',
   provenance: {
-    structured: '结构化 JSON（data/papers）',
-    readme: 'README 解析回退',
-    degraded: '当前缺少 data/papers/*.json，本次构建解析的是 README.md。',
+    structured: '',
+    readme: '',
+    degraded: '',
   },
 };
+
+/** Task vocabulary -> Chinese.
+ *
+ *  Composite labels ("Large-scale traffic flow prediction") are translated by
+ *  matching the longest known suffix and translating any leading qualifiers, so
+ *  a new paper usually needs no new entry: only the head noun has to be known.
+ */
+const taskZh: Record<string, string> = {
+  'traffic forecasting': '交通预测',
+  'traffic prediction': '交通预测',
+  'traffic flow prediction': '交通流量预测',
+  'traffic flow forecasting': '交通流量预测',
+  'traffic speed prediction': '交通速度预测',
+  survey: '综述',
+  'missing value imputation': '缺失值填补',
+  'trajectory prediction': '轨迹预测',
+  'demand prediction': '需求预测',
+  nowcasting: '临近预报',
+  'accident / incident prediction': '事故/事件预测',
+  'travel time estimation': '行程时间估计',
+  'urban spatio-temporal prediction': '城市时空预测',
+  'probabilistic traffic forecasting': '概率交通预测',
+};
+
+const taskQualifierZh: Record<string, string> = {
+  urban: '城市',
+  'large-scale': '大规模',
+  'short-term': '短期',
+  'long-horizon': '长时程',
+  'real-time': '实时',
+  'multi-step': '多步',
+};
+
+export function localizeTask(task: string | null, lang: Lang): string {
+  if (!task) return '';
+  if (lang !== 'zh') return task;
+  const hit = taskZh[task.toLowerCase()];
+  if (hit) return hit;
+
+  const words = task.split(' ');
+  for (let i = 1; i < words.length; i++) {
+    const head = taskZh[words.slice(i).join(' ').toLowerCase()];
+    if (head) {
+      const prefix = words
+        .slice(0, i)
+        .map((w) => taskQualifierZh[w.toLowerCase()] ?? '')
+        .join('');
+      return prefix + head;
+    }
+  }
+  return task;
+}
+
+/** Lineage layer labels; the raw value stays in the data for filtering. */
+const layerZh: Record<string, string> = {
+  sota_core: '近年主流',
+  classic_baseline: '经典基线',
+  survey: '综述',
+  application: '应用',
+};
+
+export function localizeLayer(layer: string, lang: Lang): string {
+  return lang === 'zh' ? (layerZh[layer] ?? layer) : layer.replace(/_/g, ' ');
+}
 
 export const ui = { en, zh } as const;
 

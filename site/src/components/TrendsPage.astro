@@ -143,6 +143,7 @@ if (wordcloud) {
         title={t.trends.byYear}
         spec={yearChart}
         height={280}
+        tableLabel={t.fallbackTable}
         fallback={{ headers: [t.papers.year, 'n'], rows: yearSeries.map(([y, c]) => [y, c]) }}
       />
       <TrendChart
@@ -150,6 +151,7 @@ if (wordcloud) {
         title={t.trends.byTask}
         spec={taskChart}
         height={280}
+        tableLabel={t.fallbackTable}
         fallback={{ headers: [t.papers.task, 'n'], rows: taskSeries.map(([k, c]) => [k, c]) }}
       />
     </div>
@@ -160,9 +162,10 @@ if (wordcloud) {
           <TrendChart
             id="trend-hotspots"
             title={t.trends.hotspots}
-            hint={`generated ${hotspots!.generatedUtc.slice(0, 10)} · top-${hotspots!.topk} terms/year`}
+            hint={`top ${hotspots!.topk} terms per year`}
             spec={heatChart}
             height={380}
+            tableLabel={t.fallbackTable}
             fallback={hotspotFallback}
           />
         </div>
@@ -175,9 +178,10 @@ if (wordcloud) {
           <TrendChart
             id="trend-wordcloud"
             title={t.trends.wordcloud}
-            hint={`${wordcloud!.file} · generated ${wordcloud!.generatedUtc.slice(0, 10)}`}
+            hint={`top ${wordRows.length} terms`}
             spec={wordChart}
             height={420}
+            tableLabel={t.fallbackTable}
             fallback={{ headers: ['term', 'count'], rows: wordRows }}
           />
         </div>
