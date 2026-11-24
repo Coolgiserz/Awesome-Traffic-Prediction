@@ -251,5 +251,72 @@ Graph WaveNet 原本一个标签都没有，按「Graph Convolution」筛选会�
    需要在扩展受控词表（`Bayesian`、`Kalman Filter`、`ARIMA` 等）后重跑规则。
 2. **`featured` 与新 `impact` 并存**。README 的 curated digest 表仍由 `featured` 驱动，
    两者语义重叠但不一致；建议下一步让 digest 表按 `impact.tier` 选取。
-3. **README 与数据层未同源**。README 里 2023–2026 共 21 条，数据层已有 73 条，
-   读者看到的仍是旧内容。需要把 `render_curated_recent.py` 扩展为按 `impact` 渲染。
+3. ~~README 与数据层未同源~~ —— **已完成**，见第八节。
+
+---
+
+## 八、README 与数据层同源（已完成）
+
+### 8.1 问题
+
+README 里 2023–2026 只有 21 条手写条目，`data/papers` 同期有 73 条。
+读者在仓库页看到的和站点上看到的不是同一批内容，且手写区块还在逐年阻塞新数据。
+
+### 8.2 改造
+
+`render_curated_recent.py` 从「读 curated JSON」改为「读 `data/papers` + `data/venues.json`」，
+成为真正意义上的渲染器：
+
+| 块 | 规则 |
+| --- | --- |
+| `AUTO RECENT PAPERS` | 最近 5 年，每年最多 12 条 |
+| `AUTO CURATED DIGEST TABLE` | landmark 按年份升序（讲技术演进），其后是 notable |
+
+**排序键：significance → venue tier → 年份 → 标题。**
+
+中间那一层是关键。只用「重要性 + 年份」时，2026 的 12 个名额被 arXiv 预印本占满
+（2026 有 17 条 preprint、3 条顶会）。加上 venue tier 后，2026 段落开头变成
+AAAI / IJCAI / ICDE。
+
+同时把 README 里手写的 `#### 2022` / `#### 2023` / `#### 2024` 三段并入自动块，
+消除「手写区 vs 自动区」两套内容的割裂。
+
+### 8.3 发现并修掉的数据错误
+
+渲染后逐条核对 2022 段落，发现一条标注为 **WWW 2022**、DOI 却是
+`10.1109/iwcmc55113.2022.9825059` 的论文。Crossref 确认：
+
+```
+container: 2022 International Wireless Communications and Mobile Computing (IWCMC)
+```
+
+成因是 venue 推断做过无边界的子串匹配：`"iwcmc"` 里包含 `"www"`。
+
+新增 `scripts/check_venue_consistency.py` 作为门禁，规则是：如果 DOI slug 里出现
+已知 venue 标识（如 `3219819` = KDD、`iwcmc` = IWCMC），而记录标注的是另一个 venue，
+就报错。已接入 `data-check.yml`。
+
+校验器做过反向验证：把该记录改回 `WWW`，`--strict` 确实退出码 1 并指出具体冲突。
+
+### 8.4 结果
+
+README 与站点现在渲染同一份数据：
+
+| 指标 | 值 |
+| --- | --- |
+| data 记录 | 195 |
+| README 渲染年份 | 2022–2026（5 年） |
+| README 每年条目 | 12 |
+| digest 行 | 15（11 landmark + 4 notable） |
+| 站点页面 | 408 |
+
+`check_readme_sync`、`render_curated_recent --check`、`migrate --check`、
+`check_venue_consistency --strict`、schema 校验、站点文案审计全部通过。
+
+### 8.5 仍未处理
+
+- **`featured` 字段已完全失去作用**。digest 表现在由 `impact` 驱动，
+  `updates/curated/recent-papers.json` 只剩「curated 备注与中文文案」这一项价值，
+  可以考虑把其中的人工备注迁进 `data/papers` 后退休这个文件。
+- 2015–2021 仍是手写区块（数据层有 79 条）。这些年份读者相对熟悉、
+  内容也稳定，暂不纳入自动渲染，避免一次 diff 过大。

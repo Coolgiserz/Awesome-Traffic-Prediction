@@ -74,6 +74,9 @@ jobs:
           sys.exit(1 if errors else 0)
           PY
 
+      - name: Venue labels must agree with their links
+        run: python3 scripts/check_venue_consistency.py --strict
+
       - name: Migration must be idempotent
         run: python3 scripts/migrate_readme_to_json.py --all --check
 

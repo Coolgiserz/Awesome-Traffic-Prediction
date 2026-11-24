@@ -286,6 +286,16 @@
     ]
   },
   {
+    "id": "iwcmc",
+    "short_name": "IWCMC",
+    "tier": "mid",
+    "type": "conference",
+    "aliases": [
+      "iwcmc",
+      "international wireless communications and mobile computing"
+    ]
+  },
+  {
     "id": "iwphm",
     "short_name": "IWPHM",
     "tier": "preprint",

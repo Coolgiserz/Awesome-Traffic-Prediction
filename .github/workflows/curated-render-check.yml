@@ -6,7 +6,8 @@ on:
       - "README.md"
       - "README.zh.md"
       - "scripts/render_curated_recent.py"
-      - "updates/curated/recent-papers.json"
+      - "data/papers/**"
+      - "data/venues.json"
       - ".github/workflows/curated-render-check.yml"
   push:
     branches:
@@ -15,7 +16,8 @@ on:
       - "README.md"
       - "README.zh.md"
       - "scripts/render_curated_recent.py"
-      - "updates/curated/recent-papers.json"
+      - "data/papers/**"
+      - "data/venues.json"
 
 jobs:
   check-curated-render:
@@ -31,8 +33,4 @@ jobs:
 
       - name: Check rendered sections
         run: |
-          python3 scripts/render_curated_recent.py \
-            --data updates/curated/recent-papers.json \
-            --readme-en README.md \
-            --readme-zh README.zh.md \
-            --check
+          python3 scripts/render_curated_recent.py --recent-window-years 5 --check

@@ -126,7 +126,26 @@ python3 scripts/check_readme_sync.py --en README.md --zh README.zh.md
 
 ## `render_curated_recent.py`
 
-Renders recent-paper year blocks and curated digest rows in both README files from structured JSON.
+Renders the README auto-blocks from `data/papers/*.json` — the structured data is
+now the source of truth, and the README is a rendered view of it.
+
+Two blocks are controlled:
+
+- `AUTO RECENT PAPERS`: the latest N years, capped per year.
+- `AUTO CURATED DIGEST TABLE`: landmark papers in chronological order (they tell
+  the story of the field), then notable recent work.
+
+Ordering is significance first, then venue tier, then recency. Without the venue
+tier step a freshly-posted arXiv preprint outranks an AAAI paper of the same
+significance, which is exactly the failure this ordering exists to prevent.
+
+```bash
+# render 5 recent years, up to 12 entries each
+python3 scripts/render_curated_recent.py --recent-window-years 5
+
+# CI gate
+python3 scripts/render_curated_recent.py --recent-window-years 5 --check
+```
 
 - Input: `updates/curated/recent-papers.json`
 - Output targets:
@@ -243,3 +262,18 @@ python3 scripts/enrich_openalex.py --apply --refresh --year 2026
 
 Both scripts are standard-library only, except the optional `jsonschema` package used for
 schema validation (`pip install jsonschema`).
+
+## `check_venue_consistency.py`
+
+Catches venue labels that contradict the link they point at. A venue tag is an
+inference; when the primary link is a DOI, the DOI slug usually names the real
+venue, so a mismatch means either the label or the link is wrong.
+
+This exists because of a real bug: a paper labelled `WWW` had the DOI
+`10.1109/iwcmc55113.2022.9825059` (an IWCMC proceedings paper). The rule that
+produced the label matched the substring "www" inside "iwcmc".
+
+```bash
+python3 scripts/check_venue_consistency.py           # report
+python3 scripts/check_venue_consistency.py --strict  # CI: non-zero on findings
+```
