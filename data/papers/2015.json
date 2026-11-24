@@ -1,0 +1,124 @@
+[
+  {
+    "id": "traffic-flow-prediction-with-big-data-a-deep-lea-2015",
+    "year": 2015,
+    "order": 1,
+    "section": "reviews",
+    "title": "Traffic Flow Prediction With Big Data: A Deep Learning Approach",
+    "title_zh": null,
+    "venue": "TITS",
+    "venue_id": "tits",
+    "venue_type": "journal",
+    "paper_url": "https://doi.org/10.1109/tits.2014.2345663",
+    "alt_urls": {
+      "paper-original": "https://bookdown.org/amanas/traficomadrid/docs/Traffic%20flow%20prediction%20with%20big%20data%20-%20A%20deep%20learning%20approach.pdf"
+    },
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1109/tits.2014.2345663",
+    "arxiv_id": null,
+    "openalex_id": "W2036785686",
+    "short_name": null,
+    "authors": [
+      "Yisheng Lv",
+      "Yanjie Duan",
+      "Wenwen Kang",
+      "Zhengxi Li",
+      "Fei–Yue Wang"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": null,
+    "method_tags": [],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "survey"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 64,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "alt_years": [
+      2015
+    ]
+  },
+  {
+    "id": "convolutional-lstm-network-a-machine-learning-ap-2015",
+    "year": 2015,
+    "order": 2,
+    "section": "deep_learning",
+    "title": "Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting",
+    "title_zh": null,
+    "venue": "NIPS",
+    "venue_id": "neurips",
+    "venue_type": "conference",
+    "paper_url": "https://doi.org/10.48550/arxiv.1506.04214",
+    "alt_urls": {
+      "paper-original": "https://papers.nips.cc/paper/2015/file/07563a3fe3bbe7e3ba84431ad9d055af-Paper.pdf"
+    },
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.48550/arxiv.1506.04214",
+    "arxiv_id": null,
+    "openalex_id": "W1485009520",
+    "short_name": null,
+    "authors": [
+      "Xingjian Shi",
+      "Zhourong Chen",
+      "Hao Wang",
+      "Dit‐Yan Yeung",
+      "Wai Kin Wong",
+      "Wang‐chun Woo"
+    ],
+    "affiliations": [],
+    "task_en": "Nowcasting",
+    "task_zh": null,
+    "method_tags": [
+      "RNN / LSTM"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "classic_baseline"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 75,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  }
+]

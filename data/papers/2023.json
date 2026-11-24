@@ -1,0 +1,116 @@
+[
+  {
+    "id": "adaptive-graph-convolution-networks-for-traffic-2023",
+    "year": 2023,
+    "order": 1,
+    "section": "deep_learning",
+    "title": "Adaptive Graph Convolution Networks for Traffic Flow Forecasting",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "https://arxiv.org/abs/2307.05517",
+    "alt_urls": {},
+    "code_url": "https://github.com/zhengdaoli/AGC-net",
+    "code_links": [
+      {
+        "label": "code",
+        "url": "https://github.com/zhengdaoli/AGC-net"
+      }
+    ],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": "2307.05517",
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": null,
+    "method_tags": [
+      "Graph Convolution",
+      "Adaptive Graph"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "dynamic_graph_learning"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 176,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "dynamic-hypergraph-structure-learning-for-traffi-2023",
+    "year": 2023,
+    "order": 2,
+    "section": "deep_learning",
+    "title": "Dynamic Hypergraph Structure Learning for Traffic Flow Forecasting",
+    "title_zh": null,
+    "venue": "ICDE",
+    "venue_id": "icde",
+    "venue_type": "conference",
+    "paper_url": "https://arxiv.org/abs/2309.12028",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": "2309.12028",
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": null,
+    "method_tags": [
+      "Adaptive Graph"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "dynamic_graph_learning"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 177,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  }
+]

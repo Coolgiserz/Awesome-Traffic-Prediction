@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Coolgiserz/Awesome-Traffic-Prediction/data/schema/venue.schema.json",
+  "title": "Venue",
+  "description": "Conference / journal / preprint server used as a paper venue tag (README 0x04).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "short_name", "type"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "e.g. tits, kdd, ijcai, neurips, arxiv, tr-part-c."
+    },
+    "name": {"type": "string"},
+    "short_name": {
+      "type": "string",
+      "description": "Exactly the string that appears inside the README tag, e.g. TITS, IJCAI, Arxiv."
+    },
+    "aliases": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "README drift observed in the repo: WWWC, WC, IF, Access, Sensor, IJGIS, ICIKM, TRPET."
+    },
+    "type": {
+      "type": "string",
+      "enum": ["conference", "journal", "preprint", "workshop", "course_report", "unknown"]
+    },
+    "url": {"type": ["string", "null"], "pattern": "^https?://"},
+    "publisher": {"type": ["string", "null"]},
+    "ccf_rank": {
+      "type": ["string", "null"],
+      "enum": ["A", "B", "C", null],
+      "description": "Optional manual annotation; never auto-filled."
+    },
+    "impact_factor": {"type": ["number", "null"]},
+    "notes": {"type": ["string", "null"]}
+  }
+}

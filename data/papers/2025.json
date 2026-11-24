@@ -1,0 +1,231 @@
+[
+  {
+    "id": "graphsparsenet-2025",
+    "year": 2025,
+    "order": 1,
+    "section": "deep_learning",
+    "title": "GraphSparseNet: a Novel Method for Large Scale Trafffic Flow Prediction",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": null,
+    "venue_type": "unknown",
+    "paper_url": "https://arxiv.org/abs/2502.19823",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": "GraphSparseNet",
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Large-scale traffic flow prediction",
+    "task_zh": "大规模交通流预测",
+    "method_tags": [
+      "Graph Sparsification",
+      "Efficiency"
+    ],
+    "note_en": "Focus on scalability",
+    "note_zh": "面向大规模和高效率",
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": true,
+    "in_digest": true,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "manual",
+      "confidence": "medium"
+    },
+    "provenance": {
+      "source": "curated_json",
+      "readme_line": null,
+      "legacy_id": "graphsparsenet-2025",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "contrastive-pretraining-2025",
+    "year": 2025,
+    "order": 2,
+    "section": "deep_learning",
+    "title": "Embedding spatial context in urban traffic forecasting with contrastive pre-training",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": null,
+    "venue_type": "unknown",
+    "paper_url": "https://arxiv.org/abs/2503.14980",
+    "alt_urls": {},
+    "code_url": "https://github.com/mattchrlw/forecasting-on-new-roads",
+    "code_links": [
+      {
+        "label": "code",
+        "url": "https://github.com/mattchrlw/forecasting-on-new-roads"
+      }
+    ],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": "Contrastive Pre-training",
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Urban traffic forecasting",
+    "task_zh": "城市交通预测",
+    "method_tags": [
+      "Contrastive Learning",
+      "Transfer"
+    ],
+    "note_en": "Better generalization to new roads",
+    "note_zh": "强调跨道路泛化能力",
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": true,
+    "in_digest": true,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "manual",
+      "confidence": "medium"
+    },
+    "provenance": {
+      "source": "curated_json",
+      "readme_line": null,
+      "legacy_id": "contrastive-pretraining-2025",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "astam-multigraph-2025",
+    "year": 2025,
+    "order": 3,
+    "section": "deep_learning",
+    "title": "An Adaptive Spatio-Temporal Traffic Flow Prediction Using Self-Attention and Multi-Graph Networks",
+    "title_zh": null,
+    "venue": "Sensors",
+    "venue_id": null,
+    "venue_type": "journal",
+    "paper_url": "https://doi.org/10.3390/s25010282",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.3390/s25010282",
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": "ASTAM + Multi-Graph",
+    "authors": [
+      "Basma Alsehaimi",
+      "Ohoud Alzamzami",
+      "Nahed Alowidi",
+      "Manar Ali"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": "交通流预测",
+    "method_tags": [
+      "Self-Attention",
+      "Multi-Graph"
+    ],
+    "note_en": "Adaptive spatio-temporal modeling",
+    "note_zh": "自适应时空建模",
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": true,
+    "in_digest": true,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "crossref",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "curated_json",
+      "readme_line": null,
+      "legacy_id": "astam-multigraph-2025",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "agc-lstm-2025",
+    "year": 2025,
+    "order": 4,
+    "section": "deep_learning",
+    "title": "Short-term multi-step-ahead sector-based traffic flow prediction based on the attention-enhanced graph convolutional LSTM network (AGC-LSTM)",
+    "title_zh": null,
+    "venue": "Neural Computing and Applications",
+    "venue_id": null,
+    "venue_type": "journal",
+    "paper_url": "https://doi.org/10.1007/s00521-024-09827-3",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1007/s00521-024-09827-3",
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": "AGC-LSTM",
+    "authors": [
+      "Ying Zhang",
+      "Shimin Xu",
+      "Linghui Zhang",
+      "Weiwei Jiang",
+      "Sameer Alam",
+      "Dabin Xue"
+    ],
+    "affiliations": [],
+    "task_en": "Short-term multi-step traffic flow prediction",
+    "task_zh": "短期多步交通流预测",
+    "method_tags": [
+      "GCN-LSTM",
+      "Attention"
+    ],
+    "note_en": "Sector-based short-term multi-step setting",
+    "note_zh": "面向分区场景的短期多步预测",
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "crossref",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "curated_json",
+      "readme_line": null,
+      "legacy_id": "agc-lstm-2025",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  }
+]

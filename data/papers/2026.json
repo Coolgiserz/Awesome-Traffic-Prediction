@@ -1,0 +1,648 @@
+[
+  {
+    "id": "ad-stgcn-2026",
+    "year": 2026,
+    "order": 1,
+    "section": "deep_learning",
+    "title": "Adaptive dynamic spatial-temporal graph convolutional neural network for traffic flow prediction",
+    "title_zh": null,
+    "venue": "Neural Networks",
+    "venue_id": null,
+    "venue_type": "journal",
+    "paper_url": "https://doi.org/10.1016/j.neunet.2025.108529",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1016/j.neunet.2025.108529",
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": "AD-STGCN",
+    "authors": [
+      "Yu Jiang",
+      "Mingmao Hu",
+      "Aihong Gong",
+      "Yanfei Lan",
+      "Qingshan Gong",
+      "Shuaiyu Li",
+      "Xu Wang",
+      "Zhenghao Yao"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": "交通流预测",
+    "method_tags": [
+      "Dynamic Graph",
+      "STGCN"
+    ],
+    "note_en": "Adaptive dynamic spatial-temporal graph",
+    "note_zh": "自适应动态图时空卷积",
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": true,
+    "in_digest": true,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "crossref",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "curated_json",
+      "readme_line": null,
+      "legacy_id": "ad-stgcn-2026",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "dgib-2026",
+    "year": 2026,
+    "order": 2,
+    "section": "deep_learning",
+    "title": "Dynamic Graph Information Bottleneck for Traffic Prediction",
+    "title_zh": null,
+    "venue": "Electronics",
+    "venue_id": null,
+    "venue_type": "unknown",
+    "paper_url": "https://doi.org/10.3390/electronics15030623",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.3390/electronics15030623",
+    "arxiv_id": null,
+    "openalex_id": "W7126440023",
+    "short_name": "Dynamic Graph Information Bottleneck",
+    "authors": [
+      "Jing Pang",
+      "Minzhe Wu",
+      "Bingxue Xie",
+      "Yanqiu Bi",
+      "Zhongbin Luo"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic prediction",
+    "task_zh": "交通预测",
+    "method_tags": [
+      "Information Bottleneck",
+      "Dynamic Graph"
+    ],
+    "note_en": "Representation compression with graph dynamics",
+    "note_zh": "动态图表示压缩思路",
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": true,
+    "in_digest": true,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "curated_json",
+      "readme_line": null,
+      "legacy_id": "dgib-2026",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "6g-stgnn-2026",
+    "year": 2026,
+    "order": 3,
+    "section": "deep_learning",
+    "title": "6G conditioned spatiotemporal graph neural networks for real time traffic flow prediction",
+    "title_zh": null,
+    "venue": "Scientific Reports",
+    "venue_id": null,
+    "venue_type": "unknown",
+    "paper_url": "https://doi.org/10.1038/s41598-025-32795-0",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1038/s41598-025-32795-0",
+    "arxiv_id": null,
+    "openalex_id": "W7125981040",
+    "short_name": "6G-conditioned STGNN",
+    "authors": [
+      "Shishir Singh Chauhan",
+      "Yogesh Kumar Jain",
+      "Praveen Kumar Mannepalli",
+      "Ankur Pandey"
+    ],
+    "affiliations": [],
+    "task_en": "Real-time traffic flow prediction",
+    "task_zh": "实时交通流预测",
+    "method_tags": [
+      "STGNN",
+      "Real-time"
+    ],
+    "note_en": "Network-condition-aware spatio-temporal modeling",
+    "note_zh": "融合网络条件信息的时空建模",
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "curated_json",
+      "readme_line": null,
+      "legacy_id": "6g-stgnn-2026",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "pimcst-2026",
+    "year": 2026,
+    "order": 4,
+    "section": "deep_learning",
+    "title": "PIMCST: Physics-Informed Multi-Phase Consensus and Spatio-Temporal Few-Shot Learning for Traffic Flow Forecasting",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": null,
+    "venue_type": "unknown",
+    "paper_url": "https://doi.org/10.1109/jiot.2026.3700641",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1109/jiot.2026.3700641",
+    "arxiv_id": null,
+    "openalex_id": "W7163667360",
+    "short_name": "PIMCST",
+    "authors": [
+      "Abdul Joseph Fofanah",
+      "Lian Wen",
+      "David Chen"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic flow forecasting",
+    "task_zh": "交通流预测",
+    "method_tags": [
+      "Physics-Informed Learning",
+      "Few-shot"
+    ],
+    "note_en": "Few-shot transfer-oriented design",
+    "note_zh": "偏少样本迁移能力",
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": true,
+    "in_digest": true,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "curated_json",
+      "readme_line": null,
+      "legacy_id": "pimcst-2026",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "hysrd-net-2026",
+    "year": 2026,
+    "order": 5,
+    "section": "deep_learning",
+    "title": "HySRD-Net: Hybrid spectral residual diffusion on spatio-temporal graphs for probabilistic traffic forecasting",
+    "title_zh": null,
+    "venue": "Expert Systems with Applications",
+    "venue_id": null,
+    "venue_type": "unknown",
+    "paper_url": "https://doi.org/10.1016/j.eswa.2026.131214",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1016/j.eswa.2026.131214",
+    "arxiv_id": null,
+    "openalex_id": "W7124441788",
+    "short_name": "HySRD-Net",
+    "authors": [
+      "Zhe Chen",
+      "Yuchen Ma",
+      "Kailin Wang"
+    ],
+    "affiliations": [],
+    "task_en": "Probabilistic traffic forecasting",
+    "task_zh": "概率交通预测",
+    "method_tags": [
+      "Probabilistic Forecasting",
+      "Graph Diffusion"
+    ],
+    "note_en": "Uncertainty-aware forecasting",
+    "note_zh": "不确定性建模导向",
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": true,
+    "in_digest": true,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "curated_json",
+      "readme_line": null,
+      "legacy_id": "hysrd-net-2026",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "feature-itransformer-2026",
+    "year": 2026,
+    "order": 6,
+    "section": "deep_learning",
+    "title": "Feature-enhanced iTransformer: A two-stage framework for high-accuracy long-horizon traffic flow forecasting",
+    "title_zh": null,
+    "venue": "PLoS ONE",
+    "venue_id": null,
+    "venue_type": "unknown",
+    "paper_url": "https://doi.org/10.1371/journal.pone.0340389",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1371/journal.pone.0340389",
+    "arxiv_id": null,
+    "openalex_id": "W7119734635",
+    "short_name": "Feature-enhanced iTransformer",
+    "authors": [
+      "Yonghui Duan",
+      "Yucong Zhang",
+      "Xiang Wang",
+      "Yuan Xue",
+      "Zirong Wang",
+      "Di Wu"
+    ],
+    "affiliations": [],
+    "task_en": "Long-horizon traffic flow forecasting",
+    "task_zh": "长时域交通流预测",
+    "method_tags": [
+      "Transformer",
+      "Long-Horizon"
+    ],
+    "note_en": "Two-stage long-horizon framework",
+    "note_zh": "两阶段长预测框架",
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": true,
+    "in_digest": true,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "curated_json",
+      "readme_line": null,
+      "legacy_id": "feature-itransformer-2026",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "vmd-lssvm-2026",
+    "year": 2026,
+    "order": 7,
+    "section": "deep_learning",
+    "title": "A Novel Attention-Weighted VMD-LSSVM Model for High-Accuracy Short-Term Traffic Prediction",
+    "title_zh": null,
+    "venue": "IET Intelligent Transport Systems",
+    "venue_id": null,
+    "venue_type": "unknown",
+    "paper_url": "https://doi.org/10.1049/itr2.70144",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1049/itr2.70144",
+    "arxiv_id": null,
+    "openalex_id": "W7125714643",
+    "short_name": "Attention-Weighted VMD-LSSVM",
+    "authors": [
+      "Jixiao Jiang",
+      "Anastasia Alexandrovna Feofilova",
+      "Ivan Vladimirovich Topilin",
+      "Chunguang Liu"
+    ],
+    "affiliations": [],
+    "task_en": "Short-term traffic prediction",
+    "task_zh": "短期交通预测",
+    "method_tags": [
+      "Hybrid Model",
+      "Short-Term"
+    ],
+    "note_en": "Classical hybrid baseline with attention weighting",
+    "note_zh": "带注意力加权的传统混合模型",
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "curated_json",
+      "readme_line": null,
+      "legacy_id": "vmd-lssvm-2026",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "msgdstn-2026",
+    "year": 2026,
+    "order": 8,
+    "section": "deep_learning",
+    "title": "Multi-Scale Graph-Decoupling Spatial-Temporal Network for Traffic Flow Forecasting in Complex Urban Environments",
+    "title_zh": null,
+    "venue": "Electronics",
+    "venue_id": null,
+    "venue_type": "unknown",
+    "paper_url": "https://doi.org/10.3390/electronics15030495",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.3390/electronics15030495",
+    "arxiv_id": null,
+    "openalex_id": "W7125544043",
+    "short_name": "MSGDSTN",
+    "authors": [
+      "Hongtao Li",
+      "Wenzheng Liu",
+      "Huaixian Chen"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic flow forecasting",
+    "task_zh": "交通流预测",
+    "method_tags": [
+      "Multi-Scale",
+      "Graph Decoupling",
+      "ST Modeling"
+    ],
+    "note_en": "Multi-scale graph-decoupled modeling for complex urban environments",
+    "note_zh": "面向复杂城市路网的多尺度图解耦时空建模",
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "curated_json",
+      "readme_line": null,
+      "legacy_id": "msgdstn-2026",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "pdr-stgcn-2026",
+    "year": 2026,
+    "order": 9,
+    "section": "deep_learning",
+    "title": "PDR-STGCN: An Enhanced STGCN with Multi-Scale Periodic Fusion and a Dynamic Relational Graph for Traffic Forecasting",
+    "title_zh": null,
+    "venue": "Systems",
+    "venue_id": null,
+    "venue_type": "unknown",
+    "paper_url": "https://doi.org/10.3390/systems14010102",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.3390/systems14010102",
+    "arxiv_id": null,
+    "openalex_id": "W7124738870",
+    "short_name": "PDR-STGCN",
+    "authors": [
+      "Jie Hu",
+      "Bingbing Tang",
+      "Langsha Zhu",
+      "Yiting Li",
+      "Jianjun Hu",
+      "Guanci Yang"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": "交通预测",
+    "method_tags": [
+      "STGCN",
+      "Dynamic Graph",
+      "Periodicity"
+    ],
+    "note_en": "Enhanced STGCN with periodic fusion and dynamic relation modeling",
+    "note_zh": "融合周期性与动态关系建模的增强 STGCN",
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "curated_json",
+      "readme_line": null,
+      "legacy_id": "pdr-stgcn-2026",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "stvmamba-2026",
+    "year": 2026,
+    "order": 10,
+    "section": "deep_learning",
+    "title": "STVMamba: A Spatio-Temporal-Variable Modeling Network with Selective State Space Mechanism for Long-Horizon Traffic Forecasting",
+    "title_zh": null,
+    "venue": "Lecture Notes in Computer Science",
+    "venue_id": null,
+    "venue_type": "unknown",
+    "paper_url": "https://doi.org/10.1007/978-981-95-5761-5_18",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1007/978-981-95-5761-5_18",
+    "arxiv_id": null,
+    "openalex_id": "W7121288621",
+    "short_name": "STVMamba",
+    "authors": [
+      "Yali Cao",
+      "Weijian Hu",
+      "Lingfang Li",
+      "Ke Han"
+    ],
+    "affiliations": [],
+    "task_en": "Long-horizon traffic forecasting",
+    "task_zh": "长时域交通预测",
+    "method_tags": [
+      "State Space Model",
+      "Long-Horizon",
+      "Spatio-Temporal"
+    ],
+    "note_en": "Selective state-space modeling for long-horizon forecasting",
+    "note_zh": "面向长时域预测的选择性状态空间建模",
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "curated_json",
+      "readme_line": null,
+      "legacy_id": "stvmamba-2026",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "tsaformer-2026",
+    "year": 2026,
+    "order": 11,
+    "section": "deep_learning",
+    "title": "TSAformer: A Traffic Flow Prediction Model Based on Cross-Dimensional Dependency Capture",
+    "title_zh": null,
+    "venue": "Electronics",
+    "venue_id": null,
+    "venue_type": "unknown",
+    "paper_url": "https://doi.org/10.3390/electronics15010231",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.3390/electronics15010231",
+    "arxiv_id": null,
+    "openalex_id": "W7118167583",
+    "short_name": "TSAformer",
+    "authors": [
+      "Haoning Lv",
+      "Xi Chen",
+      "Weijie Xiu"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": "交通流预测",
+    "method_tags": [
+      "Transformer",
+      "Cross-Dimensional Dependency"
+    ],
+    "note_en": "Cross-dimensional dependency capture for traffic flow prediction",
+    "note_zh": "通过跨维依赖建模提升交通流预测",
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "curated_json",
+      "readme_line": null,
+      "legacy_id": "tsaformer-2026",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  }
+]

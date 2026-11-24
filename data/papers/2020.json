@@ -1,0 +1,1676 @@
+[
+  {
+    "id": "deep-learning-for-spatio-temporal-data-mining-a-2020",
+    "year": 2020,
+    "order": 1,
+    "section": "reviews",
+    "title": "Deep Learning for Spatio-Temporal Data Mining: A Survey",
+    "title_zh": null,
+    "venue": "KDD",
+    "venue_id": "kdd",
+    "venue_type": "conference",
+    "paper_url": "https://ieeexplore.ieee.org/abstract/document/9204396/",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Survey",
+    "task_zh": null,
+    "method_tags": [],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "survey"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 65,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "urban-flow-prediction-from-spatiotemporal-data-u-2020",
+    "year": 2020,
+    "order": 2,
+    "section": "reviews",
+    "title": "Urban flow prediction from spatiotemporal data using machine learning: A survey",
+    "title_zh": null,
+    "venue": "Information Fusion",
+    "venue_id": "information-fusion",
+    "venue_type": "journal",
+    "paper_url": "https://www.sciencedirect.com/science/article/pii/S1566253519303094",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": null,
+    "method_tags": [],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "survey"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 66,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "deep-learning-on-traffic-prediction-methods-anal-2020",
+    "year": 2020,
+    "order": 3,
+    "section": "reviews",
+    "title": "Deep Learning on Traffic Prediction: Methods, Analysis and Future Directions",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "https://arxiv.org/abs/2004.08555",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": "2004.08555",
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Survey",
+    "task_zh": null,
+    "method_tags": [],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "survey"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 67,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "spatial-temporal-transformer-networks-for-traffi-2020",
+    "year": 2020,
+    "order": 4,
+    "section": "deep_learning",
+    "title": "Spatial-Temporal Transformer Networks for Traffic Flow Forecasting",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "https://arxiv.org/abs/2001.02908",
+    "alt_urls": {},
+    "code_url": "https://github.com/wubin5/STTN",
+    "code_links": [
+      {
+        "label": "code-not-official",
+        "url": "https://github.com/wubin5/STTN"
+      }
+    ],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": "2001.02908",
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": null,
+    "method_tags": [
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "long_horizon_transformer"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 126,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "transfer-learning-with-graph-neural-networks-for-2020",
+    "year": 2020,
+    "order": 5,
+    "section": "deep_learning",
+    "title": "Transfer Learning with Graph Neural Networks for Short-Term Highway Traffic Forecasting",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "https://arxiv.org/abs/2004.08038",
+    "alt_urls": {},
+    "code_url": "https://github.com/tanwimallick/TL-DCRNN",
+    "code_links": [
+      {
+        "label": "code",
+        "url": "https://github.com/tanwimallick/TL-DCRNN"
+      }
+    ],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": "2004.08038",
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "STGNN",
+      "Transfer Learning"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "fewshot_transfer"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 127,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "bayesian-spatio-temporal-graph-convolutional-net-2020",
+    "year": 2020,
+    "order": 6,
+    "section": "deep_learning",
+    "title": "Bayesian Spatio-Temporal Graph Convolutional Network for Traffic Forecasting",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "https://www.researchgate.net/publication/344678512_Bayesian_Spatio-Temporal_Graph_Convolutional_Network_for_Traffic_Forecasting",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Graph Convolution",
+      "STGNN",
+      "Probabilistic"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 128,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "traffic-transformer-2020",
+    "year": 2020,
+    "order": 7,
+    "section": "deep_learning",
+    "title": "Traffic transformer: Capturing the continuity and periodicity of time series for traffic forecasting",
+    "title_zh": null,
+    "venue": "TGIS",
+    "venue_id": "tgis",
+    "venue_type": "unknown",
+    "paper_url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/tgis.12644",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": "Traffic transformer",
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "long_horizon_transformer"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 129,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "traffic-prediction-in-optical-networks-using-gra-2020",
+    "year": 2020,
+    "order": 8,
+    "section": "deep_learning",
+    "title": "Traffic Prediction in Optical Networks Using Graph Convolutional Generative Adversarial Networks",
+    "title_zh": null,
+    "venue": "ICTON",
+    "venue_id": "icton",
+    "venue_type": "unknown",
+    "paper_url": "https://ieeexplore.ieee.org/document/9203477",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Graph Convolution",
+      "GAN"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "diffusion_probabilistic"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 130,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "spatio-temporal-graph-structure-learning-for-tra-2020",
+    "year": 2020,
+    "order": 9,
+    "section": "deep_learning",
+    "title": "Spatio-Temporal Graph Structure Learning for Traffic Forecasting",
+    "title_zh": null,
+    "venue": "AAAI",
+    "venue_id": "aaai",
+    "venue_type": "conference",
+    "paper_url": "https://ojs.aaai.org//index.php/AAAI/article/view/5470",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "STGNN",
+      "Adaptive Graph"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "dynamic_graph_learning"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low",
+      "note": "sota link removed: paperswithcode SOTA pages redirect to a generic HF trending page"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 131,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "learning-geo-contextual-embeddings-for-commuting-2020",
+    "year": 2020,
+    "order": 10,
+    "section": "deep_learning",
+    "title": "Learning Geo-Contextual Embeddings for Commuting Flow Prediction",
+    "title_zh": null,
+    "venue": "AAAI",
+    "venue_id": "aaai",
+    "venue_type": "conference",
+    "paper_url": "https://ojs.aaai.org//index.php/AAAI/article/view/5425",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": null,
+    "method_tags": [
+      "Embedding"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 132,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "spatial-temporal-synchronous-graph-convolutional-2020",
+    "year": 2020,
+    "order": 11,
+    "section": "deep_learning",
+    "title": "Spatial-Temporal Synchronous Graph Convolutional Networks: A New Framework for Spatial-Temporal Network Data Forecasting",
+    "title_zh": null,
+    "venue": "AAAI",
+    "venue_id": "aaai",
+    "venue_type": "conference",
+    "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/view/5438",
+    "alt_urls": {},
+    "code_url": "https://github.com/Davidham3/STSGCN",
+    "code_links": [
+      {
+        "label": "code",
+        "url": "https://github.com/Davidham3/STSGCN"
+      }
+    ],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Graph Convolution"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 133,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "stgat-2020",
+    "year": 2020,
+    "order": 12,
+    "section": "deep_learning",
+    "title": "STGAT: Spatial-Temporal Graph Attention Networks for Traffic Flow Forecasting",
+    "title_zh": null,
+    "venue": "Access",
+    "venue_id": "access",
+    "venue_type": "journal",
+    "paper_url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9146162",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": "STGAT",
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": null,
+    "method_tags": [
+      "Graph Attention",
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 134,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "city-wide-traffic-flow-forecasting-using-a-deep-2020",
+    "year": 2020,
+    "order": 13,
+    "section": "deep_learning",
+    "title": "City-Wide Traffic Flow Forecasting Using a Deep Convolutional Neural Network",
+    "title_zh": null,
+    "venue": "Sensor",
+    "venue_id": "sensors",
+    "venue_type": "journal",
+    "paper_url": "https://www.mdpi.com/1424-8220/20/2/421",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": null,
+    "method_tags": [],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 135,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "buildsensys-2020",
+    "year": 2020,
+    "order": 14,
+    "section": "deep_learning",
+    "title": "BuildSenSys: Reusing Building Sensing Data for Traffic Prediction with Cross-domain Learning",
+    "title_zh": null,
+    "venue": "Mobile Computing",
+    "venue_id": "mobile-computing",
+    "venue_type": "unknown",
+    "paper_url": "https://ieeexplore.ieee.org/abstract/document/9018140",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": "BuildSenSys",
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 136,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "spatio-temporal-meta-learning-for-urban-traffic-2020",
+    "year": 2020,
+    "order": 15,
+    "section": "deep_learning",
+    "title": "Spatio-Temporal Meta Learning for Urban Traffic Prediction",
+    "title_zh": null,
+    "venue": "TKDE",
+    "venue_id": "tkde",
+    "venue_type": "journal",
+    "paper_url": "https://ieeexplore.ieee.org/document/9096591",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 137,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "what-is-the-human-mobility-in-a-new-city-transfe-2020",
+    "year": 2020,
+    "order": 16,
+    "section": "deep_learning",
+    "title": "What is the Human Mobility in a New City: Transfer Mobility Knowledge Across Cities",
+    "title_zh": null,
+    "venue": "WC",
+    "venue_id": "www",
+    "venue_type": "conference",
+    "paper_url": "http://urban-computing.com/pdf/www1208tianfu.pdf",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Transfer Learning"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "fewshot_transfer"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 138,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "traffic-graph-convolutional-recurrent-neural-net-2020",
+    "year": 2020,
+    "order": 17,
+    "section": "deep_learning",
+    "title": "Traffic Graph Convolutional Recurrent Neural Network: A Deep Learning Framework for Network-Scale Traffic Learning and Forecasting",
+    "title_zh": null,
+    "venue": "TITS",
+    "venue_id": "tits",
+    "venue_type": "journal",
+    "paper_url": "https://ieeexplore.ieee.org/document/8917706",
+    "alt_urls": {},
+    "code_url": "https://github.com/zhiyongc/Graph_Convolutional_LSTM",
+    "code_links": [
+      {
+        "label": "code",
+        "url": "https://github.com/zhiyongc/Graph_Convolutional_LSTM"
+      }
+    ],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Graph Convolution"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 139,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "adaptive-graph-convolutional-recurrent-network-f-2020",
+    "year": 2020,
+    "order": 18,
+    "section": "deep_learning",
+    "title": "Adaptive Graph Convolutional Recurrent Network for Traffic Forecasting",
+    "title_zh": null,
+    "venue": "NeurIPS",
+    "venue_id": "neurips",
+    "venue_type": "conference",
+    "paper_url": "https://arxiv.org/abs/2007.02842",
+    "alt_urls": {},
+    "code_url": "https://github.com/LeiBAI/AGCRN",
+    "code_links": [
+      {
+        "label": "code",
+        "url": "https://github.com/LeiBAI/AGCRN"
+      }
+    ],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": "2007.02842",
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Graph Convolution",
+      "Adaptive Graph"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "dynamic_graph_learning"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 140,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "gman-2020",
+    "year": 2020,
+    "order": 19,
+    "section": "deep_learning",
+    "title": "GMAN: A Graph Multi-Attention Network for Traffic Prediction",
+    "title_zh": null,
+    "venue": "AAAI",
+    "venue_id": "aaai",
+    "venue_type": "conference",
+    "paper_url": "https://arxiv.org/abs/1911.08415",
+    "alt_urls": {},
+    "code_url": "https://github.com/zhengchuanpan/GMAN",
+    "code_links": [
+      {
+        "label": "code",
+        "url": "https://github.com/zhengchuanpan/GMAN"
+      }
+    ],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": "1911.08415",
+    "openalex_id": null,
+    "short_name": "GMAN",
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 141,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "constgat-2020",
+    "year": 2020,
+    "order": 20,
+    "section": "deep_learning",
+    "title": "ConSTGAT: Contextual Spatial-Temporal Graph Attention Network for Travel Time Estimation at Baidu Maps",
+    "title_zh": null,
+    "venue": "KDD",
+    "venue_id": "kdd",
+    "venue_type": "conference",
+    "paper_url": "https://www.kdd.org/kdd2020/accepted-papers/view/constgat-contextual-spatial-temporal-graph-attention-network-for-travel-tim",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": "ConSTGAT",
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Travel time estimation",
+    "task_zh": null,
+    "method_tags": [
+      "Graph Attention",
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 142,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "preserving-dynamic-attention-for-long-term-spati-2020",
+    "year": 2020,
+    "order": 21,
+    "section": "deep_learning",
+    "title": "Preserving Dynamic Attention for Long-Term Spatial-Temporal Prediction",
+    "title_zh": null,
+    "venue": "KDD",
+    "venue_id": "kdd",
+    "venue_type": "conference",
+    "paper_url": "https://arxiv.org/abs/2006.08849",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": "2006.08849",
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 143,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "temporal-multi-graph-convolutional-network-for-t-2020",
+    "year": 2020,
+    "order": 22,
+    "section": "deep_learning",
+    "title": "Temporal Multi-Graph Convolutional Network for Traffic Flow Prediction",
+    "title_zh": null,
+    "venue": "TITS",
+    "venue_id": "tits",
+    "venue_type": "journal",
+    "paper_url": "https://ieeexplore.ieee.org/document/9098104",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": null,
+    "method_tags": [
+      "Graph Convolution"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 144,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "a-spatial-temporal-attention-approach-for-traffi-2020",
+    "year": 2020,
+    "order": 23,
+    "section": "deep_learning",
+    "title": "A Spatial-Temporal Attention Approach for Traffic Prediction",
+    "title_zh": null,
+    "venue": "TITS",
+    "venue_id": "tits",
+    "venue_type": "journal",
+    "paper_url": "https://www.researchgate.net/publication/340567373_A_Spatial-Temporal_Attention_Approach_for_Traffic_Prediction",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 145,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "traffic-flow-imputation-using-parallel-data-and-2020",
+    "year": 2020,
+    "order": 24,
+    "section": "deep_learning",
+    "title": "Traffic Flow Imputation Using Parallel Data and Generative Adversarial Networks",
+    "title_zh": null,
+    "venue": "TITS",
+    "venue_id": "tits",
+    "venue_type": "journal",
+    "paper_url": "https://ieeexplore.ieee.org/document/8699108",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Missing value imputation",
+    "task_zh": null,
+    "method_tags": [
+      "GAN"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "diffusion_probabilistic",
+      "imputation_data_quality"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 146,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "traffic-flow-prediction-via-spatial-temporal-gra-2020",
+    "year": 2020,
+    "order": 25,
+    "section": "deep_learning",
+    "title": "Traffic Flow Prediction via Spatial Temporal Graph Neural Network",
+    "title_zh": null,
+    "venue": "WWW",
+    "venue_id": "www",
+    "venue_type": "conference",
+    "paper_url": "https://dl.acm.org/doi/abs/10.1145/3366423.3380186",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": null,
+    "method_tags": [
+      "STGNN"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 147,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "graph-attention-temporal-convolutional-network-f-2020",
+    "year": 2020,
+    "order": 26,
+    "section": "deep_learning",
+    "title": "Graph attention temporal convolutional network for traffic speed forecasting on road networks",
+    "title_zh": null,
+    "venue": "IJGIS",
+    "venue_id": "ijgis",
+    "venue_type": "journal",
+    "paper_url": "https://www.tandfonline.com/doi/abs/10.1080/21680566.2020.1822765?journalCode=ttrb20",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic speed prediction",
+    "task_zh": null,
+    "method_tags": [
+      "Graph Attention",
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 148,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "st-grat-2020",
+    "year": 2020,
+    "order": 27,
+    "section": "deep_learning",
+    "title": "ST-GRAT: A Novel Spatio-temporal Graph Attention Network for Accurately Forecasting Dynamically Changing Road Speed",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "https://arxiv.org/abs/1911.13181",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": "1911.13181",
+    "openalex_id": null,
+    "short_name": "ST-GRAT",
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic speed prediction",
+    "task_zh": null,
+    "method_tags": [
+      "STGNN",
+      "Graph Attention",
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 149,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "spatial-temporal-incidence-dynamic-graph-neural-2020",
+    "year": 2020,
+    "order": 28,
+    "section": "deep_learning",
+    "title": "Spatial Temporal Incidence Dynamic Graph Neural Networks for Traffic Flow Forecasting",
+    "title_zh": null,
+    "venue": "IF",
+    "venue_id": "if",
+    "venue_type": "unknown",
+    "paper_url": "https://www.sciencedirect.com/science/article/abs/pii/S0020025520300451?via%3Dihub",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": null,
+    "method_tags": [
+      "STGNN",
+      "Adaptive Graph"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "dynamic_graph_learning"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 150,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "tssrgcn-2020",
+    "year": 2020,
+    "order": 29,
+    "section": "deep_learning",
+    "title": "TSSRGCN: Temporal Spectral Spatial Retrieval Graph Convolutional Network for Traffic Flow Forecasting",
+    "title_zh": null,
+    "venue": "ICDM",
+    "venue_id": "icdm",
+    "venue_type": "conference",
+    "paper_url": "https://ieeexplore.ieee.org/document/9338393",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": "TSSRGCN",
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": null,
+    "method_tags": [
+      "Graph Convolution"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 151,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "spatial-temporal-fusion-graph-neural-networks-fo-2020",
+    "year": 2020,
+    "order": 30,
+    "section": "deep_learning",
+    "title": "Spatial-Temporal Fusion Graph Neural Networks for Traffic Flow Forecasting",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "https://arxiv.org/abs/2012.09641",
+    "alt_urls": {},
+    "code_url": "https://github.com/MengzhangLI/STFGNN",
+    "code_links": [
+      {
+        "label": "code",
+        "url": "https://github.com/MengzhangLI/STFGNN"
+      }
+    ],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": "2012.09641",
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": null,
+    "method_tags": [
+      "STGNN"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 156,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "informer-2020",
+    "year": 2020,
+    "order": 31,
+    "section": "time_series",
+    "title": "Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "https://arxiv.org/pdf/2012.07436.pdf",
+    "alt_urls": {},
+    "code_url": "https://github.com/zhouhaoyi/Informer2020",
+    "code_links": [
+      {
+        "label": "code",
+        "url": "https://github.com/zhouhaoyi/Informer2020"
+      }
+    ],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": "2012.07436",
+    "openalex_id": null,
+    "short_name": "Informer",
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "application"
+    ],
+    "direction_tags": [
+      "long_horizon_transformer"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 245,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  }
+]

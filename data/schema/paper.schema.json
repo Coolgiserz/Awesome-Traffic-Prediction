@@ -1,0 +1,370 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Coolgiserz/Awesome-Traffic-Prediction/data/schema/paper.schema.json",
+  "title": "Paper",
+  "description": "Single paper record. One record per unique work, merged across venues/arXiv versions.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "year",
+    "title",
+    "paper_url"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*-[0-9]{4}$",
+      "description": "Stable slug: <short-name-slug>-<year>, e.g. tgcn-2018, stgcn-2018, dcrnn-2017."
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 1990,
+      "maximum": 2100,
+      "description": "Publication year of the archival venue; arXiv-only works use first-submission year."
+    },
+    "order": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Manual display order inside (section, year). Optional; renderer falls back to (year, title)."
+    },
+    "section": {
+      "type": "string",
+      "enum": [
+        "reviews",
+        "deep_learning",
+        "statistic",
+        "time_series",
+        "temporal_network_embedding"
+      ],
+      "default": "deep_learning",
+      "description": "Maps to the README 0x00 subsections."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 5,
+      "description": "Canonical English title, copied verbatim from README/venue."
+    },
+    "title_zh": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Optional Chinese title; renderer falls back to title when null."
+    },
+    "venue": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Venue short name as used in the README tag, e.g. TITS, IJCAI, Arxiv, KDD, NeurIPS."
+    },
+    "venue_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Foreign key into data/venues.json, e.g. tits, arxiv, kdd."
+    },
+    "venue_type": {
+      "type": "string",
+      "enum": [
+        "conference",
+        "journal",
+        "preprint",
+        "workshop",
+        "thesis",
+        "unknown"
+      ],
+      "default": "unknown"
+    },
+    "paper_url": {
+      "type": "string",
+      "pattern": "^https?://",
+      "description": "Primary link; prefer DOI, publisher or arXiv abs page."
+    },
+    "alt_urls": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^https?://"
+      },
+      "description": "Extra links keyed by README tag: paper-ieee, review, etc."
+    },
+    "code_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^https?://"
+    },
+    "code_links": {
+      "type": "array",
+      "description": "Multiple implementations, e.g. official TF + PyTorch reimplementation.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "url"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "enum": [
+              "code",
+              "code-official-tf",
+              "code-pytorch",
+              "code-not-official"
+            ]
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https?://"
+          }
+        }
+      }
+    },
+    "data_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^https?://"
+    },
+    "project_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^https?://"
+    },
+    "doi": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^10\\.[0-9]{4,9}/\\S+$",
+      "description": "Bare DOI, lowercase, no https://doi.org/ prefix."
+    },
+    "arxiv_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9]{4}\\.[0-9]{4,5}(v[0-9]+)?$|^[a-z.-]+/[0-9]{7}(v[0-9]+)?$"
+    },
+    "openalex_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^W[0-9]+$"
+    },
+    "short_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Model acronym used as display label in the digest table."
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "affiliations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "research_group ids, e.g. fib-tsinghua."
+    },
+    "task_en": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "task_zh": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "method_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Controlled tag vocabulary shared with scripts/configs post rules."
+    },
+    "note_en": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "note_zh": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "datasets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "dataset ids, e.g. metr-la, pems-bay."
+    },
+    "layers": {
+      "type": "array",
+      "description": "Layered classification used by docs/evolution/02-paper-scope.md.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "sota_core",
+          "classic_baseline",
+          "survey",
+          "application"
+        ]
+      }
+    },
+    "direction_tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "st_foundation_llm",
+          "diffusion_probabilistic",
+          "dynamic_graph_learning",
+          "long_horizon_transformer",
+          "fewshot_transfer",
+          "privacy_federated",
+          "benchmark_reproducibility",
+          "imputation_data_quality",
+          "trajectory_prediction",
+          "od_demand"
+        ]
+      }
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Legacy field: drives the curated digest table."
+    },
+    "in_digest": {
+      "type": "boolean",
+      "default": false
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "dead_link",
+        "superseded",
+        "retracted"
+      ],
+      "default": "active"
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "checked_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "link_ok": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "metadata_source": {
+          "type": "string",
+          "enum": [
+            "manual",
+            "readme_migration",
+            "openalex",
+            "arxiv",
+            "crossref",
+            "semantic_scholar"
+          ]
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Free-form verification remark."
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Where this record came from, required during the markdown->JSON grey release.",
+      "properties": {
+        "source": {
+          "type": "string",
+          "enum": [
+            "readme_migration",
+            "curated_json",
+            "manual",
+            "search_pipeline"
+          ]
+        },
+        "readme_line": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "description": "1-based README line this record was migrated from; null for curated-JSON or pipeline records."
+        },
+        "legacy_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "migrated_at": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "alt_years": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 1990,
+        "maximum": 2100
+      },
+      "description": "Other publication years this work appeared under (e.g. arXiv preprint year vs proceedings year)."
+    }
+  }
+}

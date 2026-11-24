@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Coolgiserz/Awesome-Traffic-Prediction/data/schema/dataset.schema.json",
+  "title": "Dataset",
+  "description": "Benchmark / data source record. One record per dataset, merged across mirrors and papers.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "signal_type", "region", "access_type"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Lowercase slug, e.g. metr-la, pems-bay, pems04, didi-gaia-xian."
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name as used in README, e.g. METR-LA, PEMS-BAY."
+    },
+    "name_zh": {"type": ["string", "null"]},
+    "aliases": {"type": "array", "items": {"type": "string"}},
+    "region": {
+      "type": "string",
+      "description": "City / province / region, e.g. Los Angeles, US; Bay Area, US; Xi'an, CN."
+    },
+    "country": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "in_china": {"type": "boolean"},
+    "signal_type": {
+      "type": "string",
+      "enum": ["speed", "flow", "occupancy", "demand_od", "demand_zone", "trajectory", "commute_flow", "poi_landuse", "multi", "unknown"],
+      "description": "Maps to README 0x02 subsections: Datasets / Trajectory / ETA / Website."
+    },
+    "source_type": {
+      "type": "string",
+      "enum": ["loop_detector", "camera", "gps_trace", "transit_smartcard", "bike_share", "taxi_trip", "census", "poi", "simulated", "unknown"],
+      "default": "unknown"
+    },
+    "nodes": {
+      "type": ["integer", "null"],
+      "minimum": 1,
+      "description": "Number of sensors/nodes when fixed (METR-LA = 207, PEMS-BAY = 325)."
+    },
+    "spatial_unit": {
+      "type": "string",
+      "enum": ["sensor", "zone", "grid", "road_segment", "station", "od_pair", "unknown"],
+      "default": "unknown"
+    },
+    "interval_minutes": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "description": "Sampling resolution in minutes (5 for METR-LA)."
+    },
+    "time_range": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start": {"type": ["string", "null"], "format": "date"},
+        "end": {"type": ["string", "null"], "format": "date"}
+      }
+    },
+    "missing_rate": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "common_horizons_minutes": {
+      "type": "array",
+      "items": {"type": "integer", "minimum": 1},
+      "description": "e.g. [15, 30, 60]."
+    },
+    "metrics": {
+      "type": "array",
+      "items": {"type": "string", "enum": ["MAE", "RMSE", "MAPE", "WAPE", "SMAPE", "CRPS", "PICP", "other"]}
+    },
+    "split_policy": {
+      "type": "string",
+      "enum": ["chronological", "random", "varies", "unknown"],
+      "default": "unknown"
+    },
+    "access_type": {
+      "type": "string",
+      "enum": ["open", "registration", "request", "charged", "unknown"]
+    },
+    "url": {"type": ["string", "null"], "pattern": "^https?://"},
+    "local_doc": {
+      "type": ["string", "null"],
+      "pattern": "^datasets/.*\\.md$",
+      "description": "In-repo doc path, e.g. datasets/METR.md."
+    },
+    "paper_ids": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Introduced-by / commonly-used-by paper ids."
+    },
+    "description_en": {"type": ["string", "null"]},
+    "description_zh": {"type": ["string", "null"]},
+    "license": {"type": ["string", "null"]},
+    "status": {"type": "string", "enum": ["active", "deprecated", "mirror_only"], "default": "active"},
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source": {"type": "string", "enum": ["readme_migration", "manual", "paper_link"]},
+        "readme_line": {"type": "integer", "minimum": 0},
+        "migrated_at": {"type": "string", "format": "date"}
+      }
+    }
+  }
+}

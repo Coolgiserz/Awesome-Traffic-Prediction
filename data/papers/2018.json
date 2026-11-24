@@ -1,0 +1,633 @@
+[
+  {
+    "id": "multi-view-imputation-2018",
+    "year": 2018,
+    "order": 1,
+    "section": "deep_learning",
+    "title": "Missing Value Imputation for Traffic-Related Time Series Data Based on a Multi-View Learning Method",
+    "title_zh": null,
+    "venue": "TITS",
+    "venue_id": "tits",
+    "venue_type": "journal",
+    "paper_url": "https://doi.org/10.1109/tits.2018.2869768",
+    "alt_urls": {
+      "paper-original": "https://ieeexplore.ieee.org/abstract/document/8478191"
+    },
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1109/tits.2018.2869768",
+    "arxiv_id": null,
+    "openalex_id": "W2894714913",
+    "short_name": null,
+    "authors": [
+      "Linchao Li",
+      "Jian Zhang",
+      "Yonggang Wang",
+      "Bin Ran"
+    ],
+    "affiliations": [],
+    "task_en": "Missing value imputation",
+    "task_zh": null,
+    "method_tags": [],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "classic_baseline"
+    ],
+    "direction_tags": [
+      "imputation_data_quality"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 90,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "stgcn-2018",
+    "year": 2018,
+    "order": 2,
+    "section": "deep_learning",
+    "title": "Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting",
+    "title_zh": null,
+    "venue": "IJCAI",
+    "venue_id": "ijcai",
+    "venue_type": "conference",
+    "paper_url": "https://doi.org/10.24963/ijcai.2018/505",
+    "alt_urls": {
+      "review": "https://openreview.net/forum?id=SkNeyVzOWB",
+      "paper-original": "https://www.ijcai.org/Proceedings/2018/0505.pdf"
+    },
+    "code_url": "https://github.com/VeritasYin/STSGCN",
+    "code_links": [
+      {
+        "label": "code",
+        "url": "https://github.com/VeritasYin/STSGCN"
+      }
+    ],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.24963/ijcai.2018/505",
+    "arxiv_id": null,
+    "openalex_id": "W2756203131",
+    "short_name": "STGCN",
+    "authors": [
+      "Bing Yu",
+      "Haoteng Yin",
+      "Zhanxing Zhu"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Graph Convolution",
+      "STGNN"
+    ],
+    "note_en": "Original code release; the paperswithcode landing page now redirects to arXiv.",
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "classic_baseline"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 91,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "lc-rnn-2018",
+    "year": 2018,
+    "order": 3,
+    "section": "deep_learning",
+    "title": "LC-RNN: A Deep Learning Model for Traffic Speed Prediction",
+    "title_zh": null,
+    "venue": "IJCAI",
+    "venue_id": "ijcai",
+    "venue_type": "conference",
+    "paper_url": "https://doi.org/10.24963/ijcai.2018/482",
+    "alt_urls": {
+      "paper-original": "https://www.ijcai.org/Proceedings/2018/482"
+    },
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.24963/ijcai.2018/482",
+    "arxiv_id": null,
+    "openalex_id": "W2807894308",
+    "short_name": "LC-RNN",
+    "authors": [
+      "Zhongjian Lv",
+      "Jiajie Xu",
+      "Kai Zheng",
+      "Hongzhi Yin",
+      "Pengpeng Zhao",
+      "Xiaofang Zhou"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic speed prediction",
+    "task_zh": null,
+    "method_tags": [
+      "RNN / LSTM"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "classic_baseline"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 92,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "geoman-2018",
+    "year": 2018,
+    "order": 4,
+    "section": "deep_learning",
+    "title": "GeoMAN: Multi-level Attention Networks for Geo-sensory Time Series Prediction",
+    "title_zh": null,
+    "venue": "IJCAI",
+    "venue_id": "ijcai",
+    "venue_type": "conference",
+    "paper_url": "https://doi.org/10.24963/ijcai.2018/476",
+    "alt_urls": {
+      "paper-original": "https://www.ijcai.org/Proceedings/2018/0476.pdf"
+    },
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.24963/ijcai.2018/476",
+    "arxiv_id": null,
+    "openalex_id": "W2808535700",
+    "short_name": "GeoMAN",
+    "authors": [
+      "Yuxuan Liang",
+      "Songyu Ke",
+      "Junbo Zhang",
+      "Xiuwen Yi",
+      "Yu Zheng"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "classic_baseline"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 93,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "diffusion-convolutional-recurrent-neural-network-2018",
+    "year": 2018,
+    "order": 5,
+    "section": "deep_learning",
+    "title": "Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting",
+    "title_zh": null,
+    "venue": "ICLR",
+    "venue_id": "iclr",
+    "venue_type": "conference",
+    "paper_url": "https://arxiv.org/abs/1707.01926",
+    "alt_urls": {
+      "review": "https://openreview.net/forum?id=SJiHXGWAZ"
+    },
+    "code_url": "https://github.com/liyaguang/DCRNN",
+    "code_links": [
+      {
+        "label": "code-official-tf",
+        "url": "https://github.com/liyaguang/DCRNN"
+      },
+      {
+        "label": "code-pytorch",
+        "url": "https://github.com/xlwang233/pytorch-DCRNN"
+      }
+    ],
+    "data_url": "https://drive.google.com/drive/folders/10FOTa6HXPqX8Pf5WRoRwcFnW9BrNZEIX?usp=drive_open",
+    "project_url": null,
+    "doi": "10.48550/arxiv.1707.01926",
+    "arxiv_id": "1707.01926",
+    "openalex_id": "W2768008502",
+    "short_name": null,
+    "authors": [
+      "Li, Yaguang",
+      "Rose Yu",
+      "Cyrus Shahabi",
+      "Yan Liu"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Diffusion"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "classic_baseline"
+    ],
+    "direction_tags": [
+      "diffusion_probabilistic"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 94,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "alt_years": [
+      2018
+    ]
+  },
+  {
+    "id": "hetero-convlstm-2018",
+    "year": 2018,
+    "order": 6,
+    "section": "deep_learning",
+    "title": "Hetero-ConvLSTM: A Deep Learning Approach to Traffic Accident Prediction on Heterogeneous Spatio-Temporal Data",
+    "title_zh": null,
+    "venue": "KDD",
+    "venue_id": "kdd",
+    "venue_type": "conference",
+    "paper_url": "https://doi.org/10.1145/3219819.3219922",
+    "alt_urls": {
+      "paper-original": "https://www.kdd.org/kdd2018/accepted-papers/view/hetero-convlstm-a-deep-learning-approach-to-traffic-accident-prediction-on-"
+    },
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1145/3219819.3219922",
+    "arxiv_id": null,
+    "openalex_id": "W2808862972",
+    "short_name": "Hetero-ConvLSTM",
+    "authors": [
+      "Zhuoning Yuan",
+      "Xun S. Zhou",
+      "Tianbao Yang"
+    ],
+    "affiliations": [],
+    "task_en": "Accident / incident prediction",
+    "task_zh": null,
+    "method_tags": [
+      "Spatio-Temporal CNN"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "classic_baseline"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 95,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "efficient-traffic-forecasting-with-graph-embeddi-2018",
+    "year": 2018,
+    "order": 7,
+    "section": "deep_learning",
+    "title": "Efficient Traffic Forecasting With Graph Embedding",
+    "title_zh": null,
+    "venue": "CS224W",
+    "venue_id": "cs224w",
+    "venue_type": "workshop",
+    "paper_url": "http://snap.stanford.edu/class/cs224w-2018/reports/CS224W-2018-42.pdf",
+    "alt_urls": {},
+    "code_url": "https://github.com/syin3/cs224w-traffic",
+    "code_links": [
+      {
+        "label": "code",
+        "url": "https://github.com/syin3/cs224w-traffic"
+      }
+    ],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Embedding"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "classic_baseline"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 96,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "social-gan-2018",
+    "year": 2018,
+    "order": 8,
+    "section": "deep_learning",
+    "title": "Social GAN: Socially Acceptable Trajectories with Generative Adversarial Networks",
+    "title_zh": null,
+    "venue": "CVPR",
+    "venue_id": "cvpr",
+    "venue_type": "conference",
+    "paper_url": "https://arxiv.org/abs/1803.10892",
+    "alt_urls": {
+      "paper-ieee": "https://ieeexplore.ieee.org/document/8578338"
+    },
+    "code_url": "https://github.com/agrimgupta92/sgan",
+    "code_links": [
+      {
+        "label": "code",
+        "url": "https://github.com/agrimgupta92/sgan"
+      }
+    ],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1109/cvpr.2018.00240",
+    "arxiv_id": "1803.10892",
+    "openalex_id": "W2794787653",
+    "short_name": "Social GAN",
+    "authors": [
+      "Agrim Gupta",
+      "Justin Johnson",
+      "Li Fei-Fei",
+      "Silvio Savarese",
+      "Alexandre Alahi"
+    ],
+    "affiliations": [],
+    "task_en": "Trajectory prediction",
+    "task_zh": null,
+    "method_tags": [
+      "GAN"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "classic_baseline"
+    ],
+    "direction_tags": [
+      "diffusion_probabilistic",
+      "trajectory_prediction"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 97,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "deep-multi-view-spatial-temporal-network-for-tax-2018",
+    "year": 2018,
+    "order": 9,
+    "section": "deep_learning",
+    "title": "Deep Multi-View Spatial-Temporal Network for Taxi Demand Prediction",
+    "title_zh": null,
+    "venue": "AAAI",
+    "venue_id": "aaai",
+    "venue_type": "conference",
+    "paper_url": "https://doi.org/10.1609/aaai.v32i1.11836",
+    "alt_urls": {
+      "paper-original": "https://ojs.aaai.org/index.php/AAAI/article/view/11836"
+    },
+    "code_url": "https://github.com/huaxiuyao/DMVST-Net",
+    "code_links": [
+      {
+        "label": "code",
+        "url": "https://github.com/huaxiuyao/DMVST-Net"
+      }
+    ],
+    "data_url": "https://outreach.didichuxing.com/appEn-vue/Personal",
+    "project_url": null,
+    "doi": "10.1609/aaai.v32i1.11836",
+    "arxiv_id": null,
+    "openalex_id": "W2788134583",
+    "short_name": null,
+    "authors": [
+      "Huaxiu Yao",
+      "Fei Qing Wu",
+      "Jintao Ke",
+      "Xianfeng Tang",
+      "Yitian Jia",
+      "Siyu Lu",
+      "Pinghua Gong",
+      "Jieping Ye",
+      "Zhenhui Li"
+    ],
+    "affiliations": [],
+    "task_en": "Demand prediction",
+    "task_zh": null,
+    "method_tags": [],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "classic_baseline"
+    ],
+    "direction_tags": [
+      "od_demand"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 98,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "probabilistic-data-fusion-for-short-term-traffic-2018",
+    "year": 2018,
+    "order": 10,
+    "section": "statistic",
+    "title": "Probabilistic Data Fusion for Short-Term Traffic Prediction With Semiparametric Density Ratio Model",
+    "title_zh": null,
+    "venue": "TITS",
+    "venue_id": "tits",
+    "venue_type": "journal",
+    "paper_url": "https://doi.org/10.1109/tits.2018.2866285",
+    "alt_urls": {
+      "paper-original": "https://ieeexplore.ieee.org/document/8479367"
+    },
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1109/tits.2018.2866285",
+    "arxiv_id": null,
+    "openalex_id": "W2894608620",
+    "short_name": null,
+    "authors": [
+      "Zheng Zhu",
+      "Xiqun Michael Chen",
+      "Xuechi Zhang",
+      "Lei Zhang"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Probabilistic"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "application"
+    ],
+    "direction_tags": [
+      "diffusion_probabilistic"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 236,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  }
+]

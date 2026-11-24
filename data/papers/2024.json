@@ -1,0 +1,220 @@
+[
+  {
+    "id": "unist-2024",
+    "year": 2024,
+    "order": 1,
+    "section": "deep_learning",
+    "title": "UniST: A Prompt-Empowered Universal Model for Urban Spatio-Temporal Prediction",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "https://arxiv.org/abs/2402.11838",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": "2402.11838",
+    "openalex_id": null,
+    "short_name": "UniST",
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Urban spatio-temporal prediction",
+    "task_zh": "城市时空预测",
+    "method_tags": [
+      "Prompting",
+      "Foundation Model"
+    ],
+    "note_en": "Universal/prompt-based perspective",
+    "note_zh": "偏通用模型与提示式框架",
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "st_foundation_llm"
+    ],
+    "featured": true,
+    "in_digest": true,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "manual",
+      "confidence": "medium"
+    },
+    "provenance": {
+      "source": "curated_json",
+      "readme_line": null,
+      "legacy_id": "unist-2024",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "cool-2024",
+    "year": 2024,
+    "order": 2,
+    "section": "deep_learning",
+    "title": "COOL: A Conjoint Perspective on Spatio-Temporal Graph Neural Network for Traffic Forecasting",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "https://arxiv.org/abs/2403.01091",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": "2403.01091",
+    "openalex_id": null,
+    "short_name": "COOL",
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": "交通预测",
+    "method_tags": [
+      "STGNN",
+      "Graph Modeling"
+    ],
+    "note_en": "Conjoint STGNN perspective",
+    "note_zh": "联合视角的 STGNN 建模",
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": true,
+    "in_digest": true,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "manual",
+      "confidence": "medium"
+    },
+    "provenance": {
+      "source": "curated_json",
+      "readme_line": null,
+      "legacy_id": "cool-2024",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "gstrgct-2024",
+    "year": 2024,
+    "order": 3,
+    "section": "deep_learning",
+    "title": "Generalized spatial–temporal regression graph convolutional transformer for traffic forecasting",
+    "title_zh": null,
+    "venue": "Complex & Intelligent Systems",
+    "venue_id": "complex-intelligent-systems",
+    "venue_type": "journal",
+    "paper_url": "https://link.springer.com/article/10.1007/s40747-024-01578-x",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": "GSTRGCT",
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": "交通预测",
+    "method_tags": [
+      "Transformer",
+      "GCN"
+    ],
+    "note_en": "Regression + graph transformer design",
+    "note_zh": "回归与图 Transformer 结合",
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "long_horizon_transformer"
+    ],
+    "featured": true,
+    "in_digest": true,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "manual",
+      "confidence": "medium"
+    },
+    "provenance": {
+      "source": "curated_json",
+      "readme_line": null,
+      "legacy_id": "gstrgct-2024",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "fl-stgnn-2024",
+    "year": 2024,
+    "order": 4,
+    "section": "deep_learning",
+    "title": "Traffic Flow Prediction Based on Federated Learning and Spatio-Temporal Graph Neural Networks",
+    "title_zh": null,
+    "venue": "ISPRS IJGI",
+    "venue_id": "isprs-ijgi",
+    "venue_type": "journal",
+    "paper_url": "https://www.mdpi.com/2220-9964/13/6/210",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": "FL + STGNN",
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": "交通流预测",
+    "method_tags": [
+      "Federated Learning",
+      "STGNN"
+    ],
+    "note_en": "Privacy-aware distributed training setting",
+    "note_zh": "联邦学习场景下的时空图建模",
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "privacy_federated"
+    ],
+    "featured": true,
+    "in_digest": true,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "manual",
+      "confidence": "medium"
+    },
+    "provenance": {
+      "source": "curated_json",
+      "readme_line": null,
+      "legacy_id": "fl-stgnn-2024",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  }
+]

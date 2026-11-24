@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Coolgiserz/Awesome-Traffic-Prediction/data/schema/research-group.schema.json",
+  "title": "ResearchGroup",
+  "description": "Lab / company listed under README 0x05 Research Group.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "org_type"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "e.g. fib-tsinghua, deepmind, bjtu-wan-group."
+    },
+    "name": {"type": "string"},
+    "name_zh": {"type": ["string", "null"]},
+    "org_type": {"type": "string", "enum": ["college", "company"]},
+    "institution": {"type": ["string", "null"], "description": "University or company name."},
+    "pi": {"type": ["string", "null"], "description": "Principal investigator when public."},
+    "url": {"type": ["string", "null"], "pattern": "^https?://"},
+    "country": {"type": ["string", "null"], "pattern": "^[A-Z]{2}$"},
+    "focus_tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["urban_science", "spatio_temporal", "its", "traffic_control", "autonomous_driving", "mobility_analytics", "ml_systems"]
+      }
+    },
+    "description_en": {"type": ["string", "null"]},
+    "description_zh": {"type": ["string", "null"]},
+    "paper_ids": {"type": "array", "items": {"type": "string"}},
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source": {"type": "string", "enum": ["readme_migration", "manual"]},
+        "readme_line": {"type": "integer", "minimum": 0},
+        "migrated_at": {"type": "string", "format": "date"}
+      }
+    }
+  }
+}

@@ -1,0 +1,215 @@
+[
+  {
+    "id": "spatial-temporal-graph-neural-network-for-traffi-2022",
+    "year": 2022,
+    "order": 1,
+    "section": "reviews",
+    "title": "Spatial-temporal graph neural network for traffic forecasting: An overview and open research issues",
+    "title_zh": null,
+    "venue": "Applied Intelligence",
+    "venue_id": "applied-intelligence",
+    "venue_type": "journal",
+    "paper_url": "https://link.springer.com/content/pdf/10.1007/s10489-021-02587-w.pdf",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Survey",
+    "task_zh": null,
+    "method_tags": [
+      "STGNN"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "survey"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 69,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "2f-tp-2022",
+    "year": 2022,
+    "order": 2,
+    "section": "deep_learning",
+    "title": "2F-TP:Learning Flexible Spatiotemporal Dependency for Flexible Traffic Prediction",
+    "title_zh": null,
+    "venue": "TITS",
+    "venue_id": "tits",
+    "venue_type": "journal",
+    "paper_url": "https://ieeexplore.ieee.org/abstract/document/9703274/",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": null,
+    "openalex_id": null,
+    "short_name": "2F-TP",
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 169,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "pre-training-enhanced-spatial-temporal-graph-neu-2022",
+    "year": 2022,
+    "order": 3,
+    "section": "deep_learning",
+    "title": "Pre-training Enhanced Spatial-temporal Graph Neural Network",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "https://arxiv.org/pdf/2206.09113.pdf",
+    "alt_urls": {
+      "paper-original": "https://arxiv.org/pdf/2206.09113.pdf"
+    },
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": "2206.09113",
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "STGNN",
+      "Foundation Model"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "st_foundation_llm"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "dead_link",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 170,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "a-lightweight-and-accurate-spatial-temporal-tran-2022",
+    "year": 2022,
+    "order": 4,
+    "section": "deep_learning",
+    "title": "A Lightweight and Accurate Spatial-Temporal Transformer for Traffic Forecasting",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "https://arxiv.org/pdf/2201.00008.pdf",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": "2201.00008",
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "long_horizon_transformer"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "readme_migration",
+      "confidence": "low"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 172,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  }
+]

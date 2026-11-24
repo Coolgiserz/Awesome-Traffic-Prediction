@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Coolgiserz/Awesome-Traffic-Prediction/data/schema/lineage.schema.json",
+  "title": "Lineage",
+  "description": "One research-lineage node. Mirrors research-lineage.md sections as machine-readable stages with explicit parent/child edges.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "title_en", "stage", "era"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "e.g. statistical-baseline, graph-neural-paradigm, structure-learning."
+    },
+    "stage": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Ordinal stage number, must match research-lineage.md heading order."
+    },
+    "era": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from_year"],
+      "properties": {
+        "from_year": {"type": "integer"},
+        "to_year": {"type": ["integer", "null"]}
+      }
+    },
+    "title_en": {"type": "string"},
+    "title_zh": {"type": ["string", "null"]},
+    "summary_en": {"type": ["string", "null"]},
+    "summary_zh": {"type": ["string", "null"]},
+    "parent_ids": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Stages this one builds on; empty for the root stage."
+    },
+    "child_ids": {"type": "array", "items": {"type": "string"}},
+    "anchor_paper_ids": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Representative papers for this stage; must exist in data/papers/."
+    },
+    "anchor_dataset_ids": {"type": "array", "items": {"type": "string"}},
+    "direction_tags": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Same enum as paper.schema.json#/properties/direction_tags."
+    },
+    "notes": {"type": ["string", "null"]}
+  }
+}

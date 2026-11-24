@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Coolgiserz/Awesome-Traffic-Prediction/data/schema/toolkit.schema.json",
+  "title": "Toolkit",
+  "description": "Software library / benchmark suite / related repository listed under 0x03 Toolkits or 0x06 Related Repositories.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "url", "kind"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "e.g. libcity, pytorch-geometric-temporal, traffic-benchmark."
+    },
+    "name": {"type": "string"},
+    "name_zh": {"type": ["string", "null"]},
+    "repo": {
+      "type": ["string", "null"],
+      "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$",
+      "description": "GitHub owner/repo when applicable."
+    },
+    "url": {"type": "string", "pattern": "^https?://"},
+    "kind": {
+      "type": "string",
+      "enum": ["library", "benchmark_suite", "routing_engine", "tutorial_site", "related_repo", "awesome_list"],
+      "description": "benchmark_suite => README 0x03; related_repo => README 0x06."
+    },
+    "language": {"type": ["string", "null"], "description": "python / cpp / mixed."},
+    "frameworks": {"type": "array", "items": {"type": "string"}},
+    "supported_tasks": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["traffic_flow", "traffic_speed", "travel_time", "trajectory", "od_demand", "generic_st"]
+      }
+    },
+    "bundled_datasets": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "dataset ids shipped or downloadable through the toolkit."
+    },
+    "implements_paper_ids": {"type": "array", "items": {"type": "string"}},
+    "last_release": {"type": ["string", "null"], "format": "date"},
+    "maintained": {"type": "boolean", "default": true},
+    "description_en": {"type": ["string", "null"]},
+    "description_zh": {"type": ["string", "null"]},
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source": {"type": "string", "enum": ["readme_migration", "manual"]},
+        "readme_line": {"type": "integer", "minimum": 0},
+        "migrated_at": {"type": "string", "format": "date"}
+      }
+    }
+  }
+}

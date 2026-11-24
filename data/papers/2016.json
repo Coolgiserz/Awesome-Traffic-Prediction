@@ -1,0 +1,65 @@
+[
+  {
+    "id": "dnn-based-prediction-model-for-spatio-temporal-d-2016",
+    "year": 2016,
+    "order": 1,
+    "section": "deep_learning",
+    "title": "DNN-Based Prediction Model for Spatio-Temporal Data",
+    "title_zh": null,
+    "venue": "Sigspatial",
+    "venue_id": "sigspatial",
+    "venue_type": "conference",
+    "paper_url": "https://doi.org/10.1145/2996913.2997016",
+    "alt_urls": {
+      "paper-original": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/09/DeepST-SIGSPATIAL2016.pdf"
+    },
+    "code_url": "https://arxiv.org/pdf/1610.00081.pdf",
+    "code_links": [
+      {
+        "label": "code",
+        "url": "https://arxiv.org/pdf/1610.00081.pdf"
+      }
+    ],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1145/2996913.2997016",
+    "arxiv_id": null,
+    "openalex_id": "W2530386080",
+    "short_name": null,
+    "authors": [
+      "Junbo Zhang",
+      "Yu Zheng",
+      "Dekang Qi",
+      "Ruiyuan Li",
+      "Xiuwen Yi"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "classic_baseline"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 79,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  }
+]

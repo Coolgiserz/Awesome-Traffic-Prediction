@@ -1,0 +1,173 @@
+[
+  {
+    "id": "deep-spatio-temporal-residual-networks-for-cityw-2017",
+    "year": 2017,
+    "order": 1,
+    "section": "deep_learning",
+    "title": "Deep Spatio-Temporal Residual Networks for Citywide Crowd Flows Prediction",
+    "title_zh": null,
+    "venue": "AAAI",
+    "venue_id": "aaai",
+    "venue_type": "conference",
+    "paper_url": "https://arxiv.org/pdf/1610.00081.pdf",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1609/aaai.v31i1.10735",
+    "arxiv_id": "1610.00081",
+    "openalex_id": "W2528639018",
+    "short_name": null,
+    "authors": [
+      "Junbo Zhang",
+      "Yu Zheng",
+      "Dekang Qi"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "classic_baseline"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 83,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "road2vec-2017",
+    "year": 2017,
+    "order": 2,
+    "section": "deep_learning",
+    "title": "Road2Vec: Measuring Traffic Interactions in Urban Road System from Massive Travel Routes",
+    "title_zh": null,
+    "venue": "ISPRS",
+    "venue_id": "isprs-ijgi",
+    "venue_type": "journal",
+    "paper_url": "https://doi.org/10.3390/ijgi6110321",
+    "alt_urls": {
+      "paper-original": "https://www.mdpi.com/2220-9964/6/11/321"
+    },
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.3390/ijgi6110321",
+    "arxiv_id": null,
+    "openalex_id": "W2766790689",
+    "short_name": "Road2Vec",
+    "authors": [
+      "Kang Liu",
+      "Song Gao",
+      "Peiyuan Qiu",
+      "Xiliang Liu",
+      "Bo Yan",
+      "Feng Lu"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "classic_baseline"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 84,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "deeptransport-2017",
+    "year": 2017,
+    "order": 3,
+    "section": "deep_learning",
+    "title": "DeepTransport: Learning Spatial-Temporal Dependency for Traffic Condition Forecasting",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "https://arxiv.org/pdf/1709.09585.pdf",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1109/ijcnn.2018.8489600",
+    "arxiv_id": "1709.09585",
+    "openalex_id": "W2963440544",
+    "short_name": "DeepTransport",
+    "authors": [
+      "Xingyi Cheng",
+      "Ruiqing Zhang",
+      "Jie Zhou",
+      "Wei Xu"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "classic_baseline"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "readme_migration",
+      "readme_line": 85,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "alt_years": [
+      2017
+    ]
+  }
+]
