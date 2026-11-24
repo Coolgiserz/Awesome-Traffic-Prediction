@@ -1,0 +1,53 @@
+---
+import DocsPage from '../components/DocsPage.astro';
+import type { Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const en = {
+  title: 'Toolkits',
+  lead: 'Frameworks that already implement the standard spatio-temporal baselines and the METR-LA / PEMS-BAY pipelines.',
+  sections: [
+    {
+      heading: 'Core toolkits',
+      rows: [
+        { label: 'LibCity', href: 'https://libcity.ai', note: 'Unified platform: 60+ traffic prediction models, data + evaluation' },
+        { label: 'PyTorch Geometric Temporal', href: 'https://pytorch-geometric-temporal.readthedocs.io/en/latest/', note: 'Spatio-temporal GNN layers on PyG' },
+        { label: 'Traffic-Benchmark', href: 'https://github.com/tsinghua-fib-lab/Traffic-Benchmark', note: 'KDD 2021 benchmark + reproducible pipelines' },
+        { label: 'BasicTS', href: 'https://github.com/GestaltCogTeam/BasicTS', note: 'Standard time-series forecasting benchmark suite' },
+        { label: 'OpenSTL', href: 'https://github.com/chengtan9907/OpenSTL', note: 'Spatio-temporal predictive learning benchmark' },
+        { label: 'Open Source Routing Machine', href: 'http://project-osrm.org', note: 'Routing / ETA backend for road networks' },
+        { label: 'UrbanPy', href: 'https://github.com/EL-BID/urbanpy', note: 'Urban data download + accessibility analysis' },
+        { label: 'transdim', href: 'https://github.com/xinychen/transdim', note: 'Spatio-temporal imputation + prediction baselines' },
+      ],
+    },
+  ],
+};
+
+const zh = {
+  title: '工具库',
+  lead: '已内置标准时空基线以及 METR-LA / PEMS-BAY 数据流水线的框架。',
+  sections: [
+    {
+      heading: '核心工具',
+      rows: [
+        { label: 'LibCity', href: 'https://libcity.ai', note: '统一平台：60+ 交通预测模型、数据与评测' },
+        { label: 'PyTorch Geometric Temporal', href: 'https://pytorch-geometric-temporal.readthedocs.io/en/latest/', note: '基于 PyG 的时空图网络层' },
+        { label: 'Traffic-Benchmark', href: 'https://github.com/tsinghua-fib-lab/Traffic-Benchmark', note: 'KDD 2021 基准与可复现流水线' },
+        { label: 'BasicTS', href: 'https://github.com/GestaltCogTeam/BasicTS', note: '时序预测标准评测套件' },
+        { label: 'OpenSTL', href: 'https://github.com/chengtan9907/OpenSTL', note: '时空预测学习基准' },
+        { label: 'OSRM', href: 'http://project-osrm.org', note: '路网寻路 / ETA 后端' },
+        { label: 'UrbanPy', href: 'https://github.com/EL-BID/urbanpy', note: '城市数据下载与可达性分析' },
+        { label: 'transdim', href: 'https://github.com/xinychen/transdim', note: '时空插补与预测基线' },
+      ],
+    },
+  ],
+};
+
+const d = lang === 'zh' ? zh : en;
+---
+
+<DocsPage lang={lang} route="toolkits" title={d.title} lead={d.lead} sections={d.sections} />

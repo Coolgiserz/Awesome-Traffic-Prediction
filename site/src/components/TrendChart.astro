@@ -1,0 +1,115 @@
+---
+// TrendChart — ECharts wrapper with a zero-JS fallback.
+// Contract: `spec` is a JSON-safe ECharts option; it is emitted as a data
+// attribute (no client templating); ECharts is dynamically imported only on
+// pages that render a chart; the <details> block carries the same numbers as a
+// plain table so no-JS visitors and crawlers get the data, not an empty canvas.
+interface Props {
+  id: string;
+  title: string;
+  hint?: string;
+  /** ECharts option object, already JSON-safe. */
+  spec: Record<string, unknown>;
+  height?: number;
+  fallback: { headers: string[]; rows: (string | number)[][] };
+}
+
+const { id, title, hint, spec, height = 260, fallback } = Astro.props;
+const specJson = JSON.stringify(spec);
+---
+
+<figure class="chart-card" style="margin:0">
+  <h3>{title}</h3>
+  {hint && <p class="hint">{hint}</p>}
+  <div
+    class="chart"
+    style={`height:${height}px`}
+    data-chart={id}
+    data-chart-spec={specJson}
+    role="img"
+    aria-label={title}
+  >
+  </div>
+  <details class="fallback">
+    <summary>Table view (no-JS fallback)</summary>
+    <div class="scroll-x">
+      <table class="data">
+        <thead>
+          <tr>{fallback.headers.map((h) => <th>{h}</th>)}</tr>
+        </thead>
+        <tbody>
+          {
+            fallback.rows.map((row) => (
+              <tr>
+                {row.map((cell) => (
+                  <td>{cell}</td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </details>
+</figure>
+
+<script>
+  // One loader handles every chart on the page: a single dynamic import of
+  // echarts/core + the pieces we actually use.
+  async function initCharts() {
+    const nodes = Array.from(document.querySelectorAll<HTMLElement>('[data-chart]'));
+    if (nodes.length === 0) return;
+
+    const [core, charts, components, renderers] = await Promise.all([
+      import('echarts/core'),
+      import('echarts/charts'),
+      import('echarts/components'),
+      import('echarts/renderers'),
+    ]);
+
+    core.use([
+      charts.BarChart,
+      charts.LineChart,
+      charts.PieChart,
+      charts.HeatmapChart,
+      components.GridComponent,
+      components.TooltipComponent,
+      components.LegendComponent,
+      components.TitleComponent,
+      components.DataZoomComponent,
+      components.VisualMapComponent,
+      renderers.CanvasRenderer,
+    ]);
+
+    for (const node of nodes) {
+      if (!node.dataset.chartSpec) continue;
+      let spec: Record<string, unknown>;
+      try {
+        spec = JSON.parse(node.dataset.chartSpec);
+      } catch {
+        continue;
+      }
+      const chart = core.init(node, undefined, { renderer: 'canvas' });
+      chart.setOption(spec as never);
+      new ResizeObserver(() => chart.resize()).observe(node);
+    }
+  }
+
+  // Defer until a chart is near the viewport: the trends page has 4 charts and
+  // the home page 3, and none of them should block first paint.
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(
+      (entries, obs) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          obs.disconnect();
+          void initCharts();
+        }
+      },
+      { rootMargin: '200px' },
+    );
+    const first = document.querySelector('[data-chart]');
+    if (first) io.observe(first);
+  } else {
+    void initCharts();
+  }
+</script>

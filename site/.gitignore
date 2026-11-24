@@ -1,0 +1,12 @@
+# build output
+dist/
+.astro/
+node_modules/
+
+# generated at build time from data/papers or README (do not commit)
+src/data/papers.generated.json
+public/_data.json
+
+# stray stores from local installs
+.pnpm-store/
+package-lock.json

@@ -1,0 +1,240 @@
+---
+/**
+ * SearchPage — Pagefind UI + facet sidebar (shared by /search/ and /zh/search/).
+ *
+ * Pagefind indexes dist/ AFTER `astro build` (`pagefind --site dist`). The index
+ * needs no server, no API key and no Algolia account.
+ *
+ * The index carries two facets (`year`, `venue`) emitted by PaperList.astro via
+ * `data-pagefind-filter`. Pagefind's stock UI does not render filter controls,
+ * so the sidebar below is a thin layer over the same Pagefind JS API
+ * (`pagefind.search()` with `{ filters }`, and `data.filters` for counts).
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ui, type Lang } from '../lib/i18n';
+import { withBase } from '../lib/url';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const pagefindBase = withBase('/pagefind/');
+const papersUrl = withBase(lang === 'zh' ? '/zh/papers/' : '/papers/');
+---
+
+<BaseLayout lang={lang} title={`${t.search.title} — ${t.siteName}`} description={t.search.placeholder} route="papers">
+  <div class="wrap search-wrap">
+    <h2>{t.search.title}</h2>
+    <p class="section-lead">{t.search.placeholder}</p>
+
+    <div class="search-layout">
+      <aside class="search-facets" id="search-facets" data-lang={lang} hidden>
+        <p class="facet-title">{t.papers.filters}</p>
+        <div class="facet-block" data-facet-block="year">
+          <p class="facet-label">{t.papers.year}</p>
+          <div class="facet-values" data-values></div>
+        </div>
+        <div class="facet-block" data-facet-block="venue">
+          <p class="facet-label">{t.papers.venue}</p>
+          <div class="facet-values" data-values></div>
+        </div>
+        <button class="btn" id="search-clear" type="button">{t.papers.reset}</button>
+      </aside>
+
+      <div class="search-main">
+        <div id="search" data-pf-base={pagefindBase} data-placeholder={t.search.placeholder}></div>
+        <p class="result-count" id="search-count" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <noscript>
+      <p class="notice">
+        <slot name="noscript">
+          Search requires JavaScript. Browse the <a href={papersUrl}>paper library</a> instead.
+        </slot>
+      </p>
+    </noscript>
+  </div>
+</BaseLayout>
+
+<style is:global>
+  /* Pagefind ships its own variables; align them with the site palette. */
+  :root {
+    --pagefind-ui-scale: 0.9;
+    --pagefind-ui-primary: var(--accent);
+    --pagefind-ui-text: var(--fg);
+    --pagefind-ui-background: var(--bg-card);
+    --pagefind-ui-border: var(--border);
+    --pagefind-ui-tag: var(--bg-soft);
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: 6px;
+    --pagefind-ui-font: var(--font);
+  }
+  .pagefind-ui__result-title { font-size: 15px; }
+  .pagefind-ui__result-excerpt { color: var(--fg-muted); font-size: 13.5px; }
+</style>
+
+<style>
+  .search-wrap {
+    padding: 28px 0 60px;
+  }
+  .search-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 200px) minmax(0, 1fr);
+    gap: 26px;
+    align-items: start;
+  }
+  @media (max-width: 760px) {
+    .search-layout { grid-template-columns: 1fr; }
+  }
+  .search-facets {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    background: var(--bg-card);
+    font-size: 13px;
+    position: sticky;
+    top: 12px;
+  }
+  .facet-title { margin: 0 0 8px; font-weight: 600; }
+  .facet-block + .facet-block { margin-top: 12px; }
+  .facet-label {
+    margin: 0 0 6px;
+    color: var(--fg-muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .facet-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    max-height: 220px;
+    overflow: auto;
+  }
+  .facet-values button {
+    border: 1px solid var(--border);
+    background: transparent;
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    color: var(--fg);
+  }
+  .facet-values button[aria-pressed='true'] {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .facet-values button .n {
+    color: var(--fg-muted);
+    margin-left: 4px;
+    font-variant-numeric: tabular-nums;
+  }
+  .facet-values button[aria-pressed='true'] .n { color: rgba(255, 255, 255, 0.8); }
+</style>
+
+<script>
+  import { ui as strings } from '../lib/i18n';
+
+  type FacetMap = Record<string, Record<string, number>>;
+
+  const holder = document.getElementById('search');
+  const facetsEl = document.getElementById('search-facets');
+  const countEl = document.getElementById('search-count');
+  const clearEl = document.getElementById('search-clear');
+  const lang = (facetsEl?.dataset.lang ?? 'en') as 'en' | 'zh';
+  const labels = strings[lang];
+
+  if (holder) {
+    const base = holder.dataset.pfBase!;
+    const active: Record<string, Set<string>> = { year: new Set(), venue: new Set() };
+    let pagefind: any = null;
+    let pagefindUI: any = null;
+
+    const order = (map: Record<string, number>) =>
+      Object.entries(map).sort((a, b) =>
+        /^\d+$/.test(a[0])
+          ? Number(b[0]) - Number(a[0])
+          : b[1] - a[1] || a[0].localeCompare(b[0]),
+      );
+
+    function renderFacets(facets: FacetMap) {
+      if (!facetsEl) return;
+      facetsEl.hidden = false;
+      for (const [key, values] of Object.entries(facets)) {
+        const block = facetsEl.querySelector<HTMLElement>(`[data-facet-block="${key}"]`);
+        const list = block?.querySelector<HTMLElement>('[data-values]');
+        if (!list) continue;
+        // Keep a selected value visible even when the new result set drops it.
+        const merged: Record<string, number> = { ...values };
+        for (const v of active[key] ?? []) merged[v] ??= 0;
+        list.innerHTML = '';
+        for (const [value, count] of order(merged).slice(0, 40)) {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.dataset.key = key;
+          btn.dataset.value = value;
+          btn.setAttribute('aria-pressed', active[key]?.has(value) ? 'true' : 'false');
+          btn.innerHTML = `${value}<span class="n">${count}</span>`;
+          list.appendChild(btn);
+        }
+      }
+    }
+
+    async function refresh() {
+      if (!pagefind) return;
+      const filters: Record<string, string[]> = {};
+      for (const [k, set] of Object.entries(active)) if (set.size) filters[k] = [...set];
+      const term = ((holder!.querySelector('input') as HTMLInputElement | null)?.value ?? '').trim();
+      const result = await pagefind.search(
+        term || null,
+        Object.keys(filters).length ? { filters } : undefined,
+      );
+      if (countEl) countEl.textContent = `${result.results.length} ${labels.papers.shown}`;
+      renderFacets(result.filters ?? {});
+    }
+
+    const load = async () => {
+      pagefind = await import(/* @vite-ignore */ `${base}pagefind.js`);
+      await pagefind.options?.({});
+      const { default: PagefindUI } = await import(/* @vite-ignore */ `${base}pagefind-ui.js`);
+      pagefindUI = new PagefindUI({
+        element: holder,
+        showSubResults: true,
+        showImages: false,
+        resetStyles: false,
+        translations: { placeholder: holder.dataset.placeholder || 'Search…' },
+      });
+      holder.querySelector('input')?.addEventListener('input', () => void refresh());
+      void refresh();
+    };
+
+    document.addEventListener('click', (ev) => {
+      const btn = (ev.target as HTMLElement).closest<HTMLElement>('[data-key]');
+      if (!btn) return;
+      const key = btn.dataset.key!;
+      const value = btn.dataset.value!;
+      const set = active[key];
+      if (!set) return;
+      if (set.has(value)) set.delete(value);
+      else set.add(value);
+      void refresh();
+    });
+
+    clearEl?.addEventListener('click', () => {
+      for (const set of Object.values(active)) set.clear();
+      const input = holder.querySelector('input') as HTMLInputElement | null;
+      if (input) {
+        input.value = '';
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+      void refresh();
+    });
+
+    holder.addEventListener('focusin', () => void load(), { once: true });
+    void load();
+  }
+</script>

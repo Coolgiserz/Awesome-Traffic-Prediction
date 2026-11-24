@@ -1,0 +1,15 @@
+---
+/**
+ * /zh/papers/<id>/ — Chinese paper detail route (same data, zh labels).
+ */
+import PaperDetail from '../../../components/PaperDetail.astro';
+import { papers } from '../../../lib/papers';
+
+export function getStaticPaths() {
+  return papers.map((paper) => ({ params: { id: paper.id }, props: { paper } }));
+}
+
+const { paper } = Astro.props;
+---
+
+<PaperDetail lang="zh" paper={paper} />

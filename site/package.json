@@ -1,0 +1,28 @@
+{
+  "name": "awesome-traffic-prediction-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Static documentation site for Awesome Traffic Prediction (Astro + Pagefind + ECharts)",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "node scripts/prepare-data.mjs && astro build && pagefind --site dist",
+    "build:fast": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "sync-data": "node scripts/prepare-data.mjs --force",
+    "clean": "rm -rf dist .astro node_modules/.astro public/_data.json",
+    "data": "node scripts/prepare-data.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.4.13"
+  },
+  "devDependencies": {
+    "echarts": "^6.1.0",
+    "pagefind": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

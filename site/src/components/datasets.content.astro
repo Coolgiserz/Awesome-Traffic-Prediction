@@ -1,0 +1,89 @@
+---
+/**
+ * Datasets page. Sources README 0x02 DataSource + datasets/*.md existence.
+ * Content is declared as data so the zh twin stays a one-line import.
+ */
+import DocsPage from '../components/DocsPage.astro';
+import type { Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const en = {
+  title: 'Datasets',
+  lead: 'Public traffic datasets grouped by region and signal. Time granularity, missing rate and split policy decide whether two papers are comparable at all.',
+  sections: [
+    {
+      heading: 'Non-China region',
+      rows: [
+        { label: 'METR-LA', href: 'https://github.com/liyaguang/DCRNN', note: '207 loop sensors, Los Angeles, 5 min speed — local page: datasets/METR.md' },
+        { label: 'PEMS-BAY', href: 'https://pems.dot.ca.gov', note: '325 sensors, Bay Area, 5 min speed' },
+        { label: 'PEMS-SF (UCI)', href: 'https://archive.ics.uci.edu/ml/datasets/PEMS-SF', note: 'Detector occupancy per station' },
+        { label: 'NYC Taxi', href: 'https://www.kaggle.com/c/nyc-taxi-trip-duration', note: 'Trip records, OD demand' },
+        { label: 'NYC Bike (Citi Bike)', href: 'https://www.citibikenyc.com/system-data', note: 'Station-level bike demand' },
+        { label: 'Seattle Loop Detector', href: 'https://github.com/zhiyongc/Seattle-Loop-Data', note: 'Loop detector speed/flow' },
+        { label: 'Apolloscape', href: 'http://apolloscape.auto/trajectory.html', note: 'Trajectory + LiDAR + camera' },
+        { label: 'Cityscapes', href: 'https://www.cityscapes-dataset.com', note: 'Urban scene, not a forecasting benchmark' },
+        { label: 'QLD road data', href: 'https://www.data.qld.gov.au/dataset/road-location-and-traffic-data', note: 'Road location + traffic' },
+      ],
+    },
+    {
+      heading: 'China region',
+      rows: [
+        { label: 'DiDi Gaia', href: 'https://outreach.didichuxing.com/', note: "Xi'an road network + traffic state" },
+        { label: 'Baidu Open Data', href: 'https://ai.baidu.com/broad/download?dataset=traffic', note: 'Traffic flow release' },
+        { label: 'HZJTD', href: 'http://www.hzjtydzs.com/index2.html', note: 'Hangzhou 202-road condition index' },
+      ],
+    },
+    {
+      heading: 'Commute / land use',
+      rows: [
+        { label: 'LEHD (US Census)', href: 'https://lehd.ces.census.gov/data/', note: 'Origin-destination commute flow' },
+        { label: 'PLUTO (NYC)', href: 'https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page', note: 'Land use / POI attributes' },
+      ],
+    },
+  ],
+};
+
+const zh = {
+  title: '数据集',
+  lead: '按区域与信号类型整理的公开交通数据集。时间粒度、缺失率与切分方式决定了不同论文是否真的可比。',
+  sections: [
+    {
+      heading: '非中国区域',
+      rows: [
+        { label: 'METR-LA', href: 'https://github.com/liyaguang/DCRNN', note: '洛杉矶 207 个线圈，5 分钟速度 — 本仓库页面：datasets/METR.md' },
+        { label: 'PEMS-BAY', href: 'https://pems.dot.ca.gov', note: '湾区 325 个传感器，5 分钟速度' },
+        { label: 'PEMS-SF (UCI)', href: 'https://archive.ics.uci.edu/ml/datasets/PEMS-SF', note: '站点占有率' },
+        { label: 'NYC Taxi', href: 'https://www.kaggle.com/c/nyc-taxi-trip-duration', note: '行程记录 / OD 需求' },
+        { label: 'NYC Bike (Citi Bike)', href: 'https://www.citibikenyc.com/system-data', note: '站点级骑行需求' },
+        { label: 'Seattle Loop', href: 'https://github.com/zhiyongc/Seattle-Loop-Data', note: '线圈速度/流量' },
+        { label: 'Apolloscape', href: 'http://apolloscape.auto/trajectory.html', note: '轨迹 + 激光雷达 + 相机' },
+        { label: 'Cityscapes', href: 'https://www.cityscapes-dataset.com', note: '城市场景，非预测基准' },
+        { label: 'QLD 道路数据', href: 'https://www.data.qld.gov.au/dataset/road-location-and-traffic-data', note: '路网位置与交通量' },
+      ],
+    },
+    {
+      heading: '中国区域',
+      rows: [
+        { label: 'DiDi Gaia', href: 'https://outreach.didichuxing.com/', note: '西安路网结构与交通状态' },
+        { label: 'Baidu Open Data', href: 'https://ai.baidu.com/broad/download?dataset=traffic', note: '交通流数据' },
+        { label: 'HZJTD', href: 'http://www.hzjtydzs.com/index2.html', note: '杭州 202 条道路交通指数' },
+      ],
+    },
+    {
+      heading: '通勤 / 土地利用',
+      rows: [
+        { label: 'LEHD（美国普查局）', href: 'https://lehd.ces.census.gov/data/', note: '起讫通勤流' },
+        { label: 'PLUTO（纽约）', href: 'https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page', note: '土地利用 / POI 属性' },
+      ],
+    },
+  ],
+};
+
+const d = lang === 'zh' ? zh : en;
+---
+
+<DocsPage lang={lang} route="datasets" title={d.title} lead={d.lead} sections={d.sections} />

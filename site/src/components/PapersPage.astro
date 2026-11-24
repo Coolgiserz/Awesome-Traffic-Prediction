@@ -1,0 +1,43 @@
+---
+/**
+ * PapersPage — shared body for `/papers/` (en) and `/zh/papers/` (zh).
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PaperList from '../components/PaperList.astro';
+import { ui, type Lang } from '../lib/i18n';
+import { papers, years, venues, tasks, methodTags, provenance } from '../lib/papers';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${t.papers.title} — ${t.siteName}`}
+  description={t.papers.lead}
+  route="papers"
+>
+  <div class="wrap" style="padding-top:28px">
+    <h2>{t.papers.title}</h2>
+    <p class="section-lead">{t.papers.lead}</p>
+    {
+      provenance.degraded && (
+        <p class="notice">
+          {t.provenance.degraded} <code>{provenance.source}</code>
+        </p>
+      )
+    }
+    <PaperList
+      lang={lang}
+      papers={papers}
+      years={years}
+      venues={venues}
+      tasks={tasks}
+      methodTags={methodTags}
+    />
+  </div>
+  <p slot="footer-meta">{t.footer.dataSource}: <code>{provenance.source}</code></p>
+</BaseLayout>

@@ -1,0 +1,57 @@
+---
+/**
+ * LineagePage — chronological research lineage view.
+ * Full year list (no truncation) with links, 1 column on mobile.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ui, type Lang } from '../lib/i18n';
+import { lineage, stats } from '../lib/papers';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang];
+const timeline = lineage();
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${t.lineage.title} — ${t.siteName}`}
+  description={t.lineage.lead}
+  route="lineage"
+>
+  <div class="wrap" style="padding-top:28px">
+    <h2>{t.lineage.title}</h2>
+    <p class="section-lead">{t.lineage.lead} · {stats.minYear}–{stats.maxYear}</p>
+
+    <ol class="timeline">
+      {
+        timeline.map((bucket) => (
+          <li>
+            <div class="year">
+              {bucket.year} <span class="pill">{bucket.papers.length}</span>
+            </div>
+            <ul>
+              {bucket.papers.map((p) => (
+                <li>
+                  {p.paperUrl ? (
+                    <a href={p.paperUrl} target="_blank" rel="noopener nofollow">{p.shortName || p.title}</a>
+                  ) : (
+                    p.shortName || p.title
+                  )}{' '}
+                  <span class="pill">{p.venue}</span>
+                  {p.codeUrl && (
+                    <a class="badge code" href={p.codeUrl} target="_blank" rel="noopener nofollow">
+                      {t.papers.code}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</BaseLayout>

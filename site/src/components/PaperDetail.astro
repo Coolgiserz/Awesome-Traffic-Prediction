@@ -1,0 +1,274 @@
+---
+/**
+ * PaperDetail — one paper per page, rendered from data/papers at build time.
+ *
+ * 104 static pages (2 locales each) with no client JS: the whole point of the
+ * structured data layer is that every paper becomes a citable URL with a
+ * canonical link, so search engines and Zotero-style tooling can reach it.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ui, pathFor, type Lang } from '../lib/i18n';
+import { withBase } from '../lib/url';
+import { related, type Paper } from '../lib/papers';
+
+interface Props {
+  lang: Lang;
+  paper: Paper;
+}
+
+const { lang, paper: p } = Astro.props;
+const t = ui[lang];
+const d = t.detail;
+
+// Title falls back to English when no Chinese translation exists (see
+// docs/evolution/12-phase1-execution.md §6: we prefer empty over machine text).
+const title = lang === 'zh' ? (p.titleZh ?? p.title) : p.title;
+const note = lang === 'zh' ? (p.noteZh ?? p.note) : p.note;
+const taskLabel = lang === 'zh' ? (p.taskZh ?? p.task) : p.task;
+
+const links: Array<{ label: string; url: string }> = [];
+if (p.paperUrl) links.push({ label: d.paper, url: p.paperUrl });
+for (const c of p.codeLinks) links.push({ label: c.label === 'code' ? d.code : c.label, url: c.url });
+if (p.codeUrl && !p.codeLinks.some((c) => c.url === p.codeUrl)) {
+  links.push({ label: d.code, url: p.codeUrl });
+}
+if (p.dataUrl) links.push({ label: d.data, url: p.dataUrl });
+if (p.reviewUrl) links.push({ label: d.review, url: p.reviewUrl });
+if (p.projectUrl) links.push({ label: d.project, url: p.projectUrl });
+// The README's original link is kept when a DOI replaced it as the primary URL.
+const original = p.altUrls['paper-original'];
+if (original && original !== p.paperUrl) links.push({ label: d.originalLink, url: original });
+
+const facts: Array<[string, string]> = [];
+facts.push([d.venue, `${p.venue}${p.venueType !== 'unknown' ? ` · ${p.venueType}` : ''}`]);
+if (p.year) facts.push([d.year, String(p.year) + (p.altYears.length ? ` (${p.altYears.join(', ')})` : '')]);
+if (p.doi) facts.push([d.doi, p.doi]);
+if (p.arxivId) facts.push([d.arxiv, `arXiv:${p.arxivId}`]);
+if (taskLabel) facts.push([t.papers.task, taskLabel]);
+if (p.layers.length) facts.push([d.layers, p.layers.join(', ')]);
+if (p.source) facts.push([d.source, p.source]);
+
+const neighbours = related(p);
+const verified = p.verification?.checked_at ?? null;
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${title} — ${t.siteName}`}
+  description={[p.venue, p.year, p.task].filter(Boolean).join(' · ')}
+  route="papers"
+>
+  <article class="wrap detail" style="padding-top:24px">
+    <p class="breadcrumb">
+      <a href={withBase(pathFor(lang, 'papers'))}>← {d.backToLibrary}</a>
+    </p>
+
+    <header class="detail-head">
+      <h1>{title}</h1>
+      <p class="detail-sub">
+        {p.year && <span class="pill year">{p.year}</span>}
+        <span class="pill">{p.venue}</span>
+        {p.layers.map((l) => <span class="pill layer">{l}</span>)}
+      </p>
+      {p.authors.length > 0 && (
+        <p class="detail-authors">
+          <strong>{d.authors}:</strong> {p.authors.join(', ')}
+        </p>
+      )}
+    </header>
+
+    <div class="detail-grid">
+      <section>
+        <h3>{d.overview}</h3>
+        <table class="facts">
+          <tbody>
+            {facts.map(([k, v]) => (
+              <tr>
+                <th>{k}</th>
+                <td>{v}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        {(p.methodTags.length > 0 || p.directionTags.length > 0) && (
+          <div class="tag-block">
+            {p.methodTags.length > 0 && (
+              <p>
+                <strong>{d.methodTags}:</strong>{' '}
+                {p.methodTags.map((tag) => (
+                  <a class="chip" href={`${withBase(pathFor(lang, 'papers'))}?m=${encodeURIComponent(tag)}`}>{tag}</a>
+                ))}
+              </p>
+            )}
+            {p.directionTags.length > 0 && (
+              <p>
+                <strong>{d.directionTags}:</strong>{' '}
+                {p.directionTags.map((tag) => <span class="chip static">{tag}</span>)}
+              </p>
+            )}
+            {p.datasets.length > 0 && (
+              <p>
+                <strong>{d.datasets}:</strong>{' '}
+                {p.datasets.map((tag) => <span class="chip static">{tag}</span>)}
+              </p>
+            )}
+          </div>
+        )}
+
+        <h3>{d.notes}</h3>
+        <p class="detail-note">{note ?? d.noNotes}</p>
+
+        <p class="detail-verify">
+          {verified
+            ? `${d.verified}: ${verified}${p.verification?.metadata_source ? ` (${p.verification.metadata_source})` : ''}`
+            : d.unverified}
+        </p>
+      </section>
+
+      <aside>
+        <h3>{d.links}</h3>
+        <ul class="link-list">
+          {links.map((l) => (
+            <li>
+              <a href={l.url} target="_blank" rel="noopener nofollow">{l.label}</a>
+              <code>{l.url.replace(/^https?:\/\//, '').slice(0, 46)}</code>
+            </li>
+          ))}
+        </ul>
+
+        {neighbours.length > 0 && (
+          <>
+            <h3>{d.related}</h3>
+            <ul class="related">
+              {neighbours.map((n) => (
+                <li>
+                  <a href={withBase(`${lang === 'zh' ? '/zh' : ''}${pathFor(lang, 'papers')}${n.id}/`)}>
+                    {n.shortName || n.title.slice(0, 40)}
+                  </a>
+                  <span class="muted">{n.year}</span>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </aside>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .breadcrumb {
+    margin: 0 0 12px;
+    font-size: 13px;
+  }
+  .detail-head h1 {
+    font-size: 26px;
+    line-height: 1.3;
+    margin: 0 0 10px;
+  }
+  .detail-sub {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0 0 8px;
+  }
+  .pill.layer {
+    background: var(--bg-soft);
+    color: var(--fg-muted);
+  }
+  .detail-authors {
+    margin: 0;
+    font-size: 14px;
+    color: var(--fg-muted);
+  }
+  .detail-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+    gap: 28px;
+    margin-top: 22px;
+  }
+  @media (max-width: 760px) {
+    .detail-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .detail-grid h3 {
+    font-size: 15px;
+    margin: 22px 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  .detail-grid section > h3:first-child,
+  .detail-grid aside > h3:first-child {
+    margin-top: 0;
+  }
+  table.facts {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+  }
+  table.facts th {
+    text-align: left;
+    font-weight: 600;
+    color: var(--fg-muted);
+    padding: 6px 12px 6px 0;
+    white-space: nowrap;
+    vertical-align: top;
+    width: 1%;
+  }
+  table.facts td {
+    padding: 6px 0;
+    word-break: break-word;
+  }
+  .tag-block p {
+    margin: 8px 0;
+    font-size: 14px;
+  }
+  .chip {
+    display: inline-block;
+    padding: 2px 8px;
+    margin: 2px 4px 2px 0;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 12.5px;
+    text-decoration: none;
+  }
+  .chip.static {
+    background: var(--bg-soft);
+    color: var(--fg-muted);
+  }
+  .detail-note {
+    font-size: 14px;
+    color: var(--fg-muted);
+  }
+  .detail-verify {
+    font-size: 12.5px;
+    color: var(--fg-muted);
+    margin-top: 16px;
+  }
+  .link-list,
+  .related {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 13.5px;
+  }
+  .link-list li,
+  .related li {
+    padding: 6px 0;
+    border-bottom: 1px dashed var(--border);
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: baseline;
+  }
+  .link-list code {
+    font-size: 11.5px;
+    color: var(--fg-muted);
+  }
+  .related .muted {
+    color: var(--fg-muted);
+    font-size: 12px;
+  }
+</style>

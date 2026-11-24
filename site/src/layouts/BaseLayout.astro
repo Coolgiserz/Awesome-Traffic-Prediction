@@ -1,0 +1,115 @@
+---
+/**
+ * BaseLayout — html shell, SEO head, header nav, footer.
+ *
+ * hreflang/canonical are emitted here for every page so the bilingual routes
+ * stay indexable as two translations of one document, not as duplicates.
+ */
+import '../styles/global.css';
+import { BASE, withBase, altLocalePath } from '../lib/url';
+import { ui, htmlLang, ogLocale, pathFor, type Lang } from '../lib/i18n';
+
+export interface Props {
+  lang: Lang;
+  title: string;
+  description?: string;
+  route: Parameters<typeof pathFor>[1];
+  /** Optional OG image path relative to site root, e.g. '/og/papers.png'. */
+  ogImage?: string;
+}
+
+const { lang, title, description = '', route, ogImage } = Astro.props;
+const t = ui[lang];
+const pathname = Astro.url.pathname;
+const canonical = new URL(withBase(pathname.replace(BASE, '') || '/'), Astro.site).href;
+const altLang: Lang = lang === 'zh' ? 'en' : 'zh';
+const altPath = altLocalePath(pathname, altLang);
+const altUrl = new URL(altPath, Astro.site).href;
+// x-default must point at the canonical *English* URL of the same route, with
+// the deployment base intact — `new URL('/papers/', site)` would drop the
+// /Awesome-Traffic-Prediction/ prefix on Project Pages.
+const xDefaultUrl = new URL(withBase(pathFor('en', route)), Astro.site).href;
+
+const nav = [
+  { key: 'home', label: t.nav.home, route: 'home' as const },
+  { key: 'papers', label: t.nav.papers, route: 'papers' as const },
+  { key: 'datasets', label: t.nav.datasets, route: 'datasets' as const },
+  { key: 'toolkits', label: t.nav.toolkits, route: 'toolkits' as const },
+  { key: 'benchmark', label: t.nav.benchmark, route: 'benchmark' as const },
+  { key: 'trends', label: t.nav.trends, route: 'trends' as const },
+  { key: 'lineage', label: t.nav.lineage, route: 'lineage' as const },
+];
+
+const currentPath = pathname.endsWith('/') ? pathname : `${pathname}/`;
+---
+
+<!doctype html>
+<html lang={htmlLang[lang]} dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang={htmlLang[lang]} href={canonical} />
+    <link rel="alternate" hreflang={htmlLang[altLang]} href={altUrl} />
+    <link rel="alternate" hreflang="x-default" href={xDefaultUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={t.siteName} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content={ogLocale[lang]} />
+    <meta property="og:locale:alternate" content={ogLocale[altLang]} />
+    <meta property="og:url" content={canonical} />
+    {ogImage && <meta property="og:image" content={new URL(withBase(ogImage), Astro.site).href} />}
+    <meta name="twitter:card" content="summary" />
+    {/* Favicon is generated from the repo mark; keep it base-relative. */}
+    <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
+    <link rel="sitemap" type="application/xml" href={withBase('/sitemap.xml')} />
+    <slot name="head" />
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap">
+        <a class="brand" href={withBase(pathFor(lang, 'home'))}>{t.siteName}</a>
+        <nav class="main" aria-label="Main">
+          {
+            nav.map((item) => {
+              const href = withBase(pathFor(lang, item.route));
+              const active = currentPath === href;
+              return (
+                <a href={href} aria-current={active ? 'page' : undefined}>
+                  {item.label}
+                </a>
+              );
+            })
+          }
+        </nav>
+        <div class="header-tools">
+          <a class="btn" href={altPath} hreflang={htmlLang[altLang]} lang={htmlLang[altLang]}>
+            {t.langSwitch}
+          </a>
+          <a class="btn primary" href={withBase('/search/')} data-search-trigger>
+            <span>{t.search.open}</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site">
+      <div class="wrap">
+        <div>
+          © {new Date().getFullYear()} {t.siteName} · {t.footer.repo}:
+          <a href="https://github.com/Coolgiserz/Awesome-Traffic-Prediction">Coolgiserz/Awesome-Traffic-Prediction</a>
+        </div>
+        <div>
+          <slot name="footer-meta" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

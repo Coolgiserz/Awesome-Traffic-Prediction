@@ -1,0 +1,159 @@
+---
+/**
+ * IndexPage — shared body for `/` (en) and `/zh/` (zh).
+ *
+ * Kept as one component so the two locales cannot drift structurally; only the
+ * dictionary differs.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TrendChart from '../components/TrendChart.astro';
+import { ui, type Lang } from '../lib/i18n';
+import { withBase } from '../lib/url';
+import { papers, stats, byYear, byVenue, byTask, provenance, generatedUtc } from '../lib/papers';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang];
+const l = (p: string) => withBase(lang === 'zh' ? `/zh${p}` : p);
+
+const yearSeries = byYear();
+const venueSeries = byVenue(10);
+const taskSeries = byTask();
+
+const yearChart = {
+  grid: { left: 40, right: 16, top: 16, bottom: 30 },
+  tooltip: { trigger: 'axis' },
+  xAxis: { type: 'category', data: yearSeries.map(([y]) => String(y)), axisLabel: { interval: 0, rotate: 45 } },
+  yAxis: { type: 'value', splitLine: { lineStyle: { opacity: 0.15 } } },
+  series: [
+    {
+      type: 'bar',
+      data: yearSeries.map(([, c]) => c),
+      itemStyle: { borderRadius: [3, 3, 0, 0] },
+      barMaxWidth: 26,
+    },
+  ],
+};
+
+const venueChart = {
+  grid: { left: 40, right: 16, top: 16, bottom: 60 },
+  tooltip: { trigger: 'axis' },
+  xAxis: { type: 'category', data: venueSeries.map(([v]) => v), axisLabel: { interval: 0, rotate: 40, fontSize: 10 } },
+  yAxis: { type: 'value', splitLine: { lineStyle: { opacity: 0.15 } } },
+  series: [{ type: 'bar', data: venueSeries.map(([, c]) => c), barMaxWidth: 22 }],
+};
+
+const taskChart = {
+  tooltip: { trigger: 'item' },
+  legend: { bottom: 0, type: 'scroll', textStyle: { fontSize: 11 } },
+  series: [
+    {
+      type: 'pie',
+      radius: ['38%', '62%'],
+      center: ['50%', '44%'],
+      data: taskSeries.map(([name, value]) => ({ name, value })),
+      label: { show: false },
+      itemStyle: { borderWidth: 1, borderColor: 'transparent' },
+    },
+  ],
+};
+
+const recent = papers.filter((p) => (p.year ?? 0) >= stats.maxYear - 1).slice(0, 8);
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${t.siteName} — ${t.siteTagline}`}
+  description={t.siteTagline}
+  route="home"
+>
+  <div class="wrap">
+    <div class="hero">
+      <h1>{t.siteName}</h1>
+      <p class="lead">{t.siteTagline}</p>
+      <div class="stats">
+        <div class="stat"><b>{stats.total}</b><span>{t.hero.total}</span></div>
+        <div class="stat"><b>{stats.minYear}–{stats.maxYear}</b><span>{t.hero.years}</span></div>
+        <div class="stat"><b>{stats.withCode}</b><span>{t.hero.code}</span></div>
+        <div class="stat"><b>{stats.withData}</b><span>{t.hero.data}</span></div>
+      </div>
+    </div>
+
+    {
+      provenance.degraded && (
+        <section>
+          <p class="notice">
+            {t.provenance.degraded} <br />
+            <code>source={provenance.source}</code> · <code>readme entries={provenance.en ?? 0}</code>
+            {' '}· <a href={withBase('/papers/')}>{t.nav.papers} →</a>
+          </p>
+        </section>
+      )
+    }
+
+    <section>
+      <h2>{t.trends.title}</h2>
+      <p class="section-lead">{t.trends.lead}</p>
+      <div class="chart-grid">
+        <TrendChart
+          id="home-year"
+          title={t.trends.byYear}
+          hint={`${stats.minYear}–${stats.maxYear}`}
+          spec={yearChart}
+          fallback={{ headers: [t.papers.year, 'n'], rows: yearSeries.map(([y, c]) => [y, c]) }}
+        />
+        <TrendChart
+          id="home-venue"
+          title={t.trends.byVenue}
+          spec={venueChart}
+          fallback={{ headers: [t.papers.venue, 'n'], rows: venueSeries.map(([v, c]) => [v, c]) }}
+        />
+        <TrendChart
+          id="home-task"
+          title={t.trends.byTask}
+          spec={taskChart}
+          fallback={{ headers: [t.papers.task, 'n'], rows: taskSeries.map(([k, c]) => [k, c]) }}
+        />
+      </div>
+      <p class="result-count">
+        <a href={l('/trends/')}>{t.trends.title} →</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>{t.papers.title}</h2>
+      <p class="section-lead">{t.papers.lead}</p>
+      <div class="grid">
+        {
+          recent.map((p) => (
+            <a class="card" href={l('/papers/')}>
+              <h3>{p.shortName || p.title}</h3>
+              <p>
+                {p.year} · {p.venue}
+                {p.methodTags.length ? ` · ${p.methodTags.slice(0, 2).join(' / ')}` : ''}
+              </p>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <section>
+      <h2>{t.nav.home}</h2>
+      <div class="grid">
+        <a class="card" href={l('/papers/')}><h3>{t.nav.papers}</h3><p>{t.papers.lead}</p></a>
+        <a class="card" href={l('/datasets/')}><h3>{t.nav.datasets}</h3><p>{t.datasets.lead}</p></a>
+        <a class="card" href={l('/toolkits/')}><h3>{t.nav.toolkits}</h3><p>{t.toolkits.lead}</p></a>
+        <a class="card" href={l('/benchmark/')}><h3>{t.nav.benchmark}</h3><p>{t.benchmark.lead}</p></a>
+        <a class="card" href={l('/lineage/')}><h3>{t.nav.lineage}</h3><p>{t.lineage.lead}</p></a>
+      </div>
+    </section>
+  </div>
+
+  <p slot="footer-meta">
+    {t.footer.dataSource}: <code>{provenance.source}</code> · {t.footer.built}{' '}
+    <time datetime={generatedUtc}>{generatedUtc.slice(0, 10)}</time>
+  </p>
+</BaseLayout>

@@ -1,0 +1,64 @@
+---
+import DocsPage from '../components/DocsPage.astro';
+import type { Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const matrix = {
+  headers: ['Dataset', 'Region', 'Signal', 'Nodes/Sensors', 'Interval', 'Horizons', 'Metrics', 'Split'],
+  rows: [
+    ['METR-LA', 'Los Angeles, US', 'Traffic speed', '207', '5 min', '15/30/60 min', 'MAE, RMSE, MAPE', 'Chronological'],
+    ['PEMS-BAY', 'Bay Area, US', 'Traffic speed', '325', '5 min', '15/30/60 min', 'MAE, RMSE, MAPE', 'Chronological'],
+    ['NYC-Bike', 'New York, US', 'Bike demand', 'Station graph', 'Varies', '30/60 min', 'MAE, RMSE, MAPE', 'Chronological'],
+    ['NYC-Taxi', 'New York, US', 'Taxi demand/OD', 'Zone or grid', 'Varies', '30/60 min', 'MAE, RMSE, MAPE', 'Chronological'],
+  ],
+};
+
+const en = {
+  title: 'Benchmark & Evaluation',
+  lead: 'Reporting conventions that make cross-paper comparison honest: same metrics, same masking, same split policy.',
+  sections: [
+    {
+      heading: 'Checklist',
+      rows: [
+        { label: 'Task definition', note: 'Short-term flow/speed forecasting, multi-horizon (15/30/60 min).' },
+        { label: 'Datasets', note: 'METR-LA and PEMS-BAY dominate; document granularity, sampling interval, missing rate, spatial coverage.' },
+        { label: 'Metrics', note: 'MAE, RMSE, MAPE — report per horizon, never a single step.' },
+        { label: 'Splits', note: 'Chronological train/val/test only; random splits leak future into past.' },
+        { label: 'Reproducibility', note: 'Seeds, hardware, training time, parameter counts.' },
+        { label: 'Masking', note: 'State whether zeros/missing are excluded from loss and metrics.' },
+      ],
+    },
+  ],
+  table: matrix,
+};
+
+const zh = {
+  title: '基准与评测',
+  lead: '让跨论文对比可信的汇报约定：同样的指标、同样的掩码、同样的切分策略。',
+  sections: [
+    {
+      heading: '检查清单',
+      rows: [
+        { label: '任务定义', note: '短期流量/速度预测，多步长（15/30/60 分钟）。' },
+        { label: '数据集', note: '主要为 METR-LA 与 PEMS-BAY；需说明粒度、采样间隔、缺失率、空间覆盖。' },
+        { label: '指标', note: 'MAE、RMSE、MAPE —— 必须分步长汇报，不能只报单步。' },
+        { label: '切分', note: '只能用时间顺序切分；随机切分会把未来泄漏到过去。' },
+        { label: '可复现', note: '随机种子、硬件、训练时长、参数量。' },
+        { label: '掩码', note: '说明零值/缺失值是否从损失与指标中排除。' },
+      ],
+    },
+  ],
+  table: {
+    headers: ['数据集', '区域', '信号', '节点/传感器', '采样间隔', '常用步长', '指标', '切分'],
+    rows: matrix.rows.map((r) => [r[0], r[1], r[2], r[3], r[4], r[5], r[6], r[7]]),
+  },
+};
+
+const d = lang === 'zh' ? zh : en;
+---
+
+<DocsPage lang={lang} route="benchmark" title={d.title} lead={d.lead} sections={d.sections} table={d.table} />

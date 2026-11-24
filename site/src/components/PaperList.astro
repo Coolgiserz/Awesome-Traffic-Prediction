@@ -1,0 +1,329 @@
+---
+/**
+ * PaperList — statically rendered paper cards + a client-side filter layer.
+ *
+ * Design decision (see docs/evolution/05-presentation.md):
+ *   - All matching papers are in the HTML. Search engines and no-JS visitors
+ *     see the full list; 170 rows is ~40 KB of HTML, cheaper than any API.
+ *   - Filtering is pure DOM attribute matching (data-year / data-venue /
+ *     data-task / data-tag), so it stays fast well past 2k rows.
+ *   - Filter state is mirrored into the URL query string (?y=&v=&t=&m=&q=),
+ *     which makes every view shareable and restorable on reload.
+ */
+import { ui, pathFor, type Lang } from '../lib/i18n';
+import { withBase } from '../lib/url';
+import type { Paper } from '../lib/papers';
+
+interface Props {
+  lang: Lang;
+  papers: Paper[];
+  years: number[];
+  venues: string[];
+  tasks: string[];
+  methodTags: string[];
+}
+
+const { lang, papers, years, venues, tasks, methodTags } = Astro.props;
+const t = ui[lang];
+// Detail routes live under the locale-prefixed library path: /papers/<id>/ and
+// /zh/papers/<id>/. pathFor already carries the /zh prefix.
+const detailBase = pathFor(lang, 'papers');
+
+/** Pagefind filter values are comma-separated: strip commas/quotes from venue names. */
+const facetVenue = (v: string) => v.replace(/[,"]/g, ' ').trim();
+
+/** Badge helper: keep the card readable while preserving every link. */
+const extraLinks = (p: Paper) => Object.keys(p.altUrls ?? {}).filter((k) => k !== 'paper-original');
+
+// Facet lists are capped: a 200-entry venue chip row is unusable. Top venues by
+// count are enough; the rest stay reachable through the search box.
+const venueCount = new Map<string, number>();
+for (const p of papers) venueCount.set(p.venue, (venueCount.get(p.venue) ?? 0) + 1);
+const topVenues = [...venueCount.entries()]
+  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+  .slice(0, 14)
+  .map(([v]) => v);
+---
+
+{/*
+  Pagefind facet source. `data-pagefind-index-attrs` tells Pagefind to read the
+  filter values off these hidden elements, so facets exist even though the
+  visible cards carry their own inline filters.
+*/}
+<span hidden data-pagefind-index-attrs="data-facet-year,data-facet-venue"></span>
+{years.map((y) => <span hidden data-facet-year={String(y)} />)}
+{topVenues.map((v) => <span hidden data-facet-venue={v} />)}
+
+<div class="paper-toolbar">
+  <input
+    type="search"
+    id="paper-search"
+    placeholder={t.papers.search}
+    aria-label={t.papers.search}
+    autocomplete="off"
+  />
+  <select id="paper-sort" aria-label={t.papers.sort}>
+    <option value="newest">{t.papers.sortNewest}</option>
+    <option value="oldest">{t.papers.sortOldest}</option>
+    <option value="venue">{t.papers.sortVenue}</option>
+  </select>
+  <button class="btn" id="paper-reset" type="button">{t.papers.reset}</button>
+  <button class="btn" id="paper-copy" type="button">{t.papers.copyLink}</button>
+</div>
+
+<div class="facet-group">
+  <span class="facet-label">{t.papers.year}</span>
+  <div class="facets" role="group" aria-label={t.papers.year}>
+    {years.map((y) => <button class="facet" type="button" data-facet="year" data-value={String(y)} aria-pressed="false">{y}</button>)}
+  </div>
+</div>
+
+<div class="facet-group">
+  <span class="facet-label">{t.papers.venue}</span>
+  <div class="facets" role="group" aria-label={t.papers.venue}>
+    {topVenues.map((v) => <button class="facet" type="button" data-facet="venue" data-value={v} aria-pressed="false">{v}</button>)}
+  </div>
+</div>
+
+<div class="facet-group">
+  <span class="facet-label">{t.papers.task}</span>
+  <div class="facets" role="group" aria-label={t.papers.task}>
+    {tasks.map((task) => <button class="facet" type="button" data-facet="task" data-value={task} aria-pressed="false">{task}</button>)}
+  </div>
+</div>
+
+<div class="facet-group">
+  <span class="facet-label">{t.papers.method}</span>
+  <div class="facets" role="group" aria-label={t.papers.method}>
+    {methodTags.map((tag) => <button class="facet" type="button" data-facet="tag" data-value={tag} aria-pressed="false">{tag}</button>)}
+  </div>
+</div>
+
+<p class="result-count" id="paper-count" aria-live="polite">
+  <span data-count>{papers.length}</span> {t.papers.shown}
+  · {t.papers.totalLabel} {papers.length}
+</p>
+
+<div class="paper-list" id="paper-list">
+  {
+    papers.map((p) => (
+      <article
+        class="paper"
+        data-pagefind-filter={`year:${p.year ?? ''}, venue:${facetVenue(p.venue)}`}
+        data-year={p.year ?? ''}
+        data-venue={p.venue}
+        data-task={p.task}
+        data-tag={(p.methodTags ?? []).join('|')}
+        data-sort-key={`${p.year ?? 0}|${p.venue}|${p.title.toLowerCase()}`}
+        data-text={`${p.title} ${p.venue} ${p.shortName} ${(p.methodTags ?? []).join(' ')} ${p.task} ${(p.authors ?? []).join(' ')}`.toLowerCase()}
+      >
+        <div class="meta">
+          {p.year && <span class="pill year">{p.year}</span>}
+          <span class="pill">{p.venue}</span>
+          {(p.methodTags ?? []).slice(0, 4).map((tag) => (
+            <span class="pill">{tag}</span>
+          ))}
+          {p.codeUrl && <span class="pill code">code</span>}
+          {p.dataUrl && <span class="pill data">data</span>}
+          <span class="badges">
+            {p.paperUrl && (
+              <a class="badge" href={p.paperUrl} target="_blank" rel="noopener nofollow">{t.papers.pdf}</a>
+            )}
+            {p.codeUrl && (
+              <a class="badge code" href={p.codeUrl} target="_blank" rel="noopener nofollow">{t.papers.code}</a>
+            )}
+            {p.dataUrl && (
+              <a class="badge data" href={p.dataUrl} target="_blank" rel="noopener nofollow">{t.papers.data}</a>
+            )}
+            {p.reviewUrl && (
+              <a class="badge" href={p.reviewUrl} target="_blank" rel="noopener nofollow">{t.papers.review}</a>
+            )}
+          </span>
+        </div>
+        <div class="title">
+          <a href={withBase(`${detailBase}${p.id}/`)}>{lang === 'zh' ? (p.titleZh ?? p.title) : p.title}</a>
+        </div>
+      </article>
+    ))
+  }
+</div>
+
+<p class="result-count" id="paper-empty" hidden>{t.papers.empty}</p>
+
+<script>
+  interface State {
+    q: string;
+    years: Set<string>;
+    venues: Set<string>;
+    tasks: Set<string>;
+    tags: Set<string>;
+    sort: string;
+  }
+
+  const list = document.getElementById('paper-list') as HTMLElement | null;
+  const cards = list ? Array.from(list.children) as HTMLElement[] : [];
+  const countEl = document.querySelector('[data-count]');
+  const emptyEl = document.getElementById('paper-empty');
+  const searchEl = document.getElementById('paper-search') as HTMLInputElement | null;
+  const sortEl = document.getElementById('paper-sort') as HTMLSelectElement | null;
+  const resetEl = document.getElementById('paper-reset');
+  const copyEl = document.getElementById('paper-copy');
+  const copiedLabel = copyEl?.dataset.copied ?? '';
+
+  if (list) {
+    const state: State = {
+      q: '',
+      years: new Set(),
+      venues: new Set(),
+      tasks: new Set(),
+      tags: new Set(),
+      sort: 'newest',
+    };
+
+    /** URL is the source of truth on first paint (shareable filter views). */
+    function readUrl() {
+      const u = new URL(window.location.href);
+      const p = u.searchParams;
+      state.q = (p.get('q') ?? '').toLowerCase();
+      for (const v of p.getAll('y')) state.years.add(v);
+      for (const v of p.getAll('v')) state.venues.add(v);
+      for (const v of p.getAll('t')) state.tasks.add(v);
+      for (const v of p.getAll('m')) state.tags.add(v);
+      state.sort = p.get('s') ?? 'newest';
+      if (searchEl) searchEl.value = state.q;
+      if (sortEl) sortEl.value = state.sort;
+    }
+
+    function writeUrl() {
+      const u = new URL(window.location.href);
+      const p = u.searchParams;
+      p.delete('y');
+      p.delete('v');
+      p.delete('t');
+      p.delete('m');
+      p.delete('q');
+      p.delete('s');
+      if (state.q) p.set('q', state.q);
+      for (const v of state.years) p.append('y', v);
+      for (const v of state.venues) p.append('v', v);
+      for (const v of state.tasks) p.append('t', v);
+      for (const v of state.tags) p.append('m', v);
+      if (state.sort !== 'newest') p.set('s', state.sort);
+      const qs = p.toString();
+      history.replaceState(null, '', qs ? `?${qs}` : u.pathname);
+    }
+
+    function matches(el: HTMLElement): boolean {
+      if (state.q && !el.dataset.text!.includes(state.q)) return false;
+      if (state.years.size && !state.years.has(el.dataset.year ?? '')) return false;
+      if (state.venues.size && !state.venues.has(el.dataset.venue ?? '')) return false;
+      if (state.tasks.size && !state.tasks.has(el.dataset.task ?? '')) return false;
+      if (state.tags.size) {
+        const own = new Set((el.dataset.tag ?? '').split('|').filter(Boolean));
+        // Tags are AND-ed: narrowing with two tags is the common research query.
+        for (const tag of state.tags) if (!own.has(tag)) return false;
+      }
+      return true;
+    }
+
+    function applySort() {
+      const sorted = [...cards].sort((a, b) => {
+        const [ay, av, at] = a.dataset.sortKey!.split('|');
+        const [by, bv, bt] = b.dataset.sortKey!.split('|');
+        if (state.sort === 'venue') {
+          return av.localeCompare(bv) || Number(by) - Number(ay) || at.localeCompare(bt);
+        }
+        const dir = state.sort === 'oldest' ? 1 : -1;
+        return (Number(ay) - Number(by)) * dir || at.localeCompare(bt);
+      });
+      const frag = document.createDocumentFragment();
+      for (const el of sorted) frag.appendChild(el);
+      list!.appendChild(frag);
+    }
+
+    let raf = 0;
+    function render() {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        let shown = 0;
+        for (const el of cards) {
+          const ok = matches(el);
+          el.hidden = !ok;
+          if (ok) shown++;
+        }
+        if (countEl) countEl.textContent = String(shown);
+        if (emptyEl) emptyEl.hidden = shown !== 0;
+        for (const btn of document.querySelectorAll<HTMLElement>('[data-facet]')) {
+          const set =
+            btn.dataset.facet === 'year'
+              ? state.years
+              : btn.dataset.facet === 'venue'
+                ? state.venues
+                : btn.dataset.facet === 'task'
+                  ? state.tasks
+                  : state.tags;
+          btn.setAttribute('aria-pressed', set.has(btn.dataset.value!) ? 'true' : 'false');
+        }
+        writeUrl();
+      });
+    }
+
+    document.addEventListener('click', (ev) => {
+      const btn = (ev.target as HTMLElement).closest<HTMLElement>('[data-facet]');
+      if (!btn) return;
+      const value = btn.dataset.value!;
+      const set =
+        btn.dataset.facet === 'year'
+          ? state.years
+          : btn.dataset.facet === 'venue'
+            ? state.venues
+            : btn.dataset.facet === 'task'
+              ? state.tasks
+              : state.tags;
+      if (set.has(value)) set.delete(value);
+      else set.add(value);
+      render();
+    });
+
+    searchEl?.addEventListener('input', () => {
+      state.q = searchEl.value.trim().toLowerCase();
+      render();
+    });
+
+    sortEl?.addEventListener('change', () => {
+      state.sort = sortEl.value;
+      applySort();
+      render();
+    });
+
+    resetEl?.addEventListener('click', () => {
+      state.q = '';
+      state.years.clear();
+      state.venues.clear();
+      state.tasks.clear();
+      state.tags.clear();
+      state.sort = 'newest';
+      if (searchEl) searchEl.value = '';
+      if (sortEl) sortEl.value = 'newest';
+      applySort();
+      render();
+    });
+
+    copyEl?.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        const prev = copyEl.textContent;
+        if (copiedLabel) copyEl.textContent = copiedLabel;
+        setTimeout(() => {
+          if (prev) copyEl.textContent = prev;
+        }, 1400);
+      } catch {
+        /* clipboard API unavailable (http origin) — URL bar already holds state */
+      }
+    });
+
+    readUrl();
+    applySort();
+    render();
+  }
+</script>

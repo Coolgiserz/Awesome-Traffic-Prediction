@@ -1,0 +1,16 @@
+---
+/**
+ * /papers/<id>/ — English paper detail route.
+ * Static: every id in data/papers is emitted by getStaticPaths at build time.
+ */
+import PaperDetail from '../../components/PaperDetail.astro';
+import { papers } from '../../lib/papers';
+
+export function getStaticPaths() {
+  return papers.map((paper) => ({ params: { id: paper.id }, props: { paper } }));
+}
+
+const { paper } = Astro.props;
+---
+
+<PaperDetail lang="en" paper={paper} />

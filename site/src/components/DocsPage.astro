@@ -1,0 +1,69 @@
+---
+/**
+ * DocsPage — generic content page (datasets / toolkits / benchmark).
+ * Content is inline data today; when docs/ markdown is published it swaps to
+ * Astro content collections without touching the routes (see 05-presentation.md).
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ui, type Lang } from '../lib/i18n';
+
+export interface Props {
+  lang: Lang;
+  route: 'datasets' | 'toolkits' | 'benchmark';
+  title: string;
+  lead: string;
+  /** Rendered as plain sections: heading + rows (link | description). */
+  sections: { heading: string; rows: { label: string; href?: string; note?: string }[] }[];
+  table?: { headers: string[]; rows: string[][] };
+}
+
+const { lang, route, title, lead, sections, table } = Astro.props;
+const t = ui[lang];
+---
+
+<BaseLayout lang={lang} title={`${title} — ${t.siteName}`} description={lead} route={route}>
+  <div class="wrap" style="padding-top:28px">
+    <h2>{title}</h2>
+    <p class="section-lead">{lead}</p>
+
+    {
+      sections.map((sec) => (
+        <section>
+          <h3 style="font-size:16px;margin:0 0 10px">{sec.heading}</h3>
+          <table class="data">
+            <tbody>
+              {sec.rows.map((row) => (
+                <tr>
+                  <td style="width:34%">
+                    {row.href ? <a href={row.href} target="_blank" rel="noopener">{row.label}</a> : row.label}
+                  </td>
+                  <td>{row.note ?? ''}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+      ))
+    }
+
+    {
+      table && (
+        <section>
+          <h3 style="font-size:16px;margin:0 0 10px">{t.benchmark.matrix}</h3>
+          <div class="scroll-x">
+            <table class="data">
+              <thead>
+                <tr>{table.headers.map((h) => <th>{h}</th>)}</tr>
+              </thead>
+              <tbody>
+                {table.rows.map((r) => (
+                  <tr>{r.map((c) => <td>{c}</td>)}</tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )
+    }
+  </div>
+</BaseLayout>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Project Pages host: the sitemap URL must include the repository prefix.
+Sitemap: https://coolgiserz.github.io/Awesome-Traffic-Prediction/sitemap.xml
