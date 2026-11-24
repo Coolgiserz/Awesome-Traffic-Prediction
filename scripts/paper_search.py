@@ -386,6 +386,21 @@ def search_openalex(
     return out
 
 
+def _arxiv_query(query: str) -> str:
+    """Build an arXiv `search_query` for a human query.
+
+    Multi-word queries are turned into a quoted phrase in the abstract field;
+    an already-qualified query (`abs:`, `ti:`, `all:`) is passed through so
+    callers can override the default.
+    """
+    q = query.strip()
+    if re.match(r"^(abs|ti|all|au|cat|co):", q, re.I) or q.startswith('"'):
+        return q
+    # Drop characters that would break the query grammar.
+    cleaned = re.sub(r'[^\w\s-]', ' ', q).strip()
+    return f'abs:"{cleaned}"'
+
+
 def search_arxiv(
     query: str,
     year_from: int,
@@ -401,7 +416,13 @@ def search_arxiv(
     page = 0
     while len(out) < limit and page < max_pages:
         params = {
-            "search_query": "all:" + query,
+            # arXiv's `all:` field with an unquoted phrase is an OR over single
+            # words: `all:traffic forecasting` matches every astronomy preprint
+            # that mentions either term. Sorting by submittedDate then returns
+            # whatever happens to be newest across all of arXiv, which is why an
+            # earlier run produced 60 irrelevant entries and 1 real hit.
+            # A quoted phrase searches the phrase; `abs:` narrows it to abstracts.
+            "search_query": _arxiv_query(query),
             "start": str(start),
             "max_results": str(batch),
             "sortBy": "submittedDate",

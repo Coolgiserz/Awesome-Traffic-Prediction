@@ -473,6 +473,9 @@ def build_record(
     # Curated JSON is the richer source for the fields it owns.
     if curated:
         record["task_en"] = curated.get("task_en") or record["task_en"]
+        # Curator labels win over rule inference; recorded so a future run can
+        # tell which tags were reviewed by a human.
+        record.setdefault("provenance", {})["curated_labels"] = True
         record["task_zh"] = curated.get("task_zh")
         record["note_en"] = curated.get("note_en")
         record["note_zh"] = curated.get("note_zh")
@@ -495,6 +498,12 @@ def build_record(
                       "alt_years", "project_url", "data_url"):
             if prev.get(field) not in (None, [], False, {}):
                 record[field] = prev[field]
+        # Labels that a curator already reviewed must not be replaced by the
+        # keyword rules on a re-run.
+        if (prev.get("provenance") or {}).get("curated_labels"):
+            for field in ("method_tags", "task_en"):
+                if prev.get(field):
+                    record[field] = prev[field]
         if prev.get("alt_urls"):
             merged = dict(record.get("alt_urls") or {})
             merged.update(prev["alt_urls"])
@@ -573,6 +582,34 @@ def main() -> int:
             stats["no_paper_url"] += 1 if not record["paper_url"] else 0
 
         target = out_dir / f"{year}.json"
+        # Records the README does not own (added by the search pipeline or by
+        # hand) must survive: overwriting the whole year file would silently
+        # delete every paper that was never in the README.
+        if target.exists():
+            try:
+                on_disk = json.loads(target.read_text(encoding="utf-8"))
+            except json.JSONDecodeError:
+                on_disk = []
+            if isinstance(on_disk, list):
+                owned = {
+                    (int(r.get("year", 0)), re.sub(r"[^a-z0-9]+", "", str(r.get("title", "")).lower()))
+                    for r in records
+                }
+                extras = [
+                    r for r in on_disk
+                    if (int(r.get("year", 0)), re.sub(r"[^a-z0-9]+", "", str(r.get("title", "")).lower()))
+                    not in owned
+                ]
+                if extras:
+                    # Keep their relative order after the README-owned block.
+                    next_order = max([int(r.get("order", 0)) for r in records], default=0) + 1
+                    for extra in extras:
+                        extra = dict(extra)
+                        if int(extra.get("order", 0)) <= next_order:
+                            extra["order"] = next_order
+                            next_order += 1
+                        records.append(extra)
+                    stats["carried_over"] += len(extras)
         rendered = json.dumps(records, ensure_ascii=False, indent=2) + "\n"
         current = target.read_text(encoding="utf-8") if target.exists() else None
         if current != rendered:
@@ -588,6 +625,7 @@ def main() -> int:
 
     print(
         f"[SUMMARY] years={len(years)} records={stats['records']} "
+        f"carried_over={stats['carried_over']} "
         f"doi={stats['with_doi']} arxiv={stats['with_arxiv']} "
         f"code={stats['with_code']} no_paper_url={stats['no_paper_url']}"
     )

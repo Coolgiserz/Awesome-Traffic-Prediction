@@ -287,3 +287,73 @@ CI 日志里看起来像"数据桥没问题，是别处挂了"。现在两条命
 
 验证方式：对全部 **224 个页面**做正文提取后扫描 27 个开发向关键词，结果 `0` 命中。
 命令留在 `09-acceptance.md` 的人工检查项里。
+
+## 10. Phase 3 起步：2023+ 召回修复
+
+### 10.1 修掉流水线里的一个真 bug
+
+`scripts/paper_search.py` 的 `search_arxiv()` 把查询拼成 `all:<query>`：
+
+```
+search_query = "all:" + query        # all:traffic forecasting
+sortBy = submittedDate
+```
+
+arXiv 的 `all:` 遇到不完整短语时是**单词 OR**，`all:traffic forecasting` 等于
+「提到 traffic 或 forecasting 的所有论文」，再按提交日期倒序，返回的是全 arXiv 最新文章。
+实测结果：一次运行召回 60 条，去重后与交通预测相关的只有 **1 条**（其余是天体物理、
+单细胞、PDE 求解器……）。
+
+修复：多词查询转成**引号短语 + abs:** 字段。
+
+```python
+def _arxiv_query(query):
+    if re.match(r"^(abs|ti|all|au|cat|co):", q, re.I) or q.startswith('"'):
+        return q                      # 调用方可覆盖默认行为
+    return f'abs:"{cleaned}"'
+```
+
+修复后同一个配置：**40 条全部相关**（Global-Local GAT、ButterMamba、PatchSTG、GAS-PFN…）。
+
+### 10.2 迁移脚本会删数据（已修）
+
+`migrate_readme_to_json.py` 按 README 重写整年文件。一旦 `data/papers/2023.json`
+里有不是从 README 来的记录（搜索流水线加的），重跑迁移就会**整批删掉**。
+这是数据基座最危险的一类缺陷：不报错、静默、不可逆。
+
+修复：写入前读盘上的现有文件，把「README 不拥有」的记录（按 `(year, 归一化标题)`
+判断）追加到记录列表尾部，`order` 顺延。汇总里新增 `carried_over=` 计数。
+
+```
+[SUMMARY] years=10 records=89 carried_over=24
+```
+
+另外修了策展标签的优先级：curated JSON 里的 `task_en` / `method_tags` 是人工审核过的，
+但重跑时会被关键词规则覆盖（UniST 的 `Urban spatio-temporal prediction` 变回
+`Traffic forecasting`）。现在 `provenance.curated_labels=true` 的记录，其标签不被规则覆盖。
+
+### 10.3 数据规模
+
+| 年份 | 迁移前 | 迁移后 |
+| --- | --- | --- |
+| 2023 | 2 | **18** |
+| 2024 | 4 | **12** |
+| 2025 | 4 | **12** |
+| 2026 | 11 | **31** |
+| 合计 | 104 | **156** |
+
+按 `provenance.source` 分布：`readme_migration 85 / curated_json 19 / search_pipeline 52`。
+元数据覆盖：DOI 103/156，作者 102/156，arXiv id 90/156。
+
+### 10.4 新增配置
+
+`scripts/configs/traffic-arxiv-backfill.json` —— arXiv 补齐配置，与只查 OpenAlex 的
+`traffic-monthly.json` 互补。后者对 2022 年之后的会议论文几乎零召回，这是本次数据缺口的
+直接原因。
+
+### 10.5 仍在处理中
+
+- 2022 年只有 4 条，同样需要补齐（arXiv 分页需要往回翻数百条，`paper_search.py`
+  目前最多翻 4 页 = 400 条，需要加 `start` 偏移参数）。
+- `venue_type` 对 arXiv 记录统一是 `preprint`，等 OpenAlex/Crossref 给出正式发表信息后
+  应更新为会议/期刊，否则「2023 年后零顶会」的现象在数据层面仍然存在。

@@ -73,11 +73,16 @@
     ],
     "data_url": null,
     "project_url": null,
-    "doi": null,
+    "doi": "10.48550/arxiv.2503.14980",
     "arxiv_id": null,
-    "openalex_id": null,
+    "openalex_id": "W4414902504",
     "short_name": "Contrastive Pre-training",
-    "authors": [],
+    "authors": [
+      "Low, Matthew",
+      "Arian Prabowo",
+      "Hao Xue",
+      "Flora Dilys Salim"
+    ],
     "affiliations": [],
     "task_en": "Urban traffic forecasting",
     "task_zh": "城市交通预测",
@@ -96,10 +101,10 @@
     "in_digest": true,
     "status": "active",
     "verification": {
-      "checked_at": null,
-      "link_ok": null,
-      "metadata_source": "manual",
-      "confidence": "medium"
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
     },
     "provenance": {
       "source": "curated_json",
@@ -223,6 +228,482 @@
       "source": "curated_json",
       "readme_line": null,
       "legacy_id": "agc-lstm-2025",
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "a-cloud-based-spatio-temporal-gnn-transf-2025",
+    "year": 2025,
+    "order": 5,
+    "section": "deep_learning",
+    "title": "A Cloud-Based Spatio-Temporal GNN-Transformer Hybrid Model for Traffic Flow Forecasting with External Feature Integration",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2510.27039v1",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.66238/fsrma90",
+    "arxiv_id": "2510.27039v1",
+    "openalex_id": "W4415914375",
+    "short_name": null,
+    "authors": [
+      "Zhuo Zheng",
+      "Lingran Meng",
+      "Ziyu Lin"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": null,
+    "method_tags": [
+      "STGNN",
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "long_horizon_transformer"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "alt_years": [
+      2025
+    ]
+  },
+  {
+    "id": "a-multi-layer-cnn-gruskip-model-based-on-2025",
+    "year": 2025,
+    "order": 6,
+    "section": "deep_learning",
+    "title": "A Multi-Layer CNN-GRUSKIP model based on transformer for spatial TEMPORAL traffic flow prediction",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2501.07593v1",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1016/j.asej.2024.103045",
+    "arxiv_id": "2501.07593v1",
+    "openalex_id": "W4402422079",
+    "short_name": null,
+    "authors": [
+      "Karimeh Ibrahim Mohammad Ata",
+      "Mohd Khair Hassan",
+      "Ayad Ghany Ismaeel",
+      "S. A. R. Al-Haddad",
+      "Thamer Alquthami",
+      "Sameer Alani"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": null,
+    "method_tags": [
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "long_horizon_transformer"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "alt_years": [
+      2025
+    ]
+  },
+  {
+    "id": "efficient-traffic-prediction-through-spa-2025",
+    "year": 2025,
+    "order": 7,
+    "section": "deep_learning",
+    "title": "Efficient Traffic Prediction Through Spatio-Temporal Distillation",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2501.10459v2",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1609/aaai.v39i1.32096",
+    "arxiv_id": "2501.10459v2",
+    "openalex_id": "W4409369336",
+    "short_name": null,
+    "authors": [
+      "Qianru Zhang",
+      "Xinyi Gao",
+      "Haixin Wang",
+      "Siu‐Ming Yiu",
+      "Hongzhi Yin"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Distillation"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "fewshot_transfer"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "fastersts-a-faster-spatio-temporal-synch-2025",
+    "year": 2025,
+    "order": 8,
+    "section": "deep_learning",
+    "title": "FasterSTS: A Faster Spatio-Temporal Synchronous Graph Convolutional Networks for Traffic flow Forecasting",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2501.00756v1",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.48550/arxiv.2501.00756",
+    "arxiv_id": "2501.00756v1",
+    "openalex_id": "W4406032347",
+    "short_name": null,
+    "authors": [
+      "Ben-Ao Dai",
+      "Nengchao Lyu",
+      "Miao, Yongchao"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": null,
+    "method_tags": [
+      "Graph Convolution"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "flowdistill-scalable-traffic-flow-predic-2025",
+    "year": 2025,
+    "order": 9,
+    "section": "deep_learning",
+    "title": "FlowDistill: Scalable Traffic Flow Prediction via Distillation from LLMs",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2504.02094v1",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.48550/arxiv.2504.02094",
+    "arxiv_id": "2504.02094v1",
+    "openalex_id": "W4409602921",
+    "short_name": null,
+    "authors": [
+      "Chenyang Yu",
+      "Xinpeng Xie",
+      "Yan Huang",
+      "Chenxi Qiu"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": null,
+    "method_tags": [
+      "Distillation"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "st_foundation_llm",
+      "fewshot_transfer"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "mscmhmst-a-traffic-flow-prediction-model-2025",
+    "year": 2025,
+    "order": 10,
+    "section": "deep_learning",
+    "title": "MSCMHMST: A traffic flow prediction model based on Transformer",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2503.13540v1",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": "2503.13540v1",
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": null,
+    "method_tags": [
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "long_horizon_transformer"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "arxiv",
+      "confidence": "medium"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "pptnet-a-hybrid-periodic-pattern-transfo-2025",
+    "year": 2025,
+    "order": 11,
+    "section": "deep_learning",
+    "title": "PPTNet: A Hybrid Periodic Pattern-Transformer Architecture for Traffic Flow Prediction and Congestion Identification",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2505.13047v2",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.48550/arxiv.2505.13047",
+    "arxiv_id": "2505.13047v2",
+    "openalex_id": "W4417286984",
+    "short_name": null,
+    "authors": [
+      "Hongrui Kou",
+      "Li, Jingkai",
+      "Wang, Ziyu",
+      "Lv, Zhouhang",
+      "Yuxin Zhang",
+      "Cheng Wang"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic flow prediction",
+    "task_zh": null,
+    "method_tags": [
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "long_horizon_transformer"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "sfadnet-spatio-temporal-fused-graph-base-2025",
+    "year": 2025,
+    "order": 12,
+    "section": "deep_learning",
+    "title": "SFADNet: Spatio-temporal Fused Graph based on Attention Decoupling Network for Traffic Prediction",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2501.04060v1",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1109/icassp49660.2025.10890001",
+    "arxiv_id": "2501.04060v1",
+    "openalex_id": "W4408354164",
+    "short_name": null,
+    "authors": [
+      "Mei Wu",
+      "Wenchao Weng",
+      "Jun Li",
+      "Yiqian Lin",
+      "Jing Chen",
+      "Dewen Seng"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
       "migrated_at": "2026-11-24"
     },
     "created_at": "2026-11-24",

@@ -346,6 +346,10 @@
         "migrated_at": {
           "type": "string",
           "format": "date"
+        },
+        "curated_labels": {
+          "type": "boolean",
+          "description": "True when task/method labels were set by a curator rather than inferred by keyword rules; a re-run must not overwrite them."
         }
       }
     },

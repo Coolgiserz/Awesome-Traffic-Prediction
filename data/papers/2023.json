@@ -20,11 +20,15 @@
     ],
     "data_url": null,
     "project_url": null,
-    "doi": null,
+    "doi": "10.48550/arxiv.2307.05517",
     "arxiv_id": "2307.05517",
-    "openalex_id": null,
+    "openalex_id": "W4384261730",
     "short_name": null,
-    "authors": [],
+    "authors": [
+      "Clyde Zhengdao Li",
+      "Wei Li",
+      "Kai Hwang"
+    ],
     "affiliations": [],
     "task_en": "Traffic flow prediction",
     "task_zh": null,
@@ -45,10 +49,10 @@
     "in_digest": false,
     "status": "active",
     "verification": {
-      "checked_at": null,
-      "link_ok": null,
-      "metadata_source": "readme_migration",
-      "confidence": "low"
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
     },
     "provenance": {
       "source": "readme_migration",
@@ -75,11 +79,18 @@
     "code_links": [],
     "data_url": null,
     "project_url": null,
-    "doi": null,
+    "doi": "10.1109/icde55515.2023.00178",
     "arxiv_id": "2309.12028",
-    "openalex_id": null,
+    "openalex_id": "W4385270450",
     "short_name": null,
-    "authors": [],
+    "authors": [
+      "Yusheng Zhao",
+      "Xiao Luo",
+      "Wei Ju",
+      "Chong Chen",
+      "Xian‐Sheng Hua",
+      "Ming Zhang"
+    ],
     "affiliations": [],
     "task_en": "Traffic flow prediction",
     "task_zh": null,
@@ -99,14 +110,945 @@
     "in_digest": false,
     "status": "active",
     "verification": {
-      "checked_at": null,
-      "link_ok": null,
-      "metadata_source": "readme_migration",
-      "confidence": "low"
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
     },
     "provenance": {
       "source": "readme_migration",
       "readme_line": 177,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "adaptive-dependency-learning-graph-neura-2023",
+    "year": 2023,
+    "order": 3,
+    "section": "deep_learning",
+    "title": "Adaptive Dependency Learning Graph Neural Networks",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2312.03903v1",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1016/j.ins.2022.12.086",
+    "arxiv_id": "2312.03903v1",
+    "openalex_id": "W4313593758",
+    "short_name": null,
+    "authors": [
+      "Abishek Sriramulu",
+      "Nicolas Fourrier",
+      "Christoph Bergmeir"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "STGNN",
+      "Adaptive Graph"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "dynamic_graph_learning"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "samsgl-series-aligned-multi-scale-graph-2023",
+    "year": 2023,
+    "order": 4,
+    "section": "deep_learning",
+    "title": "SAMSGL: Series-Aligned Multi-Scale Graph Learning for Spatio-Temporal Forecasting",
+    "title_zh": null,
+    "venue": "Chaos: An Interdisciplinary Journal of Nonlinear Science",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "https://doi.org/10.1063/5.0211403",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1063/5.0211403",
+    "arxiv_id": "2312.02646v3",
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [
+      "Xiaobei Zou",
+      "Luolin Xiong",
+      "Yang Tang",
+      "Jürgen Kurths"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "STGNN"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "crossref",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "multispans-a-multi-range-spatial-tempora-2023",
+    "year": 2023,
+    "order": 5,
+    "section": "deep_learning",
+    "title": "MultiSPANS: A Multi-range Spatial-Temporal Transformer Network for Traffic Forecast via Structural Entropy Optimization",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2311.02880v1",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1145/3616855.3635820",
+    "arxiv_id": "2311.02880v1",
+    "openalex_id": "W4392367760",
+    "short_name": null,
+    "authors": [
+      "Dongcheng Zou",
+      "Senzhang Wang",
+      "Xuefeng Li",
+      "Hao Ming Peng",
+      "Yuandong Wang",
+      "Chunyang Liu",
+      "Kehua Sheng",
+      "Bo Zhang"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "long_horizon_transformer"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "alt_years": [
+      2023
+    ]
+  },
+  {
+    "id": "distil-the-informative-essence-of-loop-d-2023",
+    "year": 2023,
+    "order": 6,
+    "section": "deep_learning",
+    "title": "Distil the informative essence of loop detector data set: Is network-level traffic forecasting hungry for more data?",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2310.20366v1",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.48550/arxiv.2310.20366",
+    "arxiv_id": "2310.20366v1",
+    "openalex_id": "W4388184678",
+    "short_name": null,
+    "authors": [
+      "Guopeng Li",
+      "Victor L. Knoop",
+      "C., J. W.",
+      "van Lint"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "improving-traffic-density-forecasting-in-2023",
+    "year": 2023,
+    "order": 7,
+    "section": "deep_learning",
+    "title": "Improving Traffic Density Forecasting in Intelligent Transportation Systems Using Gated Graph Neural Networks",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2310.17729v1",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1109/iit59782.2023.10366426",
+    "arxiv_id": "2310.17729v1",
+    "openalex_id": "W4390188199",
+    "short_name": null,
+    "authors": [
+      "Razib Hayat Khan",
+      "Jonayet Miah",
+      "S. M. Yasir Arafat",
+      "M. M. Mahbubul Syeed",
+      "Duc M Ca"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "STGNN"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "spatio-temporal-meta-contrastive-learnin-2023",
+    "year": 2023,
+    "order": 8,
+    "section": "deep_learning",
+    "title": "Spatio-Temporal Meta Contrastive Learning",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2310.17678v1",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1145/3583780.3615065",
+    "arxiv_id": "2310.17678v1",
+    "openalex_id": "W4387846511",
+    "short_name": null,
+    "authors": [
+      "Jiabin Tang",
+      "Lianghao Xia",
+      "Jie Hu",
+      "Chao Huang"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Contrastive Learning",
+      "Meta-Learning"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "diffusion_probabilistic",
+      "dynamic_graph_learning"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "spatial-temporal-hypergraph-neural-netwo-2023",
+    "year": 2023,
+    "order": 9,
+    "section": "deep_learning",
+    "title": "Spatial-Temporal Hypergraph Neural Network for Traffic Forecasting",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2310.16070v1",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": "2310.16070v1",
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "STGNN",
+      "Adaptive Graph"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "dynamic_graph_learning"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "arxiv",
+      "confidence": "medium"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "networkwide-traffic-state-forecasting-us-2023",
+    "year": 2023,
+    "order": 10,
+    "section": "deep_learning",
+    "title": "Networkwide Traffic State Forecasting Using Exogenous Information: A Multi-Dimensional Graph Attention-Based Approach",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2310.12353v1",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1177/03611981241247050",
+    "arxiv_id": "2310.12353v1",
+    "openalex_id": "W4396956478",
+    "short_name": null,
+    "authors": [
+      "Syed Islam",
+      "Monika Filipovska"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Graph Attention",
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "alt_years": [
+      2023
+    ]
+  },
+  {
+    "id": "revealing-the-power-of-masked-autoencode-2023",
+    "year": 2023,
+    "order": 11,
+    "section": "deep_learning",
+    "title": "Revealing the Power of Masked Autoencoders in Traffic Forecasting",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2309.15169v2",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1145/3627673.3679989",
+    "arxiv_id": "2309.15169v2",
+    "openalex_id": "W4403577835",
+    "short_name": null,
+    "authors": [
+      "Jiarui Sun",
+      "Yujie Fan",
+      "Chin‐Chia Michael Yeh",
+      "Wei Zhong Zhang",
+      "Girish Vinayak Chowdhary"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "alt_years": [
+      2023
+    ]
+  },
+  {
+    "id": "rethinking-sensors-modeling-hierarchical-2023",
+    "year": 2023,
+    "order": 12,
+    "section": "deep_learning",
+    "title": "Rethinking Sensors Modeling: Hierarchical Information Enhanced Traffic Forecasting",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2309.11284v1",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1145/3583780.3614910",
+    "arxiv_id": "2309.11284v1",
+    "openalex_id": "W4386942258",
+    "short_name": null,
+    "authors": [
+      "Qian Ma",
+      "Zijian Zhang",
+      "Xiangyu Zhao",
+      "Haoliang Li",
+      "Hongwei Zhao",
+      "Yiqi Wang",
+      "Zitao Liu",
+      "Wanyu Wang"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "test-time-compensated-representation-lea-2023",
+    "year": 2023,
+    "order": 13,
+    "section": "deep_learning",
+    "title": "Test-Time Compensated Representation Learning for Extreme Traffic Forecasting",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2309.09074v1",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.48550/arxiv.2309.09074",
+    "arxiv_id": "2309.09074v1",
+    "openalex_id": "W4386875318",
+    "short_name": null,
+    "authors": [
+      "Zhiwei Zhang",
+      "Weizhong Zhang",
+      "Huang, Yaowei",
+      "Kani Chen"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "benchmark_reproducibility"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "irregular-traffic-time-series-forecastin-2023",
+    "year": 2023,
+    "order": 14,
+    "section": "deep_learning",
+    "title": "Irregular Traffic Time Series Forecasting Based on Asynchronous Spatio-Temporal Graph Convolutional Network",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2308.16818v3",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": "2308.16818v3",
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Graph Convolution",
+      "STGNN"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "arxiv",
+      "confidence": "medium"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "meta-attentive-graph-convolutional-recur-2023",
+    "year": 2023,
+    "order": 15,
+    "section": "deep_learning",
+    "title": "Meta Attentive Graph Convolutional Recurrent Network for Traffic Forecasting",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2308.14377v1",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.48550/arxiv.2308.14377",
+    "arxiv_id": "2308.14377v1",
+    "openalex_id": "W4386273110",
+    "short_name": null,
+    "authors": [
+      "Adnan Zeb",
+      "Yongchao Ye",
+      "Shiyao Zhang",
+      "James J. Q. Yu"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Graph Convolution",
+      "Meta-Learning"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "dynamic_graph_learning"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "staeformer-spatio-temporal-adaptive-embe-2023",
+    "year": 2023,
+    "order": 16,
+    "section": "deep_learning",
+    "title": "STAEformer: Spatio-Temporal Adaptive Embedding Makes Vanilla Transformer SOTA for Traffic Forecasting",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2308.10425v5",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": null,
+    "arxiv_id": "2308.10425v5",
+    "openalex_id": null,
+    "short_name": null,
+    "authors": [],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Adaptive Graph",
+      "Transformer"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "dynamic_graph_learning",
+      "long_horizon_transformer"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": null,
+      "link_ok": null,
+      "metadata_source": "arxiv",
+      "confidence": "medium"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "cross-city-few-shot-traffic-forecasting-2023",
+    "year": 2023,
+    "order": 17,
+    "section": "deep_learning",
+    "title": "Cross-city Few-Shot Traffic Forecasting via Traffic Pattern Bank",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2308.09727v1",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.1145/3583780.3614829",
+    "arxiv_id": "2308.09727v1",
+    "openalex_id": "W4387848913",
+    "short_name": null,
+    "authors": [
+      "Zhanyu Liu",
+      "Guanjie Zheng",
+      "Yanwei Yu"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [
+      "Few-Shot"
+    ],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "fewshot_transfer"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
+      "legacy_id": null,
+      "migrated_at": "2026-11-24"
+    },
+    "created_at": "2026-11-24",
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "st-mlp-a-cascaded-spatio-temporal-linear-2023",
+    "year": 2023,
+    "order": 18,
+    "section": "deep_learning",
+    "title": "ST-MLP: A Cascaded Spatio-Temporal Linear Framework with Channel-Independence Strategy for Traffic Forecasting",
+    "title_zh": null,
+    "venue": "Arxiv",
+    "venue_id": "arxiv",
+    "venue_type": "preprint",
+    "paper_url": "http://arxiv.org/abs/2308.07496v1",
+    "alt_urls": {},
+    "code_url": null,
+    "code_links": [],
+    "data_url": null,
+    "project_url": null,
+    "doi": "10.48550/arxiv.2308.07496",
+    "arxiv_id": "2308.07496v1",
+    "openalex_id": "W4385889942",
+    "short_name": null,
+    "authors": [
+      "Zepu Wang",
+      "Yuqi Nie",
+      "Peng Sun",
+      "Nam H. Nguyen",
+      "John M. Mulvey",
+      "H. Vincent Poor"
+    ],
+    "affiliations": [],
+    "task_en": "Traffic forecasting",
+    "task_zh": null,
+    "method_tags": [],
+    "note_en": null,
+    "note_zh": null,
+    "datasets": [],
+    "layers": [
+      "sota_core"
+    ],
+    "direction_tags": [
+      "long_horizon_transformer"
+    ],
+    "featured": false,
+    "in_digest": false,
+    "status": "active",
+    "verification": {
+      "checked_at": "2026-11-24",
+      "link_ok": true,
+      "metadata_source": "openalex",
+      "confidence": "high"
+    },
+    "provenance": {
+      "source": "search_pipeline",
+      "readme_line": null,
       "legacy_id": null,
       "migrated_at": "2026-11-24"
     },
