@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-01T08:41:39.188922+00:00",
+  "generated_utc": "2026-11-01T09:01:11.642896+00:00",
   "input": "updates/monthly-paper-candidates.md",
   "phrase_rules": [
     "traffic flow",
@@ -21,15 +21,11 @@
   ],
   "top_words": [
     [
+      "machine",
+      2
+    ],
+    [
       "hybrid",
-      1
-    ],
-    [
-      "xgboost",
-      1
-    ],
-    [
-      "lstm",
       1
     ],
     [
@@ -37,115 +33,63 @@
       1
     ],
     [
+      "mobile",
+      1
+    ],
+    [
+      "hourly",
+      1
+    ],
+    [
+      "urban",
+      1
+    ],
+    [
+      "accidents",
+      1
+    ],
+    [
+      "case",
+      1
+    ],
+    [
+      "belgrade",
+      1
+    ],
+    [
+      "identification",
+      1
+    ],
+    [
+      "most",
+      1
+    ],
+    [
+      "important",
+      1
+    ],
+    [
+      "environmental",
+      1
+    ],
+    [
+      "variables",
+      1
+    ],
+    [
+      "sap",
+      1
+    ],
+    [
       "flow",
       1
     ],
     [
-      "multi-horizon",
+      "techniques",
       1
     ],
     [
-      "empirical",
-      1
-    ],
-    [
-      "explainability",
-      1
-    ],
-    [
-      "robustness",
-      1
-    ],
-    [
-      "multi-scale",
-      1
-    ],
-    [
-      "traffic-state",
-      1
-    ],
-    [
-      "gated",
-      1
-    ],
-    [
-      "attention",
-      1
-    ],
-    [
-      "bus",
-      1
-    ],
-    [
-      "arrival",
-      1
-    ],
-    [
-      "explainable",
-      1
-    ],
-    [
-      "machine",
-      1
-    ],
-    [
-      "thermal",
-      1
-    ],
-    [
-      "discomfort",
-      1
-    ],
-    [
-      "multipollutant",
-      1
-    ],
-    [
-      "exposure",
-      1
-    ],
-    [
-      "dhaka",
-      1
-    ],
-    [
-      "roadways",
-      1
-    ],
-    [
-      "road",
-      1
-    ],
-    [
-      "freight",
-      1
-    ],
-    [
-      "transport",
-      1
-    ],
-    [
-      "spain",
-      1
-    ],
-    [
-      "mixed-methods",
-      1
-    ],
-    [
-      "assessment",
-      1
-    ],
-    [
-      "sarima",
-      1
-    ],
-    [
-      "forecasts",
-      1
-    ],
-    [
-      "traffic flow",
+      "traffic forecasting",
       1
     ]
   ]
