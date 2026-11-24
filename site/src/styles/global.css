@@ -9,6 +9,15 @@
   --accent-soft: #ddf4ff;
   --ok: #1a7f37;
   --warn: #9a6700;
+  /* Quality-signal palette: venue tier and landmark. Tokens, not literals, so
+     the dark theme can restate them instead of inheriting a pale blue chip. */
+  --tier-bg: #e8f0fe;
+  --tier-fg: #1a4b8c;
+  --tier-border: #cfdcf7;
+  --landmark-bg: #fff4e5;
+  --landmark-fg: #8a4b00;
+  --landmark-border: #f3d9b5;
+  --landmark-rail: #e0a458;
   --radius: 8px;
   --maxw: 1180px;
   --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial,
@@ -28,6 +37,13 @@
     --accent-soft: #121d2f;
     --ok: #3fb950;
     --warn: #d29922;
+    --tier-bg: #14243c;
+    --tier-fg: #79b8ff;
+    --tier-border: #1f3a5f;
+    --landmark-bg: #2b2113;
+    --landmark-fg: #e3a662;
+    --landmark-border: #4a3a22;
+    --landmark-rail: #b8823c;
   }
 }
 
@@ -234,6 +250,17 @@ p.section-lead { color: var(--fg-muted); margin: 0 0 20px; max-width: 70ch; }
   font-size: 11.5px;
   color: var(--fg-muted);
   line-height: 18px;
+  /* A 75-character venue name must not push the badges off the card. */
+  max-width: 22ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+@media (max-width: 720px) {
+  .pill { max-width: 16ch; }
+  .paper .meta { gap: 6px; }
 }
 .pill.year { background: var(--accent-soft); color: var(--accent); border-color: transparent; font-weight: 600; }
 .pill.code { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 40%, var(--border)); }
@@ -340,13 +367,27 @@ footer.site .wrap { display: flex; flex-wrap: wrap; gap: 16px; justify-content: 
 @media (max-width: 720px) {
   .header-tools .btn span { display: none; }
   .hero { padding: 30px 0 18px; }
+  .hero h1 { font-size: 26px; }
+  .paper { padding: 10px 12px; }
+  .paper .title { font-size: 14px; }
+  /* Four facet groups before the results push them below the fold on a phone. */
+  .facets { max-height: 4.6rem; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  .facet-group { margin-bottom: 8px; }
+  table.data th, table.data td { padding: 7px 9px; }
+}
+
+/* Keyboard focus was invisible on every interactive element. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 /* Quality signals on paper cards: venue tier and landmark status. */
 .pill.tier-top {
-  background: #e8f0fe;
-  color: #1a4b8c;
-  border-color: #cfdcf7;
+  background: var(--tier-bg);
+  color: var(--tier-fg);
+  border-color: var(--tier-border);
 }
 .pill.tier-pre {
   background: transparent;
@@ -354,16 +395,16 @@ footer.site .wrap { display: flex; flex-wrap: wrap; gap: 16px; justify-content: 
   color: var(--fg-muted);
 }
 .pill.landmark {
-  background: #fff4e5;
-  color: #8a4b00;
-  border-color: #f3d9b5;
+  background: var(--landmark-bg);
+  color: var(--landmark-fg);
+  border-color: var(--landmark-border);
   font-weight: 600;
 }
 
 
 /* Front-page landmark cards: the reason-why line is what carries the value. */
 .landmark-card {
-  border-left: 3px solid #e0a458;
+  border-left: 3px solid var(--landmark-rail);
 }
 .landmark-card .why {
   color: var(--fg-muted);
@@ -375,7 +416,7 @@ footer.site .wrap { display: flex; flex-wrap: wrap; gap: 16px; justify-content: 
   display: inline-block;
   padding: 0 5px;
   border-radius: 3px;
-  background: #e8f0fe;
-  color: #1a4b8c;
+  background: var(--tier-bg);
+  color: var(--tier-fg);
   font-size: 11px;
 }

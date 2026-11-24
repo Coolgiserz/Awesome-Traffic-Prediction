@@ -26,7 +26,9 @@ const title = lang === 'zh' ? (p.titleZh ?? p.title) : p.title;
 // Notes are curator prose, not metadata: a Chinese page must not show English
 // prose it cannot vouch for. Falling back to the neutral empty state is honest.
 const note = lang === 'zh' ? p.noteZh : p.note;
-const taskLabel = p.taskZh ?? localizeTask(p.task, lang);
+// task_zh is curator copy and only meaningful on the Chinese page; on the
+// English page the localized form of the English task is the correct label.
+const taskLabel = lang === 'zh' ? (p.taskZh ?? localizeTask(p.task, lang)) : localizeTask(p.task, lang);
 
 const links: Array<{ label: string; url: string }> = [];
 if (p.paperUrl) links.push({ label: d.paper, url: p.paperUrl });

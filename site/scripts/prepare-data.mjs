@@ -61,6 +61,29 @@ async function readJsonSafe(p) {
   }
 }
 
+/**
+ * Human-readable label for a paper.
+ *
+ * `short_name` in the data is an acronym and is often absent. Truncating the
+ * raw title at a fixed width produces fragments like "Distil the informative
+ * essence of loop det", which reads worse than no label at all; cutting at a
+ * word boundary and stopping at a colon gives "Distil the informative essence
+ * of loop detector data set" instead.
+ */
+function displayName(item, title) {
+  const explicit = item.short_name ?? item.shortName;
+  if (explicit) return explicit;
+  const head = String(title).split(':')[0].trim();
+  if (head.length <= 48) return head;
+  const words = head.split(/\s+/);
+  const out = [];
+  for (const w of words) {
+    if ([...out, w].join(' ').length > 44) break;
+    out.push(w);
+  }
+  return out.length ? out.join(' ') : head.slice(0, 44);
+}
+
 function slugify(input) {
   return String(input)
     .toLowerCase()
@@ -107,7 +130,7 @@ function normalizePaper(item, file, venues, citations) {
     venueId: item.venue_id ?? null,
     venueType: item.venue_type ?? 'unknown',
     // Short display name: explicit acronym > curated short name > title head.
-    shortName: item.short_name ?? title.split(':')[0].trim().slice(0, 42),
+    shortName: displayName(item, title),
     title,
     titleZh: item.title_zh ?? null,
     paperUrl: item.paper_url ?? item.paperUrl ?? null,
@@ -358,7 +381,7 @@ async function scrapeReadme(file, lang) {
       venue: parsed.venue ?? 'Unknown',
       venueId: null,
       venueType: 'unknown',
-      shortName: parsed.title.split(':')[0].trim().slice(0, 42),
+      shortName: displayName({}, parsed.title),
       title: parsed.title,
       titleZh: null,
       paperUrl: parsed.paperUrl,

@@ -140,6 +140,8 @@ export const stats = {
   total: papers.length,
   withCode: papers.filter((p) => p.codeUrl).length,
   withData: papers.filter((p) => p.dataUrl).length,
+  inTopVenue: papers.filter((p) => p.venueTier === 'top').length,
+  landmarks: papers.filter((p) => p.impact?.tier === 'landmark').length,
   withDoi: papers.filter((p) => p.doi).length,
   withAuthors: papers.filter((p) => p.authors.length).length,
   minYear: Math.min(...years),

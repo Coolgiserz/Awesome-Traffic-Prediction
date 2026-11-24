@@ -29,8 +29,8 @@ const en = {
   hero: {
     total: 'papers indexed',
     years: 'years covered',
+    top: 'in top venues',
     code: 'with code',
-    data: 'with data',
   },
   papers: {
     title: 'Paper library',
@@ -152,7 +152,12 @@ const zh: typeof en = {
     landmarks: '奠基论文',
   },
   langSwitch: 'English',
-  hero: { total: '篇论文', years: '个年份', code: '有代码', data: '有数据' },
+  hero: {
+    total: '篇论文',
+    years: '个年份',
+    top: '篇见于顶会顶刊',
+    code: '篇有代码',
+  },
   papers: {
     title: '论文库',
     lead: '收录的全部论文，按年份、会议/期刊、任务与方法标注。奠基论文另有标记，会议等级可以看出发表门槛。',

@@ -30,6 +30,15 @@
     ]
   },
   {
+    "id": "ainshams",
+    "short_name": "Ain Shams Engineering Journal",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "ain shams engineering journal"
+    ]
+  },
+  {
     "id": "appliedintell",
     "short_name": "Applied Intelligence",
     "tier": "mid",
@@ -140,6 +149,15 @@
     "type": "journal",
     "aliases": [
       "expert systems with applications"
+    ]
+  },
+  {
+    "id": "icassp",
+    "short_name": "ICASSP",
+    "tier": "mid",
+    "type": "conference",
+    "aliases": [
+      "ieee international conference on acoustics speech and signal processing"
     ]
   },
   {
@@ -255,6 +273,15 @@
     "aliases": [
       "information fusion",
       "if"
+    ]
+  },
+  {
+    "id": "infosci",
+    "short_name": "Information Sciences",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "information sciences"
     ]
   },
   {
@@ -467,6 +494,15 @@
       "tr-c",
       "trpet",
       "transportation research part c: emerging technologies"
+    ]
+  },
+  {
+    "id": "trr",
+    "short_name": "Transportation Research Record",
+    "tier": "mid",
+    "type": "journal",
+    "aliases": [
+      "transportation research record journal of the transportation research board"
     ]
   },
   {

@@ -41,19 +41,40 @@ def main() -> int:
     ap.add_argument("--strict", action="store_true")
     args = ap.parse_args()
 
+    venues = {}
+    vpath = Path("data/venues.json")
+    if vpath.exists():
+        venues = {v["id"]: v for v in json.loads(vpath.read_text(encoding="utf-8")) if v.get("id")}
+
     findings: list[tuple[str, str, str, str]] = []
+    drift: list[tuple[str, str, str]] = []
     for path in sorted(glob.glob(f"{args.data_dir}/*.json")):
         for rec in json.load(open(path, encoding="utf-8")):
             url = (rec.get("paper_url") or "").lower()
             venue = (rec.get("venue") or "").upper()
             if not url or not venue:
                 continue
+            # venue_id must agree with the display name, or the venue facet and
+            # the card disagree: a record can be filed under arXiv while its card
+            # says "Information Sciences", and filtering by either misses it.
+            vid = rec.get("venue_id")
+            if vid and vid in venues:
+                short = venues[vid].get("short_name")
+                if short and venue and venue != short.upper() and rec.get("venue") != short:
+                    drift.append((rec.get("id", "?"), vid, rec.get("venue", "")))
+
             for token, implied in DOI_TOKENS.items():
                 if token not in url:
                     continue
                 if venue != implied.upper():
                     findings.append((rec.get("id", "?"), venue, implied, url[-60:]))
                 break
+
+    if drift:
+        print(f"[FAIL] {len(drift)} record(s) have a venue_id that disagrees with their venue name:")
+        for rid, vid, name in drift:
+            print(f"- {rid}: venue_id={vid} but venue={name!r}")
+        return 1
 
     if findings:
         print(f"[FAIL] {len(findings)} record(s) have a venue that contradicts their link:")
