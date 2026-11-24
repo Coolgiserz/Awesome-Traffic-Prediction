@@ -59,12 +59,14 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 9
+          version: 10            # 读得懂 lockfileVersion 9.0；固定大版本，别浮动
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          # 关键：Astro 7 的 engines 是 "node >=22.23.4"，Node 20 会直接失败。
+          # lts/* 解析到当前 LTS（>=22），满足这个精确下限。
+          node-version: lts/*
           cache: pnpm
           cache-dependency-path: site/pnpm-lock.yaml
 

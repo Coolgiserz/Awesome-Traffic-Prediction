@@ -48,12 +48,18 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 9
+          # 10 reads lockfileVersion 9.0; 9 also works, but 10 is what the
+          # lockfile was resolved against in practice. Pin, do not float:
+          # a minor bump can change the resolution and break --frozen-lockfile.
+          version: 10
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          # Astro 7 declares engines.node ">=22.23.4". Pinning to 22 would drift
+          # as the 22.x line gets patch releases; 'lts/*' resolves to the current
+          # LTS (>=22 today) and still satisfies an exact minimum like this one.
+          node-version: lts/*
           cache: pnpm
           cache-dependency-path: site/pnpm-lock.yaml
 

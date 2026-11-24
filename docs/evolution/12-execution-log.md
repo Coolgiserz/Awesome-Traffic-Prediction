@@ -225,3 +225,32 @@ python3 -m http.server 4321 --directory /tmp/serve
 2. **Pages Settings 一次性操作**：`Settings → Pages → Source` 必须切到 **GitHub Actions**，
    否则 `deploy-pages` 报 `Not Found`。这是首次部署最常见的失败点。
 3. **首次部署后自查**：`curl -I .../\_astro/<某个css>` 必须 200（验证 `.nojekyll` 生效）。
+
+## 8. CI 首次运行的修正：Node 版本
+
+首次 `pages.yml` 运行失败，报：
+
+```
+Node.js v20.20.2 is not supported by Astro!
+Please upgrade Node.js to a supported version: ">=22.23.4"
+```
+
+根因：`04-pages-deploy.md` 的示例 workflow 写的是 `node-version: 20`，而实际安装的
+`astro@7.4.13` 的 `engines.node` 是 `>=22.23.4`（lockfile 里也记录了同一条 engines）。
+文档示例是按更早的 Astro 版本写的，照抄即失败。
+
+三处修正：
+
+| 位置 | 改前 | 改后 | 理由 |
+| --- | --- | --- | --- |
+| `pages.yml` Node | `20` | `lts/*` | Astro 的 engines 是精确下限，`lts/*` 解析到当前 LTS（>=22）且不必随 22.x 补丁版本改动 |
+| `pages.yml` pnpm | `9` | `10` | lockfile 实际由 pnpm 12 解析（9.0 格式），10 能读；固定大版本避免 resolution 漂移打破 `--frozen-lockfile` |
+| `site/package.json` engines | `>=20.0.0` | `>=22.23.4` | 声明必须与真实依赖一致，否则本地装完能在旧 Node 上"成功"构建到一半 |
+| `docs/evolution/04-pages-deploy.md` | 示例 `node 20` / `pnpm 9` | 同步修正 | 文档里的示例会被照抄，是这次失败的源头 |
+
+额外加了一道护栏：`site/scripts/prepare-data.mjs` 在最前面检查 Node 版本，
+不满足就立刻 `exit 1`。
+
+修改前的失败模式很坏——`prepare-data` 成功、写了文件，然后 Astro 才崩，
+CI 日志里看起来像"数据桥没问题，是别处挂了"。现在两条命令都会在第一步给出
+明确原因。可用 `PREPARE_DATA_SKIP_NODE_CHECK=1` 绕过（仅用于调试）。

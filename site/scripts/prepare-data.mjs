@@ -23,6 +23,25 @@ import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+// Fail before doing any work when the runtime cannot run Astro. Astro 7's
+// engines field is an exact minimum ("node >=22.23.4"), and the failure mode
+// without this check is the worst kind: prepare-data succeeds, writes files, and
+// the build only dies later inside Astro — see the Node 20 CI failure.
+const NODE_MIN = [22, 23, 4];
+{
+  const [maj, min, pat] = process.versions.node.split('.').map(Number);
+  const tooOld =
+    maj < NODE_MIN[0] ||
+    (maj === NODE_MIN[0] && (min < NODE_MIN[1] || (min === NODE_MIN[1] && pat < NODE_MIN[2])));
+  if (tooOld && !process.env.PREPARE_DATA_SKIP_NODE_CHECK) {
+    console.error(
+      `[prepare-data] FATAL node ${process.versions.node} is too old: Astro 7 needs ` +
+        `>=${NODE_MIN.join('.')}. Set PREPARE_DATA_SKIP_NODE_CHECK=1 to bypass.`,
+    );
+    process.exit(1);
+  }
+}
+
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const SITE_DIR = path.resolve(HERE, '..');
 const REPO_DIR = path.resolve(SITE_DIR, '..');
