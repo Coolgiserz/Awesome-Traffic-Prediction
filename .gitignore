@@ -2,3 +2,7 @@
 .cache/
 # pnpm store created next to site/ when the default store is unusable
 .pnpm-store/
+
+# python bytecode
+__pycache__/
+*.pyc
